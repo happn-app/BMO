@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AsyncOperationResult",
+        "repositoryURL": "git@github.com:happn-app/AsyncOperationResult",
+        "state": {
+          "branch": null,
+          "revision": "29447ed9b5dc4dae67144dec812468d0b5dc8967",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

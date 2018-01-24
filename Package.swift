@@ -14,11 +14,12 @@ let package = Package(
 		)
 	],
 	dependencies: [
+		.package(url: "git@github.com:happn-app/AsyncOperationResult", from: "1.0.0")
 	],
 	targets: [
 		.target(
 			name: "BMO",
-			dependencies: []
+			dependencies: ["AsyncOperationResult"]
 		),
 		.testTarget(
 			name: "BMOTests",

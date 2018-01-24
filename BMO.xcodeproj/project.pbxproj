@@ -24,19 +24,172 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		7B3C40442018B29F00E4A0A5 /* BMORequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* BMORequestManager.swift */; };
+		7B3C40452018B29F00E4A0A5 /* BMORequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* BMORequestManager.swift */; };
+		7B3C40462018B29F00E4A0A5 /* BMORequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* BMORequestManager.swift */; };
+		7B3C40472018B29F00E4A0A5 /* BMORequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* BMORequestManager.swift */; };
+		7B3C40732018B44700E4A0A5 /* BMOBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40722018B44700E4A0A5 /* BMOBridge.swift */; };
+		7B3C40742018B44700E4A0A5 /* BMOBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40722018B44700E4A0A5 /* BMOBridge.swift */; };
+		7B3C40752018B44700E4A0A5 /* BMOBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40722018B44700E4A0A5 /* BMOBridge.swift */; };
+		7B3C40762018B44700E4A0A5 /* BMOBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40722018B44700E4A0A5 /* BMOBridge.swift */; };
+		7B3C40792018B48100E4A0A5 /* NumberOfCores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */; };
+		7B3C407A2018B48100E4A0A5 /* NumberOfCores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */; };
+		7B3C407B2018B48100E4A0A5 /* NumberOfCores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */; };
+		7B3C407C2018B48100E4A0A5 /* NumberOfCores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */; };
+		7B3C40812018B50300E4A0A5 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */; };
+		7B3C40822018B50300E4A0A5 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */; };
+		7B3C40832018B50300E4A0A5 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */; };
+		7B3C40842018B50300E4A0A5 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */; };
+		7B3C40862018B54500E4A0A5 /* BMODb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40852018B54500E4A0A5 /* BMODb.swift */; };
+		7B3C40872018B54500E4A0A5 /* BMODb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40852018B54500E4A0A5 /* BMODb.swift */; };
+		7B3C40882018B54500E4A0A5 /* BMODb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40852018B54500E4A0A5 /* BMODb.swift */; };
+		7B3C40892018B54500E4A0A5 /* BMODb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40852018B54500E4A0A5 /* BMODb.swift */; };
+		7B3C40922018B63600E4A0A5 /* BMORequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C408C2018B63600E4A0A5 /* BMORequestOperation.swift */; };
+		7B3C40932018B63600E4A0A5 /* BMORequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C408C2018B63600E4A0A5 /* BMORequestOperation.swift */; };
+		7B3C40942018B63600E4A0A5 /* BMORequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C408C2018B63600E4A0A5 /* BMORequestOperation.swift */; };
+		7B3C40952018B63600E4A0A5 /* BMORequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C408C2018B63600E4A0A5 /* BMORequestOperation.swift */; };
+		7B3C40962018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40912018B63600E4A0A5 /* BMOMixedRepresentation.swift */; };
+		7B3C40972018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40912018B63600E4A0A5 /* BMOMixedRepresentation.swift */; };
+		7B3C40982018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40912018B63600E4A0A5 /* BMOMixedRepresentation.swift */; };
+		7B3C40992018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40912018B63600E4A0A5 /* BMOMixedRepresentation.swift */; };
+		7B3C40A62018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A42018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift */; };
+		7B3C40A72018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A42018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift */; };
+		7B3C40A82018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A42018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift */; };
+		7B3C40A92018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A42018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift */; };
+		7B3C40AA2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A52018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift */; };
+		7B3C40AB2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A52018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift */; };
+		7B3C40AC2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A52018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift */; };
+		7B3C40AD2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A52018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift */; };
+		7B3C40AF2018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BMOBackResultImporter.swift */; };
+		7B3C40B02018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BMOBackResultImporter.swift */; };
+		7B3C40B12018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BMOBackResultImporter.swift */; };
+		7B3C40B22018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BMOBackResultImporter.swift */; };
+		7B3C40B52018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BMOBackRequest.swift */; };
+		7B3C40B62018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BMOBackRequest.swift */; };
+		7B3C40B72018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BMOBackRequest.swift */; };
+		7B3C40B82018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BMOBackRequest.swift */; };
+		7B3C40BA2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B92018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift */; };
+		7B3C40BB2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B92018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift */; };
+		7B3C40BC2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B92018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift */; };
+		7B3C40BD2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B92018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift */; };
+		7B3C40BF2018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40BE2018BACF00E4A0A5 /* BMOUniquingRequest.swift */; };
+		7B3C40C02018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40BE2018BACF00E4A0A5 /* BMOUniquingRequest.swift */; };
+		7B3C40C12018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40BE2018BACF00E4A0A5 /* BMOUniquingRequest.swift */; };
+		7B3C40C22018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40BE2018BACF00E4A0A5 /* BMOUniquingRequest.swift */; };
+		7B3C40C52018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C42018BE0E00E4A0A5 /* BMOChangesDescription.swift */; };
+		7B3C40C62018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C42018BE0E00E4A0A5 /* BMOChangesDescription.swift */; };
+		7B3C40C72018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C42018BE0E00E4A0A5 /* BMOChangesDescription.swift */; };
+		7B3C40C82018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C42018BE0E00E4A0A5 /* BMOChangesDescription.swift */; };
+		7B3C40CA2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C92018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift */; };
+		7B3C40CB2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C92018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift */; };
+		7B3C40CC2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C92018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift */; };
+		7B3C40CD2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40C92018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift */; };
+		7B3C40CF2018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40CE2018BE6C00E4A0A5 /* BMOBackRequestResult.swift */; };
+		7B3C40D02018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40CE2018BE6C00E4A0A5 /* BMOBackRequestResult.swift */; };
+		7B3C40D12018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40CE2018BE6C00E4A0A5 /* BMOBackRequestResult.swift */; };
+		7B3C40D22018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40CE2018BE6C00E4A0A5 /* BMOBackRequestResult.swift */; };
+		7B3C40D42018BED300E4A0A5 /* BMOImportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D32018BED300E4A0A5 /* BMOImportResult.swift */; };
+		7B3C40D52018BED300E4A0A5 /* BMOImportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D32018BED300E4A0A5 /* BMOImportResult.swift */; };
+		7B3C40D62018BED300E4A0A5 /* BMOImportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D32018BED300E4A0A5 /* BMOImportResult.swift */; };
+		7B3C40D72018BED300E4A0A5 /* BMOImportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D32018BED300E4A0A5 /* BMOImportResult.swift */; };
+		7B3C40D92018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D82018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift */; };
+		7B3C40DA2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D82018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift */; };
+		7B3C40DB2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D82018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift */; };
+		7B3C40DC2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40D82018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift */; };
+		7B3C40E82018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40E72018DAB100E4A0A5 /* BMOBackRequestOperation.swift */; };
+		7B3C40E92018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40E72018DAB100E4A0A5 /* BMOBackRequestOperation.swift */; };
+		7B3C40EA2018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40E72018DAB100E4A0A5 /* BMOBackRequestOperation.swift */; };
+		7B3C40EB2018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40E72018DAB100E4A0A5 /* BMOBackRequestOperation.swift */; };
+		7B3C40ED2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40EC2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift */; };
+		7B3C40EE2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40EC2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift */; };
+		7B3C40EF2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40EC2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift */; };
+		7B3C40F02018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40EC2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift */; };
 		7B7A34C820027B4700348DF4 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A34BF20027B4600348DF4 /* BMO.framework */; };
 		7B7A34D620027B6700348DF4 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
-		7B7A34D720027B6C00348DF4 /* source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* source.swift */; };
 		7B8BD02320026E8C009BE667 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
 		7B8BD036200274B9009BE667 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
-		7B8BD0372002752A009BE667 /* source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* source.swift */; };
-		7BB52E4B20027A0E007CAD7B /* source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* source.swift */; };
 		7BC696DE2002775C007BC3E9 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* BMO.framework */; };
 		7BC696EC200277AA007BC3E9 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
-		7BC696ED200277AE007BC3E9 /* source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* source.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7B3C405C2018B40200E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B8BD01A20026E8C009BE667;
+			remoteInfo = "AsyncOperationResult-macOS";
+		};
+		7B3C405E2018B40200E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B7A34BF20027B4600348DF4;
+			remoteInfo = "AsyncOperationResult-tvOS";
+		};
+		7B3C40602018B40200E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7BC696D52002775C007BC3E9;
+			remoteInfo = "AsyncOperationResult-iOS";
+		};
+		7B3C40622018B40200E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7BB52E43200279EA007CAD7B;
+			remoteInfo = "AsyncOperationResult-watchOS";
+		};
+		7B3C40642018B40200E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B8BD02220026E8C009BE667;
+			remoteInfo = "AsyncOperationResult-macOSTests";
+		};
+		7B3C40662018B40200E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7BC696DD2002775C007BC3E9;
+			remoteInfo = "AsyncOperationResult-iOSTests";
+		};
+		7B3C40682018B40200E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B7A34C720027B4700348DF4;
+			remoteInfo = "AsyncOperationResult-tvOSTests";
+		};
+		7B3C406A2018B41700E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = "AsyncOperationResult-macOS";
+		};
+		7B3C406C2018B41B00E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
+			remoteInfo = "AsyncOperationResult-tvOS";
+		};
+		7B3C406E2018B41E00E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
+			remoteInfo = "AsyncOperationResult-iOS";
+		};
+		7B3C40702018B42100E4A0A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
+			remoteInfo = "AsyncOperationResult-watchOS";
+		};
 		7B639D912002CDF40079C664 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
@@ -93,9 +246,29 @@
 		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B21BAD02003BBC700DFF758 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7B21BAD12003BF0600DFF758 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		7B3C40432018B29F00E4A0A5 /* BMORequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMORequestManager.swift; sourceTree = "<group>"; };
+		7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AsyncOperationResult.xcodeproj; path = AsyncOperationResult/AsyncOperationResult.xcodeproj; sourceTree = "<group>"; };
+		7B3C40722018B44700E4A0A5 /* BMOBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOBridge.swift; sourceTree = "<group>"; };
+		7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfCores.swift; sourceTree = "<group>"; };
+		7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		7B3C40852018B54500E4A0A5 /* BMODb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMODb.swift; sourceTree = "<group>"; };
+		7B3C408C2018B63600E4A0A5 /* BMORequestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMORequestOperation.swift; sourceTree = "<group>"; };
+		7B3C40912018B63600E4A0A5 /* BMOMixedRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOMixedRepresentation.swift; sourceTree = "<group>"; };
+		7B3C40A42018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMODbRepresentationExporter.swift; sourceTree = "<group>"; };
+		7B3C40A52018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMODbRepresentationImporter.swift; sourceTree = "<group>"; };
+		7B3C40AE2018B80D00E4A0A5 /* BMOBackResultImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOBackResultImporter.swift; sourceTree = "<group>"; };
+		7B3C40B42018BA3400E4A0A5 /* BMOBackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOBackRequest.swift; sourceTree = "<group>"; };
+		7B3C40B92018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOImportBridgeOperationResultsRequest.swift; sourceTree = "<group>"; };
+		7B3C40BE2018BACF00E4A0A5 /* BMOUniquingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOUniquingRequest.swift; sourceTree = "<group>"; };
+		7B3C40C42018BE0E00E4A0A5 /* BMOChangesDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOChangesDescription.swift; sourceTree = "<group>"; };
+		7B3C40C92018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOBridgeBackRequestResult.swift; sourceTree = "<group>"; };
+		7B3C40CE2018BE6C00E4A0A5 /* BMOBackRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOBackRequestResult.swift; sourceTree = "<group>"; };
+		7B3C40D32018BED300E4A0A5 /* BMOImportResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOImportResult.swift; sourceTree = "<group>"; };
+		7B3C40D82018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncOperationResult+BMOResults.swift"; sourceTree = "<group>"; };
+		7B3C40E72018DAB100E4A0A5 /* BMOBackRequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOBackRequestOperation.swift; sourceTree = "<group>"; };
+		7B3C40EC2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMOImportBridgeOperationResultsRequestOperation.swift; sourceTree = "<group>"; };
 		7B7A34BF20027B4600348DF4 /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7A34C720027B4700348DF4 /* BMO-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B8BD01320026AF1009BE667 /* source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = source.swift; sourceTree = "<group>"; };
 		7B8BD01A20026E8C009BE667 /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD01D20026E8C009BE667 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		7B8BD02220026E8C009BE667 /* BMO-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +336,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B3C40502018B3D300E4A0A5 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */,
+			);
+			name = Dependencies;
+			path = Carthage/Checkouts;
+			sourceTree = "<group>";
+		};
+		7B3C40522018B40200E4A0A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C405D2018B40200E4A0A5 /* AsyncOperationResult.framework */,
+				7B3C405F2018B40200E4A0A5 /* AsyncOperationResult.framework */,
+				7B3C40612018B40200E4A0A5 /* AsyncOperationResult.framework */,
+				7B3C40632018B40200E4A0A5 /* AsyncOperationResult.framework */,
+				7B3C40652018B40200E4A0A5 /* AsyncOperationResult-macOSTests.xctest */,
+				7B3C40672018B40200E4A0A5 /* AsyncOperationResult-iOSTests.xctest */,
+				7B3C40692018B40200E4A0A5 /* AsyncOperationResult-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B3C40772018B47500E4A0A5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */,
+				7B3C40912018B63600E4A0A5 /* BMOMixedRepresentation.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7B3C40B32018BA1D00E4A0A5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C40B42018BA3400E4A0A5 /* BMOBackRequest.swift */,
+				7B3C40B92018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift */,
+				7B3C40BE2018BACF00E4A0A5 /* BMOUniquingRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		7B3C40C32018BDDA00E4A0A5 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C40C42018BE0E00E4A0A5 /* BMOChangesDescription.swift */,
+				7B3C40C92018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift */,
+				7B3C40CE2018BE6C00E4A0A5 /* BMOBackRequestResult.swift */,
+				7B3C40D32018BED300E4A0A5 /* BMOImportResult.swift */,
+				7B3C40D82018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		7B3C40E22018DA8900E4A0A5 /* Request Operations */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C40E72018DAB100E4A0A5 /* BMOBackRequestOperation.swift */,
+				7B3C40EC2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift */,
+				7B3C408C2018B63600E4A0A5 /* BMORequestOperation.swift */,
+			);
+			path = "Request Operations";
+			sourceTree = "<group>";
+		};
+		7B3C40F22018E27600E4A0A5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C40852018B54500E4A0A5 /* BMODb.swift */,
+				7B3C40722018B44700E4A0A5 /* BMOBridge.swift */,
+				7B3C40AE2018B80D00E4A0A5 /* BMOBackResultImporter.swift */,
+				7B3C40A52018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift */,
+				7B3C40A42018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7B661F9220026ACC00486182 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +421,7 @@
 				7B21BACD2003B2C600DFF758 /* BMO.podspec */,
 				7B8BD01120026AF1009BE667 /* Sources */,
 				7B8BD031200274B9009BE667 /* Tests */,
+				7B3C40502018B3D300E4A0A5 /* Dependencies */,
 				7B8BD01B20026E8C009BE667 /* Xcode Supporting Files */,
 				7B661F9C20026ACC00486182 /* Products */,
 			);
@@ -202,7 +452,13 @@
 		7B8BD01220026AF1009BE667 /* BMO */ = {
 			isa = PBXGroup;
 			children = (
-				7B8BD01320026AF1009BE667 /* source.swift */,
+				7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */,
+				7B3C40432018B29F00E4A0A5 /* BMORequestManager.swift */,
+				7B3C40F22018E27600E4A0A5 /* Protocols */,
+				7B3C40B32018BA1D00E4A0A5 /* Requests */,
+				7B3C40E22018DA8900E4A0A5 /* Request Operations */,
+				7B3C40C32018BDDA00E4A0A5 /* Results */,
+				7B3C40772018B47500E4A0A5 /* Utilities */,
 			);
 			path = BMO;
 			sourceTree = "<group>";
@@ -279,6 +535,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B3C406D2018B41B00E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-tvOS";
 			productName = "happnLogger-tvOS";
@@ -315,6 +572,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B3C406B2018B41700E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-macOS";
 			productName = "happnLogger-macOS";
@@ -351,6 +609,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B3C40712018B42100E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-watchOS";
 			productName = "happnLogger-watchOS";
@@ -369,6 +628,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B3C406F2018B41E00E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-iOS";
 			productName = "happnLogger-iOS";
@@ -447,6 +707,12 @@
 			mainGroup = 7B661F9220026ACC00486182;
 			productRefGroup = 7B661F9C20026ACC00486182 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7B3C40522018B40200E4A0A5 /* Products */;
+					ProjectRef = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7B639D8D2002CDE70079C664 /* All */,
@@ -460,6 +726,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7B3C405D2018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AsyncOperationResult.framework;
+			remoteRef = 7B3C405C2018B40200E4A0A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B3C405F2018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AsyncOperationResult.framework;
+			remoteRef = 7B3C405E2018B40200E4A0A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B3C40612018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AsyncOperationResult.framework;
+			remoteRef = 7B3C40602018B40200E4A0A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B3C40632018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AsyncOperationResult.framework;
+			remoteRef = 7B3C40622018B40200E4A0A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B3C40652018B40200E4A0A5 /* AsyncOperationResult-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AsyncOperationResult-macOSTests.xctest";
+			remoteRef = 7B3C40642018B40200E4A0A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B3C40672018B40200E4A0A5 /* AsyncOperationResult-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AsyncOperationResult-iOSTests.xctest";
+			remoteRef = 7B3C40662018B40200E4A0A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B3C40692018B40200E4A0A5 /* AsyncOperationResult-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AsyncOperationResult-tvOSTests.xctest";
+			remoteRef = 7B3C40682018B40200E4A0A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7B7A34BD20027B4600348DF4 /* Resources */ = {
@@ -518,7 +836,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B7A34D720027B6C00348DF4 /* source.swift in Sources */,
+				7B3C40D02018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */,
+				7B3C40BB2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */,
+				7B3C40452018B29F00E4A0A5 /* BMORequestManager.swift in Sources */,
+				7B3C40872018B54500E4A0A5 /* BMODb.swift in Sources */,
+				7B3C40822018B50300E4A0A5 /* DependencyInjection.swift in Sources */,
+				7B3C40A72018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */,
+				7B3C40932018B63600E4A0A5 /* BMORequestOperation.swift in Sources */,
+				7B3C407A2018B48100E4A0A5 /* NumberOfCores.swift in Sources */,
+				7B3C40C02018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */,
+				7B3C40DA2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
+				7B3C40E92018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */,
+				7B3C40C62018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */,
+				7B3C40B02018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */,
+				7B3C40742018B44700E4A0A5 /* BMOBridge.swift in Sources */,
+				7B3C40972018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */,
+				7B3C40EE2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */,
+				7B3C40AB2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */,
+				7B3C40CB2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */,
+				7B3C40D52018BED300E4A0A5 /* BMOImportResult.swift in Sources */,
+				7B3C40B62018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +871,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8BD0372002752A009BE667 /* source.swift in Sources */,
+				7B3C40CF2018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */,
+				7B3C40BA2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */,
+				7B3C40442018B29F00E4A0A5 /* BMORequestManager.swift in Sources */,
+				7B3C40862018B54500E4A0A5 /* BMODb.swift in Sources */,
+				7B3C40812018B50300E4A0A5 /* DependencyInjection.swift in Sources */,
+				7B3C40A62018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */,
+				7B3C40922018B63600E4A0A5 /* BMORequestOperation.swift in Sources */,
+				7B3C40792018B48100E4A0A5 /* NumberOfCores.swift in Sources */,
+				7B3C40BF2018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */,
+				7B3C40D92018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
+				7B3C40E82018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */,
+				7B3C40C52018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */,
+				7B3C40AF2018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */,
+				7B3C40732018B44700E4A0A5 /* BMOBridge.swift in Sources */,
+				7B3C40962018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */,
+				7B3C40ED2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */,
+				7B3C40AA2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */,
+				7B3C40CA2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */,
+				7B3C40D42018BED300E4A0A5 /* BMOImportResult.swift in Sources */,
+				7B3C40B52018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +906,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BB52E4B20027A0E007CAD7B /* source.swift in Sources */,
+				7B3C40D22018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */,
+				7B3C40BD2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */,
+				7B3C40472018B29F00E4A0A5 /* BMORequestManager.swift in Sources */,
+				7B3C40892018B54500E4A0A5 /* BMODb.swift in Sources */,
+				7B3C40842018B50300E4A0A5 /* DependencyInjection.swift in Sources */,
+				7B3C40A92018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */,
+				7B3C40952018B63600E4A0A5 /* BMORequestOperation.swift in Sources */,
+				7B3C407C2018B48100E4A0A5 /* NumberOfCores.swift in Sources */,
+				7B3C40C22018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */,
+				7B3C40DC2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
+				7B3C40EB2018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */,
+				7B3C40C82018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */,
+				7B3C40B22018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */,
+				7B3C40762018B44700E4A0A5 /* BMOBridge.swift in Sources */,
+				7B3C40992018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */,
+				7B3C40F02018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */,
+				7B3C40AD2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */,
+				7B3C40CD2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */,
+				7B3C40D72018BED300E4A0A5 /* BMOImportResult.swift in Sources */,
+				7B3C40B82018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +933,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BC696ED200277AE007BC3E9 /* source.swift in Sources */,
+				7B3C40D12018BE6C00E4A0A5 /* BMOBackRequestResult.swift in Sources */,
+				7B3C40BC2018BA9500E4A0A5 /* BMOImportBridgeOperationResultsRequest.swift in Sources */,
+				7B3C40462018B29F00E4A0A5 /* BMORequestManager.swift in Sources */,
+				7B3C40882018B54500E4A0A5 /* BMODb.swift in Sources */,
+				7B3C40832018B50300E4A0A5 /* DependencyInjection.swift in Sources */,
+				7B3C40A82018B7AB00E4A0A5 /* BMODbRepresentationExporter.swift in Sources */,
+				7B3C40942018B63600E4A0A5 /* BMORequestOperation.swift in Sources */,
+				7B3C407B2018B48100E4A0A5 /* NumberOfCores.swift in Sources */,
+				7B3C40C12018BACF00E4A0A5 /* BMOUniquingRequest.swift in Sources */,
+				7B3C40DB2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
+				7B3C40EA2018DAB100E4A0A5 /* BMOBackRequestOperation.swift in Sources */,
+				7B3C40C72018BE0E00E4A0A5 /* BMOChangesDescription.swift in Sources */,
+				7B3C40B12018B80E00E4A0A5 /* BMOBackResultImporter.swift in Sources */,
+				7B3C40752018B44700E4A0A5 /* BMOBridge.swift in Sources */,
+				7B3C40982018B63600E4A0A5 /* BMOMixedRepresentation.swift in Sources */,
+				7B3C40EF2018DAEE00E4A0A5 /* BMOImportBridgeOperationResultsRequestOperation.swift in Sources */,
+				7B3C40AC2018B7AB00E4A0A5 /* BMODbRepresentationImporter.swift in Sources */,
+				7B3C40CC2018BE3300E4A0A5 /* BMOBridgeBackRequestResult.swift in Sources */,
+				7B3C40D62018BED300E4A0A5 /* BMOImportResult.swift in Sources */,
+				7B3C40B72018BA3400E4A0A5 /* BMOBackRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +967,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7B3C406B2018B41700E4A0A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-macOS";
+			targetProxy = 7B3C406A2018B41700E4A0A5 /* PBXContainerItemProxy */;
+		};
+		7B3C406D2018B41B00E4A0A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-tvOS";
+			targetProxy = 7B3C406C2018B41B00E4A0A5 /* PBXContainerItemProxy */;
+		};
+		7B3C406F2018B41E00E4A0A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-iOS";
+			targetProxy = 7B3C406E2018B41E00E4A0A5 /* PBXContainerItemProxy */;
+		};
+		7B3C40712018B42100E4A0A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-watchOS";
+			targetProxy = 7B3C40702018B42100E4A0A5 /* PBXContainerItemProxy */;
+		};
 		7B639D922002CDF40079C664 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7B8BD01920026E8C009BE667 /* BMO-macOS */;
@@ -673,7 +1087,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -725,7 +1139,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = "";

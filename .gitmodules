@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/AsyncOperationResult"]
+	path = Carthage/Checkouts/AsyncOperationResult
+	url = ssh://git@github.com/happn-app/AsyncOperationResult.git
