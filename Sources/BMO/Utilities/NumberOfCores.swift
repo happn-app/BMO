@@ -1,5 +1,5 @@
 /*
- * Utilities.swift
+ * NumberOfCores.swift
  * BMO
  *
  * Created by François Lamboley on 1/24/18.

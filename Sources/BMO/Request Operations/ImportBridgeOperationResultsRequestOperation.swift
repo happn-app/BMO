@@ -1,5 +1,5 @@
 /*
- * BMOImportBridgeOperationResultsRequestOperation.swift
+ * ImportBridgeOperationResultsRequestOperation.swift
  * BMO
  *
  * Created by François Lamboley on 1/24/18.
@@ -12,16 +12,16 @@ import AsyncOperationResult
 
 
 
-public final class BMOImportBridgeOperationResultsRequestOperation<BridgeType : BMOBridge> : Operation {
+public final class ImportBridgeOperationResultsRequestOperation<BridgeType : Bridge> : Operation {
 	
-	public typealias DbRepresentationImporterResultType = (importResult: BMOImportResult<BridgeType.DbType>, bridgeBackRequestResult: BMOBridgeBackRequestResult<BridgeType>)
+	public typealias DbRepresentationImporterResultType = (importResult: ImportResult<BridgeType.DbType>, bridgeBackRequestResult: BridgeBackRequestResult<BridgeType>)
 	
-	public let request: BMOImportBridgeOperationResultsRequest<BridgeType>
-	public let importer: AnyBMOBackResultsImporter<BridgeType>
+	public let request: ImportBridgeOperationResultsRequest<BridgeType>
+	public let importer: AnyBackResultsImporter<BridgeType>
 	
-	public private(set) var result: AsyncOperationResult<BMOBridgeBackRequestResult<BridgeType>> = .error(BMOError.notFinished)
+	public private(set) var result: AsyncOperationResult<BridgeBackRequestResult<BridgeType>> = .error(Error.notFinished)
 	
-	public init(request r: BMOImportBridgeOperationResultsRequest<BridgeType>, importer i: AnyBMOBackResultsImporter<BridgeType>) {
+	public init(request r: ImportBridgeOperationResultsRequest<BridgeType>, importer i: AnyBackResultsImporter<BridgeType>) {
 		request = r
 		importer = i
 	}
@@ -41,7 +41,7 @@ public final class BMOImportBridgeOperationResultsRequestOperation<BridgeType : 
 			try throwIfCancelled()
 			
 			guard dbRepresentationCount > 0 || request.importPreparationBlock != nil || request.importSuccessBlock != nil else {
-				result = .success(BMOBridgeBackRequestResult(metadata: metadata, returnedObjectIDsAndRelationships: [], asyncChanges: BMOChangesDescription()))
+				result = .success(BridgeBackRequestResult(metadata: metadata, returnedObjectIDsAndRelationships: [], asyncChanges: ChangesDescription()))
 				return
 			}
 			
@@ -59,7 +59,7 @@ public final class BMOImportBridgeOperationResultsRequestOperation<BridgeType : 
 				
 				do {
 					guard try self.request.importPreparationBlock?() ?? true else {
-						self.result = .error(BMOError.cancelled)
+						self.result = .error(Error.cancelled)
 						return
 					}
 					
@@ -83,7 +83,7 @@ public final class BMOImportBridgeOperationResultsRequestOperation<BridgeType : 
 	}
 	
 	private func throwIfCancelled() throws {
-		guard !isCancelled else {throw BMOError.cancelled}
+		guard !isCancelled else {throw Error.cancelled}
 	}
 	
 }

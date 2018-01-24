@@ -1,5 +1,5 @@
 /*
- * BMOImportBridgeOperationResultsRequest.swift
+ * ImportBridgeOperationResultsRequest.swift
  * BMO
  *
  * Created by François Lamboley on 1/24/18.
@@ -10,7 +10,7 @@ import Foundation
 
 
 
-public struct BMOImportBridgeOperationResultsRequest<BridgeType : BMOBridge> {
+public struct ImportBridgeOperationResultsRequest<BridgeType : Bridge> {
 	
 	let db: BridgeType.DbType
 	
@@ -26,9 +26,9 @@ public struct BMOImportBridgeOperationResultsRequest<BridgeType : BMOBridge> {
 	let userInfo: BridgeType.UserInfoType
 	
 	let importPreparationBlock: (() throws -> Bool)?
-	let importSuccessBlock: ((_ importResults: BMOImportResult<BridgeType.DbType>) throws -> Void)?
+	let importSuccessBlock: ((_ importResults: ImportResult<BridgeType.DbType>) throws -> Void)?
 	/* Also called if `fastImportSuccessBlock` or `fastImportPreparationBlock`
 	 * fail. NOT called if `fastImportPreparationBlock` returns `false` though. */
-	let importErrorBlock: ((_ error: Error) -> Void)?
+	let importErrorBlock: ((_ error: Swift.Error) -> Void)?
 	
 }

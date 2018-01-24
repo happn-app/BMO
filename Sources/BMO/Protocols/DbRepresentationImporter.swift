@@ -1,5 +1,5 @@
 /*
- * BMODbRepresentationImporter.swift
+ * DbRepresentationImporter.swift
  * BMO
  *
  * Created by François Lamboley on 5/23/17.
@@ -10,9 +10,9 @@ import Foundation
 
 
 
-public protocol BMODbRepresentationImporter {
+public protocol DbRepresentationImporter {
 	
-	associatedtype DbType : BMODb
+	associatedtype DbType : Db
 	associatedtype ResultType
 	
 	func prepareImport() throws
@@ -27,9 +27,9 @@ public protocol BMODbRepresentationImporter {
    ********************************************* */
 
 /* RFC */
-public protocol BMOSingleThreadDbRepresentationImporterResultBuilder {
+public protocol SingleThreadDbRepresentationImporterResultBuilder {
 
-	associatedtype DbType : BMODb
+	associatedtype DbType : Db
 	associatedtype DbRepresentationUserInfoType
 
 	associatedtype ResultType

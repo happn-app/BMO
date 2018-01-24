@@ -1,5 +1,5 @@
 /*
- * BMOChangesDescription.swift
+ * ChangesDescription.swift
  * BMO
  *
  * Created by François Lamboley on 1/24/18.
@@ -10,7 +10,7 @@ import Foundation
 
 
 
-public struct BMOChangesDescription<DbObjectID : Hashable> {
+public struct ChangesDescription<DbObjectID : Hashable> {
 	
 	public var objectIDsInserted = Set<DbObjectID>()
 	public var objectIDsUpdated = Set<DbObjectID>()

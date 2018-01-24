@@ -1,5 +1,5 @@
 /*
- * BMORequestManager.swift
+ * RequestManager.swift
  * BMO
  *
  *
@@ -113,7 +113,7 @@ import AsyncOperationResult
 
 
 
-public final class BMORequestManager {
+public final class RequestManager {
 	
 	public static var defaultBackOperationQueue: OperationQueue {
 		let ret = OperationQueue()
@@ -155,16 +155,16 @@ public final class BMORequestManager {
 	is not mandatory. */
 	public var bridges: [Any]?
 	
-	public var defaultResultsImporterFactory: AnyBMOBackResultsImporterFactory?
+	public var defaultResultsImporterFactory: AnyBackResultsImporterFactory?
 	
-	/** Initializer for the BMORequestManager.
+	/** Initializer for the RequestManager.
 	
 	- Parameter backOperationQueue: The queue on which the back operations (API
 	calls) will be made. If nil, a default queue (well suited for back operations
 	using URL Session) will be used. */
-	public init(bridges bs: [Any]? = nil, resultsImporterFactory: AnyBMOBackResultsImporterFactory? = nil, backOperationQueue bq: OperationQueue? = nil, parseOperationQueue pq: OperationQueue? = nil) {
-		backOperationQueue = bq ?? BMORequestManager.defaultBackOperationQueue
-		parseOperationQueue = pq ?? BMORequestManager.defaultParseOperationQueue
+	public init(bridges bs: [Any]? = nil, resultsImporterFactory: AnyBackResultsImporterFactory? = nil, backOperationQueue bq: OperationQueue? = nil, parseOperationQueue pq: OperationQueue? = nil) {
+		backOperationQueue = bq ?? RequestManager.defaultBackOperationQueue
+		parseOperationQueue = pq ?? RequestManager.defaultParseOperationQueue
 		
 		bridges = bs
 		defaultResultsImporterFactory = resultsImporterFactory
@@ -193,10 +193,10 @@ public final class BMORequestManager {
 	create the results importer that'll be used to import the results of the
 	bridge operation to the database. */
 	@discardableResult
-	public func operation<RequestType, BridgeType>(forBackRequest request: RequestType, withBridge bridge: BridgeType? = nil, resultsImporterFactory: AnyBMOBackResultsImporterFactory? = nil, autoStart: Bool, handler: ((_ response: AsyncOperationResult<BMOBackRequestResult<RequestType, BridgeType>>) -> Void)? = nil) -> BMOBackRequestOperation<RequestType, BridgeType> {
+	public func operation<RequestType, BridgeType>(forBackRequest request: RequestType, withBridge bridge: BridgeType? = nil, resultsImporterFactory: AnyBackResultsImporterFactory? = nil, autoStart: Bool, handler: ((_ response: AsyncOperationResult<BackRequestResult<RequestType, BridgeType>>) -> Void)? = nil) -> BackRequestOperation<RequestType, BridgeType> {
 		let bridge = getBridge(from: bridge)
 		let importerFactory = resultsImporterFactory ?? defaultResultsImporterFactory
-		let operation = BMOBackRequestOperation(request: request, bridge: bridge, importer: importerFactory?.createResultsImporter(), backOperationQueue: backOperationQueue, parseOperationQueue: parseOperationQueue, requestManager: self)
+		let operation = BackRequestOperation(request: request, bridge: bridge, importer: importerFactory?.createResultsImporter(), backOperationQueue: backOperationQueue, parseOperationQueue: parseOperationQueue, requestManager: self)
 		if let handler = handler {
 			operation.completionBlock = {
 				operation.completionBlock = nil /* TBT: Can this be removed? */
@@ -216,7 +216,7 @@ public final class BMORequestManager {
 	   MARK: - Private
 	   *************** */
 	
-	private func getBridge<BridgeType: BMOBridge>(from bridge: BridgeType?) -> BridgeType {
+	private func getBridge<BridgeType: Bridge>(from bridge: BridgeType?) -> BridgeType {
 		if let bridge = bridge {return bridge}
 		
 		for bridge in bridges! {
@@ -233,6 +233,6 @@ public final class BMORequestManager {
 
 extension NSNotification.Name {
 	
-	static let BMORequestManagerCancelAllBackRequestOperations = NSNotification.Name(rawValue: "fr.ftw-and-co.happn.notif.bmo.cancel_back_request_operations")
+	static let BMORequestManagerCancelAllBackRequestOperations = NSNotification.Name(rawValue: "com.happn.BMO.notif_names.cancel_all_back_request_operations")
 	
 }

@@ -1,5 +1,5 @@
 /*
- * BMOBackRequestOperation.swift
+ * BackRequestOperation.swift
  * BMO
  *
  * Created by François Lamboley on 1/24/18.
@@ -12,20 +12,20 @@ import AsyncOperationResult
 
 
 
-public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeType : BMOBridge> : Operation
+public final class BackRequestOperation<RequestType : BackRequest, BridgeType : Bridge> : Operation
 	where BridgeType.DbType == RequestType.DbType, BridgeType.AdditionalDbRequestInfoType == RequestType.AdditionalDbRequestInfoType
 {
 	
 	public let bridge: BridgeType
 	public let request: RequestType
-	public let importer: AnyBMOBackResultsImporter<BridgeType>?
+	public let importer: AnyBackResultsImporter<BridgeType>?
 	
 	public let backOperationQueue: OperationQueue
 	public let parseOperationQueue: OperationQueue
 	
-	public private(set) var result: AsyncOperationResult<BMOBackRequestResult<RequestType, BridgeType>> = .error(BMOError.notFinished)
+	public private(set) var result: AsyncOperationResult<BackRequestResult<RequestType, BridgeType>> = .error(Error.notFinished)
 	
-	public init(request r: RequestType, bridge b: BridgeType, importer i: AnyBMOBackResultsImporter<BridgeType>?, backOperationQueue bq: OperationQueue, parseOperationQueue pq: OperationQueue, requestManager: BMORequestManager?) {
+	public init(request r: RequestType, bridge b: BridgeType, importer i: AnyBackResultsImporter<BridgeType>?, backOperationQueue bq: OperationQueue, parseOperationQueue pq: OperationQueue, requestManager: RequestManager?) {
 		bridge = b
 		request = r
 		importer = i
@@ -62,7 +62,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 	
 	public override func start() {
 		assert(state == .inited)
-		guard !isCancelled else {result = .error(BMOError.cancelled); state = .finished; return}
+		guard !isCancelled else {result = .error(Error.cancelled); state = .finished; return}
 		
 		state = .running
 		if let bridgeOperations = bridgeOperations {
@@ -77,7 +77,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 				}
 				request.db.perform {
 					do {
-						guard !self.isCancelled else {throw BMOError.cancelled}
+						guard !self.isCancelled else {throw Error.cancelled}
 						self.launchOperations(try self.unsafePrepareStart(withSafePartResults: safePrepareResults))
 					} catch {
 						self.result = .error(error)
@@ -108,7 +108,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 		}
 	}
 	
-	private enum BMORequestOperationState {
+	private enum RequestOperationState {
 		
 		case inited
 		case running
@@ -118,11 +118,11 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 	
 	private func launchOperations(_ operations: [BridgeOperation]) {
 		cancellationSemaphore.wait(); defer {cancellationSemaphore.signal()}
-		guard !isCancelled else {result = .error(BMOError.cancelled); state = .finished; return}
+		guard !isCancelled else {result = .error(Error.cancelled); state = .finished; return}
 		
 		let completionOperation = BlockOperation { [weak self] in
 			guard let strongSelf = self else {return}
-			strongSelf.result = .success(BMOBackRequestResult(results: strongSelf.resultsBuilding))
+			strongSelf.result = .success(BackRequestResult(results: strongSelf.resultsBuilding))
 			strongSelf.state = .finished
 		}
 		/* The completion operation will be called only when ALL dependencies are
@@ -152,7 +152,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 			var operations = [BridgeOperation]()
 			
 			for (dbRequestId, dbRequestPart) in try safePart?.requestParts ?? request.backRequestParts() {
-				guard !isCancelled else {throw BMOError.cancelled}
+				guard !isCancelled else {throw Error.cancelled}
 				guard let operation = try bridgeOperation(forDbRequestPart: dbRequestPart, withId: dbRequestId) else {continue}
 				operations.append(operation)
 			}
@@ -170,7 +170,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 		}
 	}
 	
-	private func bridgeOperation(forDbRequestPart part: BMOBackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalDbRequestInfoType>, withId requestPartId: RequestType.RequestPartId) throws -> BridgeOperation? {
+	private func bridgeOperation(forDbRequestPart part: BackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalDbRequestInfoType>, withId requestPartId: RequestType.RequestPartId) throws -> BridgeOperation? {
 		var userInfo = bridge.createUserInfoObject()
 		
 		/* Retrieve the back operation part of the bridge operation. */
@@ -191,7 +191,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 		let parseOperation: Operation?
 		let resultsProcessingOperation: Operation
 		if let db = request.dbForImportingResults(ofRequestPart: part, withId: requestPartId) {
-			let resultsImportRequest = BMOImportBridgeOperationResultsRequest(
+			let resultsImportRequest = ImportBridgeOperationResultsRequest(
 				db: db, bridge: bridge, operation: backOperation, expectedEntity: expectedEntity,
 				updatedObjectId: updatedObject.flatMap{ self.request.db.unsafeObjectID(forObject: $0) },
 				userInfo: userInfo,
@@ -199,7 +199,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 				importSuccessBlock: { try self.request.endResultsImport(ofRequestPart: part, withId: requestPartId, inDb: db, importResults: $0) },
 				importErrorBlock: { self.request.processResultsImportError(ofRequestPart: part, withId: requestPartId, inDb: db, error: $0) }
 			)
-			let importOperation = BMOImportBridgeOperationResultsRequestOperation(request: resultsImportRequest, importer: importer!) /* Maybe think about it a little more, but it seems normal that if there is no importer, we should crash. Another solution would be to gracefully simply not import the results... (check if importer is nil in if above) */
+			let importOperation = ImportBridgeOperationResultsRequestOperation(request: resultsImportRequest, importer: importer!) /* Maybe think about it a little more, but it seems normal that if there is no importer, we should crash. Another solution would be to gracefully simply not import the results... (check if importer is nil in if above) */
 			importOperation.addDependency(backOperation)
 			parseOperation = importOperation
 			resultsProcessingOperation = BlockOperation{ self.resultsBuilding[requestPartId] = importOperation.result }
@@ -209,7 +209,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 			resultsProcessingOperation = BlockOperation {
 				self.resultsBuilding[requestPartId] =
 					self.bridge.error(fromFinishedOperation: backOperation).map{ .error($0) } ??
-					.success(BMOBridgeBackRequestResult(metadata: nil, returnedObjectIDsAndRelationships: [], asyncChanges: BMOChangesDescription()))
+					.success(BridgeBackRequestResult(metadata: nil, returnedObjectIDsAndRelationships: [], asyncChanges: ChangesDescription()))
 			}
 			resultsProcessingOperation.addDependency(backOperation)
 		}
@@ -217,7 +217,7 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 		return (backOperation: backOperation, parseOperation: parseOperation, resultsProcessingOperation: resultsProcessingOperation)
 	}
 	
-	private typealias SafePartStartPreparationResults = (enteredBridge: Bool, requestParts: [RequestType.RequestPartId: BMOBackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalDbRequestInfoType>]?)
+	private typealias SafePartStartPreparationResults = (enteredBridge: Bool, requestParts: [RequestType.RequestPartId: BackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalDbRequestInfoType>]?)
 	
 	private typealias BridgeOperation = (backOperation: Operation, parseOperation: Operation?, resultsProcessingOperation: Operation)
 	
@@ -225,9 +225,9 @@ public final class BMOBackRequestOperation<RequestType : BMOBackRequest, BridgeT
 	
 	private var bridgeOperations: [BridgeOperation]?
 	private let resultsProcessingQueue: OperationQueue /* A serial queue */
-	private var resultsBuilding = Dictionary<RequestType.RequestPartId, AsyncOperationResult<BMOBridgeBackRequestResult<BridgeType>>>()
+	private var resultsBuilding = Dictionary<RequestType.RequestPartId, AsyncOperationResult<BridgeBackRequestResult<BridgeType>>>()
 	
-	private var state = BMORequestOperationState.inited {
+	private var state = RequestOperationState.inited {
 		willSet(newState) {
 			let newStateExecuting = (newState == .running)
 			let oldStateExecuting = (state == .running)

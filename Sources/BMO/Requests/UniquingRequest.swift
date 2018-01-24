@@ -1,5 +1,5 @@
 /*
- * BMOUniquingRequest.swift
+ * UniquingRequest.swift
  * BMO
  *
  * Created by François Lamboley on 1/24/18.
@@ -17,7 +17,7 @@ the already inserted object will be updated. In this case, the object given in
 argument to this enum case will be deleted.
 
 - warning: Not corresponding operation implemented yet */
-public struct BMOUniquingRequest<DbType : BMODb> {
+public struct UniquingRequest<DbType : Db> {
 	
 	let db: DbType
 	

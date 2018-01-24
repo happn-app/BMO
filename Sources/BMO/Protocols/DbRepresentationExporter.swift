@@ -1,5 +1,5 @@
 /*
- * BMODbRepresentationExporter.swift
+ * DbRepresentationExporter.swift
  * BMO
  *
  * Created by François Lamboley on 5/23/17.
@@ -10,9 +10,9 @@ import Foundation
 
 
 
-public protocol BMODbRepresentationExporter {
+public protocol DbRepresentationExporter {
 	
-	associatedtype DbType : BMODb
+	associatedtype DbType : Db
 	associatedtype DbRepresentationType
 	
 	init(unsafeObjects: [DbType.ObjectType])

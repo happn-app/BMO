@@ -1,5 +1,5 @@
 /*
- * BMODb.swift
+ * Db.swift
  * BMO
  *
  * Created by François Lamboley on 2/5/17.
@@ -10,7 +10,7 @@ import Foundation
 
 
 
-public protocol BMODb {
+public protocol Db {
 	
 	associatedtype ObjectType
 	associatedtype ObjectIDType : Hashable
@@ -19,9 +19,9 @@ public protocol BMODb {
 	associatedtype EntityDescriptionType
 	/* Note:
 	 * We could comment the associated type below. It is indeed not used by any
-	 * object using a generic BMODb instance, because the
-	 * BMOFastImportRepresentation struct uses Strings for its properties keys
-	 * instead of PropertyDescriptionType.
+	 * object using a generic Db instance, because the FastImportRepresentation
+	 * struct uses Strings for its properties keys instead of
+	 * PropertyDescriptionType.
 	 *
 	 * We'll probably NOT change that anytime soon because:
 	 *    - There's a CoreData bug related to hash value of NSPropertyDescription

@@ -1,5 +1,5 @@
 /*
- * BMOBridge.swift
+ * Bridge.swift
  * BMO
  *
  * Created by François Lamboley on 1/30/17.
@@ -10,9 +10,9 @@ import Foundation
 
 
 
-public protocol BMOBridge {
+public protocol Bridge {
 	
-	associatedtype DbType : BMODb
+	associatedtype DbType : Db
 	associatedtype AdditionalDbRequestInfoType
 	
 	/** An internal type you can use for basically whatever you want. For
@@ -77,18 +77,18 @@ public protocol BMOBridge {
 	Return nil if the results should not be imported at all. */
 	func remoteObjectRepresentations(fromFinishedOperation operation: BackOperationType, userInfo: UserInfoType) throws -> [RemoteObjectRepresentationType]?
 	
-	func mixedRepresentation(fromRemoteObjectRepresentation remoteRepresentation: RemoteObjectRepresentationType, expectedEntity: DbType.EntityDescriptionType, userInfo: UserInfoType) -> BMOMixedRepresentation<DbType.EntityDescriptionType, RemoteRelationshipAndMetadataRepresentationType, UserInfoType>?
+	func mixedRepresentation(fromRemoteObjectRepresentation remoteRepresentation: RemoteObjectRepresentationType, expectedEntity: DbType.EntityDescriptionType, userInfo: UserInfoType) -> MixedRepresentation<DbType.EntityDescriptionType, RemoteRelationshipAndMetadataRepresentationType, UserInfoType>?
 	
-	func subUserInfo(forRelationshipNamed relationshipName: String, inEntity entity: DbType.EntityDescriptionType, currentMixedRepresentation: BMOMixedRepresentation<DbType.EntityDescriptionType, RemoteRelationshipAndMetadataRepresentationType, UserInfoType>) -> UserInfoType
+	func subUserInfo(forRelationshipNamed relationshipName: String, inEntity entity: DbType.EntityDescriptionType, currentMixedRepresentation: MixedRepresentation<DbType.EntityDescriptionType, RemoteRelationshipAndMetadataRepresentationType, UserInfoType>) -> UserInfoType
 	func metadata(fromRemoteRelationshipAndMetadataRepresentation remoteRelationshipAndMetadataRepresentation: RemoteRelationshipAndMetadataRepresentationType, userInfo: UserInfoType) -> MetadataType?
 	func remoteObjectRepresentations(fromRemoteRelationshipAndMetadataRepresentation remoteRelationshipAndMetadataRepresentation: RemoteRelationshipAndMetadataRepresentationType, userInfo: UserInfoType) -> [RemoteObjectRepresentationType]?
 	
 	/* If not implemented, defaults to .replace */
-	func relationshipMergeType(forRelationshipNamed relationshipName: String, inEntity entity: DbType.EntityDescriptionType, currentMixedRepresentation: BMOMixedRepresentation<DbType.EntityDescriptionType, RemoteRelationshipAndMetadataRepresentationType, UserInfoType>) -> BMODbRepresentationRelationshipMergeType<DbType.EntityDescriptionType, DbType.ObjectType>
+	func relationshipMergeType(forRelationshipNamed relationshipName: String, inEntity entity: DbType.EntityDescriptionType, currentMixedRepresentation: MixedRepresentation<DbType.EntityDescriptionType, RemoteRelationshipAndMetadataRepresentationType, UserInfoType>) -> DbRepresentationRelationshipMergeType<DbType.EntityDescriptionType, DbType.ObjectType>
 	
 }
 
-public enum BMODbRepresentationRelationshipMergeType<DbEntityDescriptionType, DbObjectType> {
+public enum DbRepresentationRelationshipMergeType<DbEntityDescriptionType, DbObjectType> {
 	
 	case replace
 	case append
