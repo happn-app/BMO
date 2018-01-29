@@ -1,17 +1,17 @@
 /*
- * BMOTests.swift
- * BMOTests
+ * BMO_FastImportRepresentationTests.swift
+ * BMO+FastImportRepresentationTests
  *
  * Created by François Lamboley on 1/24/18.
  * Copyright © 2018 happn. All rights reserved.
  */
 
 import XCTest
-@testable import BMO
+@testable import BMO_FastImportRepresentation
 
 
 
-class BMOTests: XCTestCase {
+class BMO_FastImportRepresentationTests: XCTestCase {
 	
 	func testExample() {
 		/* This is an example of a functional test case.

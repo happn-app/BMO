@@ -10,6 +10,8 @@ import Foundation
 
 
 
+/* Note: This protocol is not used directly in BMO yet (but new requests type
+ *       will be created that will need it). */
 public protocol DbRepresentationImporter {
 	
 	associatedtype DbType : Db

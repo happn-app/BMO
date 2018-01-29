@@ -41,4 +41,9 @@ public struct ImportResult<DbType : Db> {
 	hence the optionality. */
 	public let changes: ChangesDescription<DbType.ObjectIDType>?
 	
+	public init(rootObjectsAndRelationships r: [(object: DbType.ObjectType, relationships: [String: ImportResult<DbType>]?)], changes c: ChangesDescription<DbType.ObjectIDType>?) {
+		rootObjectsAndRelationships = r
+		changes = c
+	}
+	
 }

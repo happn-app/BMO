@@ -9,8 +9,12 @@ let package = Package(
 	name: "BMO",
 	products: [
 		.library(
-			name: "BMO",
+			name: "BMOCore",
 			targets: ["BMO"]
+		),
+		.library(
+			name: "BMO+CoreData",
+			targets: ["BMO", "BMO+FastImportRepresentation", "BMO+CoreData"]
 		)
 	],
 	dependencies: [
@@ -24,6 +28,22 @@ let package = Package(
 		.testTarget(
 			name: "BMOTests",
 			dependencies: ["BMO"]
+		),
+		.target(
+			name: "BMO+FastImportRepresentation",
+			dependencies: ["BMO"]
+		),
+		.testTarget(
+			name: "BMO+FastImportRepresentationTests",
+			dependencies: ["BMO+FastImportRepresentation"]
+		),
+		.target(
+			name: "BMO+CoreData",
+			dependencies: ["AsyncOperationResult", "BMO", "BMO+FastImportRepresentation"]
+		),
+		.testTarget(
+			name: "BMO+CoreDataTests",
+			dependencies: ["BMO+CoreData"]
 		)
 	]
 )

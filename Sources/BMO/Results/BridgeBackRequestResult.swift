@@ -37,4 +37,10 @@ public struct BridgeBackRequestResult<BridgeType : Bridge> {
 	hence the optionality. */
 	public let asyncChanges: ChangesDescription<BridgeType.DbType.ObjectIDType>?
 	
+	public init(metadata m: BridgeType.MetadataType?, returnedObjectIDsAndRelationships r: [(objectID: BridgeType.DbType.ObjectIDType, relationships: [String: BridgeBackRequestResult<BridgeType>]?)], asyncChanges c: ChangesDescription<BridgeType.DbType.ObjectIDType>?) {
+		metadata = m
+		returnedObjectIDsAndRelationships = r
+		asyncChanges = c
+	}
+	
 }
