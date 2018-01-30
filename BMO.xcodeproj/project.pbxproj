@@ -238,6 +238,10 @@
 		7B8BD036200274B9009BE667 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
 		7BC696DE2002775C007BC3E9 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* BMO.framework */; };
 		7BC696EC200277AA007BC3E9 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
+		7BEB91EE202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
+		7BEB91EF202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
+		7BEB91F0202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
+		7BEB91F1202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -909,6 +913,7 @@
 		7BC696D52002775C007BC3E9 /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC696DD2002775C007BC3E9 /* BMO-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BDB4E582019234900D1D5F2 /* Db+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Db+CoreData.swift"; sourceTree = "<group>"; };
+		7BEB91ED202131E30068239F /* Bridge+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bridge+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1292,8 +1297,6 @@
 			children = (
 				7B013608201F7D2300CE0893 /* ImportError.swift */,
 				7B013600201F769000CE0893 /* CoreDataUtils.swift */,
-				7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */,
-				7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1396,6 +1399,7 @@
 			isa = PBXGroup;
 			children = (
 				7B51617A201F949200B94FB3 /* Protocol Implementations */,
+				7BEB91F6202131F40068239F /* Protocol Extensions */,
 				7B516179201F93C500B94FB3 /* Utilities */,
 			);
 			path = "BMO+CoreData";
@@ -1485,6 +1489,16 @@
 				7B8BD034200274B9009BE667 /* BMOTests.swift */,
 			);
 			path = BMOTests;
+			sourceTree = "<group>";
+		};
+		7BEB91F6202131F40068239F /* Protocol Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BEB91ED202131E30068239F /* Bridge+CoreData.swift */,
+				7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */,
+				7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */,
+			);
+			path = "Protocol Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2992,6 +3006,7 @@
 				7B51625F201FBF8200B94FB3 /* Db+CoreData.swift in Sources */,
 				7B516268201FBF8200B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */,
 				7B516260201FBF8200B94FB3 /* CoreDataFetchRequest.swift in Sources */,
+				7BEB91EF202131E30068239F /* Bridge+CoreData.swift in Sources */,
 				7B516265201FBF8200B94FB3 /* CoreDataUtils.swift in Sources */,
 				7B516267201FBF8200B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
 				7B516261201FBF8200B94FB3 /* CoreDataSaveRequest.swift in Sources */,
@@ -3016,6 +3031,7 @@
 				7B51626A201FBF8300B94FB3 /* Db+CoreData.swift in Sources */,
 				7B516273201FBF8300B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */,
 				7B51626B201FBF8300B94FB3 /* CoreDataFetchRequest.swift in Sources */,
+				7BEB91F0202131E30068239F /* Bridge+CoreData.swift in Sources */,
 				7B516270201FBF8300B94FB3 /* CoreDataUtils.swift in Sources */,
 				7B516272201FBF8300B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
 				7B51626C201FBF8300B94FB3 /* CoreDataSaveRequest.swift in Sources */,
@@ -3040,6 +3056,7 @@
 				7B516275201FBF8300B94FB3 /* Db+CoreData.swift in Sources */,
 				7B51627E201FBF8300B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */,
 				7B516276201FBF8300B94FB3 /* CoreDataFetchRequest.swift in Sources */,
+				7BEB91F1202131E30068239F /* Bridge+CoreData.swift in Sources */,
 				7B51627B201FBF8300B94FB3 /* CoreDataUtils.swift in Sources */,
 				7B51627D201FBF8300B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
 				7B516277201FBF8300B94FB3 /* CoreDataSaveRequest.swift in Sources */,
@@ -3108,6 +3125,7 @@
 				7B83326220192758005184FE /* CoreDataSaveRequest.swift in Sources */,
 				7B83326020192758005184FE /* Db+CoreData.swift in Sources */,
 				7B013601201F769000CE0893 /* CoreDataUtils.swift in Sources */,
+				7BEB91EE202131E30068239F /* Bridge+CoreData.swift in Sources */,
 				7B83326320192758005184FE /* FastImportRepresentationCoreDataImporter.swift in Sources */,
 				7B516178201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */,
 				7B516170201F81C400B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
