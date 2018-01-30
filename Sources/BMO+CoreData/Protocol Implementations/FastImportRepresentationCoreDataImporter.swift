@@ -71,11 +71,11 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 	private func unsafeImport(representations: [DbRepresentationType], in db: NSManagedObjectContext, updatingObject updatedObject: DbType.ObjectType?, isRootImport: Bool, resultBuilder: ResultBuilderType, prefetchedObjectsByUniquingIds uniqIdToObject: inout [AnyHashable: NSManagedObject], insertedObjects: inout [NSManagedObject]) throws -> [DbType.ObjectType] {
 		if let updatedObject = updatedObject, updatedObject.isUsable {
 			guard representations.count <= 1 else {
-				throw Error.tooManyRepresentationsToUpdateObject
+				throw ImportError.tooManyRepresentationsToUpdateObject
 			}
 			if let r = representations.first {
 				guard updatedObject.entity.isKindOf(entity: r.entity) else {
-					throw Error.updatedObjectAndRepresentedObjectEntitiesDoNotMatch
+					throw ImportError.updatedObjectAndRepresentedObjectEntitiesDoNotMatch
 				}
 				if let uid = r.uniquingId {
 					if let currentObjectForUID = uniqIdToObject[uid] {

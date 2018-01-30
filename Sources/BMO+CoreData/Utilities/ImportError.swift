@@ -1,5 +1,5 @@
 /*
- * Error.swift
+ * ImportError.swift
  * BMO+CoreData
  *
  * Created by François Lamboley on 1/24/18.
@@ -10,7 +10,7 @@ import Foundation
 
 
 
-public enum Error : Swift.Error {
+public enum ImportError : Swift.Error {
 	
 	case tooManyRepresentationsToUpdateObject
 	case updatedObjectAndRepresentedObjectEntitiesDoNotMatch

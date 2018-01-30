@@ -16,7 +16,7 @@ import AsyncOperationResult
 extension AsyncOperationResult<BridgeType : Bridge> where T == BackRequestResult<CoreDataFetchRequest, BridgeType> {
 	var simpleBackRequestResult: AsyncOperationResult<BridgeBackRequestResult<BridgeType>> {...}
 	var simpleBackRequestSuccessValue: BridgeBackRequestResult<HappnBridge>? {...}
-	var simpleBackRequestError: Error? {...}
+	var simpleBackRequestError: Swift.Error? {...}
 }*/
 
 public extension AsyncOperationResult {

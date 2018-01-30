@@ -23,7 +23,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 	public let backOperationQueue: OperationQueue
 	public let parseOperationQueue: OperationQueue
 	
-	public private(set) var result: AsyncOperationResult<BackRequestResult<RequestType, BridgeType>> = .error(Error.notFinished)
+	public private(set) var result: AsyncOperationResult<BackRequestResult<RequestType, BridgeType>> = .error(OperationError.notFinished)
 	
 	public init(request r: RequestType, bridge b: BridgeType, importer i: AnyBackResultsImporter<BridgeType>?, backOperationQueue bq: OperationQueue, parseOperationQueue pq: OperationQueue, requestManager: RequestManager?) {
 		bridge = b
@@ -62,7 +62,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 	
 	public override func start() {
 		assert(state == .inited)
-		guard !isCancelled else {result = .error(Error.cancelled); state = .finished; return}
+		guard !isCancelled else {result = .error(OperationError.cancelled); state = .finished; return}
 		
 		state = .running
 		if let bridgeOperations = bridgeOperations {
@@ -77,7 +77,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 				}
 				request.db.perform {
 					do {
-						guard !self.isCancelled else {throw Error.cancelled}
+						guard !self.isCancelled else {throw OperationError.cancelled}
 						self.launchOperations(try self.unsafePrepareStart(withSafePartResults: safePrepareResults))
 					} catch {
 						self.result = .error(error)
@@ -118,7 +118,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 	
 	private func launchOperations(_ operations: [BridgeOperation]) {
 		cancellationSemaphore.wait(); defer {cancellationSemaphore.signal()}
-		guard !isCancelled else {result = .error(Error.cancelled); state = .finished; return}
+		guard !isCancelled else {result = .error(OperationError.cancelled); state = .finished; return}
 		
 		let completionOperation = BlockOperation { [weak self] in
 			guard let strongSelf = self else {return}
@@ -152,7 +152,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 			var operations = [BridgeOperation]()
 			
 			for (dbRequestId, dbRequestPart) in try safePart?.requestParts ?? request.backRequestParts() {
-				guard !isCancelled else {throw Error.cancelled}
+				guard !isCancelled else {throw OperationError.cancelled}
 				guard let operation = try bridgeOperation(forDbRequestPart: dbRequestPart, withId: dbRequestId) else {continue}
 				operations.append(operation)
 			}

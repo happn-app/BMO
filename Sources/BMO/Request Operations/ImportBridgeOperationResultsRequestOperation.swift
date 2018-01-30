@@ -19,7 +19,7 @@ public final class ImportBridgeOperationResultsRequestOperation<BridgeType : Bri
 	public let request: ImportBridgeOperationResultsRequest<BridgeType>
 	public let importer: AnyBackResultsImporter<BridgeType>
 	
-	public private(set) var result: AsyncOperationResult<BridgeBackRequestResult<BridgeType>> = .error(Error.notFinished)
+	public private(set) var result: AsyncOperationResult<BridgeBackRequestResult<BridgeType>> = .error(OperationError.notFinished)
 	
 	public init(request r: ImportBridgeOperationResultsRequest<BridgeType>, importer i: AnyBackResultsImporter<BridgeType>) {
 		request = r
@@ -59,7 +59,7 @@ public final class ImportBridgeOperationResultsRequestOperation<BridgeType : Bri
 				
 				do {
 					guard try self.request.importPreparationBlock?() ?? true else {
-						self.result = .error(Error.cancelled)
+						self.result = .error(OperationError.cancelled)
 						return
 					}
 					
@@ -83,7 +83,7 @@ public final class ImportBridgeOperationResultsRequestOperation<BridgeType : Bri
 	}
 	
 	private func throwIfCancelled() throws {
-		guard !isCancelled else {throw Error.cancelled}
+		guard !isCancelled else {throw OperationError.cancelled}
 	}
 	
 }
