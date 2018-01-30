@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B51620C201FBDD200B94FB3"
-               BuildableName = "BMO_RESTUtils.framework"
-               BlueprintName = "BMO+RESTUtils-watchOS"
+               BlueprintIdentifier = "7B0AB0B62021147200AC083A"
+               BuildableName = "BMO_RESTCoreData.framework"
+               BlueprintName = "BMO+RESTCoreData-macOS"
                ReferencedContainer = "container:BMO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,7 +29,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7B0AB11A2021148600AC083A"
+               BuildableName = "BMO+RESTCoreData-macOSTests.xctest"
+               BlueprintName = "BMO+RESTCoreData-macOSTests"
+               ReferencedContainer = "container:BMO.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7B0AB0B62021147200AC083A"
+            BuildableName = "BMO_RESTCoreData.framework"
+            BlueprintName = "BMO+RESTCoreData-macOS"
+            ReferencedContainer = "container:BMO.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -47,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B51620C201FBDD200B94FB3"
-            BuildableName = "BMO_RESTUtils.framework"
-            BlueprintName = "BMO+RESTUtils-watchOS"
+            BlueprintIdentifier = "7B0AB0B62021147200AC083A"
+            BuildableName = "BMO_RESTCoreData.framework"
+            BlueprintName = "BMO+RESTCoreData-macOS"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +84,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B51620C201FBDD200B94FB3"
-            BuildableName = "BMO_RESTUtils.framework"
-            BlueprintName = "BMO+RESTUtils-watchOS"
+            BlueprintIdentifier = "7B0AB0B62021147200AC083A"
+            BuildableName = "BMO_RESTCoreData.framework"
+            BlueprintName = "BMO+RESTCoreData-macOS"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

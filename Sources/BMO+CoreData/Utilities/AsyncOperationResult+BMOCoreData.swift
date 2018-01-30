@@ -16,15 +16,15 @@ import BMO
 
 extension AsyncOperationResult {
 	
-	public func simpleBackRequestResult<BridgeType>() -> AsyncOperationResult<BridgeBackRequestResult<BridgeType>> where T == BackRequestResult<CoreDataFetchRequest, BridgeType> {
+	public func simpleBackRequestResult<BridgeType>() -> AsyncOperationResult<BridgeBackRequestResult<BridgeType>> where T == BackRequestResult<CoreDataFetchRequest<BridgeType.AdditionalRequestInfoType>, BridgeType> {
 		return simpleBackRequestResult(forRequestPartId: NSNull())
 	}
 	
-	public func simpleBackRequestSuccessValue<BridgeType>() -> BridgeBackRequestResult<BridgeType>? where T == BackRequestResult<CoreDataFetchRequest, BridgeType> {
+	public func simpleBackRequestSuccessValue<BridgeType>() -> BridgeBackRequestResult<BridgeType>? where T == BackRequestResult<CoreDataFetchRequest<BridgeType.AdditionalRequestInfoType>, BridgeType> {
 		return simpleBackRequestResult().successValue
 	}
 	
-	public func simpleBackRequestError<BridgeType>() -> Swift.Error? where T == BackRequestResult<CoreDataFetchRequest, BridgeType> {
+	public func simpleBackRequestError<BridgeType>() -> Swift.Error? where T == BackRequestResult<CoreDataFetchRequest<BridgeType.AdditionalRequestInfoType>, BridgeType> {
 		return simpleBackRequestResult().error
 	}
 	

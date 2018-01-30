@@ -13,7 +13,7 @@ import AsyncOperationResult
 
 
 public final class BackRequestOperation<RequestType : BackRequest, BridgeType : Bridge> : Operation
-	where BridgeType.DbType == RequestType.DbType, BridgeType.AdditionalDbRequestInfoType == RequestType.AdditionalDbRequestInfoType
+	where BridgeType.DbType == RequestType.DbType, BridgeType.AdditionalRequestInfoType == RequestType.AdditionalRequestInfoType
 {
 	
 	public let bridge: BridgeType
@@ -170,7 +170,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 		}
 	}
 	
-	private func bridgeOperation(forDbRequestPart part: BackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalDbRequestInfoType>, withId requestPartId: RequestType.RequestPartId) throws -> BridgeOperation? {
+	private func bridgeOperation(forDbRequestPart part: BackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalRequestInfoType>, withId requestPartId: RequestType.RequestPartId) throws -> BridgeOperation? {
 		var userInfo = bridge.createUserInfoObject()
 		
 		/* Retrieve the back operation part of the bridge operation. */
@@ -217,7 +217,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 		return (backOperation: backOperation, parseOperation: parseOperation, resultsProcessingOperation: resultsProcessingOperation)
 	}
 	
-	private typealias SafePartStartPreparationResults = (enteredBridge: Bool, requestParts: [RequestType.RequestPartId: BackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalDbRequestInfoType>]?)
+	private typealias SafePartStartPreparationResults = (enteredBridge: Bool, requestParts: [RequestType.RequestPartId: BackRequestPart<RequestType.DbType.ObjectType, RequestType.DbType.FetchRequestType, RequestType.AdditionalRequestInfoType>]?)
 	
 	private typealias BridgeOperation = (backOperation: Operation, parseOperation: Operation?, resultsProcessingOperation: Operation)
 	

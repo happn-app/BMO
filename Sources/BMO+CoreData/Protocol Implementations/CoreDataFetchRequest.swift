@@ -10,11 +10,10 @@ import CoreData
 import Foundation
 
 import BMO
-import BMO_RESTUtils
 
 
 
-public struct CoreDataFetchRequest : BackRequest {
+public struct CoreDataFetchRequest<AdditionalInfoType> : BackRequest {
 	
 	public typealias DbType = NSManagedObjectContext
 	public typealias RequestPartId = NSNull
@@ -29,33 +28,17 @@ public struct CoreDataFetchRequest : BackRequest {
 	public let fetchRequest: NSFetchRequest<NSFetchRequestResult>
 	
 	public let fetchType: FetchType
-	public let additionalRESTInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?
+	public let additionalInfo: AdditionalInfoType?
 	
 	public let leaveBridgeHandler: (() -> Bool)? /* Called just after the bridge operations have been computed, on the context. */
 	public let preImportHandler: (() -> Bool)? /* Return false if you want to stop the request before the import of the results. */
 	public let preCompletionHandler: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)?
 	
-	public init(context: NSManagedObjectContext, entity: NSEntityDescription, resultType: NSFetchRequestResultType = .managedObjectResultType, remoteId: String, remoteIdPropertyName: String = "remoteId", flatifiedFields: String?, alwaysFetchProperties: Bool, leaveBridgeHandler lb: (() -> Bool)? = nil, preImportHandler pi: (() -> Bool)? = nil, preCompletionHandler pc: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)? = nil) {
-		let fRequest = NSFetchRequest<NSFetchRequestResult>()
-		fRequest.entity = entity
-		fRequest.resultType = resultType
-		fRequest.predicate = NSPredicate(format: "%K == %@", remoteIdPropertyName, remoteId)
-		
-		db = context
-		fetchRequest = fRequest
-		fetchType = (alwaysFetchProperties || !(flatifiedFields?.isEmpty ?? true)) ? .always : .onlyIfNoLocalResults
-		additionalRESTInfo = AdditionalRESTRequestInfo<NSPropertyDescription>(flatifiedFields: flatifiedFields, inEntity: entity)
-		
-		leaveBridgeHandler = lb
-		preImportHandler = pi
-		preCompletionHandler = pc
-	}
-	
-	public init(context: NSManagedObjectContext, fetchRequest fr: NSFetchRequest<NSFetchRequestResult>, fetchType ft: FetchType, additionalRESTInfo i: AdditionalRESTRequestInfo<NSPropertyDescription>?, leaveBridgeHandler lb: (() -> Bool)? = nil, preImportHandler pi: (() -> Bool)? = nil, preCompletionHandler pc: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)? = nil) {
+	public init(context: NSManagedObjectContext, fetchRequest fr: NSFetchRequest<NSFetchRequestResult>, fetchType ft: FetchType, additionalInfo i: AdditionalInfoType?, leaveBridgeHandler lb: (() -> Bool)? = nil, preImportHandler pi: (() -> Bool)? = nil, preCompletionHandler pc: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)? = nil) {
 		db = context
 		fetchRequest = fr
 		fetchType = ft
-		additionalRESTInfo = i
+		additionalInfo = i
 		
 		leaveBridgeHandler = lb
 		preImportHandler = pi
@@ -87,8 +70,8 @@ public struct CoreDataFetchRequest : BackRequest {
 		}
 	}
 	
-	public func backRequestParts() throws -> [NSNull: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>] {
-		return [NSNull(): .fetch(fetchRequest, additionalRESTInfo)]
+	public func backRequestParts() throws -> [NSNull: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>] {
+		return [NSNull(): .fetch(fetchRequest, additionalInfo)]
 	}
 	
 	public func leaveBridge() throws -> Bool {
@@ -98,20 +81,20 @@ public struct CoreDataFetchRequest : BackRequest {
 	public func processBridgeError(_: Swift.Error) {
 	}
 	
-	public func dbForImportingResults(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: NSNull) -> NSManagedObjectContext? {
+	public func dbForImportingResults(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: NSNull) -> NSManagedObjectContext? {
 		return db
 	}
 	
-	public func prepareResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: NSNull, inDb db: NSManagedObjectContext) throws -> Bool {
+	public func prepareResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: NSNull, inDb db: NSManagedObjectContext) throws -> Bool {
 		return preImportHandler?() ?? true
 	}
 	
-	public func endResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: NSNull, inDb db: NSManagedObjectContext, importResults: ImportResult<NSManagedObjectContext>) throws {
+	public func endResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: NSNull, inDb db: NSManagedObjectContext, importResults: ImportResult<NSManagedObjectContext>) throws {
 		try preCompletionHandler?(importResults)
 		try db.save()
 	}
 	
-	public func processResultsImportError(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: NSNull, inDb db: NSManagedObjectContext, error: Swift.Error) {
+	public func processResultsImportError(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: NSNull, inDb db: NSManagedObjectContext, error: Swift.Error) {
 		db.rollback()
 	}
 	

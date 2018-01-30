@@ -1,149 +1,23 @@
 /*
- * ParameterizedStringSet.swift
- * BMO+RESTUtils
+ * StandardRESTParameterizedStringSetParser.swift
+ * RESTUtils
  *
- * Created by François Lamboley on 2/24/17.
- * Copyright © 2017 happn. All rights reserved.
+ * Created by François Lamboley on 1/30/18.
+ * Copyright © 2018 happn. All rights reserved.
  */
 
 import Foundation
 
 
 
-/** Useful mainly for the "fields" query param of a REST request. */
-public struct ParameterizedStringSet {
-	
-	public var valuesAndParams: [String: [String: ParameterizedStringSet]]
-	
-	init() {
-		valuesAndParams = [:]
-	}
-	
-	init(simpleValue: String) {
-		valuesAndParams = [simpleValue: [:]]
-	}
-	
-	init<S : Sequence>(simpleSequence: S) where S.Iterator.Element == String {
-		valuesAndParams = [:]
-		for v in simpleSequence {valuesAndParams[v] = [:]}
-	}
-	
-	init(valuesAndParams vp: [String: [String: ParameterizedStringSet]]) {
-		valuesAndParams = vp
-	}
-	
-	var isEmpty: Bool {
-		return valuesAndParams.count == 0
-	}
-	
-	var isSimple: Bool {
-		return valuesAndParams.count == 1 && valuesAndParams.values.first!.count == 0
-	}
-	
-	var values: Set<String> {
-		return Set(valuesAndParams.keys)
-	}
-	
-	func hasValue(_ value: String) -> Bool {
-		if let _ = valuesAndParams[value] {return true}
-		return false
-	}
-	
-	/* Returns nil if value is not in set */
-	func params(forValue value: String) -> [String: ParameterizedStringSet]? {
-		return valuesAndParams[value]
-	}
-	
-	mutating func insert(_ value: String) {
-		guard valuesAndParams[value] == nil else {return}
-		valuesAndParams[value] = [:]
-	}
-	
-	mutating func insert<S : Sequence>(_ values: S) where S.Iterator.Element == String {
-		for v in values {insert(v)}
-	}
-	
-	/** Inserts the given value with the given params if not in set. If the value
-	was already in the set, updates the params for the given value. */
-	mutating func add(simpleParams: [String: String], forValue value: String) {
-		var currentParams = valuesAndParams[value] ?? [:]
-		for (k, v) in simpleParams {currentParams[k] = ParameterizedStringSet(simpleValue: v)}
-		valuesAndParams[value] = currentParams
-	}
-	
-	mutating func merge(_ otherSet: ParameterizedStringSet) {
-		for (value, params) in otherSet.valuesAndParams {
-			merge(params: params, forValue: value)
-		}
-	}
-	
-	mutating func merge(params: [String: ParameterizedStringSet], forValue value: String) {
-		var updatedParams = valuesAndParams[value] ?? [:]
-		for (k, v) in params {
-			var newV = updatedParams[k] ?? ParameterizedStringSet()
-			newV.merge(v)
-			
-			updatedParams[k] = newV
-		}
-		valuesAndParams[value] = updatedParams
-	}
-	
-	mutating func set(params: [String: ParameterizedStringSet], forValue value: String) {
-		valuesAndParams[value] = params
-	}
-	
-	func inserting<S : Sequence>(_ values: S) -> ParameterizedStringSet where S.Iterator.Element == String {
-		var ret = self
-		for v in values {ret.insert(v)}
-		return ret
-	}
-	
-	/* TODO: Force certain values to have only one parameter in their parameters */
-	func merged(_ otherSet: ParameterizedStringSet) -> ParameterizedStringSet {
-		var ret = self
-		ret.merge(otherSet)
-		return ret
-	}
-	
-	/** If merge fails (unknown type given to merge), returns self unmodified. */
-	func merged(_ newValue: Any?, pssParser: ParameterizedStringSetParser) -> ParameterizedStringSet {
-		guard let newPSS = ParameterizedStringSet.fromAny(newValue, withPSSParser: pssParser) else {return self}
-		return merged(newPSS)
-	}
-	
-	static func fromAny(_ newValue: Any?, withPSSParser pssParser: ParameterizedStringSetParser) -> ParameterizedStringSet? {
-		guard let newValue = newValue else {return ParameterizedStringSet()}
-		
-		switch newValue {
-		case let pss as ParameterizedStringSet: return pss
-		case let set as Set<String>:            return ParameterizedStringSet(simpleSequence: set)
-		case let array as [String]:             return ParameterizedStringSet(simpleSequence: array)
-		case let string as String:              return ((try? pssParser.parse(flatifiedParam: string)) ?? ParameterizedStringSet(simpleValue: string))
-		case let int as Int:                    return ParameterizedStringSet(simpleValue: String(int))
-		default: return nil
-		}
-	}
-	
-}
-
-
-public protocol ParameterizedStringSetParser {
-	
-	func parse(flatifiedParam: String) throws -> ParameterizedStringSet
-	func flatify(param: ParameterizedStringSet) -> String
-	
-}
-
-
 /** Currently always parses with support for backslashing, zero length values
 and no braces shortcut when parsing flatified string.
 
-The reason for this is we converted the parser from PHP and I'm lazy enough
-not to change it to support non-backslashing, non-zero length, and especially
-braces. */
+The reason for this is I converted the parser from PHP and I'm lazy enough not
+to change it to support non-backslashing, nonzero length, and especially braces. */
 public struct StandardRESTParameterizedStringSetParser : ParameterizedStringSetParser {
 	
-	enum Error : Swift.Error {
+	public enum Error : Swift.Error {
 		
 		case unexpectedCharAfterParamValueEnd(Character?)
 		case earlyEndValue
@@ -154,9 +28,9 @@ public struct StandardRESTParameterizedStringSetParser : ParameterizedStringSetP
 		
 	}
 	
-	let supportsBackslashing: Bool /* true for happn, but set to false as the back does not want to receive the backslashes... */
-	let supportsZeroLengthValues: Bool /* true for happn, but weird, confusing and unused, so set to false... */
-	let subValueNameForBracesShortcut: String? /* "fields" for Facebook */
+	public let supportsBackslashing: Bool /* true for happn, but set to false as the back does not want to receive the backslashes... */
+	public let supportsZeroLengthValues: Bool /* true for happn, but weird, confusing and unused, so set to false... */
+	public let subValueNameForBracesShortcut: String? /* "fields" for Facebook */
 	
 	public init(supportsBackslashing b: Bool = false, supportsZeroLengthValues z: Bool = false, subValueNameForBracesShortcut s: String? = nil) {
 		supportsBackslashing = b
@@ -182,8 +56,8 @@ public struct StandardRESTParameterizedStringSetParser : ParameterizedStringSetP
 		var ret = String()
 		for (val, subparam) in param.valuesAndParams {
 			guard !val.isEmpty || supportsZeroLengthValues else {continue}
-			/* We don't check if value is safe in case there are no support for
-			 * backslashing (no comma, dot, parenthesis, etc.) */
+			/* Note: We don't check if value is safe in case there are no support
+			 * for backslashing (no comma, dot, parenthesis, etc.) */
 			ret += (first ? "" : ",") + backslashedValue(val)
 			
 			for (subparamVal, subsubparam) in subparam {
@@ -199,8 +73,8 @@ public struct StandardRESTParameterizedStringSetParser : ParameterizedStringSetP
 		return ret
 	}
 	
-	/* I'd like the Engine definition to make the function return an Engine...
-	 * but a typealias cannot circularly reference itself :( */
+	/* I'd like the Engine definition to make the function return an Engine, but
+	 * a typealias cannot circularly reference itself! :( */
 	private typealias Engine = (_ char: Character?, _ engineState: inout EngineState) throws -> Any
 	
 	private struct EngineState {

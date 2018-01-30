@@ -1,6 +1,6 @@
 /*
  * RESTPath.swift
- * BMO+RESTUtils
+ * RESTUtils
  *
  * Created by François Lamboley on 1/25/18.
  * Copyright © 2018 happn. All rights reserved.

@@ -22,7 +22,7 @@ public enum BackRequestPart<DbObjectType, DbFetchRequestType, DbAdditionalInfoTy
 public protocol BackRequest {
 	
 	associatedtype DbType : Db
-	associatedtype AdditionalDbRequestInfoType
+	associatedtype AdditionalRequestInfoType
 	
 	associatedtype RequestPartId: Hashable
 	
@@ -53,14 +53,14 @@ public protocol BackRequest {
 	Will be called on the context if needsRetrievingBackRequestPartsOnContext is
 	`true`. Setting this property to `false` will not guarantee you will not be
 	called on the context though. */
-	func backRequestParts() throws -> [RequestPartId: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalDbRequestInfoType>]
+	func backRequestParts() throws -> [RequestPartId: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalRequestInfoType>]
 	
 	/* TODO: The request should be able to give a different importer per request
 	 *       part id (for instance to specify an importer with a more thorough
 	 *       uniquing algorithm when dealing with db who has a parent). This
 	 *       would offload the responsability of getting an importer from the
 	 *       client and move it to the request.
-	func backResultsImporter<BridgeType : Bridge>(for requestPartId: RequestPartId) -> AnyBackResultsImporter<BridgeType>? where BridgeType.DbType == DbType, BridgeType.AdditionalDbRequestInfoType == AdditionalDbRequestInfoType */
+	func backResultsImporter<BridgeType : Bridge>(for requestPartId: RequestPartId) -> AnyBackResultsImporter<BridgeType>? where BridgeType.DbType == DbType, BridgeType.AdditionalRequestInfoType == AdditionalRequestInfoType */
 	
 	/** Perform here the actions required after the operations for the given
 	request have been computed.
@@ -84,19 +84,19 @@ public protocol BackRequest {
 	/* ********* */
 	
 	/** Return `nil` if the results of the request part should not be processed. */
-	func dbForImportingResults(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalDbRequestInfoType>, withId id: RequestPartId) -> DbType?
+	func dbForImportingResults(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalRequestInfoType>, withId id: RequestPartId) -> DbType?
 	
 	/** Perform here the actions to prepare for the import of the data for the
 	given request part. Return false if the results should not be imported.
 	
 	Will always be called on the context. */
-	func prepareResultsImport(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalDbRequestInfoType>, withId id: RequestPartId, inDb db: DbType) throws -> Bool
+	func prepareResultsImport(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalRequestInfoType>, withId id: RequestPartId, inDb db: DbType) throws -> Bool
 	
 	/** Perform here the actions to finish the import of the data for the given
 	request part.
 	
 	Will always be called on the context. */
-	func endResultsImport(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalDbRequestInfoType>, withId id: RequestPartId, inDb db: DbType, importResults: ImportResult<DbType>) throws
+	func endResultsImport(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalRequestInfoType>, withId id: RequestPartId, inDb db: DbType, importResults: ImportResult<DbType>) throws
 	
 	/** Perform here the actions to finish the import of the data for the given
 	request part, after an error occurred. Only called for fast import errors, or
@@ -105,6 +105,6 @@ public protocol BackRequest {
 	**Not** called if `prepareResultsImport...` returns `false` though.
 	
 	Will always be called on the context. */
-	func processResultsImportError(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalDbRequestInfoType>, withId id: RequestPartId, inDb db: DbType, error: Swift.Error)
+	func processResultsImportError(ofRequestPart requestPart: BackRequestPart<DbType.ObjectType, DbType.FetchRequestType, AdditionalRequestInfoType>, withId id: RequestPartId, inDb db: DbType, error: Swift.Error)
 	
 }

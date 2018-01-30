@@ -1,6 +1,6 @@
 /*
- * AdditionalRequestInfo+CoreData.swift
- * BMO+CoreData
+ * AdditionalRequestInfo+RESTCoreData.swift
+ * BMO+RESTCoreData
  *
  * Created by François Lamboley on 1/29/18.
  * Copyright © 2018 happn. All rights reserved.
@@ -9,7 +9,7 @@
 import CoreData
 import Foundation
 
-import BMO_RESTUtils
+import RESTUtils
 
 
 

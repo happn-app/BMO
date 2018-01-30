@@ -17,18 +17,22 @@
 				7B639D942002CDF40079C664 /* PBXTargetDependency */,
 				7B639D962002CDF40079C664 /* PBXTargetDependency */,
 				7B639D982002CDF40079C664 /* PBXTargetDependency */,
-				7B51628C201FBFF700B94FB3 /* PBXTargetDependency */,
-				7B51628E201FBFF700B94FB3 /* PBXTargetDependency */,
-				7B516290201FBFF700B94FB3 /* PBXTargetDependency */,
-				7B516292201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B516294201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B516296201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B516298201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B51629A201FBFF700B94FB3 /* PBXTargetDependency */,
+				7B51628C201FBFF700B94FB3 /* PBXTargetDependency */,
+				7B51628E201FBFF700B94FB3 /* PBXTargetDependency */,
+				7B516290201FBFF700B94FB3 /* PBXTargetDependency */,
+				7B516292201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B51629C201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B51629E201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B5162A0201FBFF700B94FB3 /* PBXTargetDependency */,
 				7B5162A2201FBFF700B94FB3 /* PBXTargetDependency */,
+				7B0AB1592021167E00AC083A /* PBXTargetDependency */,
+				7B0AB15B2021167E00AC083A /* PBXTargetDependency */,
+				7B0AB15D2021167E00AC083A /* PBXTargetDependency */,
+				7B0AB15F2021167E00AC083A /* PBXTargetDependency */,
 			);
 			name = All;
 			productName = All;
@@ -38,7 +42,40 @@
 /* Begin PBXBuildFile section */
 		7B013601201F769000CE0893 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013600201F769000CE0893 /* CoreDataUtils.swift */; };
 		7B013609201F7D2300CE0893 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013608201F7D2300CE0893 /* Error.swift */; };
-		7B01360B201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift */; };
+		7B0AB0A520210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */; };
+		7B0AB0A620210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */; };
+		7B0AB0A720210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */; };
+		7B0AB0A820210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */; };
+		7B0AB0AA20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A920210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift */; };
+		7B0AB0AB20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A920210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift */; };
+		7B0AB0AC20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A920210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift */; };
+		7B0AB0AD20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A920210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift */; };
+		7B0AB141202115AF00AC083A /* RequestManager+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+RESTCoreData.swift */; };
+		7B0AB142202115AF00AC083A /* RESTCoreDataFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08B2020BAE500AC083A /* RESTCoreDataFetchRequest.swift */; };
+		7B0AB143202115AF00AC083A /* RESTCoreDataSaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08C2020BB1900AC083A /* RESTCoreDataSaveRequest.swift */; };
+		7B0AB144202115AF00AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */; };
+		7B0AB145202115AF00AC083A /* CoreData+RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */; };
+		7B0AB146202115B000AC083A /* RequestManager+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+RESTCoreData.swift */; };
+		7B0AB147202115B000AC083A /* RESTCoreDataFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08B2020BAE500AC083A /* RESTCoreDataFetchRequest.swift */; };
+		7B0AB148202115B000AC083A /* RESTCoreDataSaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08C2020BB1900AC083A /* RESTCoreDataSaveRequest.swift */; };
+		7B0AB149202115B000AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */; };
+		7B0AB14A202115B000AC083A /* CoreData+RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */; };
+		7B0AB14B202115B000AC083A /* RequestManager+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+RESTCoreData.swift */; };
+		7B0AB14C202115B000AC083A /* RESTCoreDataFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08B2020BAE500AC083A /* RESTCoreDataFetchRequest.swift */; };
+		7B0AB14D202115B000AC083A /* RESTCoreDataSaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08C2020BB1900AC083A /* RESTCoreDataSaveRequest.swift */; };
+		7B0AB14E202115B000AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */; };
+		7B0AB14F202115B000AC083A /* CoreData+RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */; };
+		7B0AB150202115B100AC083A /* RequestManager+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+RESTCoreData.swift */; };
+		7B0AB151202115B100AC083A /* RESTCoreDataFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08B2020BAE500AC083A /* RESTCoreDataFetchRequest.swift */; };
+		7B0AB152202115B100AC083A /* RESTCoreDataSaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08C2020BB1900AC083A /* RESTCoreDataSaveRequest.swift */; };
+		7B0AB153202115B100AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */; };
+		7B0AB154202115B100AC083A /* CoreData+RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */; };
+		7B0AB155202115FC00AC083A /* BMO_RESTCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0B52021127E00AC083A /* BMO_RESTCoreDataTests.swift */; };
+		7B0AB156202115FD00AC083A /* BMO_RESTCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0B52021127E00AC083A /* BMO_RESTCoreDataTests.swift */; };
+		7B0AB157202115FD00AC083A /* BMO_RESTCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0B52021127E00AC083A /* BMO_RESTCoreDataTests.swift */; };
+		7B0AB1622021175D00AC083A /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */; };
+		7B0AB1652021177F00AC083A /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0E62021147D00AC083A /* BMO_RESTCoreData.framework */; };
+		7B0AB1682021179100AC083A /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0FF2021148000AC083A /* BMO_RESTCoreData.framework */; };
 		7B3192C12019F1CC0088312B /* ParameterizedStringSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */; };
 		7B3192C32019F2640088312B /* RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192C22019F2640088312B /* RESTPath.swift */; };
 		7B3C40442018B29F00E4A0A5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* RequestManager.swift */; };
@@ -73,10 +110,10 @@
 		7B3C40AB2018B7AB00E4A0A5 /* DbRepresentationImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A52018B7AB00E4A0A5 /* DbRepresentationImporter.swift */; };
 		7B3C40AC2018B7AB00E4A0A5 /* DbRepresentationImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A52018B7AB00E4A0A5 /* DbRepresentationImporter.swift */; };
 		7B3C40AD2018B7AB00E4A0A5 /* DbRepresentationImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A52018B7AB00E4A0A5 /* DbRepresentationImporter.swift */; };
-		7B3C40AF2018B80E00E4A0A5 /* BackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultImporter.swift */; };
-		7B3C40B02018B80E00E4A0A5 /* BackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultImporter.swift */; };
-		7B3C40B12018B80E00E4A0A5 /* BackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultImporter.swift */; };
-		7B3C40B22018B80E00E4A0A5 /* BackResultImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultImporter.swift */; };
+		7B3C40AF2018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultsImporter.swift */; };
+		7B3C40B02018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultsImporter.swift */; };
+		7B3C40B12018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultsImporter.swift */; };
+		7B3C40B22018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40AE2018B80D00E4A0A5 /* BackResultsImporter.swift */; };
 		7B3C40B52018BA3400E4A0A5 /* BackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BackRequest.swift */; };
 		7B3C40B62018BA3400E4A0A5 /* BackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BackRequest.swift */; };
 		7B3C40B72018BA3400E4A0A5 /* BackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BackRequest.swift */; };
@@ -122,7 +159,6 @@
 		7B3C40FA2018E6C900E4A0A5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40F72018E6C900E4A0A5 /* Error.swift */; };
 		7B3C40FB2018E6C900E4A0A5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40F72018E6C900E4A0A5 /* Error.swift */; };
 		7B516170201F81C400B94FB3 /* MixedRepresentation+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */; };
-		7B516176201F8FDE00B94FB3 /* RequestManager+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+CoreData.swift */; };
 		7B516178201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */; };
 		7B51617C201FB6F600B94FB3 /* FastImportResultBuilderForBackResultsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51617B201FB6F600B94FB3 /* FastImportResultBuilderForBackResultsImporter.swift */; };
 		7B51618B201FBB1A00B94FB3 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516182201FBB1A00B94FB3 /* BMO_FastImportRepresentation.framework */; };
@@ -135,15 +171,14 @@
 		7B5161BC201FBCBC00B94FB3 /* BMO_FastImportRepresentationsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817F062019158200625427 /* BMO_FastImportRepresentationsTest.swift */; };
 		7B5161CA201FBD5700B94FB3 /* FastImportRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817F112019168100625427 /* FastImportRepresentation.swift */; };
 		7B5161CB201FBD5700B94FB3 /* FastImportResultBuilderForBackResultsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51617B201FB6F600B94FB3 /* FastImportResultBuilderForBackResultsImporter.swift */; };
-		7B5161DE201FBDAB00B94FB3 /* BMO_RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161D5201FBDAB00B94FB3 /* BMO_RESTUtils.framework */; };
-		7B5161FA201FBDBE00B94FB3 /* BMO_RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161F1201FBDBE00B94FB3 /* BMO_RESTUtils.framework */; };
+		7B5161DE201FBDAB00B94FB3 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161D5201FBDAB00B94FB3 /* RESTUtils.framework */; };
+		7B5161FA201FBDBE00B94FB3 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161F1201FBDBE00B94FB3 /* RESTUtils.framework */; };
 		7B516223201FBDF000B94FB3 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B51621A201FBDF000B94FB3 /* BMO_CoreData.framework */; };
 		7B51623F201FBDFF00B94FB3 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516236201FBDFE00B94FB3 /* BMO_CoreData.framework */; };
 		7B51625A201FBF7100B94FB3 /* BMO_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83326620192808005184FE /* BMO_CoreDataTests.swift */; };
 		7B51625B201FBF7100B94FB3 /* BMO_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83326620192808005184FE /* BMO_CoreDataTests.swift */; };
-		7B51625C201FBF7400B94FB3 /* BMO_RESTUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328920192A61005184FE /* BMO_RESTUtilsTests.swift */; };
-		7B51625D201FBF7500B94FB3 /* BMO_RESTUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328920192A61005184FE /* BMO_RESTUtilsTests.swift */; };
-		7B51625E201FBF8200B94FB3 /* RequestManager+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+CoreData.swift */; };
+		7B51625C201FBF7400B94FB3 /* RESTUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328920192A61005184FE /* RESTUtilsTests.swift */; };
+		7B51625D201FBF7500B94FB3 /* RESTUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328920192A61005184FE /* RESTUtilsTests.swift */; };
 		7B51625F201FBF8200B94FB3 /* Db+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB4E582019234900D1D5F2 /* Db+CoreData.swift */; };
 		7B516260201FBF8200B94FB3 /* CoreDataFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83323E201924C3005184FE /* CoreDataFetchRequest.swift */; };
 		7B516261201FBF8200B94FB3 /* CoreDataSaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83324320192501005184FE /* CoreDataSaveRequest.swift */; };
@@ -151,10 +186,8 @@
 		7B516263201FBF8200B94FB3 /* FastImportRepresentationCoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817F122019168100625427 /* FastImportRepresentationCoreDataImporter.swift */; };
 		7B516264201FBF8200B94FB3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013608201F7D2300CE0893 /* Error.swift */; };
 		7B516265201FBF8200B94FB3 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013600201F769000CE0893 /* CoreDataUtils.swift */; };
-		7B516266201FBF8200B94FB3 /* AdditionalRequestInfo+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift */; };
 		7B516267201FBF8200B94FB3 /* MixedRepresentation+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */; };
 		7B516268201FBF8200B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */; };
-		7B516269201FBF8200B94FB3 /* RequestManager+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+CoreData.swift */; };
 		7B51626A201FBF8300B94FB3 /* Db+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB4E582019234900D1D5F2 /* Db+CoreData.swift */; };
 		7B51626B201FBF8300B94FB3 /* CoreDataFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83323E201924C3005184FE /* CoreDataFetchRequest.swift */; };
 		7B51626C201FBF8300B94FB3 /* CoreDataSaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83324320192501005184FE /* CoreDataSaveRequest.swift */; };
@@ -162,10 +195,8 @@
 		7B51626E201FBF8300B94FB3 /* FastImportRepresentationCoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817F122019168100625427 /* FastImportRepresentationCoreDataImporter.swift */; };
 		7B51626F201FBF8300B94FB3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013608201F7D2300CE0893 /* Error.swift */; };
 		7B516270201FBF8300B94FB3 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013600201F769000CE0893 /* CoreDataUtils.swift */; };
-		7B516271201FBF8300B94FB3 /* AdditionalRequestInfo+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift */; };
 		7B516272201FBF8300B94FB3 /* MixedRepresentation+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */; };
 		7B516273201FBF8300B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */; };
-		7B516274201FBF8300B94FB3 /* RequestManager+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516175201F8FDE00B94FB3 /* RequestManager+CoreData.swift */; };
 		7B516275201FBF8300B94FB3 /* Db+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB4E582019234900D1D5F2 /* Db+CoreData.swift */; };
 		7B516276201FBF8300B94FB3 /* CoreDataFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83323E201924C3005184FE /* CoreDataFetchRequest.swift */; };
 		7B516277201FBF8300B94FB3 /* CoreDataSaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83324320192501005184FE /* CoreDataSaveRequest.swift */; };
@@ -173,7 +204,6 @@
 		7B516279201FBF8300B94FB3 /* FastImportRepresentationCoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817F122019168100625427 /* FastImportRepresentationCoreDataImporter.swift */; };
 		7B51627A201FBF8300B94FB3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013608201F7D2300CE0893 /* Error.swift */; };
 		7B51627B201FBF8300B94FB3 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013600201F769000CE0893 /* CoreDataUtils.swift */; };
-		7B51627C201FBF8300B94FB3 /* AdditionalRequestInfo+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift */; };
 		7B51627D201FBF8300B94FB3 /* MixedRepresentation+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */; };
 		7B51627E201FBF8300B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */; };
 		7B51627F201FBF8700B94FB3 /* RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192C22019F2640088312B /* RESTPath.swift */; };
@@ -201,8 +231,8 @@
 		7B83326320192758005184FE /* FastImportRepresentationCoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817F122019168100625427 /* FastImportRepresentationCoreDataImporter.swift */; };
 		7B83326420192758005184FE /* BackResultsImporterForCoreDataWithFastImportRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817F102019168100625427 /* BackResultsImporterForCoreDataWithFastImportRepresentation.swift */; };
 		7B83326720192808005184FE /* BMO_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83326620192808005184FE /* BMO_CoreDataTests.swift */; };
-		7B83327A2019296C005184FE /* BMO_RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332712019296C005184FE /* BMO_RESTUtils.framework */; };
-		7B83328A20192A62005184FE /* BMO_RESTUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328920192A61005184FE /* BMO_RESTUtilsTests.swift */; };
+		7B83327A2019296C005184FE /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332712019296C005184FE /* RESTUtils.framework */; };
+		7B83328A20192A62005184FE /* RESTUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328920192A61005184FE /* RESTUtilsTests.swift */; };
 		7B83328E2019310D005184FE /* AdditionalRESTRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */; };
 		7B8BD02320026E8C009BE667 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
 		7B8BD036200274B9009BE667 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
@@ -211,12 +241,222 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7B01360C201F7F7000CE0893 /* PBXContainerItemProxy */ = {
+		7B0AB0B82021147200AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = "BMO-macOS";
+		};
+		7B0AB0BA2021147200AC083A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7B8332702019296C005184FE;
 			remoteInfo = "BMO+RESTUtils-macOS";
+		};
+		7B0AB0BC2021147200AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B817EF82019158200625427;
+			remoteInfo = "BMO+FastImportRepresentations-macOS";
+		};
+		7B0AB0D12021147D00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
+			remoteInfo = "BMO-tvOS";
+		};
+		7B0AB0D32021147D00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5161D4201FBDAB00B94FB3;
+			remoteInfo = "BMO+RESTUtils-tvOS";
+		};
+		7B0AB0D52021147D00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B516181201FBB1A00B94FB3;
+			remoteInfo = "BMO+FastImportRepresentation-tvOS";
+		};
+		7B0AB0EA2021148000AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
+			remoteInfo = "BMO-iOS";
+		};
+		7B0AB0EC2021148000AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5161F0201FBDBE00B94FB3;
+			remoteInfo = "BMO+RESTUtils-iOS";
+		};
+		7B0AB0EE2021148000AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5161A1201FBC2200B94FB3;
+			remoteInfo = "BMO+FastImportRepresentation-iOS";
+		};
+		7B0AB1032021148300AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
+			remoteInfo = "BMO-watchOS";
+		};
+		7B0AB1052021148300AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B51620C201FBDD200B94FB3;
+			remoteInfo = "BMO+RESTUtils-watchOS";
+		};
+		7B0AB1072021148300AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5161C1201FBCEF00B94FB3;
+			remoteInfo = "BMO+FastImportRepresentation-watchOS";
+		};
+		7B0AB1582021167E00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0B62021147200AC083A;
+			remoteInfo = "BMO+RESTCoreData-macOS";
+		};
+		7B0AB15A2021167E00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0CF2021147D00AC083A;
+			remoteInfo = "BMO+RESTCoreData-tvOS";
+		};
+		7B0AB15C2021167E00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0E82021148000AC083A;
+			remoteInfo = "BMO+RESTCoreData-iOS";
+		};
+		7B0AB15E2021167E00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB1012021148300AC083A;
+			remoteInfo = "BMO+RESTCoreData-watchOS";
+		};
+		7B0AB1602021175200AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0B62021147200AC083A;
+			remoteInfo = "BMO+RESTCoreData-macOS";
+		};
+		7B0AB1632021177800AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0CF2021147D00AC083A;
+			remoteInfo = "BMO+RESTCoreData-tvOS";
+		};
+		7B0AB1662021178C00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0E82021148000AC083A;
+			remoteInfo = "BMO+RESTCoreData-iOS";
+		};
+		7B0AB16920211A1B00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8332482019274B005184FE;
+			remoteInfo = "BMO+CoreData-macOS";
+		};
+		7B0AB16B20211A2700AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B516219201FBDF000B94FB3;
+			remoteInfo = "BMO+CoreData-tvOS";
+		};
+		7B0AB16D20211A3400AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B516235201FBDFE00B94FB3;
+			remoteInfo = "BMO+CoreData-iOS";
+		};
+		7B0AB16F20211A4000AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B516251201FBE0C00B94FB3;
+			remoteInfo = "BMO+CoreData-watchOS";
+		};
+		7B0AB17620211C3500AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = "AsyncOperationResult-macOS";
+		};
+		7B0AB17820211C4100AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
+			remoteInfo = "AsyncOperationResult-tvOS";
+		};
+		7B0AB17A20211C4900AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
+			remoteInfo = "AsyncOperationResult-iOS";
+		};
+		7B0AB17C20211C4D00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
+			remoteInfo = "AsyncOperationResult-watchOS";
+		};
+		7B0AB17E20211C5600AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = "AsyncOperationResult-macOS";
+		};
+		7B0AB18020211C5B00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
+			remoteInfo = "AsyncOperationResult-tvOS";
+		};
+		7B0AB18220211C5F00AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
+			remoteInfo = "AsyncOperationResult-iOS";
+		};
+		7B0AB18420211C6400AC083A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
+			remoteInfo = "AsyncOperationResult-watchOS";
 		};
 		7B3C405C2018B40200E4A0A5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -456,13 +696,6 @@
 			remoteGlobalIDString = 7B516181201FBB1A00B94FB3;
 			remoteInfo = "BMO+FastImportRepresentation-tvOS";
 		};
-		7B5162A7201FC02600B94FB3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B5161D4201FBDAB00B94FB3;
-			remoteInfo = "BMO+RESTUtils-tvOS";
-		};
 		7B5162A9201FC03A00B94FB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
@@ -477,13 +710,6 @@
 			remoteGlobalIDString = 7B5161A1201FBC2200B94FB3;
 			remoteInfo = "BMO+FastImportRepresentation-iOS";
 		};
-		7B5162AD201FC03A00B94FB3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B5161F0201FBDBE00B94FB3;
-			remoteInfo = "BMO+RESTUtils-iOS";
-		};
 		7B5162AF201FC04200B94FB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
@@ -497,13 +723,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B5161C1201FBCEF00B94FB3;
 			remoteInfo = "BMO+FastImportRepresentation-watchOS";
-		};
-		7B5162B3201FC04200B94FB3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B51620C201FBDD200B94FB3;
-			remoteInfo = "BMO+RESTUtils-watchOS";
 		};
 		7B639D912002CDF40079C664 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -601,7 +820,20 @@
 /* Begin PBXFileReference section */
 		7B013600201F769000CE0893 /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
 		7B013608201F7D2300CE0893 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdditionalRequestInfo+CoreData.swift"; sourceTree = "<group>"; };
+		7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdditionalRequestInfo+RESTCoreData.swift"; sourceTree = "<group>"; };
+		7B0AB08B2020BAE500AC083A /* RESTCoreDataFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCoreDataFetchRequest.swift; sourceTree = "<group>"; };
+		7B0AB08C2020BB1900AC083A /* RESTCoreDataSaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCoreDataSaveRequest.swift; sourceTree = "<group>"; };
+		7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+RESTPath.swift"; sourceTree = "<group>"; };
+		7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterizedStringSetParser.swift; sourceTree = "<group>"; };
+		7B0AB0A920210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardRESTParameterizedStringSetParser.swift; sourceTree = "<group>"; };
+		7B0AB0B52021127E00AC083A /* BMO_RESTCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMO_RESTCoreDataTests.swift; sourceTree = "<group>"; };
+		7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0AB0E62021147D00AC083A /* BMO_RESTCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0AB0FF2021148000AC083A /* BMO_RESTCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0AB1182021148300AC083A /* BMO_RESTCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0AB1252021148600AC083A /* BMO+RESTCoreData-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0AB1322021148A00AC083A /* BMO+RESTCoreData-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0AB13F2021148E00AC083A /* BMO+RESTCoreData-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B21BACD2003B2C600DFF758 /* BMO.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BMO.podspec; sourceTree = "<group>"; };
 		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B21BAD02003BBC700DFF758 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -617,7 +849,7 @@
 		7B3C40912018B63600E4A0A5 /* MixedRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedRepresentation.swift; sourceTree = "<group>"; };
 		7B3C40A42018B7AB00E4A0A5 /* DbRepresentationExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbRepresentationExporter.swift; sourceTree = "<group>"; };
 		7B3C40A52018B7AB00E4A0A5 /* DbRepresentationImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbRepresentationImporter.swift; sourceTree = "<group>"; };
-		7B3C40AE2018B80D00E4A0A5 /* BackResultImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackResultImporter.swift; sourceTree = "<group>"; };
+		7B3C40AE2018B80D00E4A0A5 /* BackResultsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackResultsImporter.swift; sourceTree = "<group>"; };
 		7B3C40B42018BA3400E4A0A5 /* BackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackRequest.swift; sourceTree = "<group>"; };
 		7B3C40B92018BA9500E4A0A5 /* ImportBridgeOperationResultsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportBridgeOperationResultsRequest.swift; sourceTree = "<group>"; };
 		7B3C40BE2018BACF00E4A0A5 /* UniquingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniquingRequest.swift; sourceTree = "<group>"; };
@@ -630,7 +862,7 @@
 		7B3C40EC2018DAEE00E4A0A5 /* ImportBridgeOperationResultsRequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportBridgeOperationResultsRequestOperation.swift; sourceTree = "<group>"; };
 		7B3C40F72018E6C900E4A0A5 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MixedRepresentation+CoreData.swift"; sourceTree = "<group>"; };
-		7B516175201F8FDE00B94FB3 /* RequestManager+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestManager+CoreData.swift"; sourceTree = "<group>"; };
+		7B516175201F8FDE00B94FB3 /* RequestManager+RESTCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestManager+RESTCoreData.swift"; sourceTree = "<group>"; };
 		7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AsyncOperationResult+BMOCoreData.swift"; sourceTree = "<group>"; };
 		7B51617B201FB6F600B94FB3 /* FastImportResultBuilderForBackResultsImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastImportResultBuilderForBackResultsImporter.swift; sourceTree = "<group>"; };
 		7B516182201FBB1A00B94FB3 /* BMO_FastImportRepresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_FastImportRepresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -638,16 +870,17 @@
 		7B5161A2201FBC2200B94FB3 /* BMO_FastImportRepresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_FastImportRepresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5161AA201FBC2300B94FB3 /* BMO+FastImportRepresentation-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+FastImportRepresentation-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5161C2201FBCEF00B94FB3 /* BMO_FastImportRepresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_FastImportRepresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B5161D5201FBDAB00B94FB3 /* BMO_RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B5161DD201FBDAB00B94FB3 /* BMO+RESTUtils-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTUtils-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B5161F1201FBDBE00B94FB3 /* BMO_RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B5161F9201FBDBE00B94FB3 /* BMO+RESTUtils-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTUtils-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B51620D201FBDD200B94FB3 /* BMO_RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5161D5201FBDAB00B94FB3 /* RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5161DD201FBDAB00B94FB3 /* RESTUtils-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RESTUtils-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5161F1201FBDBE00B94FB3 /* RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5161F9201FBDBE00B94FB3 /* RESTUtils-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RESTUtils-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B51620D201FBDD200B94FB3 /* RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B51621A201FBDF000B94FB3 /* BMO_CoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_CoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B516222201FBDF000B94FB3 /* BMO+CoreData-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+CoreData-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B516236201FBDFE00B94FB3 /* BMO_CoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_CoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B51623E201FBDFE00B94FB3 /* BMO+CoreData-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+CoreData-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B516252201FBE0C00B94FB3 /* BMO_CoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_CoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B57B69C201FDAEA00FAED2F /* Jake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jake.swift; sourceTree = "<group>"; };
 		7B75E6AE201E5E3D00D88635 /* RESTPathProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTPathProtocols.swift; sourceTree = "<group>"; };
 		7B7A34BF20027B4600348DF4 /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7A34C720027B4700348DF4 /* BMO-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -662,9 +895,9 @@
 		7B8332492019274B005184FE /* BMO_CoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_CoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8332512019274B005184FE /* BMO+CoreData-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+CoreData-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B83326620192808005184FE /* BMO_CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMO_CoreDataTests.swift; sourceTree = "<group>"; };
-		7B8332712019296C005184FE /* BMO_RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B8332792019296C005184FE /* BMO+RESTUtils-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTUtils-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B83328920192A61005184FE /* BMO_RESTUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMO_RESTUtilsTests.swift; sourceTree = "<group>"; };
+		7B8332712019296C005184FE /* RESTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RESTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8332792019296C005184FE /* RESTUtils-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RESTUtils-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B83328920192A61005184FE /* RESTUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTUtilsTests.swift; sourceTree = "<group>"; };
 		7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalRESTRequestInfo.swift; sourceTree = "<group>"; };
 		7B8BD01A20026E8C009BE667 /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD01D20026E8C009BE667 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
@@ -679,6 +912,58 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7B0AB0C72021147200AC083A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0E02021147D00AC083A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0F92021148000AC083A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB1122021148300AC083A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB11F2021148600AC083A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB1622021175D00AC083A /* BMO_RESTCoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB12C2021148A00AC083A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB1652021177F00AC083A /* BMO_RESTCoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB1392021148E00AC083A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB1682021179100AC083A /* BMO_RESTCoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B51617E201FBB1A00B94FB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -727,7 +1012,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B5161DE201FBDAB00B94FB3 /* BMO_RESTUtils.framework in Frameworks */,
+				7B5161DE201FBDAB00B94FB3 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +1027,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B5161FA201FBDBE00B94FB3 /* BMO_RESTUtils.framework in Frameworks */,
+				7B5161FA201FBDBE00B94FB3 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,7 +1131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B83327A2019296C005184FE /* BMO_RESTUtils.framework in Frameworks */,
+				7B83327A2019296C005184FE /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,6 +1175,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B0AB04E20207AF000AC083A /* Jake */ = {
+			isa = PBXGroup;
+			children = (
+				7B57B69C201FDAEA00FAED2F /* Jake.swift */,
+			);
+			path = Jake;
+			sourceTree = "<group>";
+		};
+		7B0AB08A2020B9EB00AC083A /* BMO+RESTCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7B516175201F8FDE00B94FB3 /* RequestManager+RESTCoreData.swift */,
+				7B0AB08B2020BAE500AC083A /* RESTCoreDataFetchRequest.swift */,
+				7B0AB08C2020BB1900AC083A /* RESTCoreDataSaveRequest.swift */,
+				7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */,
+				7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */,
+			);
+			path = "BMO+RESTCoreData";
+			sourceTree = "<group>";
+		};
+		7B0AB0AE20210F2E00AC083A /* For BMO */ = {
+			isa = PBXGroup;
+			children = (
+				7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */,
+			);
+			path = "For BMO";
+			sourceTree = "<group>";
+		};
+		7B0AB0B42021126900AC083A /* BMO+RESTCoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B0AB0B52021127E00AC083A /* BMO_RESTCoreDataTests.swift */,
+			);
+			path = "BMO+RESTCoreDataTests";
+			sourceTree = "<group>";
+		};
 		7B3C40502018B3D300E4A0A5 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -937,9 +1258,9 @@
 			isa = PBXGroup;
 			children = (
 				7B3C40C42018BE0E00E4A0A5 /* ChangesDescription.swift */,
+				7B3C40D32018BED300E4A0A5 /* ImportResult.swift */,
 				7B3C40C92018BE3300E4A0A5 /* BridgeBackRequestResult.swift */,
 				7B3C40CE2018BE6C00E4A0A5 /* BackRequestResult.swift */,
-				7B3C40D32018BED300E4A0A5 /* ImportResult.swift */,
 				7B3C40D82018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift */,
 			);
 			path = Results;
@@ -959,7 +1280,7 @@
 			children = (
 				7B3C40852018B54500E4A0A5 /* Db.swift */,
 				7B3C40722018B44700E4A0A5 /* Bridge.swift */,
-				7B3C40AE2018B80D00E4A0A5 /* BackResultImporter.swift */,
+				7B3C40AE2018B80D00E4A0A5 /* BackResultsImporter.swift */,
 				7B3C40A52018B7AB00E4A0A5 /* DbRepresentationImporter.swift */,
 				7B3C40A42018B7AB00E4A0A5 /* DbRepresentationExporter.swift */,
 			);
@@ -971,7 +1292,6 @@
 			children = (
 				7B013608201F7D2300CE0893 /* Error.swift */,
 				7B013600201F769000CE0893 /* CoreDataUtils.swift */,
-				7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift */,
 				7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */,
 				7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */,
 			);
@@ -990,6 +1310,13 @@
 			path = "Protocol Implementations";
 			sourceTree = "<group>";
 		};
+		7B57B679201FD7A200FAED2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7B661F9220026ACC00486182 = {
 			isa = PBXGroup;
 			children = (
@@ -1001,6 +1328,7 @@
 				7B8BD031200274B9009BE667 /* Tests */,
 				7B3C40502018B3D300E4A0A5 /* Dependencies */,
 				7B8BD01B20026E8C009BE667 /* Xcode Supporting Files */,
+				7B57B679201FD7A200FAED2F /* Frameworks */,
 				7B661F9C20026ACC00486182 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1019,23 +1347,30 @@
 				7B817F012019158200625427 /* BMO+FastImportRepresentation-macOSTests.xctest */,
 				7B8332492019274B005184FE /* BMO_CoreData.framework */,
 				7B8332512019274B005184FE /* BMO+CoreData-macOSTests.xctest */,
-				7B8332712019296C005184FE /* BMO_RESTUtils.framework */,
-				7B8332792019296C005184FE /* BMO+RESTUtils-macOSTests.xctest */,
+				7B8332712019296C005184FE /* RESTUtils.framework */,
+				7B8332792019296C005184FE /* RESTUtils-macOSTests.xctest */,
 				7B516182201FBB1A00B94FB3 /* BMO_FastImportRepresentation.framework */,
 				7B51618A201FBB1A00B94FB3 /* BMO+FastImportRepresentation-tvOSTests.xctest */,
 				7B5161A2201FBC2200B94FB3 /* BMO_FastImportRepresentation.framework */,
 				7B5161AA201FBC2300B94FB3 /* BMO+FastImportRepresentation-iOSTests.xctest */,
 				7B5161C2201FBCEF00B94FB3 /* BMO_FastImportRepresentation.framework */,
-				7B5161D5201FBDAB00B94FB3 /* BMO_RESTUtils.framework */,
-				7B5161DD201FBDAB00B94FB3 /* BMO+RESTUtils-tvOSTests.xctest */,
-				7B5161F1201FBDBE00B94FB3 /* BMO_RESTUtils.framework */,
-				7B5161F9201FBDBE00B94FB3 /* BMO+RESTUtils-iOSTests.xctest */,
-				7B51620D201FBDD200B94FB3 /* BMO_RESTUtils.framework */,
+				7B5161D5201FBDAB00B94FB3 /* RESTUtils.framework */,
+				7B5161DD201FBDAB00B94FB3 /* RESTUtils-tvOSTests.xctest */,
+				7B5161F1201FBDBE00B94FB3 /* RESTUtils.framework */,
+				7B5161F9201FBDBE00B94FB3 /* RESTUtils-iOSTests.xctest */,
+				7B51620D201FBDD200B94FB3 /* RESTUtils.framework */,
 				7B51621A201FBDF000B94FB3 /* BMO_CoreData.framework */,
 				7B516222201FBDF000B94FB3 /* BMO+CoreData-tvOSTests.xctest */,
 				7B516236201FBDFE00B94FB3 /* BMO_CoreData.framework */,
 				7B51623E201FBDFE00B94FB3 /* BMO+CoreData-iOSTests.xctest */,
 				7B516252201FBE0C00B94FB3 /* BMO_CoreData.framework */,
+				7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */,
+				7B0AB0E62021147D00AC083A /* BMO_RESTCoreData.framework */,
+				7B0AB0FF2021148000AC083A /* BMO_RESTCoreData.framework */,
+				7B0AB1182021148300AC083A /* BMO_RESTCoreData.framework */,
+				7B0AB1252021148600AC083A /* BMO+RESTCoreData-macOSTests.xctest */,
+				7B0AB1322021148A00AC083A /* BMO+RESTCoreData-tvOSTests.xctest */,
+				7B0AB13F2021148E00AC083A /* BMO+RESTCoreData-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1060,7 +1395,6 @@
 		7B817F1820191A5900625427 /* BMO+CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				7B516175201F8FDE00B94FB3 /* RequestManager+CoreData.swift */,
 				7B51617A201F949200B94FB3 /* Protocol Implementations */,
 				7B516179201F93C500B94FB3 /* Utilities */,
 			);
@@ -1075,32 +1409,36 @@
 			path = "BMO+CoreDataTests";
 			sourceTree = "<group>";
 		};
-		7B83328820192A3A005184FE /* BMO+RESTUtilsTests */ = {
+		7B83328820192A3A005184FE /* RESTUtilsTests */ = {
 			isa = PBXGroup;
 			children = (
-				7B83328920192A61005184FE /* BMO_RESTUtilsTests.swift */,
+				7B83328920192A61005184FE /* RESTUtilsTests.swift */,
 			);
-			path = "BMO+RESTUtilsTests";
+			path = RESTUtilsTests;
 			sourceTree = "<group>";
 		};
-		7B83328C20192F99005184FE /* BMO+RESTUtils */ = {
+		7B83328C20192F99005184FE /* RESTUtils */ = {
 			isa = PBXGroup;
 			children = (
 				7B3192C22019F2640088312B /* RESTPath.swift */,
 				7B75E6AE201E5E3D00D88635 /* RESTPathProtocols.swift */,
-				7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */,
 				7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */,
+				7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */,
+				7B0AB0A920210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift */,
+				7B0AB0AE20210F2E00AC083A /* For BMO */,
 			);
-			path = "BMO+RESTUtils";
+			path = RESTUtils;
 			sourceTree = "<group>";
 		};
 		7B8BD01120026AF1009BE667 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				7B8BD01220026AF1009BE667 /* BMO */,
+				7B83328C20192F99005184FE /* RESTUtils */,
 				7B817EFA2019158200625427 /* BMO+FastImportRepresentation */,
-				7B83328C20192F99005184FE /* BMO+RESTUtils */,
 				7B817F1820191A5900625427 /* BMO+CoreData */,
+				7B0AB08A2020B9EB00AC083A /* BMO+RESTCoreData */,
+				7B0AB04E20207AF000AC083A /* Jake */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1133,9 +1471,10 @@
 			children = (
 				7B8BD032200274B9009BE667 /* LinuxMain.swift */,
 				7B8BD033200274B9009BE667 /* BMOTests */,
+				7B83328820192A3A005184FE /* RESTUtilsTests */,
 				7B817F052019158200625427 /* BMO+FastImportRepresentationTests */,
-				7B83328820192A3A005184FE /* BMO+RESTUtilsTests */,
 				7B833265201927E3005184FE /* BMO+CoreDataTests */,
+				7B0AB0B42021126900AC083A /* BMO+RESTCoreDataTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1151,6 +1490,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		7B0AB0C82021147200AC083A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0E12021147D00AC083A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0FA2021148000AC083A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB1132021148300AC083A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B51617F201FBB1A00B94FB3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1266,6 +1633,152 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7B0AB0B62021147200AC083A /* BMO+RESTCoreData-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AB0CA2021147200AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-macOS" */;
+			buildPhases = (
+				7B0AB0BD2021147200AC083A /* Sources */,
+				7B0AB0C72021147200AC083A /* Frameworks */,
+				7B0AB0C82021147200AC083A /* Headers */,
+				7B0AB0C92021147200AC083A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AB17F20211C5600AC083A /* PBXTargetDependency */,
+				7B0AB0B72021147200AC083A /* PBXTargetDependency */,
+				7B0AB0B92021147200AC083A /* PBXTargetDependency */,
+				7B0AB0BB2021147200AC083A /* PBXTargetDependency */,
+				7B0AB16A20211A1B00AC083A /* PBXTargetDependency */,
+			);
+			name = "BMO+RESTCoreData-macOS";
+			productName = "BMO+CoreData";
+			productReference = 7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B0AB0CF2021147D00AC083A /* BMO+RESTCoreData-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AB0E32021147D00AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-tvOS" */;
+			buildPhases = (
+				7B0AB0D62021147D00AC083A /* Sources */,
+				7B0AB0E02021147D00AC083A /* Frameworks */,
+				7B0AB0E12021147D00AC083A /* Headers */,
+				7B0AB0E22021147D00AC083A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AB18120211C5B00AC083A /* PBXTargetDependency */,
+				7B0AB0D02021147D00AC083A /* PBXTargetDependency */,
+				7B0AB0D22021147D00AC083A /* PBXTargetDependency */,
+				7B0AB0D42021147D00AC083A /* PBXTargetDependency */,
+				7B0AB16C20211A2700AC083A /* PBXTargetDependency */,
+			);
+			name = "BMO+RESTCoreData-tvOS";
+			productName = "BMO+CoreData-tvOS";
+			productReference = 7B0AB0E62021147D00AC083A /* BMO_RESTCoreData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B0AB0E82021148000AC083A /* BMO+RESTCoreData-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AB0FC2021148000AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-iOS" */;
+			buildPhases = (
+				7B0AB0EF2021148000AC083A /* Sources */,
+				7B0AB0F92021148000AC083A /* Frameworks */,
+				7B0AB0FA2021148000AC083A /* Headers */,
+				7B0AB0FB2021148000AC083A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AB18320211C5F00AC083A /* PBXTargetDependency */,
+				7B0AB0E92021148000AC083A /* PBXTargetDependency */,
+				7B0AB0EB2021148000AC083A /* PBXTargetDependency */,
+				7B0AB0ED2021148000AC083A /* PBXTargetDependency */,
+				7B0AB16E20211A3400AC083A /* PBXTargetDependency */,
+			);
+			name = "BMO+RESTCoreData-iOS";
+			productName = "BMO+CoreData-iOS";
+			productReference = 7B0AB0FF2021148000AC083A /* BMO_RESTCoreData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B0AB1012021148300AC083A /* BMO+RESTCoreData-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AB1152021148300AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-watchOS" */;
+			buildPhases = (
+				7B0AB1082021148300AC083A /* Sources */,
+				7B0AB1122021148300AC083A /* Frameworks */,
+				7B0AB1132021148300AC083A /* Headers */,
+				7B0AB1142021148300AC083A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AB18520211C6400AC083A /* PBXTargetDependency */,
+				7B0AB1022021148300AC083A /* PBXTargetDependency */,
+				7B0AB1042021148300AC083A /* PBXTargetDependency */,
+				7B0AB1062021148300AC083A /* PBXTargetDependency */,
+				7B0AB17020211A4000AC083A /* PBXTargetDependency */,
+			);
+			name = "BMO+RESTCoreData-watchOS";
+			productName = "BMO+CoreData-watchOS";
+			productReference = 7B0AB1182021148300AC083A /* BMO_RESTCoreData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B0AB11A2021148600AC083A /* BMO+RESTCoreData-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AB1222021148600AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-macOSTests" */;
+			buildPhases = (
+				7B0AB11D2021148600AC083A /* Sources */,
+				7B0AB11F2021148600AC083A /* Frameworks */,
+				7B0AB1212021148600AC083A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AB1612021175200AC083A /* PBXTargetDependency */,
+			);
+			name = "BMO+RESTCoreData-macOSTests";
+			productName = "BMO+CoreDataTests";
+			productReference = 7B0AB1252021148600AC083A /* BMO+RESTCoreData-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7B0AB1272021148A00AC083A /* BMO+RESTCoreData-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AB12F2021148A00AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-tvOSTests" */;
+			buildPhases = (
+				7B0AB12A2021148A00AC083A /* Sources */,
+				7B0AB12C2021148A00AC083A /* Frameworks */,
+				7B0AB12E2021148A00AC083A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AB1642021177800AC083A /* PBXTargetDependency */,
+			);
+			name = "BMO+RESTCoreData-tvOSTests";
+			productName = "BMO+CoreData-tvOSTests";
+			productReference = 7B0AB1322021148A00AC083A /* BMO+RESTCoreData-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7B0AB1342021148E00AC083A /* BMO+RESTCoreData-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AB13C2021148E00AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-iOSTests" */;
+			buildPhases = (
+				7B0AB1372021148E00AC083A /* Sources */,
+				7B0AB1392021148E00AC083A /* Frameworks */,
+				7B0AB13B2021148E00AC083A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AB1672021178C00AC083A /* PBXTargetDependency */,
+			);
+			name = "BMO+RESTCoreData-iOSTests";
+			productName = "BMO+CoreData-iOSTests";
+			productReference = 7B0AB13F2021148E00AC083A /* BMO+RESTCoreData-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7B516181201FBB1A00B94FB3 /* BMO+FastImportRepresentation-tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B516193201FBB1B00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+FastImportRepresentation-tvOS" */;
@@ -1359,9 +1872,9 @@
 			productReference = 7B5161C2201FBCEF00B94FB3 /* BMO_FastImportRepresentation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B5161D4201FBDAB00B94FB3 /* BMO+RESTUtils-tvOS */ = {
+		7B5161D4201FBDAB00B94FB3 /* RESTUtils-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B5161E6201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-tvOS" */;
+			buildConfigurationList = 7B5161E6201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-tvOS" */;
 			buildPhases = (
 				7B5161D0201FBDAB00B94FB3 /* Sources */,
 				7B5161D1201FBDAB00B94FB3 /* Frameworks */,
@@ -1372,14 +1885,14 @@
 			);
 			dependencies = (
 			);
-			name = "BMO+RESTUtils-tvOS";
+			name = "RESTUtils-tvOS";
 			productName = "BMO+RESTUtils-tvOS";
-			productReference = 7B5161D5201FBDAB00B94FB3 /* BMO_RESTUtils.framework */;
+			productReference = 7B5161D5201FBDAB00B94FB3 /* RESTUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B5161DC201FBDAB00B94FB3 /* BMO+RESTUtils-tvOSTests */ = {
+		7B5161DC201FBDAB00B94FB3 /* RESTUtils-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B5161E9201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-tvOSTests" */;
+			buildConfigurationList = 7B5161E9201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-tvOSTests" */;
 			buildPhases = (
 				7B5161D9201FBDAB00B94FB3 /* Sources */,
 				7B5161DA201FBDAB00B94FB3 /* Frameworks */,
@@ -1390,14 +1903,14 @@
 			dependencies = (
 				7B5161E0201FBDAB00B94FB3 /* PBXTargetDependency */,
 			);
-			name = "BMO+RESTUtils-tvOSTests";
+			name = "RESTUtils-tvOSTests";
 			productName = "BMO+RESTUtils-tvOSTests";
-			productReference = 7B5161DD201FBDAB00B94FB3 /* BMO+RESTUtils-tvOSTests.xctest */;
+			productReference = 7B5161DD201FBDAB00B94FB3 /* RESTUtils-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7B5161F0201FBDBE00B94FB3 /* BMO+RESTUtils-iOS */ = {
+		7B5161F0201FBDBE00B94FB3 /* RESTUtils-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B516202201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-iOS" */;
+			buildConfigurationList = 7B516202201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-iOS" */;
 			buildPhases = (
 				7B5161EC201FBDBE00B94FB3 /* Sources */,
 				7B5161ED201FBDBE00B94FB3 /* Frameworks */,
@@ -1408,14 +1921,14 @@
 			);
 			dependencies = (
 			);
-			name = "BMO+RESTUtils-iOS";
+			name = "RESTUtils-iOS";
 			productName = "BMO+RESTUtils-iOS";
-			productReference = 7B5161F1201FBDBE00B94FB3 /* BMO_RESTUtils.framework */;
+			productReference = 7B5161F1201FBDBE00B94FB3 /* RESTUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B5161F8201FBDBE00B94FB3 /* BMO+RESTUtils-iOSTests */ = {
+		7B5161F8201FBDBE00B94FB3 /* RESTUtils-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B516205201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-iOSTests" */;
+			buildConfigurationList = 7B516205201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-iOSTests" */;
 			buildPhases = (
 				7B5161F5201FBDBE00B94FB3 /* Sources */,
 				7B5161F6201FBDBE00B94FB3 /* Frameworks */,
@@ -1426,14 +1939,14 @@
 			dependencies = (
 				7B5161FC201FBDBE00B94FB3 /* PBXTargetDependency */,
 			);
-			name = "BMO+RESTUtils-iOSTests";
+			name = "RESTUtils-iOSTests";
 			productName = "BMO+RESTUtils-iOSTests";
-			productReference = 7B5161F9201FBDBE00B94FB3 /* BMO+RESTUtils-iOSTests.xctest */;
+			productReference = 7B5161F9201FBDBE00B94FB3 /* RESTUtils-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7B51620C201FBDD200B94FB3 /* BMO+RESTUtils-watchOS */ = {
+		7B51620C201FBDD200B94FB3 /* RESTUtils-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B516212201FBDD200B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-watchOS" */;
+			buildConfigurationList = 7B516212201FBDD200B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-watchOS" */;
 			buildPhases = (
 				7B516208201FBDD200B94FB3 /* Sources */,
 				7B516209201FBDD200B94FB3 /* Frameworks */,
@@ -1444,9 +1957,9 @@
 			);
 			dependencies = (
 			);
-			name = "BMO+RESTUtils-watchOS";
+			name = "RESTUtils-watchOS";
 			productName = "BMO+RESTUtils-watchOS";
-			productReference = 7B51620D201FBDD200B94FB3 /* BMO_RESTUtils.framework */;
+			productReference = 7B51620D201FBDD200B94FB3 /* RESTUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7B516219201FBDF000B94FB3 /* BMO+CoreData-tvOS */ = {
@@ -1461,8 +1974,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B0AB17920211C4100AC083A /* PBXTargetDependency */,
 				7B5162A4201FC02600B94FB3 /* PBXTargetDependency */,
-				7B5162A8201FC02600B94FB3 /* PBXTargetDependency */,
 				7B5162A6201FC02600B94FB3 /* PBXTargetDependency */,
 			);
 			name = "BMO+CoreData-tvOS";
@@ -1500,8 +2013,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B0AB17B20211C4900AC083A /* PBXTargetDependency */,
 				7B5162AA201FC03A00B94FB3 /* PBXTargetDependency */,
-				7B5162AE201FC03A00B94FB3 /* PBXTargetDependency */,
 				7B5162AC201FC03A00B94FB3 /* PBXTargetDependency */,
 			);
 			name = "BMO+CoreData-iOS";
@@ -1539,8 +2052,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B0AB17D20211C4D00AC083A /* PBXTargetDependency */,
 				7B5162B0201FC04200B94FB3 /* PBXTargetDependency */,
-				7B5162B4201FC04200B94FB3 /* PBXTargetDependency */,
 				7B5162B2201FC04200B94FB3 /* PBXTargetDependency */,
 			);
 			name = "BMO+CoreData-watchOS";
@@ -1634,8 +2147,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B0AB17720211C3500AC083A /* PBXTargetDependency */,
 				7B8332692019287B005184FE /* PBXTargetDependency */,
-				7B01360D201F7F7000CE0893 /* PBXTargetDependency */,
 				7B83326B2019287F005184FE /* PBXTargetDependency */,
 			);
 			name = "BMO+CoreData-macOS";
@@ -1661,9 +2174,9 @@
 			productReference = 7B8332512019274B005184FE /* BMO+CoreData-macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7B8332702019296C005184FE /* BMO+RESTUtils-macOS */ = {
+		7B8332702019296C005184FE /* RESTUtils-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B8332822019296C005184FE /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-macOS" */;
+			buildConfigurationList = 7B8332822019296C005184FE /* Build configuration list for PBXNativeTarget "RESTUtils-macOS" */;
 			buildPhases = (
 				7B83326C2019296C005184FE /* Sources */,
 				7B83326D2019296C005184FE /* Frameworks */,
@@ -1674,14 +2187,14 @@
 			);
 			dependencies = (
 			);
-			name = "BMO+RESTUtils-macOS";
+			name = "RESTUtils-macOS";
 			productName = "BMO+REST";
-			productReference = 7B8332712019296C005184FE /* BMO_RESTUtils.framework */;
+			productReference = 7B8332712019296C005184FE /* RESTUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B8332782019296C005184FE /* BMO+RESTUtils-macOSTests */ = {
+		7B8332782019296C005184FE /* RESTUtils-macOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B8332852019296C005184FE /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-macOSTests" */;
+			buildConfigurationList = 7B8332852019296C005184FE /* Build configuration list for PBXNativeTarget "RESTUtils-macOSTests" */;
 			buildPhases = (
 				7B8332752019296C005184FE /* Sources */,
 				7B8332762019296C005184FE /* Frameworks */,
@@ -1692,9 +2205,9 @@
 			dependencies = (
 				7B83327C2019296C005184FE /* PBXTargetDependency */,
 			);
-			name = "BMO+RESTUtils-macOSTests";
+			name = "RESTUtils-macOSTests";
 			productName = "BMO+RESTTests";
-			productReference = 7B8332792019296C005184FE /* BMO+RESTUtils-macOSTests.xctest */;
+			productReference = 7B8332792019296C005184FE /* RESTUtils-macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		7B8BD01920026E8C009BE667 /* BMO-macOS */ = {
@@ -1800,6 +2313,27 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = happn;
 				TargetAttributes = {
+					7B0AB0B62021147200AC083A = {
+						ProvisioningStyle = Automatic;
+					};
+					7B0AB0CF2021147D00AC083A = {
+						ProvisioningStyle = Automatic;
+					};
+					7B0AB0E82021148000AC083A = {
+						ProvisioningStyle = Automatic;
+					};
+					7B0AB1012021148300AC083A = {
+						ProvisioningStyle = Automatic;
+					};
+					7B0AB11A2021148600AC083A = {
+						ProvisioningStyle = Automatic;
+					};
+					7B0AB1272021148A00AC083A = {
+						ProvisioningStyle = Automatic;
+					};
+					7B0AB1342021148E00AC083A = {
+						ProvisioningStyle = Automatic;
+					};
 					7B516181201FBB1A00B94FB3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -1948,6 +2482,13 @@
 				7B8BD02120026E8C009BE667 /* BMO-macOSTests */,
 				7B7A34C620027B4700348DF4 /* BMO-tvOSTests */,
 				7BC696DC2002775C007BC3E9 /* BMO-iOSTests */,
+				7B8332702019296C005184FE /* RESTUtils-macOS */,
+				7B5161D4201FBDAB00B94FB3 /* RESTUtils-tvOS */,
+				7B5161F0201FBDBE00B94FB3 /* RESTUtils-iOS */,
+				7B51620C201FBDD200B94FB3 /* RESTUtils-watchOS */,
+				7B8332782019296C005184FE /* RESTUtils-macOSTests */,
+				7B5161DC201FBDAB00B94FB3 /* RESTUtils-tvOSTests */,
+				7B5161F8201FBDBE00B94FB3 /* RESTUtils-iOSTests */,
 				7B817EF82019158200625427 /* BMO+FastImportRepresentation-macOS */,
 				7B516181201FBB1A00B94FB3 /* BMO+FastImportRepresentation-tvOS */,
 				7B5161A1201FBC2200B94FB3 /* BMO+FastImportRepresentation-iOS */,
@@ -1955,13 +2496,6 @@
 				7B817F002019158200625427 /* BMO+FastImportRepresentation-macOSTests */,
 				7B516189201FBB1A00B94FB3 /* BMO+FastImportRepresentation-tvOSTests */,
 				7B5161A9201FBC2300B94FB3 /* BMO+FastImportRepresentation-iOSTests */,
-				7B8332702019296C005184FE /* BMO+RESTUtils-macOS */,
-				7B5161D4201FBDAB00B94FB3 /* BMO+RESTUtils-tvOS */,
-				7B5161F0201FBDBE00B94FB3 /* BMO+RESTUtils-iOS */,
-				7B51620C201FBDD200B94FB3 /* BMO+RESTUtils-watchOS */,
-				7B8332782019296C005184FE /* BMO+RESTUtils-macOSTests */,
-				7B5161DC201FBDAB00B94FB3 /* BMO+RESTUtils-tvOSTests */,
-				7B5161F8201FBDBE00B94FB3 /* BMO+RESTUtils-iOSTests */,
 				7B8332482019274B005184FE /* BMO+CoreData-macOS */,
 				7B516219201FBDF000B94FB3 /* BMO+CoreData-tvOS */,
 				7B516235201FBDFE00B94FB3 /* BMO+CoreData-iOS */,
@@ -1969,6 +2503,13 @@
 				7B8332502019274B005184FE /* BMO+CoreData-macOSTests */,
 				7B516221201FBDF000B94FB3 /* BMO+CoreData-tvOSTests */,
 				7B51623D201FBDFE00B94FB3 /* BMO+CoreData-iOSTests */,
+				7B0AB0B62021147200AC083A /* BMO+RESTCoreData-macOS */,
+				7B0AB0CF2021147D00AC083A /* BMO+RESTCoreData-tvOS */,
+				7B0AB0E82021148000AC083A /* BMO+RESTCoreData-iOS */,
+				7B0AB1012021148300AC083A /* BMO+RESTCoreData-watchOS */,
+				7B0AB11A2021148600AC083A /* BMO+RESTCoreData-macOSTests */,
+				7B0AB1272021148A00AC083A /* BMO+RESTCoreData-tvOSTests */,
+				7B0AB1342021148E00AC083A /* BMO+RESTCoreData-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2026,6 +2567,55 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7B0AB0C92021147200AC083A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0E22021147D00AC083A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0FB2021148000AC083A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB1142021148300AC083A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB1212021148600AC083A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB12E2021148A00AC083A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB13B2021148E00AC083A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B516180201FBB1A00B94FB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2225,6 +2815,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B0AB0BD2021147200AC083A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB143202115AF00AC083A /* RESTCoreDataSaveRequest.swift in Sources */,
+				7B0AB144202115AF00AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */,
+				7B0AB142202115AF00AC083A /* RESTCoreDataFetchRequest.swift in Sources */,
+				7B0AB145202115AF00AC083A /* CoreData+RESTPath.swift in Sources */,
+				7B0AB141202115AF00AC083A /* RequestManager+RESTCoreData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0D62021147D00AC083A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB148202115B000AC083A /* RESTCoreDataSaveRequest.swift in Sources */,
+				7B0AB149202115B000AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */,
+				7B0AB147202115B000AC083A /* RESTCoreDataFetchRequest.swift in Sources */,
+				7B0AB14A202115B000AC083A /* CoreData+RESTPath.swift in Sources */,
+				7B0AB146202115B000AC083A /* RequestManager+RESTCoreData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB0EF2021148000AC083A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB14D202115B000AC083A /* RESTCoreDataSaveRequest.swift in Sources */,
+				7B0AB14E202115B000AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */,
+				7B0AB14C202115B000AC083A /* RESTCoreDataFetchRequest.swift in Sources */,
+				7B0AB14F202115B000AC083A /* CoreData+RESTPath.swift in Sources */,
+				7B0AB14B202115B000AC083A /* RequestManager+RESTCoreData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB1082021148300AC083A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB152202115B100AC083A /* RESTCoreDataSaveRequest.swift in Sources */,
+				7B0AB153202115B100AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */,
+				7B0AB151202115B100AC083A /* RESTCoreDataFetchRequest.swift in Sources */,
+				7B0AB154202115B100AC083A /* CoreData+RESTPath.swift in Sources */,
+				7B0AB150202115B100AC083A /* RequestManager+RESTCoreData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB11D2021148600AC083A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB157202115FD00AC083A /* BMO_RESTCoreDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB12A2021148A00AC083A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB156202115FD00AC083A /* BMO_RESTCoreDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B0AB1372021148E00AC083A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB155202115FC00AC083A /* BMO_RESTCoreDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B51617D201FBB1A00B94FB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2273,7 +2935,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B516280201FBF8700B94FB3 /* RESTPathProtocols.swift in Sources */,
+				7B0AB0A620210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
 				7B516281201FBF8700B94FB3 /* AdditionalRESTRequestInfo.swift in Sources */,
+				7B0AB0AB20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B51627F201FBF8700B94FB3 /* RESTPath.swift in Sources */,
 				7B516282201FBF8700B94FB3 /* ParameterizedStringSet.swift in Sources */,
 			);
@@ -2283,7 +2947,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B51625C201FBF7400B94FB3 /* BMO_RESTUtilsTests.swift in Sources */,
+				7B51625C201FBF7400B94FB3 /* RESTUtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2292,7 +2956,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B516284201FBF8800B94FB3 /* RESTPathProtocols.swift in Sources */,
+				7B0AB0A720210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
 				7B516285201FBF8800B94FB3 /* AdditionalRESTRequestInfo.swift in Sources */,
+				7B0AB0AC20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B516283201FBF8800B94FB3 /* RESTPath.swift in Sources */,
 				7B516286201FBF8800B94FB3 /* ParameterizedStringSet.swift in Sources */,
 			);
@@ -2302,7 +2968,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B51625D201FBF7500B94FB3 /* BMO_RESTUtilsTests.swift in Sources */,
+				7B51625D201FBF7500B94FB3 /* RESTUtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2311,7 +2977,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B516288201FBF8800B94FB3 /* RESTPathProtocols.swift in Sources */,
+				7B0AB0A820210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
 				7B516289201FBF8800B94FB3 /* AdditionalRESTRequestInfo.swift in Sources */,
+				7B0AB0AD20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B516287201FBF8800B94FB3 /* RESTPath.swift in Sources */,
 				7B51628A201FBF8800B94FB3 /* ParameterizedStringSet.swift in Sources */,
 			);
@@ -2326,9 +2994,7 @@
 				7B516260201FBF8200B94FB3 /* CoreDataFetchRequest.swift in Sources */,
 				7B516265201FBF8200B94FB3 /* CoreDataUtils.swift in Sources */,
 				7B516267201FBF8200B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
-				7B51625E201FBF8200B94FB3 /* RequestManager+CoreData.swift in Sources */,
 				7B516261201FBF8200B94FB3 /* CoreDataSaveRequest.swift in Sources */,
-				7B516266201FBF8200B94FB3 /* AdditionalRequestInfo+CoreData.swift in Sources */,
 				7B516263201FBF8200B94FB3 /* FastImportRepresentationCoreDataImporter.swift in Sources */,
 				7B516264201FBF8200B94FB3 /* Error.swift in Sources */,
 				7B516262201FBF8200B94FB3 /* BackResultsImporterForCoreDataWithFastImportRepresentation.swift in Sources */,
@@ -2352,9 +3018,7 @@
 				7B51626B201FBF8300B94FB3 /* CoreDataFetchRequest.swift in Sources */,
 				7B516270201FBF8300B94FB3 /* CoreDataUtils.swift in Sources */,
 				7B516272201FBF8300B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
-				7B516269201FBF8200B94FB3 /* RequestManager+CoreData.swift in Sources */,
 				7B51626C201FBF8300B94FB3 /* CoreDataSaveRequest.swift in Sources */,
-				7B516271201FBF8300B94FB3 /* AdditionalRequestInfo+CoreData.swift in Sources */,
 				7B51626E201FBF8300B94FB3 /* FastImportRepresentationCoreDataImporter.swift in Sources */,
 				7B51626F201FBF8300B94FB3 /* Error.swift in Sources */,
 				7B51626D201FBF8300B94FB3 /* BackResultsImporterForCoreDataWithFastImportRepresentation.swift in Sources */,
@@ -2378,9 +3042,7 @@
 				7B516276201FBF8300B94FB3 /* CoreDataFetchRequest.swift in Sources */,
 				7B51627B201FBF8300B94FB3 /* CoreDataUtils.swift in Sources */,
 				7B51627D201FBF8300B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
-				7B516274201FBF8300B94FB3 /* RequestManager+CoreData.swift in Sources */,
 				7B516277201FBF8300B94FB3 /* CoreDataSaveRequest.swift in Sources */,
-				7B51627C201FBF8300B94FB3 /* AdditionalRequestInfo+CoreData.swift in Sources */,
 				7B516279201FBF8300B94FB3 /* FastImportRepresentationCoreDataImporter.swift in Sources */,
 				7B51627A201FBF8300B94FB3 /* Error.swift in Sources */,
 				7B516278201FBF8300B94FB3 /* BackResultsImporterForCoreDataWithFastImportRepresentation.swift in Sources */,
@@ -2402,7 +3064,7 @@
 				7B3C40DA2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
 				7B3C40E92018DAB100E4A0A5 /* BackRequestOperation.swift in Sources */,
 				7B3C40C62018BE0E00E4A0A5 /* ChangesDescription.swift in Sources */,
-				7B3C40B02018B80E00E4A0A5 /* BackResultImporter.swift in Sources */,
+				7B3C40B02018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */,
 				7B3C40742018B44700E4A0A5 /* Bridge.swift in Sources */,
 				7B3C40972018B63600E4A0A5 /* MixedRepresentation.swift in Sources */,
 				7B3C40EE2018DAEE00E4A0A5 /* ImportBridgeOperationResultsRequestOperation.swift in Sources */,
@@ -2446,11 +3108,9 @@
 				7B83326220192758005184FE /* CoreDataSaveRequest.swift in Sources */,
 				7B83326020192758005184FE /* Db+CoreData.swift in Sources */,
 				7B013601201F769000CE0893 /* CoreDataUtils.swift in Sources */,
-				7B01360B201F7EC500CE0893 /* AdditionalRequestInfo+CoreData.swift in Sources */,
 				7B83326320192758005184FE /* FastImportRepresentationCoreDataImporter.swift in Sources */,
 				7B516178201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */,
 				7B516170201F81C400B94FB3 /* MixedRepresentation+CoreData.swift in Sources */,
-				7B516176201F8FDE00B94FB3 /* RequestManager+CoreData.swift in Sources */,
 				7B83326120192758005184FE /* CoreDataFetchRequest.swift in Sources */,
 				7B83326420192758005184FE /* BackResultsImporterForCoreDataWithFastImportRepresentation.swift in Sources */,
 				7B013609201F7D2300CE0893 /* Error.swift in Sources */,
@@ -2470,7 +3130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3192C32019F2640088312B /* RESTPath.swift in Sources */,
+				7B0AB0A520210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
 				7B75E6AF201E5E3D00D88635 /* RESTPathProtocols.swift in Sources */,
+				7B0AB0AA20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B83328E2019310D005184FE /* AdditionalRESTRequestInfo.swift in Sources */,
 				7B3192C12019F1CC0088312B /* ParameterizedStringSet.swift in Sources */,
 			);
@@ -2480,7 +3142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B83328A20192A62005184FE /* BMO_RESTUtilsTests.swift in Sources */,
+				7B83328A20192A62005184FE /* RESTUtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2499,7 +3161,7 @@
 				7B3C40D92018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
 				7B3C40E82018DAB100E4A0A5 /* BackRequestOperation.swift in Sources */,
 				7B3C40C52018BE0E00E4A0A5 /* ChangesDescription.swift in Sources */,
-				7B3C40AF2018B80E00E4A0A5 /* BackResultImporter.swift in Sources */,
+				7B3C40AF2018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */,
 				7B3C40732018B44700E4A0A5 /* Bridge.swift in Sources */,
 				7B3C40962018B63600E4A0A5 /* MixedRepresentation.swift in Sources */,
 				7B3C40ED2018DAEE00E4A0A5 /* ImportBridgeOperationResultsRequestOperation.swift in Sources */,
@@ -2534,7 +3196,7 @@
 				7B3C40DC2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
 				7B3C40EB2018DAB100E4A0A5 /* BackRequestOperation.swift in Sources */,
 				7B3C40C82018BE0E00E4A0A5 /* ChangesDescription.swift in Sources */,
-				7B3C40B22018B80E00E4A0A5 /* BackResultImporter.swift in Sources */,
+				7B3C40B22018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */,
 				7B3C40762018B44700E4A0A5 /* Bridge.swift in Sources */,
 				7B3C40992018B63600E4A0A5 /* MixedRepresentation.swift in Sources */,
 				7B3C40F02018DAEE00E4A0A5 /* ImportBridgeOperationResultsRequestOperation.swift in Sources */,
@@ -2561,7 +3223,7 @@
 				7B3C40DB2018BF0800E4A0A5 /* AsyncOperationResult+BMOResults.swift in Sources */,
 				7B3C40EA2018DAB100E4A0A5 /* BackRequestOperation.swift in Sources */,
 				7B3C40C72018BE0E00E4A0A5 /* ChangesDescription.swift in Sources */,
-				7B3C40B12018B80E00E4A0A5 /* BackResultImporter.swift in Sources */,
+				7B3C40B12018B80E00E4A0A5 /* BackResultsImporter.swift in Sources */,
 				7B3C40752018B44700E4A0A5 /* Bridge.swift in Sources */,
 				7B3C40982018B63600E4A0A5 /* MixedRepresentation.swift in Sources */,
 				7B3C40EF2018DAEE00E4A0A5 /* ImportBridgeOperationResultsRequestOperation.swift in Sources */,
@@ -2584,10 +3246,160 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B01360D201F7F7000CE0893 /* PBXTargetDependency */ = {
+		7B0AB0B72021147200AC083A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B8332702019296C005184FE /* BMO+RESTUtils-macOS */;
-			targetProxy = 7B01360C201F7F7000CE0893 /* PBXContainerItemProxy */;
+			target = 7B8BD01920026E8C009BE667 /* BMO-macOS */;
+			targetProxy = 7B0AB0B82021147200AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0B92021147200AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332702019296C005184FE /* RESTUtils-macOS */;
+			targetProxy = 7B0AB0BA2021147200AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0BB2021147200AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B817EF82019158200625427 /* BMO+FastImportRepresentation-macOS */;
+			targetProxy = 7B0AB0BC2021147200AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0D02021147D00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B7A34BE20027B4600348DF4 /* BMO-tvOS */;
+			targetProxy = 7B0AB0D12021147D00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0D22021147D00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5161D4201FBDAB00B94FB3 /* RESTUtils-tvOS */;
+			targetProxy = 7B0AB0D32021147D00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0D42021147D00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B516181201FBB1A00B94FB3 /* BMO+FastImportRepresentation-tvOS */;
+			targetProxy = 7B0AB0D52021147D00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0E92021148000AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BC696D42002775C007BC3E9 /* BMO-iOS */;
+			targetProxy = 7B0AB0EA2021148000AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0EB2021148000AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5161F0201FBDBE00B94FB3 /* RESTUtils-iOS */;
+			targetProxy = 7B0AB0EC2021148000AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB0ED2021148000AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5161A1201FBC2200B94FB3 /* BMO+FastImportRepresentation-iOS */;
+			targetProxy = 7B0AB0EE2021148000AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB1022021148300AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BB52E42200279EA007CAD7B /* BMO-watchOS */;
+			targetProxy = 7B0AB1032021148300AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB1042021148300AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B51620C201FBDD200B94FB3 /* RESTUtils-watchOS */;
+			targetProxy = 7B0AB1052021148300AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB1062021148300AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5161C1201FBCEF00B94FB3 /* BMO+FastImportRepresentation-watchOS */;
+			targetProxy = 7B0AB1072021148300AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB1592021167E00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0B62021147200AC083A /* BMO+RESTCoreData-macOS */;
+			targetProxy = 7B0AB1582021167E00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB15B2021167E00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0CF2021147D00AC083A /* BMO+RESTCoreData-tvOS */;
+			targetProxy = 7B0AB15A2021167E00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB15D2021167E00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0E82021148000AC083A /* BMO+RESTCoreData-iOS */;
+			targetProxy = 7B0AB15C2021167E00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB15F2021167E00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB1012021148300AC083A /* BMO+RESTCoreData-watchOS */;
+			targetProxy = 7B0AB15E2021167E00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB1612021175200AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0B62021147200AC083A /* BMO+RESTCoreData-macOS */;
+			targetProxy = 7B0AB1602021175200AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB1642021177800AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0CF2021147D00AC083A /* BMO+RESTCoreData-tvOS */;
+			targetProxy = 7B0AB1632021177800AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB1672021178C00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0E82021148000AC083A /* BMO+RESTCoreData-iOS */;
+			targetProxy = 7B0AB1662021178C00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB16A20211A1B00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332482019274B005184FE /* BMO+CoreData-macOS */;
+			targetProxy = 7B0AB16920211A1B00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB16C20211A2700AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B516219201FBDF000B94FB3 /* BMO+CoreData-tvOS */;
+			targetProxy = 7B0AB16B20211A2700AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB16E20211A3400AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B516235201FBDFE00B94FB3 /* BMO+CoreData-iOS */;
+			targetProxy = 7B0AB16D20211A3400AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB17020211A4000AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B516251201FBE0C00B94FB3 /* BMO+CoreData-watchOS */;
+			targetProxy = 7B0AB16F20211A4000AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB17720211C3500AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-macOS";
+			targetProxy = 7B0AB17620211C3500AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB17920211C4100AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-tvOS";
+			targetProxy = 7B0AB17820211C4100AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB17B20211C4900AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-iOS";
+			targetProxy = 7B0AB17A20211C4900AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB17D20211C4D00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-watchOS";
+			targetProxy = 7B0AB17C20211C4D00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB17F20211C5600AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-macOS";
+			targetProxy = 7B0AB17E20211C5600AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB18120211C5B00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-tvOS";
+			targetProxy = 7B0AB18020211C5B00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB18320211C5F00AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-iOS";
+			targetProxy = 7B0AB18220211C5F00AC083A /* PBXContainerItemProxy */;
+		};
+		7B0AB18520211C6400AC083A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AsyncOperationResult-watchOS";
+			targetProxy = 7B0AB18420211C6400AC083A /* PBXContainerItemProxy */;
 		};
 		7B3C406B2018B41700E4A0A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2636,12 +3448,12 @@
 		};
 		7B5161E0201FBDAB00B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B5161D4201FBDAB00B94FB3 /* BMO+RESTUtils-tvOS */;
+			target = 7B5161D4201FBDAB00B94FB3 /* RESTUtils-tvOS */;
 			targetProxy = 7B5161DF201FBDAB00B94FB3 /* PBXContainerItemProxy */;
 		};
 		7B5161FC201FBDBE00B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B5161F0201FBDBE00B94FB3 /* BMO+RESTUtils-iOS */;
+			target = 7B5161F0201FBDBE00B94FB3 /* RESTUtils-iOS */;
 			targetProxy = 7B5161FB201FBDBE00B94FB3 /* PBXContainerItemProxy */;
 		};
 		7B516225201FBDF000B94FB3 /* PBXTargetDependency */ = {
@@ -2676,22 +3488,22 @@
 		};
 		7B516294201FBFF700B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B8332702019296C005184FE /* BMO+RESTUtils-macOS */;
+			target = 7B8332702019296C005184FE /* RESTUtils-macOS */;
 			targetProxy = 7B516293201FBFF700B94FB3 /* PBXContainerItemProxy */;
 		};
 		7B516296201FBFF700B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B5161D4201FBDAB00B94FB3 /* BMO+RESTUtils-tvOS */;
+			target = 7B5161D4201FBDAB00B94FB3 /* RESTUtils-tvOS */;
 			targetProxy = 7B516295201FBFF700B94FB3 /* PBXContainerItemProxy */;
 		};
 		7B516298201FBFF700B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B5161F0201FBDBE00B94FB3 /* BMO+RESTUtils-iOS */;
+			target = 7B5161F0201FBDBE00B94FB3 /* RESTUtils-iOS */;
 			targetProxy = 7B516297201FBFF700B94FB3 /* PBXContainerItemProxy */;
 		};
 		7B51629A201FBFF700B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B51620C201FBDD200B94FB3 /* BMO+RESTUtils-watchOS */;
+			target = 7B51620C201FBDD200B94FB3 /* RESTUtils-watchOS */;
 			targetProxy = 7B516299201FBFF700B94FB3 /* PBXContainerItemProxy */;
 		};
 		7B51629C201FBFF700B94FB3 /* PBXTargetDependency */ = {
@@ -2724,11 +3536,6 @@
 			target = 7B516181201FBB1A00B94FB3 /* BMO+FastImportRepresentation-tvOS */;
 			targetProxy = 7B5162A5201FC02600B94FB3 /* PBXContainerItemProxy */;
 		};
-		7B5162A8201FC02600B94FB3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B5161D4201FBDAB00B94FB3 /* BMO+RESTUtils-tvOS */;
-			targetProxy = 7B5162A7201FC02600B94FB3 /* PBXContainerItemProxy */;
-		};
 		7B5162AA201FC03A00B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7BC696D42002775C007BC3E9 /* BMO-iOS */;
@@ -2739,11 +3546,6 @@
 			target = 7B5161A1201FBC2200B94FB3 /* BMO+FastImportRepresentation-iOS */;
 			targetProxy = 7B5162AB201FC03A00B94FB3 /* PBXContainerItemProxy */;
 		};
-		7B5162AE201FC03A00B94FB3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B5161F0201FBDBE00B94FB3 /* BMO+RESTUtils-iOS */;
-			targetProxy = 7B5162AD201FC03A00B94FB3 /* PBXContainerItemProxy */;
-		};
 		7B5162B0201FC04200B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7BB52E42200279EA007CAD7B /* BMO-watchOS */;
@@ -2753,11 +3555,6 @@
 			isa = PBXTargetDependency;
 			target = 7B5161C1201FBCEF00B94FB3 /* BMO+FastImportRepresentation-watchOS */;
 			targetProxy = 7B5162B1201FC04200B94FB3 /* PBXContainerItemProxy */;
-		};
-		7B5162B4201FC04200B94FB3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B51620C201FBDD200B94FB3 /* BMO+RESTUtils-watchOS */;
-			targetProxy = 7B5162B3201FC04200B94FB3 /* PBXContainerItemProxy */;
 		};
 		7B639D922002CDF40079C664 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2811,7 +3608,7 @@
 		};
 		7B83327C2019296C005184FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B8332702019296C005184FE /* BMO+RESTUtils-macOS */;
+			target = 7B8332702019296C005184FE /* RESTUtils-macOS */;
 			targetProxy = 7B83327B2019296C005184FE /* PBXContainerItemProxy */;
 		};
 		7B8BD02520026E8C009BE667 /* PBXTargetDependency */ = {
@@ -2827,6 +3624,313 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7B0AB0CB2021147200AC083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B0AB0CC2021147200AC083A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B0AB0E42021147D00AC083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B0AB0E52021147D00AC083A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B0AB0FD2021148000AC083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B0AB0FE2021148000AC083A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B0AB1162021148300AC083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-watchOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B0AB1172021148300AC083A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-watchOS";
+				PRODUCT_NAME = BMO_RESTCoreData;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B0AB1232021148600AC083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		7B0AB1242021148600AC083A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		7B0AB1302021148A00AC083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		7B0AB1312021148A00AC083A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		7B0AB13D2021148E00AC083A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B0AB13E2021148E00AC083A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		7B516194201FBB1B00B94FB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3062,8 +4166,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-RESTUtils-tvOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3088,8 +4192,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-RESTUtils-tvOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -3106,7 +4210,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTUtils-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3122,7 +4226,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTUtils-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
@@ -3144,8 +4248,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-RESTUtils-iOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3170,8 +4274,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-RESTUtils-iOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -3189,7 +4293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTUtils-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3206,7 +4310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTUtils-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
@@ -3229,8 +4333,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-RESTUtils-watchOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-watchOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3256,8 +4360,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-RESTUtils-watchOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-watchOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -3281,7 +4385,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-CoreData-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-tvOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -3307,7 +4411,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-CoreData-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-tvOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -3363,7 +4467,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-CoreData-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-iOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -3389,7 +4493,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-CoreData-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-iOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -3448,7 +4552,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-CoreData-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-watchOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -3475,7 +4579,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-CoreData-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-watchOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -3843,7 +4947,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.happn.BMO.CoreDataTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreDataTests-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3861,7 +4965,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.happn.BMO.CoreDataTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreDataTests-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -3884,8 +4988,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.REST-macOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3911,8 +5015,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.REST-macOS";
-				PRODUCT_NAME = BMO_RESTUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOS";
+				PRODUCT_NAME = RESTUtils;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -3930,7 +5034,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.REST-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -3947,7 +5051,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.REST-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -4178,6 +5282,69 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7B0AB0CA2021147200AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AB0CB2021147200AC083A /* Debug */,
+				7B0AB0CC2021147200AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0AB0E32021147D00AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AB0E42021147D00AC083A /* Debug */,
+				7B0AB0E52021147D00AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0AB0FC2021148000AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AB0FD2021148000AC083A /* Debug */,
+				7B0AB0FE2021148000AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0AB1152021148300AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AB1162021148300AC083A /* Debug */,
+				7B0AB1172021148300AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0AB1222021148600AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AB1232021148600AC083A /* Debug */,
+				7B0AB1242021148600AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0AB12F2021148A00AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AB1302021148A00AC083A /* Debug */,
+				7B0AB1312021148A00AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0AB13C2021148E00AC083A /* Build configuration list for PBXNativeTarget "BMO+RESTCoreData-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AB13D2021148E00AC083A /* Debug */,
+				7B0AB13E2021148E00AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7B516193201FBB1B00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+FastImportRepresentation-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -4223,7 +5390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B5161E6201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-tvOS" */ = {
+		7B5161E6201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B5161E7201FBDAB00B94FB3 /* Debug */,
@@ -4232,7 +5399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B5161E9201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-tvOSTests" */ = {
+		7B5161E9201FBDAB00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B5161EA201FBDAB00B94FB3 /* Debug */,
@@ -4241,7 +5408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B516202201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-iOS" */ = {
+		7B516202201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B516203201FBDBE00B94FB3 /* Debug */,
@@ -4250,7 +5417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B516205201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-iOSTests" */ = {
+		7B516205201FBDBE00B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B516206201FBDBE00B94FB3 /* Debug */,
@@ -4259,7 +5426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B516212201FBDD200B94FB3 /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-watchOS" */ = {
+		7B516212201FBDD200B94FB3 /* Build configuration list for PBXNativeTarget "RESTUtils-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B516213201FBDD200B94FB3 /* Debug */,
@@ -4385,7 +5552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B8332822019296C005184FE /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-macOS" */ = {
+		7B8332822019296C005184FE /* Build configuration list for PBXNativeTarget "RESTUtils-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B8332832019296C005184FE /* Debug */,
@@ -4394,7 +5561,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B8332852019296C005184FE /* Build configuration list for PBXNativeTarget "BMO+RESTUtils-macOSTests" */ = {
+		7B8332852019296C005184FE /* Build configuration list for PBXNativeTarget "RESTUtils-macOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B8332862019296C005184FE /* Debug */,

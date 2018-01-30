@@ -8,8 +8,6 @@
 
 import CoreData
 
-import BMO_RESTUtils
-
 
 
 extension NSManagedObjectContext {
@@ -38,15 +36,6 @@ extension NSManagedObject {
 	
 	var isUsable: Bool {
 		return !isDeleted && managedObjectContext != nil
-	}
-	
-}
-
-extension NSManagedObject : RESTPathKeyResovable {
-	
-	public func restPathObject(for key: String) -> Any? {
-		guard entity.propertiesByName.keys.contains(key) else {return nil}
-		return value(forKey: key)
 	}
 	
 }

@@ -9,41 +9,24 @@ let package = Package(
 	name: "BMO",
 	products: [
 		.library(
-			name: "BMOCore",
-			targets: ["BMO"]
-		),
-		.library(
-			name: "BMO+CoreData",
-			targets: ["BMO", "BMO+FastImportRepresentation", "BMO+CoreData"]
+			name: "Jake",
+			targets: ["Jake"]
 		)
 	],
 	dependencies: [
-		.package(url: "git@github.com:happn-app/AsyncOperationResult", from: "1.0.0")
+		.package(url: "git@github.com:happn-app/AsyncOperationResult.git", from: "1.0.0")
 	],
 	targets: [
-		.target(
-			name: "BMO",
-			dependencies: ["AsyncOperationResult"]
-		),
-		.testTarget(
-			name: "BMOTests",
-			dependencies: ["BMO"]
-		),
-		.target(
-			name: "BMO+FastImportRepresentation",
-			dependencies: ["BMO"]
-		),
-		.testTarget(
-			name: "BMO+FastImportRepresentationTests",
-			dependencies: ["BMO+FastImportRepresentation"]
-		),
-		.target(
-			name: "BMO+CoreData",
-			dependencies: ["AsyncOperationResult", "BMO", "BMO+FastImportRepresentation"]
-		),
-		.testTarget(
-			name: "BMO+CoreDataTests",
-			dependencies: ["BMO+CoreData"]
-		)
+		.target(name: "BMO",                          dependencies: ["AsyncOperationResult"]),
+		.target(name: "RESTUtils",                    dependencies: []),
+		.target(name: "BMO+FastImportRepresentation", dependencies: ["BMO"]),
+		.target(name: "BMO+CoreData",                 dependencies: ["AsyncOperationResult", "BMO", "BMO+FastImportRepresentation"]),
+		.target(name: "BMO+RESTCoreData",             dependencies: ["AsyncOperationResult", "BMO", "RESTUtils", "BMO+FastImportRepresentation", "BMO+CoreData"]),
+		.target(name: "Jake",                         dependencies: ["AsyncOperationResult", "BMO", "RESTUtils", "BMO+FastImportRepresentation", "BMO+CoreData", "BMO+RESTCoreData"]),
+		.testTarget(name: "BMOTests",                          dependencies: ["BMO"]),
+		.testTarget(name: "RESTUtilsTests",                    dependencies: ["RESTUtils"]),
+		.testTarget(name: "BMO+FastImportRepresentationTests", dependencies: ["BMO+FastImportRepresentation"]),
+		.testTarget(name: "BMO+CoreDataTests",                 dependencies: ["BMO+CoreData"]),
+		.testTarget(name: "BMO+RESTCoreDataTests",             dependencies: ["BMO+RESTCoreData"])
 	]
 )

@@ -10,11 +10,10 @@ import CoreData
 import Foundation
 
 import BMO
-import BMO_RESTUtils
 
 
 
-public struct CoreDataSaveRequest : BackRequest {
+public struct CoreDataSaveRequest<AdditionalInfoType> : BackRequest {
 	
 	public typealias DbType = NSManagedObjectContext
 	public typealias RequestPartId = DbType.ObjectIDType
@@ -34,12 +33,19 @@ public struct CoreDataSaveRequest : BackRequest {
 	}
 	
 	public let db: NSManagedObjectContext
-	public let additionalRESTInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?
+	public let additionalInfo: AdditionalInfoType?
 	
 	public let objectsToSave: [NSManagedObject]?
 	
 	/* TODO: Implement this properly */
 	public let saveWorkflow: SaveWorkflow
+	
+	public init(db database: NSManagedObjectContext, additionalInfo i: AdditionalInfoType?, objectsToSave o: [NSManagedObject]?, saveWorkflow w: SaveWorkflow) {
+		db = database
+		additionalInfo = i
+		objectsToSave = o
+		saveWorkflow = w
+	}
 	
 	public var needsEnteringBridgeOnContext: Bool {
 		return true
@@ -58,18 +64,18 @@ public struct CoreDataSaveRequest : BackRequest {
 		return true
 	}
 	
-	public func backRequestParts() throws -> [RequestPartId: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>] {
-		var res = [RequestPartId: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>]()
+	public func backRequestParts() throws -> [RequestPartId: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>] {
+		var res = [RequestPartId: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>]()
 		if let objectsToSave = objectsToSave {
 			for object in objectsToSave {
-				if      object.isDeleted  {res[object.objectID] = .delete(object, additionalRESTInfo); internals.deletedObjectIDs.insert(object.objectID)}
-				else if object.isInserted {res[object.objectID] = .insert(object, additionalRESTInfo)}
-				else if object.isUpdated  {res[object.objectID] = .update(object, additionalRESTInfo)}
+				if      object.isDeleted  {res[object.objectID] = .delete(object, additionalInfo); internals.deletedObjectIDs.insert(object.objectID)}
+				else if object.isInserted {res[object.objectID] = .insert(object, additionalInfo)}
+				else if object.isUpdated  {res[object.objectID] = .update(object, additionalInfo)}
 			}
 		} else {
-			for deletedObject  in db.deletedObjects  {res[deletedObject.objectID]  = .delete(deletedObject,  additionalRESTInfo); internals.deletedObjectIDs.insert(deletedObject.objectID)}
-			for insertedObject in db.insertedObjects {res[insertedObject.objectID] = .insert(insertedObject, additionalRESTInfo)}
-			for updatedObject  in db.updatedObjects  {res[updatedObject.objectID]  = .update(updatedObject,  additionalRESTInfo)}
+			for deletedObject  in db.deletedObjects  {res[deletedObject.objectID]  = .delete(deletedObject,  additionalInfo); internals.deletedObjectIDs.insert(deletedObject.objectID)}
+			for insertedObject in db.insertedObjects {res[insertedObject.objectID] = .insert(insertedObject, additionalInfo)}
+			for updatedObject  in db.updatedObjects  {res[updatedObject.objectID]  = .update(updatedObject,  additionalInfo)}
 		}
 		return res
 	}
@@ -85,21 +91,21 @@ public struct CoreDataSaveRequest : BackRequest {
 		db.rollback()
 	}
 	
-	public func dbForImportingResults(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: RequestPartId) -> NSManagedObjectContext? {
+	public func dbForImportingResults(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: RequestPartId) -> NSManagedObjectContext? {
 		return (!internals.deletedObjectIDs.contains(id) ? db : nil)
 	}
 	
-	public func prepareResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: RequestPartId, inDb db: NSManagedObjectContext) throws -> Bool {
+	public func prepareResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: RequestPartId, inDb db: NSManagedObjectContext) throws -> Bool {
 		guard db.parent == nil else {db.saveToDiskOrRollback(); return false} /* We do not support sub-context with our current importers */
 		return true
 	}
 	
-	public func endResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: NSManagedObjectContext.ObjectIDType, inDb db: NSManagedObjectContext, importResults: ImportResult<NSManagedObjectContext>) throws {
+	public func endResultsImport(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: NSManagedObjectContext.ObjectIDType, inDb db: NSManagedObjectContext, importResults: ImportResult<NSManagedObjectContext>) throws {
 		assert(db.parent == nil)
 		db.saveToDiskOrRollback()
 	}
 	
-	public func processResultsImportError(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalRESTRequestInfo<NSPropertyDescription>>, withId id: NSManagedObjectContext.ObjectIDType, inDb db: NSManagedObjectContext, error: Swift.Error) {
+	public func processResultsImportError(ofRequestPart requestPart: BackRequestPart<NSManagedObject, NSFetchRequest<NSFetchRequestResult>, AdditionalInfoType>, withId id: NSManagedObjectContext.ObjectIDType, inDb db: NSManagedObjectContext, error: Swift.Error) {
 		db.rollback()
 	}
 	

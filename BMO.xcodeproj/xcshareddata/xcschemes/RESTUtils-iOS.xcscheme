@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B5161D4201FBDAB00B94FB3"
-               BuildableName = "BMO_RESTUtils.framework"
-               BlueprintName = "BMO+RESTUtils-tvOS"
+               BlueprintIdentifier = "7B5161F0201FBDBE00B94FB3"
+               BuildableName = "RESTUtils.framework"
+               BlueprintName = "RESTUtils-iOS"
                ReferencedContainer = "container:BMO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B5161DC201FBDAB00B94FB3"
-               BuildableName = "BMO+RESTUtils-tvOSTests.xctest"
-               BlueprintName = "BMO+RESTUtils-tvOSTests"
+               BlueprintIdentifier = "7B5161F8201FBDBE00B94FB3"
+               BuildableName = "RESTUtils-iOSTests.xctest"
+               BlueprintName = "RESTUtils-iOSTests"
                ReferencedContainer = "container:BMO.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B5161D4201FBDAB00B94FB3"
-            BuildableName = "BMO_RESTUtils.framework"
-            BlueprintName = "BMO+RESTUtils-tvOS"
+            BlueprintIdentifier = "7B5161F0201FBDBE00B94FB3"
+            BuildableName = "RESTUtils.framework"
+            BlueprintName = "RESTUtils-iOS"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B5161D4201FBDAB00B94FB3"
-            BuildableName = "BMO_RESTUtils.framework"
-            BlueprintName = "BMO+RESTUtils-tvOS"
+            BlueprintIdentifier = "7B5161F0201FBDBE00B94FB3"
+            BuildableName = "RESTUtils.framework"
+            BlueprintName = "RESTUtils-iOS"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,9 +84,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B5161D4201FBDAB00B94FB3"
-            BuildableName = "BMO_RESTUtils.framework"
-            BlueprintName = "BMO+RESTUtils-tvOS"
+            BlueprintIdentifier = "7B5161F0201FBDBE00B94FB3"
+            BuildableName = "RESTUtils.framework"
+            BlueprintName = "RESTUtils-iOS"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

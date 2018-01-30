@@ -1,17 +1,17 @@
 /*
- * BMO_RESTUtilsTests.swift
- * BMO+RESTUtilsTests
+ * RESTUtilsTests.swift
+ * RESTUtilsTests
  *
  * Created by François Lamboley on 1/24/18.
  * Copyright © 2018 happn. All rights reserved.
  */
 
 import XCTest
-@testable import BMO_RESTUtils
+@testable import RESTUtils
 
 
 
-class BMO_RESTUtilsTests: XCTestCase {
+class RESTUtilsTests: XCTestCase {
 	
 	func testInvalidPath1() {
 		XCTAssertNil(RESTPath("("))

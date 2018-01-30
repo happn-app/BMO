@@ -1,6 +1,6 @@
 /*
  * AdditionalRESTRequestInfo.swift
- * BMO+RESTUtils
+ * RESTUtils
  *
  * Created by François Lamboley on 4/23/17.
  * Copyright © 2017 happn. All rights reserved.

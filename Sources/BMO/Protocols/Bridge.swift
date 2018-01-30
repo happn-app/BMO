@@ -13,7 +13,7 @@ import Foundation
 public protocol Bridge {
 	
 	associatedtype DbType : Db
-	associatedtype AdditionalDbRequestInfoType
+	associatedtype AdditionalRequestInfoType
 	
 	/** An internal type you can use for basically whatever you want. For
 	instance if you need information about the original request when converting
@@ -42,14 +42,14 @@ public protocol Bridge {
 	
 	/* Bridging -- Front end => Back end. Called on the correct db context. */
 	
-	func expectedResultEntity(forFetchRequest fetchRequest: DbType.FetchRequestType, additionalInfo: AdditionalDbRequestInfoType?) -> DbType.EntityDescriptionType?
+	func expectedResultEntity(forFetchRequest fetchRequest: DbType.FetchRequestType, additionalInfo: AdditionalRequestInfoType?) -> DbType.EntityDescriptionType?
 	func expectedResultEntity(forObject object: DbType.ObjectType) -> DbType.EntityDescriptionType?
 	
-	func backOperation(forFetchRequest fetchRequest: DbType.FetchRequestType, additionalInfo: AdditionalDbRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
+	func backOperation(forFetchRequest fetchRequest: DbType.FetchRequestType, additionalInfo: AdditionalRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
 	
-	func backOperation(forInsertedObject insertedObject: DbType.ObjectType, additionalInfo: AdditionalDbRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
-	func backOperation(forUpdatedObject updatedObject: DbType.ObjectType, additionalInfo: AdditionalDbRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
-	func backOperation(forDeletedObject deletedObject: DbType.ObjectType, additionalInfo: AdditionalDbRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
+	func backOperation(forInsertedObject insertedObject: DbType.ObjectType, additionalInfo: AdditionalRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
+	func backOperation(forUpdatedObject updatedObject: DbType.ObjectType, additionalInfo: AdditionalRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
+	func backOperation(forDeletedObject deletedObject: DbType.ObjectType, additionalInfo: AdditionalRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType?
 	
 	/* Bridging -- Back end => Front end. NOT called on a db context. If you need to be on a db context you're probably doing it wrong... */
 	
