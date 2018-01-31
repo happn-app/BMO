@@ -1,1 +1,2 @@
 github "happn-app/AsyncOperationResult" ~> 1.0
+github "happn-app/CollectionLoader" ~> 0.9

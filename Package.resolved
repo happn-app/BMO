@@ -9,6 +9,24 @@
           "revision": "29447ed9b5dc4dae67144dec812468d0b5dc8967",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "CollectionLoader",
+        "repositoryURL": "git@github.com:happn-app/CollectionLoader.git",
+        "state": {
+          "branch": null,
+          "revision": "86e3f0032f8ffe306339b8b7fc2067396b07c461",
+          "version": "0.9.0"
+        }
+      },
+      {
+        "package": "KVObserver",
+        "repositoryURL": "git@github.com:happn-app/KVObserver.git",
+        "state": {
+          "branch": null,
+          "revision": "cae572fa27065d52df9cf66c34a0a30d7f6f7a57",
+          "version": "0.9.0"
+        }
       }
     ]
   },

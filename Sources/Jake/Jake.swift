@@ -15,3 +15,5 @@
 @_exported import BMO_FastImportRepresentation
 @_exported import BMO_CoreData
 @_exported import BMO_RESTCoreData
+@_exported import CollectionLoader
+@_exported import CollectionLoader_RESTCoreData
