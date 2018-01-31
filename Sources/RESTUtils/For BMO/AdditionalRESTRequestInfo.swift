@@ -58,9 +58,9 @@ public struct AdditionalRESTRequestInfo<DbPropertyDescription : Hashable> {
 	}
 	
 	/* Private (implicitely, we still need it though for ObjC compatibility)
-	 * because the NSPropertyDescription class is buggy. Se we'll implement a
-	 * subscript directly in this struct to access sub-additional info which will
-	 * workaround the hashing problem. */
-	var _subAdditionalInfo: [DbPropertyDescription: AdditionalRESTRequestInfo<DbPropertyDescription>]
+	 * because the NSPropertyDescription class is buggy. Instead we'll implement
+	 * a subscript directly in this struct to access sub-additional info which
+	 * will workaround the hashing problem. */
+	public private(set) var _subAdditionalInfo: [DbPropertyDescription: AdditionalRESTRequestInfo<DbPropertyDescription>]
 	
 }
