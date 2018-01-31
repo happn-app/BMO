@@ -16,6 +16,9 @@ import BMO_FastImportRepresentation
 
 public class BackResultsImporterForCoreDataWithFastImportRepresentation<BridgeType : Bridge> : BackResultsImporter where BridgeType.DbType == NSManagedObjectContext {
 	
+	public init() {
+	}
+	
 	public func retrieveDbRepresentations(fromRemoteRepresentations remoteRepresentations: [BridgeType.RemoteObjectRepresentationType], expectedEntity entity: BridgeType.DbType.EntityDescriptionType, userInfo: BridgeType.UserInfoType, bridge: BridgeType, shouldContinueHandler: () -> Bool) -> Int {
 		dbRepresentations = FastImportRepresentation.fastImportRepresentations(fromRemoteRepresentations: remoteRepresentations, expectedEntity: entity, userInfo: userInfo, bridge: bridge, shouldContinueHandler: shouldContinueHandler)
 		return dbRepresentations.count
