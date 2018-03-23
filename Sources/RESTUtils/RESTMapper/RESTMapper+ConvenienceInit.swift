@@ -15,7 +15,8 @@ public enum _RESTConvenienceMappingForEntity {
 	case restPath(String)
 	case paginator(RESTPaginator)
 	case uniquingPropertyName(String?) /* If not given, entity does not have uniquing. If given property name is nil, entity is singleton. */
-	
+	case entityPrefixedUniquingPropertyName(String?) /* For backward compatibility purpose: same as the one above, but uniquing value, if property is given, will be prefixed with the entity name. */
+
 	case forcedParametersOnFetch([String: Any])
 	
 	case forcedValuesOnSave([String: Any])
@@ -68,6 +69,7 @@ public extension RESTMapper {
 			
 			var restPathStr: String? = nil
 			var paginator: RESTPaginator? = nil
+			var uniquingPropertyIsPrefixed = false
 			var forcedValuesOnSave = [String: Any]()
 			var forcedParametersOnFetch = [String: Any]()
 			var uniquingProperty: DbPropertyDescription?? = nil
@@ -77,12 +79,13 @@ public extension RESTMapper {
 			
 			for convenienceEntityMappingPart in convenienceEntityMapping {
 				switch convenienceEntityMappingPart {
-				case .restPath(let p):                restPathStr = p
-				case .paginator(let p):               paginator = p
-				case .uniquingPropertyName(let n):    uniquingProperty = .some(n.flatMap{ propertyGetter(entity, $0) })
-				case .forcedParametersOnFetch(let v): forcedParametersOnFetch = v
-				case .forcedValuesOnSave(let v):      forcedValuesOnSave = v
-				case .restEntityDescription(let d):   restEntityDescription = d
+				case .restPath(let p):                           restPathStr = p
+				case .paginator(let p):                          paginator = p
+				case .uniquingPropertyName(let n):               uniquingProperty = .some(n.flatMap{ propertyGetter(entity, $0) })
+				case .entityPrefixedUniquingPropertyName(let n): uniquingProperty = .some(n.flatMap{ propertyGetter(entity, $0) }); uniquingPropertyIsPrefixed = true
+				case .forcedParametersOnFetch(let v):            forcedParametersOnFetch = v
+				case .forcedValuesOnSave(let v):                 forcedValuesOnSave = v
+				case .restEntityDescription(let d):              restEntityDescription = d
 					
 				case .propertiesMapping(let conveniencePropertiesMapping):
 					for (propertyName, conveniencePropertyMapping) in conveniencePropertiesMapping {
@@ -188,7 +191,7 @@ public extension RESTMapper {
 			if let restPathStr = restPathStr {restPath = RESTPath(restPathStr)!}
 			else                             {restPath = nil}
 			let uniquingType: RESTEntityUniquingType<DbPropertyDescription>?
-			if let uniquingProperty = uniquingProperty {uniquingType = uniquingProperty.flatMap{ .onProperty(constantPrefix: entityName + "/", property: $0) } ?? .singleton(entityName)}
+			if let uniquingProperty = uniquingProperty {uniquingType = uniquingProperty.flatMap{ .onProperty(constantPrefix: (uniquingPropertyIsPrefixed ? entityName + "/" : nil), property: $0) } ?? .singleton(entityName)}
 			else                                       {uniquingType = nil}
 			entitiesMapping[entity] = RESTEntityMapping<DbPropertyDescription>(
 				restPath: restPath,
