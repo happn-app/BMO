@@ -96,8 +96,8 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 								 * UID as the one we're given in the representation.
 								 * We'll update the UID of the object but print a
 								 * message in the logs first! */
-								if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to update object %@ but representation has UID %@. Updating UID (aka. \"zzRID\") of updating object (experimental; might lead to unexpected results).", log: $0, type: .info, updatedObject, String(describing: uid)) }}
-								else                                                          {NSLog("Asked to update object %@ but representation has UID %@. Updating UID (aka. \"zzRID\") of updating object (experimental; might lead to unexpected results).", updatedObject, String(describing: uid))}
+								if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to update object %@ but representation has UID %@. Updating UID (aka. \"zzRID\") of updated object (experimental; might lead to unexpected results).", log: $0, type: .info, updatedObject, String(describing: uid)) }}
+								else                                                          {NSLog("Asked to update object %@ but representation has UID %@. Updating UID (aka. \"zzRID\") of updated object (experimental; might lead to unexpected results).", updatedObject, String(describing: uid))}
 							}
 							updatedObject.setValue(uid, forKey: "zzRID")
 						}
