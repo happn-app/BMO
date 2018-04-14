@@ -24,7 +24,7 @@ public extension NSPredicate {
 			return [comparison]
 			
 		case let compound as NSCompoundPredicate where compound.compoundPredicateType == .or:
-			return try? compound.subpredicates.flatMap{
+			return try? compound.subpredicates.compactMap{
 				guard let comparison = $0 as? NSComparisonPredicate else {
 					if !failForUnknownPredicates {return nil}
 					else                         {throw NSError(domain: "ignored", code: 1, userInfo: nil)}
@@ -111,7 +111,7 @@ public extension NSPredicate {
 		case let compoundPredicate as NSCompoundPredicate:
 			return NSCompoundPredicate(
 				type: compoundPredicate.compoundPredicateType,
-				subpredicates: compoundPredicate.subpredicates.flatMap{ ($0 as? NSPredicate)?.predicateByAddingKeyPathPrefix(keyPathPrefix) }
+				subpredicates: compoundPredicate.subpredicates.compactMap{ ($0 as? NSPredicate)?.predicateByAddingKeyPathPrefix(keyPathPrefix) }
 			)
 			
 		default: fatalError("Unknown predicate type to form sub-query predicate for \(self)")
@@ -187,12 +187,12 @@ public extension NSExpression {
 			         possible for the collection to contain something else than
 			         NSExpressions, but we never know! */
 			switch collection {
-			case let exprs as [Any]:            return NSExpression(forAggregate: exprs.flatMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
-			case let exprs as Set<AnyHashable>: return NSExpression(forAggregate: exprs.flatMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
+			case let exprs as [Any]:            return NSExpression(forAggregate: exprs.compactMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
+			case let exprs as Set<AnyHashable>: return NSExpression(forAggregate: exprs.compactMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
 			case let exprs as [AnyHashable: Any]:
 				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Doc says we can initialize an aggregate expression with a dictionary, but method signature says otherwise... Returning an aggregate expression with a collection being the values of the original collection (prefixed by added prefix).", log: $0, type: .info) }}
 				else                                                          {NSLog("Doc says we can initialize an aggregate expression with a dictionary, but method signature says otherwise... Returning an aggregate expression with a collection being the values of the original collection (prefixed by added prefix).")}
-				return NSExpression(forAggregate: exprs.values.flatMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
+				return NSExpression(forAggregate: exprs.values.compactMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
 				
 			default:
 				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Unknown collection %@ for aggregate expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, String(describing: collection), self, keyPathPrefix) }}

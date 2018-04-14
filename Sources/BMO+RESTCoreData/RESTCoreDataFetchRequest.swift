@@ -24,14 +24,11 @@ public extension CoreDataFetchRequest where AdditionalInfoType == AdditionalREST
 		fRequest.resultType = resultType
 		fRequest.predicate = NSPredicate(format: "%K == %@", remoteIdPropertyName, remoteId)
 		
-		db = context
-		fetchRequest = fRequest
-		fetchType = (alwaysFetchProperties || !(flatifiedFields?.isEmpty ?? true)) ? .always : .onlyIfNoLocalResults
-		additionalInfo = AdditionalRESTRequestInfo<NSPropertyDescription>(flatifiedFields: flatifiedFields, inEntity: entity)
-		
-		leaveBridgeHandler = lb
-		preImportHandler = pi
-		preCompletionHandler = pc
+		self.init(
+			context: context, fetchRequest: fRequest, fetchType: (alwaysFetchProperties || !(flatifiedFields?.isEmpty ?? true)) ? .always : .onlyIfNoLocalResults,
+			additionalInfo: AdditionalRESTRequestInfo<NSPropertyDescription>(flatifiedFields: flatifiedFields, inEntity: entity),
+			leaveBridgeHandler: lb, preImportHandler: pi, preCompletionHandler: pc
+		)
 	}
 	
 }

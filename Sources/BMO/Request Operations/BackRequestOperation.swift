@@ -130,7 +130,7 @@ public final class BackRequestOperation<RequestType : BackRequest, BridgeType : 
 		operations.forEach{ completionOperation.addDependency($0.resultsProcessingOperation) }
 		
 		backOperationQueue.addOperations(operations.map{ $0.backOperation }, waitUntilFinished: false)
-		parseOperationQueue.addOperations(operations.flatMap{ $0.parseOperation }, waitUntilFinished: false)
+		parseOperationQueue.addOperations(operations.compactMap{ $0.parseOperation }, waitUntilFinished: false)
 		resultsProcessingQueue.addOperations(operations.map{ $0.resultsProcessingOperation }, waitUntilFinished: false)
 		resultsProcessingQueue.addOperation(completionOperation)
 	}
