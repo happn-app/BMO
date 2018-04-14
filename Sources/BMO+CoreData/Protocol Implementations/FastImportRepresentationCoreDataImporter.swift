@@ -22,7 +22,8 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 	typealias DbType = NSManagedObjectContext
 	typealias DbRepresentationType = FastImportRepresentation<NSEntityDescription, NSManagedObject, ResultBuilderType.DbRepresentationUserInfoType>
 	
-	init(representations r: [DbRepresentationType], resultBuilder rb: ResultBuilderType) {
+	init(uniquingPropertyName p: String, representations r: [DbRepresentationType], resultBuilder rb: ResultBuilderType) {
+		uniquingPropertyName = p
 		resultBuilder = rb
 		representations = r
 	}
@@ -36,13 +37,13 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 		for (entity, uniquingIds) in uniquingIdsByEntity {
 			let request = NSFetchRequest<NSManagedObject>()
 			request.entity = entity
-			if db.parent == nil {request.propertiesToFetch = ["zzRID"]} /* If setting propertiesToFetch when context has a parent we get a CoreData exception (corrupt database). Tested on iOS 10. */
-			request.predicate = NSPredicate(format: "%K IN %@", "zzRID", uniquingIds)
+			if db.parent == nil {request.propertiesToFetch = [uniquingPropertyName]} /* If setting propertiesToFetch when context has a parent we get a CoreData exception (corrupt database). Tested on iOS 10. */
+			request.predicate = NSPredicate(format: "%K IN %@", uniquingPropertyName, uniquingIds)
 			let objects = try db.fetch(request)
 			
 			for object in objects {
-				guard let rid = object.value(forKey: "zzRID") as? AnyHashable else {assertionFailure("Well… This is unexpected! Didn't get an AnyHashable value for RID of object \(object)"); continue}
-				objectsByUniquingIds[rid] = object
+				guard let uid = object.value(forKey: uniquingPropertyName) as? AnyHashable else {assertionFailure("Well… This is unexpected! Didn't get an AnyHashable value for UID of object \(object) (property name \(uniquingPropertyName))"); continue}
+				objectsByUniquingIds[uid] = object
 			}
 		}
 		
@@ -55,10 +56,11 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 	
 	private func extractUniquingIds(representations: [DbRepresentationType]) {
 		for representation in representations {
+			assert(!representation.relationships.keys.contains(uniquingPropertyName))
+			assert( representation.entity.attributesByName.keys.contains(uniquingPropertyName)) /* attributesByName includes superentities attributes */
+			assert(!representation.attributes.keys.contains(uniquingPropertyName) || (representation.attributes[uniquingPropertyName] as? AnyHashable) == representation.uniquingId)
 			if let uniquingId = representation.uniquingId {
-				var uniquingIds = uniquingIdsByEntity[representation.entity] ?? []
-				uniquingIds.insert(uniquingId)
-				uniquingIdsByEntity[representation.entity] = uniquingIds
+				uniquingIdsByEntity[representation.entity, default: []].insert(uniquingId)
 			}
 			for relationshipValueDescription in representation.relationships.values {
 				if let relationshipRepresentations = relationshipValueDescription.value?.0 {
@@ -89,17 +91,17 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 						}
 					} else {
 						/* We are told to forcibly update an object, and we can do it! */
-						let updatedObjectUID = updatedObject.value(forKey: "zzRID")
+						let updatedObjectUID = updatedObject.value(forKey: uniquingPropertyName)
 						if updatedObjectUID as? AnyHashable != uid {
 							if updatedObjectUID != nil {
 								/* Object we're asked to update does not have the same
 								 * UID as the one we're given in the representation.
 								 * We'll update the UID of the object but print a
 								 * message in the logs first! */
-								if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to update object %@ but representation has UID %@. Updating UID (aka. \"zzRID\") of updated object (experimental; might lead to unexpected results).", log: $0, type: .info, updatedObject, String(describing: uid)) }}
-								else                                                          {NSLog("Asked to update object %@ but representation has UID %@. Updating UID (aka. \"zzRID\") of updated object (experimental; might lead to unexpected results).", updatedObject, String(describing: uid))}
+								if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to update object %@ but representation has UID %@. Updating UID (property “%{public}@”) of updated object (experimental; might lead to unexpected results).", log: $0, type: .info, updatedObject, String(describing: uid), uniquingPropertyName) }}
+								else                                                          {NSLog("Asked to update object %@ but representation has UID %@. Updating UID (property “%@”) of updated object (experimental; might lead to unexpected results).", updatedObject, String(describing: uid), uniquingPropertyName)}
 							}
-							updatedObject.setValue(uid, forKey: "zzRID")
+							updatedObject.setValue(uid, forKey: uniquingPropertyName)
 						}
 						uniqIdToObject[uid] = updatedObject
 					}
@@ -116,7 +118,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 					/* If the object is not in the uniqIdToObject dictionary we have
 					 * to create it. */
 					object = NSEntityDescription.insertNewObject(forEntityName: representation.entity.name!, into: db)
-					object.setValue(uid, forKey: "zzRID")
+					object.setValue(uid, forKey: uniquingPropertyName)
 					uniqIdToObject[uid] = object
 					insertedObjects.append(object)
 					try resultBuilder.unsafeInserted(object: object, fromDb: db)
@@ -199,6 +201,8 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 		try resultBuilder.unsafeFinishedImport(inDb: db)
 		return res
 	}
+	
+	private let uniquingPropertyName: String
 	
 	private let representations: [DbRepresentationType]
 	private let resultBuilder: ResultBuilderType
