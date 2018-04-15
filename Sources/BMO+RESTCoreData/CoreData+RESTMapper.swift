@@ -8,6 +8,7 @@
 
 import CoreData
 import Foundation
+import os.log
 
 import RESTUtils
 
@@ -21,7 +22,27 @@ extension NSPropertyDescription : DbRESTPropertyDescription {
 }
 
 extension NSAttributeDescription {
-	public override var valueType: AnyClass? {return attributeValueClassName.flatMap{ NSClassFromString($0)!}}
+	public override var valueType: AnyClass? {
+		/* We force cast in String? because while it is valid for the user info
+		 * not to have a value for the forced class name key, if there is a value
+		 * it is invalid that it is not a string. */
+		if let forcedClassName = userInfo?["BMO_ObjCAttributeValueClassName"] as! String? {
+			/* We assume if the user has set a forced class name, it has taken care
+			 * for the class to actually be available in the ObjC runtime. */
+			return NSClassFromString(forcedClassName)!
+		}
+		guard let className = attributeValueClassName else {
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got an attribute description whose attributeValueClassName is nil; returning nil valueType. Attribute is %{public}@", log: $0, type: .info, self) }}
+			else                                                          {NSLog("Got an attribute description whose attributeValueClassName is nil; returning nil valueType. Attribute is %@", self)}
+			return nil
+		}
+		guard let objcClass = NSClassFromString(className) else {
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got an attribute value class name (%{public}@) which is unreachable in the ObjC runtime; returning nil valueType. Attribute is %{public}@", log: $0, type: .info, className, self) }}
+			else                                                          {NSLog("Got an attribute value class name (%@) which is unreachable in the ObjC runtime; returning nil valueType. Attribute is %{public}@", className, self)}
+			return nil
+		}
+		return objcClass
+	}
 }
 
 
