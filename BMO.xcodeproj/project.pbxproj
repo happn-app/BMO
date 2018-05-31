@@ -240,6 +240,22 @@
 		7B83328E2019310D005184FE /* AdditionalRESTRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */; };
 		7B8BD02320026E8C009BE667 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
 		7B8BD036200274B9009BE667 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
+		7BB4E56320C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
+		7BB4E56420C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
+		7BB4E56520C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
+		7BB4E56620C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
+		7BB4E57020C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */; };
+		7BB4E57120C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */; };
+		7BB4E57220C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */; };
+		7BB4E57320C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */; };
+		7BB4E57520C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */; };
+		7BB4E57620C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */; };
+		7BB4E57720C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */; };
+		7BB4E57820C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */; };
+		7BB4E57A20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */; };
+		7BB4E57B20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */; };
+		7BB4E57C20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */; };
+		7BB4E57D20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */; };
 		7BB9656A2022299900024DE1 /* CollectionLoader_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB965612022299800024DE1 /* CollectionLoader_RESTCoreData.framework */; };
 		7BB96586202229A900024DE1 /* CollectionLoader_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB9657D202229A900024DE1 /* CollectionLoader_RESTCoreData.framework */; };
 		7BB965A2202229BF00024DE1 /* CollectionLoader_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB96599202229BF00024DE1 /* CollectionLoader_RESTCoreData.framework */; };
@@ -320,6 +336,14 @@
 		7BB966592022613900024DE1 /* CollectionLoader_RESTCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB966562022613900024DE1 /* CollectionLoader_RESTCoreDataTests.swift */; };
 		7BC696DE2002775C007BC3E9 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* BMO.framework */; };
 		7BC696EC200277AA007BC3E9 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
+		7BD6276620C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */; };
+		7BD6276720C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */; };
+		7BD6276820C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */; };
+		7BD6276920C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */; };
+		7BD6276B20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */; };
+		7BD6276C20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */; };
+		7BD6276D20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */; };
+		7BD6276E20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */; };
 		7BEB91EE202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
 		7BEB91EF202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
 		7BEB91F0202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
@@ -1257,6 +1281,10 @@
 		7B8BD02920026E8C009BE667 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B8BD032200274B9009BE667 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* BMOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOTests.swift; sourceTree = "<group>"; };
+		7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTUUIDTransformer.swift; sourceTree = "<group>"; };
+		7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTURLTransformer.swift; sourceTree = "<group>"; };
+		7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTBase64DataTransformer.swift; sourceTree = "<group>"; };
+		7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTEnumTransformer.swift; sourceTree = "<group>"; };
 		7BB52E43200279EA007CAD7B /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB9653D202228F600024DE1 /* CoreDataSearchCLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSearchCLH.swift; sourceTree = "<group>"; };
 		7BB9653E202228F600024DE1 /* AnyCoreDataCLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCoreDataCLH.swift; sourceTree = "<group>"; };
@@ -1287,6 +1315,8 @@
 		7BB966562022613900024DE1 /* CollectionLoader_RESTCoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionLoader_RESTCoreDataTests.swift; sourceTree = "<group>"; };
 		7BC696D52002775C007BC3E9 /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC696DD2002775C007BC3E9 /* BMO-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTDateAndTimeTransformer.swift; sourceTree = "<group>"; };
+		7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTNumericTransformer.swift; sourceTree = "<group>"; };
 		7BDB4E582019234900D1D5F2 /* Db+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Db+CoreData.swift"; sourceTree = "<group>"; };
 		7BEB91ED202131E30068239F /* Bridge+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bridge+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1972,6 +2002,12 @@
 				7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */,
 				7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */,
 				7B0AB0A920210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift */,
+				7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */,
+				7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */,
+				7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */,
+				7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */,
+				7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */,
+				7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -3788,18 +3824,24 @@
 			files = (
 				7BB9663F202242A200024DE1 /* RESTPropertyMapping.swift in Sources */,
 				7BB966492022431C00024DE1 /* RESTMapper+ConvenienceInit.swift in Sources */,
+				7BB4E57B20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */,
+				7BB4E56420C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */,
+				7BB4E57620C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */,
 				7BB9662B20223ED600024DE1 /* RESTMapperTransformer.swift in Sources */,
 				7B516280201FBF8700B94FB3 /* RESTPathProtocols.swift in Sources */,
 				7BB9664E2022546900024DE1 /* DependencyInjection.swift in Sources */,
 				7BB9661320223A1F00024DE1 /* RESTMaxIdPaginator.swift in Sources */,
 				7BB9662320223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661720223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
+				7BB4E57120C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
 				7BB966352022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9660F20223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A620210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
+				7BD6276C20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */,
 				7B516281201FBF8700B94FB3 /* AdditionalRESTRequestInfo.swift in Sources */,
 				7BB9663A2022421600024DE1 /* RESTEntityMapping.swift in Sources */,
 				7BB9661B20223A1F00024DE1 /* RESTMapper.swift in Sources */,
+				7BD6276720C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */,
 				7B0AB0AB20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B51627F201FBF8700B94FB3 /* RESTPath.swift in Sources */,
 				7BB96644202242F000024DE1 /* BaseProtocols.swift in Sources */,
@@ -3821,18 +3863,24 @@
 			files = (
 				7BB96640202242A200024DE1 /* RESTPropertyMapping.swift in Sources */,
 				7BB9664A2022431C00024DE1 /* RESTMapper+ConvenienceInit.swift in Sources */,
+				7BB4E57C20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */,
+				7BB4E56520C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */,
+				7BB4E57720C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */,
 				7BB9662C20223ED600024DE1 /* RESTMapperTransformer.swift in Sources */,
 				7B516284201FBF8800B94FB3 /* RESTPathProtocols.swift in Sources */,
 				7BB9664F2022546900024DE1 /* DependencyInjection.swift in Sources */,
 				7BB9661420223A1F00024DE1 /* RESTMaxIdPaginator.swift in Sources */,
 				7BB9662420223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661820223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
+				7BB4E57220C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
 				7BB966362022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9661020223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A720210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
+				7BD6276D20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */,
 				7B516285201FBF8800B94FB3 /* AdditionalRESTRequestInfo.swift in Sources */,
 				7BB9663B2022421600024DE1 /* RESTEntityMapping.swift in Sources */,
 				7BB9661C20223A1F00024DE1 /* RESTMapper.swift in Sources */,
+				7BD6276820C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */,
 				7B0AB0AC20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B516283201FBF8800B94FB3 /* RESTPath.swift in Sources */,
 				7BB96645202242F000024DE1 /* BaseProtocols.swift in Sources */,
@@ -3854,18 +3902,24 @@
 			files = (
 				7BB96641202242A200024DE1 /* RESTPropertyMapping.swift in Sources */,
 				7BB9664B2022431C00024DE1 /* RESTMapper+ConvenienceInit.swift in Sources */,
+				7BB4E57D20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */,
+				7BB4E56620C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */,
+				7BB4E57820C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */,
 				7BB9662D20223ED600024DE1 /* RESTMapperTransformer.swift in Sources */,
 				7B516288201FBF8800B94FB3 /* RESTPathProtocols.swift in Sources */,
 				7BB966502022546900024DE1 /* DependencyInjection.swift in Sources */,
 				7BB9661520223A1F00024DE1 /* RESTMaxIdPaginator.swift in Sources */,
 				7BB9662520223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661920223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
+				7BB4E57320C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
 				7BB966372022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9661120223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A820210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
+				7BD6276E20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */,
 				7B516289201FBF8800B94FB3 /* AdditionalRESTRequestInfo.swift in Sources */,
 				7BB9663C2022421600024DE1 /* RESTEntityMapping.swift in Sources */,
 				7BB9661D20223A1F00024DE1 /* RESTMapper.swift in Sources */,
+				7BD6276920C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */,
 				7B0AB0AD20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B516287201FBF8800B94FB3 /* RESTPath.swift in Sources */,
 				7BB96646202242F000024DE1 /* BaseProtocols.swift in Sources */,
@@ -4027,18 +4081,24 @@
 			files = (
 				7BB9663E202242A200024DE1 /* RESTPropertyMapping.swift in Sources */,
 				7BB966482022431C00024DE1 /* RESTMapper+ConvenienceInit.swift in Sources */,
+				7BB4E57A20C0C05F003A0977 /* RESTEnumTransformer.swift in Sources */,
+				7BB4E56320C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */,
+				7BB4E57520C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */,
 				7BB9662A20223ED600024DE1 /* RESTMapperTransformer.swift in Sources */,
 				7B3192C32019F2640088312B /* RESTPath.swift in Sources */,
 				7BB9664D2022546900024DE1 /* DependencyInjection.swift in Sources */,
 				7BB9661220223A1F00024DE1 /* RESTMaxIdPaginator.swift in Sources */,
 				7BB9662220223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661620223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
+				7BB4E57020C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
 				7BB966342022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9660E20223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A520210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
+				7BD6276B20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */,
 				7B75E6AF201E5E3D00D88635 /* RESTPathProtocols.swift in Sources */,
 				7BB966392022421600024DE1 /* RESTEntityMapping.swift in Sources */,
 				7BB9661A20223A1F00024DE1 /* RESTMapper.swift in Sources */,
+				7BD6276620C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */,
 				7B0AB0AA20210EF800AC083A /* StandardRESTParameterizedStringSetParser.swift in Sources */,
 				7B83328E2019310D005184FE /* AdditionalRESTRequestInfo.swift in Sources */,
 				7BB96643202242F000024DE1 /* BaseProtocols.swift in Sources */,
