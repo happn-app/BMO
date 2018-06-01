@@ -13,6 +13,10 @@ import XCTest
 
 class RESTColorTransformerTests: XCTestCase {
 	
+	func testSimpleFail() {
+		XCTAssertNil(RESTColorTransformer.convertObjectToColor("#000000 "))
+	}
+	
 	func testSimpleHexColorWithSharpConversion() {
 		XCTAssertEqual(RESTColorTransformer.convertObjectToColor("#000000"), BMOColor(red: 0, green: 0, blue: 0, alpha: 1))
 	}
@@ -23,6 +27,7 @@ class RESTColorTransformerTests: XCTestCase {
 	
 	/* Fill this array with all the tests to have Linux testing compatibility. */
 	static var allTests = [
+		("testSimpleFail", testSimpleFail),
 		("testSimpleHexColorWithSharpConversion", testSimpleHexColorWithSharpConversion),
 		("testSimpleHexColorWithoutSharpConversion", testSimpleHexColorWithoutSharpConversion)
 	]
