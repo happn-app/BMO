@@ -18,15 +18,26 @@ value for converting a numeric value to a String (except for Ints, of course,
 but this is a generic transformer for all numeric values). */
 public final class RESTNumericTransformer : ValueTransformer {
 	
+	public enum StringParsingBase {
+		
+		case ten
+		case sixteen
+		
+	}
+	
 	public enum NumericFormat {
 		
 		case int
 		case float
 		case double
 		
-		case intWithOptions(doubleToIntRoundingRule: FloatingPointRoundingRule, ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?, failOnNonWholeNumbers: Bool, parseStringAsDouble: Bool)
-		case floatWithOptions(ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?)
-		case doubleWithOptions(ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?)
+		case intBase(StringParsingBase)
+		case floatBase(StringParsingBase)
+		case doubleBase(StringParsingBase)
+		
+		case intWithOptions(doubleToIntRoundingRule: FloatingPointRoundingRule, base: StringParsingBase, ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?, failOnNonWholeNumbers: Bool, parseStringAsDouble: Bool)
+		case floatWithOptions(base: StringParsingBase, ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?)
+		case doubleWithOptions(base: StringParsingBase, ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?)
 		
 	}
 	
@@ -51,7 +62,7 @@ public final class RESTNumericTransformer : ValueTransformer {
 	If `parseStringAsDouble` is `true`, will try and parse the string as a Double
 	and return the value, converting the same way as with an NSNumber. */
 	public static func convertObjectToInt(
-		_ obj: Any?, doubleToIntRoundingRule: FloatingPointRoundingRule = .toNearestOrAwayFromZero,
+		_ obj: Any?, doubleToIntRoundingRule: FloatingPointRoundingRule = .toNearestOrAwayFromZero, stringParsingBase: StringParsingBase = .ten,
 		ignoredCharacters: CharacterSet = .whitespacesAndNewlines, parserMustScanWholeString: Bool = true, scannerLocale: Locale? = nil,
 		failOnNonWholeNumbers: Bool = false, parseStringAsDouble: Bool = false
 	) -> Int? {
@@ -69,7 +80,13 @@ public final class RESTNumericTransformer : ValueTransformer {
 			let scanner = Scanner(string: str)
 			scanner.locale = scannerLocale
 			scanner.charactersToBeSkipped = ignoredCharacters
-			guard scanner.scanInt(&int) else {return nil}
+			switch stringParsingBase {
+			case .ten: guard scanner.scanInt(&int) else {return nil}
+			case .sixteen:
+				var uint64 = UInt64(0)
+				guard scanner.scanHexInt64(&uint64), let i = Int(exactly: uint64) else {return nil}
+				int = i
+			}
 			guard !parserMustScanWholeString || scanner.isAtEnd else {return nil}
 			return int
 		} else {
@@ -77,7 +94,10 @@ public final class RESTNumericTransformer : ValueTransformer {
 			let scanner = Scanner(string: str)
 			scanner.locale = scannerLocale
 			scanner.charactersToBeSkipped = ignoredCharacters
-			guard scanner.scanDouble(&double) else {return nil}
+			switch stringParsingBase {
+			case .ten:     guard scanner.scanDouble(&double)    else {return nil}
+			case .sixteen: guard scanner.scanHexDouble(&double) else {return nil}
+			}
 			guard !parserMustScanWholeString || scanner.isAtEnd else {return nil}
 			guard !failOnNonWholeNumbers || RESTNumericTransformer.isDecimalWhole(Decimal(double)) else {return nil}
 			return Int(exactly: double.rounded(doubleToIntRoundingRule))
@@ -94,7 +114,7 @@ public final class RESTNumericTransformer : ValueTransformer {
 	
 	- String: the object will be parsed with a Scanner, with the given ignored
 	characters (by default whitespaces and newlines) and the given locale. */
-	public static func convertObjectToFloat(_ obj: Any?, ignoredCharacters: CharacterSet = .whitespacesAndNewlines, parserMustScanWholeString: Bool = true, scannerLocale: Locale? = nil) -> Float? {
+	public static func convertObjectToFloat(_ obj: Any?, stringParsingBase: StringParsingBase = .ten, ignoredCharacters: CharacterSet = .whitespacesAndNewlines, parserMustScanWholeString: Bool = true, scannerLocale: Locale? = nil) -> Float? {
 		if let f = obj as? Float {return f}
 		if let n = obj as? NSNumber {return n.floatValue}
 		
@@ -105,7 +125,10 @@ public final class RESTNumericTransformer : ValueTransformer {
 		let scanner = Scanner(string: str)
 		scanner.locale = scannerLocale
 		scanner.charactersToBeSkipped = ignoredCharacters
-		guard scanner.scanFloat(&float) else {return nil}
+		switch stringParsingBase {
+		case .ten:     guard scanner.scanFloat(&float)    else {return nil}
+		case .sixteen: guard scanner.scanHexFloat(&float) else {return nil}
+		}
 		guard !parserMustScanWholeString || scanner.isAtEnd else {return nil}
 		return float
 	}
@@ -120,7 +143,7 @@ public final class RESTNumericTransformer : ValueTransformer {
 	
 	- String: the object will be parsed with a Scanner, with the given ignored
 	characters (by default whitespaces and newlines) and the given locale. */
-	public static func convertObjectToDouble(_ obj: Any?, ignoredCharacters: CharacterSet = .whitespacesAndNewlines, parserMustScanWholeString: Bool = true, scannerLocale: Locale? = nil) -> Double? {
+	public static func convertObjectToDouble(_ obj: Any?, stringParsingBase: StringParsingBase = .ten, ignoredCharacters: CharacterSet = .whitespacesAndNewlines, parserMustScanWholeString: Bool = true, scannerLocale: Locale? = nil) -> Double? {
 		if let d = obj as? Double {return d}
 		if let n = obj as? NSNumber {return n.doubleValue}
 		
@@ -131,7 +154,10 @@ public final class RESTNumericTransformer : ValueTransformer {
 		let scanner = Scanner(string: str)
 		scanner.locale = scannerLocale
 		scanner.charactersToBeSkipped = ignoredCharacters
-		guard scanner.scanDouble(&double) else {return nil}
+		switch stringParsingBase {
+		case .ten:     guard scanner.scanDouble(&double)    else {return nil}
+		case .sixteen: guard scanner.scanHexDouble(&double) else {return nil}
+		}
 		guard !parserMustScanWholeString || scanner.isAtEnd else {return nil}
 		return double
 	}
@@ -156,14 +182,18 @@ public final class RESTNumericTransformer : ValueTransformer {
 		case .float:  return RESTNumericTransformer.convertObjectToFloat(value)
 		case .double: return RESTNumericTransformer.convertObjectToDouble(value)
 			
-		case .intWithOptions(doubleToIntRoundingRule: let r, ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l, failOnNonWholeNumbers: let fnw, parseStringAsDouble: let d):
-			return RESTNumericTransformer.convertObjectToInt(value, doubleToIntRoundingRule: r, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l, failOnNonWholeNumbers: fnw, parseStringAsDouble: d)
+		case .intBase(let base):    return RESTNumericTransformer.convertObjectToInt(value, stringParsingBase: base)
+		case .floatBase(let base):  return RESTNumericTransformer.convertObjectToFloat(value, stringParsingBase: base)
+		case .doubleBase(let base): return RESTNumericTransformer.convertObjectToDouble(value, stringParsingBase: base)
 			
-		case .floatWithOptions(ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l):
-			return RESTNumericTransformer.convertObjectToFloat(value, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l)
+		case .intWithOptions(doubleToIntRoundingRule: let r, base: let base, ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l, failOnNonWholeNumbers: let fnw, parseStringAsDouble: let d):
+			return RESTNumericTransformer.convertObjectToInt(value, doubleToIntRoundingRule: r, stringParsingBase: base, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l, failOnNonWholeNumbers: fnw, parseStringAsDouble: d)
 			
-		case .doubleWithOptions(ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l):
-			return RESTNumericTransformer.convertObjectToDouble(value, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l)
+		case .floatWithOptions(base: let base, ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l):
+			return RESTNumericTransformer.convertObjectToFloat(value, stringParsingBase: base, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l)
+			
+		case .doubleWithOptions(base: let base, ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l):
+			return RESTNumericTransformer.convertObjectToDouble(value, stringParsingBase: base, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l)
 		}
 	}
 	

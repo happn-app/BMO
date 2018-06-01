@@ -240,6 +240,9 @@
 		7B83328E2019310D005184FE /* AdditionalRESTRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */; };
 		7B8BD02320026E8C009BE667 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
 		7B8BD036200274B9009BE667 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
+		7B93F6EB20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */; };
+		7B93F6EC20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */; };
+		7B93F6ED20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */; };
 		7BB4E56320C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
 		7BB4E56420C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
 		7BB4E56520C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
@@ -352,6 +355,10 @@
 		7BEB91EF202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
 		7BEB91F0202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
 		7BEB91F1202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
+		7BEEDB8420C162B300275BCE /* RESTColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */; };
+		7BEEDB8520C162B300275BCE /* RESTColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */; };
+		7BEEDB8620C162B300275BCE /* RESTColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */; };
+		7BEEDB8720C162B300275BCE /* RESTColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1285,6 +1292,7 @@
 		7B8BD02920026E8C009BE667 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B8BD032200274B9009BE667 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* BMOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOTests.swift; sourceTree = "<group>"; };
+		7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTColorTransformerTests.swift; sourceTree = "<group>"; };
 		7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTUUIDTransformer.swift; sourceTree = "<group>"; };
 		7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTURLTransformer.swift; sourceTree = "<group>"; };
 		7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTBase64DataTransformer.swift; sourceTree = "<group>"; };
@@ -1324,6 +1332,7 @@
 		7BDB4E582019234900D1D5F2 /* Db+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Db+CoreData.swift"; sourceTree = "<group>"; };
 		7BDB847820C0D359001684D7 /* RESTBoolTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTBoolTransformer.swift; sourceTree = "<group>"; };
 		7BEB91ED202131E30068239F /* Bridge+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bridge+CoreData.swift"; sourceTree = "<group>"; };
+		7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTColorTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1889,6 +1898,7 @@
 			isa = PBXGroup;
 			children = (
 				7B83328920192A61005184FE /* RESTUtilsTests.swift */,
+				7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */,
 			);
 			path = RESTUtilsTests;
 			sourceTree = "<group>";
@@ -2013,6 +2023,7 @@
 				7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */,
 				7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */,
 				7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */,
+				7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */,
 				7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */,
 			);
 			path = Utilities;
@@ -3841,6 +3852,7 @@
 				7BB9662320223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661720223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
 				7BB4E57120C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
+				7BEEDB8520C162B300275BCE /* RESTColorTransformer.swift in Sources */,
 				7BB966352022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9660F20223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A620210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
@@ -3861,6 +3873,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B51625C201FBF7400B94FB3 /* RESTUtilsTests.swift in Sources */,
+				7B93F6EC20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3881,6 +3894,7 @@
 				7BB9662420223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661820223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
 				7BB4E57220C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
+				7BEEDB8620C162B300275BCE /* RESTColorTransformer.swift in Sources */,
 				7BB966362022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9661020223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A720210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
@@ -3901,6 +3915,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B51625D201FBF7500B94FB3 /* RESTUtilsTests.swift in Sources */,
+				7B93F6ED20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3921,6 +3936,7 @@
 				7BB9662520223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661920223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
 				7BB4E57320C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
+				7BEEDB8720C162B300275BCE /* RESTColorTransformer.swift in Sources */,
 				7BB966372022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9661120223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A820210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
@@ -4101,6 +4117,7 @@
 				7BB9662220223DDA00024DE1 /* AnyEquatable.swift in Sources */,
 				7BB9661620223A1F00024DE1 /* RESTOffsetLimitPaginator.swift in Sources */,
 				7BB4E57020C0BEAC003A0977 /* RESTURLTransformer.swift in Sources */,
+				7BEEDB8420C162B300275BCE /* RESTColorTransformer.swift in Sources */,
 				7BB966342022410700024DE1 /* RESTMapping.swift in Sources */,
 				7BB9660E20223A1F00024DE1 /* RESTPaginator.swift in Sources */,
 				7B0AB0A520210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */,
@@ -4121,6 +4138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B83328A20192A62005184FE /* RESTUtilsTests.swift in Sources */,
+				7B93F6EB20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
