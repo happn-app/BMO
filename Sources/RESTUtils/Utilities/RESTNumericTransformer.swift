@@ -24,7 +24,7 @@ public final class RESTNumericTransformer : ValueTransformer {
 		case float
 		case double
 		
-		case intWithOptions(doubleToIntRoundingRule: FloatingPointRoundingRule, ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?, parseStringAsDouble: Bool)
+		case intWithOptions(doubleToIntRoundingRule: FloatingPointRoundingRule, ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?, failOnNonWholeNumbers: Bool, parseStringAsDouble: Bool)
 		case floatWithOptions(ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?)
 		case doubleWithOptions(ignoredCharacters: CharacterSet, parserMustScanWholeString: Bool, scannerLocale: Locale?)
 		
@@ -40,6 +40,11 @@ public final class RESTNumericTransformer : ValueTransformer {
 	rounded using the given rounding method, then cast to an Int using an exact
 	conversion (fails but does not crash if the value is too big or too small).
 	The default rounding method is the “schoolbook rounding.”
+	If the `failOnNonWholeNumbers` is set to `true`, the double value is checked
+	to be whole before being converted into an Int. This is relative to precision
+	problems (for instance a very big number with a decimal value might see its
+	decimal value dropped when converted to a Double and thus being considered as
+	a whole number).
 	
 	- String: the object will be parsed with a Scanner, with the given ignored
 	characters (by default whitespaces and newlines) and the given locale.
@@ -48,10 +53,13 @@ public final class RESTNumericTransformer : ValueTransformer {
 	public static func convertObjectToInt(
 		_ obj: Any?, doubleToIntRoundingRule: FloatingPointRoundingRule = .toNearestOrAwayFromZero,
 		ignoredCharacters: CharacterSet = .whitespacesAndNewlines, parserMustScanWholeString: Bool = true, scannerLocale: Locale? = nil,
-		parseStringAsDouble: Bool = false
+		failOnNonWholeNumbers: Bool = false, parseStringAsDouble: Bool = false
 	) -> Int? {
 		if let n = obj as? Int {return n}
-		if let n = obj as? NSNumber {return Int(exactly: n.doubleValue.rounded(doubleToIntRoundingRule))}
+		if let n = obj as? NSNumber {
+			guard !failOnNonWholeNumbers || RESTNumericTransformer.isDecimalWhole(n.decimalValue) else {return nil}
+			return Int(exactly: n.doubleValue.rounded(doubleToIntRoundingRule))
+		}
 		
 		guard let str = obj as? String else {return nil}
 		
@@ -71,6 +79,7 @@ public final class RESTNumericTransformer : ValueTransformer {
 			scanner.charactersToBeSkipped = ignoredCharacters
 			guard scanner.scanDouble(&double) else {return nil}
 			guard !parserMustScanWholeString || scanner.isAtEnd else {return nil}
+			guard !failOnNonWholeNumbers || RESTNumericTransformer.isDecimalWhole(Decimal(double)) else {return nil}
 			return Int(exactly: double.rounded(doubleToIntRoundingRule))
 		}
 	}
@@ -147,8 +156,8 @@ public final class RESTNumericTransformer : ValueTransformer {
 		case .float:  return RESTNumericTransformer.convertObjectToFloat(value)
 		case .double: return RESTNumericTransformer.convertObjectToDouble(value)
 			
-		case .intWithOptions(doubleToIntRoundingRule: let r, ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l, parseStringAsDouble: let d):
-			return RESTNumericTransformer.convertObjectToInt(value, doubleToIntRoundingRule: r, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l, parseStringAsDouble: d)
+		case .intWithOptions(doubleToIntRoundingRule: let r, ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l, failOnNonWholeNumbers: let fnw, parseStringAsDouble: let d):
+			return RESTNumericTransformer.convertObjectToInt(value, doubleToIntRoundingRule: r, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l, failOnNonWholeNumbers: fnw, parseStringAsDouble: d)
 			
 		case .floatWithOptions(ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l):
 			return RESTNumericTransformer.convertObjectToFloat(value, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l)
@@ -156,6 +165,23 @@ public final class RESTNumericTransformer : ValueTransformer {
 		case .doubleWithOptions(ignoredCharacters: let ic, parserMustScanWholeString: let w, scannerLocale: let l):
 			return RESTNumericTransformer.convertObjectToDouble(value, ignoredCharacters: ic, parserMustScanWholeString: w, scannerLocale: l)
 		}
+	}
+	
+	/* ***************
+      MARK: - Private
+	   *************** */
+	
+	/* From https://stackoverflow.com/a/46331176/1152894
+	 * I found many variations on the same method to check whether a decimal is
+	 * whole, this method seemed the best. */
+	private static func isDecimalWhole(_ d: Decimal) -> Bool {
+		guard !d.isZero else {return true}
+		guard d.isNormal else {return false}
+		
+		var d = d
+		var rounded = Decimal()
+		NSDecimalRound(&rounded, &d, 0, .plain)
+		return d == rounded
 	}
 	
 }
