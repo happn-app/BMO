@@ -17,7 +17,7 @@ For the reverse transformation, depending on the options, the reversed value can
 either be a `String` or an `NSNumber`. */
 public final class RESTDateAndTimeTransformer : ValueTransformer {
 	
-	public enum DateConversionFormats {
+	public enum DateConversionFormat {
 		
 		public enum NumericTimestampStyle {
 			
@@ -54,7 +54,7 @@ public final class RESTDateAndTimeTransformer : ValueTransformer {
 	
 	/** Try and convert the given object with the given formats. Try the
 	conversions in the order given for the formats. */
-	public static func convertObjectToDate(_ obj: Any?, dateConversionFormats: [DateConversionFormats]) -> Date? {
+	public static func convertObjectToDate(_ obj: Any?, dateConversionFormats: [DateConversionFormat]) -> Date? {
 		if let date = obj as? Date {return date}
 		
 		let strObj = obj as? String
@@ -111,20 +111,20 @@ public final class RESTDateAndTimeTransformer : ValueTransformer {
 		return NSDate.self
 	}
 	
-	public let forwardConversionDateFormats: [DateConversionFormats]
-	public let reverseConversionDateFormat: DateConversionFormats
+	public let forwardConversionDateFormats: [DateConversionFormat]
+	public let reverseConversionDateFormat: DateConversionFormat
 	
 	public convenience override init() {
 		if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
-			let iso8601Formatter = DateConversionFormats.iso8601(options: [.withFullDate, .withFullTime], timezone: nil)
+			let iso8601Formatter = DateConversionFormat.iso8601(options: [.withFullDate, .withFullTime], timezone: nil)
 			self.init(forwardConversionDateFormats: [iso8601Formatter], reverseConversionDateFormat: iso8601Formatter)
 		} else {
-			let iso8601Formatter = DateConversionFormats.fakeISO8601(timezone: nil)
+			let iso8601Formatter = DateConversionFormat.fakeISO8601(timezone: nil)
 			self.init(forwardConversionDateFormats: [iso8601Formatter], reverseConversionDateFormat: iso8601Formatter)
 		}
 	}
 	
-	public init(forwardConversionDateFormats f: [DateConversionFormats], reverseConversionDateFormat r: DateConversionFormats) {
+	public init(forwardConversionDateFormats f: [DateConversionFormat], reverseConversionDateFormat r: DateConversionFormat) {
 		reverseConversionDateFormat = r
 		forwardConversionDateFormats = f
 	}
