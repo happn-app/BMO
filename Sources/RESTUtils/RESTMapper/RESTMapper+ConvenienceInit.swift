@@ -81,7 +81,7 @@ public extension RESTMapper {
 				switch convenienceEntityMappingPart {
 				case .restPath(let p):                           restPathStr = p
 				case .paginator(let p):                          paginator = p
-				case .uniquingPropertyName(let n):               uniquingProperty = .some(n.flatMap{ propertyGetter(entity, $0) })
+				case .uniquingPropertyName(let n):               uniquingProperty = .some(n.flatMap{ propertyGetter(entity, $0) }); uniquingPropertyIsPrefixed = false
 				case .entityPrefixedUniquingPropertyName(let n): uniquingProperty = .some(n.flatMap{ propertyGetter(entity, $0) }); uniquingPropertyIsPrefixed = true
 				case .forcedParametersOnFetch(let v):            forcedParametersOnFetch = v
 				case .forcedValuesOnSave(let v):                 forcedValuesOnSave = v
