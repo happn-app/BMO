@@ -163,23 +163,6 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 					newValues = newComputedValues
 				}
 				
-				/* FYI we had an automatic conversion of NSManagedObject to a
-					representation that could automatically be sent as HTTP body
-					params. This is not done anymore.
-				
-				if ([val isKindOfClass:NSManagedObject.class] && [val conformsToProtocol:@protocol(FLRemoteIdedManagedObject)])
-					/* <there was a todo here>: Should probably be @{[self RESTPropertyNameForSavingLocalProperty:[val entity].propertiesByName[@"remoteId"]]: [val remoteId]} here... */
-					val = [val remoteId];
-				if ([val isKindOfClass:NSArray.class] || [val isKindOfClass:NSOrderedSet.class] || [val isKindOfClass:NSSet.class]) {
-					NSMutableArray *newVal = [NSMutableArray arrayWithCapacity:[(NSArray *)val count]];
-					for (__strong id subVal in val) {
-						if ([subVal isKindOfClass:NSManagedObject.class] && [subVal conformsToProtocol:@protocol(FLRemoteIdedManagedObject)])
-						subVal = @{[self RESTPropertyNameForSavingLocalProperty:[subVal entity].propertiesByName[@"remoteId"]]: [subVal remoteId]};
-						[newVal addObject:subVal];
-					}
-					val = newVal;
-				}*/
-				
 				/* Merging the new values with the current rest representation */
 				merge(restRepresentation: &result, newValues: newValues)
 				didMapProperties = true
