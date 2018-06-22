@@ -37,7 +37,7 @@ public final class ImportBridgeOperationResultsRequestOperation<BridgeType : Bri
 			
 			let remoteRepresentations = try request.bridge.remoteObjectRepresentations(fromFinishedOperation: request.operation, userInfo: requestParsingUserInfo) ?? []
 			try throwIfCancelled()
-			let dbRepresentationCount = importer.retrieveDbRepresentations(fromRemoteRepresentations: remoteRepresentations, expectedEntity: request.expectedEntity, userInfo: requestParsingUserInfo, bridge: request.bridge, shouldContinueHandler: {!self.isCancelled})
+			let dbRepresentationCount = importer.retrieveDbRepresentations(fromRemoteRepresentations: remoteRepresentations, expectedEntity: request.expectedEntity, userInfo: requestParsingUserInfo, bridge: request.bridge, shouldContinueHandler: { !self.isCancelled })
 			try throwIfCancelled()
 			
 			guard dbRepresentationCount > 0 || request.importPreparationBlock != nil || request.importSuccessBlock != nil else {
