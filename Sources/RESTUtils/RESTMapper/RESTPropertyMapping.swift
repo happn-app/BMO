@@ -119,4 +119,9 @@ struct RESTPropertyMapping {
 	
 	let restPropertyPathInFields: [String]?
 	
+	/** For to-many relationhips only, a paginator that will overwrite the
+	paginator for the destination entity (or the default paginator if the
+	destination entity does not have a paginator). */
+	let relationshipPaginator: RESTPaginator?
+	
 }

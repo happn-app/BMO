@@ -31,6 +31,8 @@ public enum _RESTConvenienceMappingForProperty {
 	
 	case isMandatory(Bool) /* Defaults to !property.isOptional */
 	
+	case relationshipPaginator(RESTPaginator) /* Set a paginator to override the one of the destination relationship entity. */
+	
 	case restNameInFields(String?)   /* Alias for .restPathInFields(restNameInFields?.components(separatedBy: ".")) */
 	case restPathInFields([String]?) /* Defaults to restPath (whether taken over by restToLocalMapping or not) */
 	
@@ -93,6 +95,8 @@ public extension RESTMapper {
 						
 						var mandatory: Bool? = nil
 						
+						var relationshipPaginator: RESTPaginator? = nil
+						
 						var restPropertyPathInFields: [String]?? = nil
 						
 						var restPropertyPath: [String]? = nil
@@ -113,6 +117,8 @@ public extension RESTMapper {
 						for conveniencePropertyMappingPart in conveniencePropertyMapping {
 							switch conveniencePropertyMappingPart {
 							case .isMandatory(let b): mandatory = b
+								
+							case .relationshipPaginator(let rp): relationshipPaginator = rp
 								
 							case .restNameInFields(let n): restPropertyPathInFields = .some(n?.components(separatedBy: "."))
 							case .restPathInFields(let p): restPropertyPathInFields = p; assert(p?.count ?? 1 > 0)
@@ -182,7 +188,8 @@ public extension RESTMapper {
 						propertiesMapping[property] = RESTPropertyMapping(
 							restToLocalMapping: rtlFinalMapping,
 							localToRESTMapping: ltrFinalMapping,
-							restPropertyPathInFields: restPropertyPathInFields ?? restPropertyPath
+							restPropertyPathInFields: restPropertyPathInFields ?? restPropertyPath,
+							relationshipPaginator: relationshipPaginator
 						)
 					}
 				}

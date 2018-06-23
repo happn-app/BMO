@@ -26,8 +26,8 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 		return nil
 	}
 	
-	public func parameters(fromAdditionalRESTInfo additionalRESTInfo: AdditionalRESTRequestInfo<DbPropertyDescription>?, forEntity entity: DbEntityDescription) -> [String: Any] {
-		var params = _parameters(fromAdditionalRESTInfo: additionalRESTInfo, forEntity: entity, firstLevel: true)
+	public func parameters(fromAdditionalRESTInfo additionalRESTInfo: AdditionalRESTRequestInfo<DbPropertyDescription>?, forEntity entity: DbEntityDescription, forcedPagniator: RESTPaginator? = nil) -> [String: Any] {
+		var params = _parameters(fromAdditionalRESTInfo: additionalRESTInfo, forEntity: entity, firstLevel: true, forcedPaginator: forcedPagniator)
 		for (k, v) in params {
 			/* We assume we won't have a ParameterizedStringSet in a sub-param. */
 			if let v = v as? ParameterizedStringSet {
@@ -227,7 +227,7 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 		}
 	}
 	
-	private func _parameters(fromAdditionalRESTInfo additionalRESTInfo: AdditionalRESTRequestInfo<DbPropertyDescription>?, forEntity entity: DbEntityDescription?, firstLevel: Bool, forcedFieldsKeyName: String? = nil) -> [String: Any] {
+	private func _parameters(fromAdditionalRESTInfo additionalRESTInfo: AdditionalRESTRequestInfo<DbPropertyDescription>?, forEntity entity: DbEntityDescription?, firstLevel: Bool, forcedFieldsKeyName: String? = nil, forcedPaginator: RESTPaginator? = nil) -> [String: Any] {
 		var result = [String: Any]()
 		let pssParser = restMapping.queryParamParser
 		let entityMapping = entity.flatMap{ restMapping.entityMapping(forEntity: $0) }
@@ -235,7 +235,7 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 		var mappingEntityForcedParams = entityMapping?.forcedParametersOnFetch ?? [:]
 		var clientForcedParams = additionalRESTInfo?.additionalRequestParameters ?? [:]
 		var mappingForcedParams = (firstLevel ? restMapping.forcedParametersOnFetch : [:])
-		var paginatorParams = additionalRESTInfo?.paginatorInfo.flatMap{ entityMapping?.paginator?.paginationParams(withPaginatorInfo: $0) } ?? [:]
+		var paginatorParams = additionalRESTInfo?.paginatorInfo.flatMap{ (forcedPaginator ?? entityMapping?.paginator)?.paginationParams(withPaginatorInfo: $0) } ?? [:]
 		
 		/* *** Fields params *** */
 		if let fieldsKeyName = forcedFieldsKeyName ?? entityMapping?.fieldsKeyName {
@@ -276,13 +276,13 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 						/* We do not have a path for the fields. We move the params
 						 * for sub-additional REST info to the current level instead
 						 * of them being a sub-level. */
-						merge(queryParams: &result, newValues: _parameters(fromAdditionalRESTInfo: subinfo, forEntity: destinationEntity, firstLevel: firstLevel, forcedFieldsKeyName: fieldsKeyName), pssParser: pssParser)
+						merge(queryParams: &result, newValues: _parameters(fromAdditionalRESTInfo: subinfo, forEntity: destinationEntity, firstLevel: firstLevel, forcedFieldsKeyName: fieldsKeyName, forcedPaginator: propertyMapping?.relationshipPaginator), pssParser: pssParser)
 						continue
 					}
 					
 					assert(propertyPathInFields.count > 0)
 					
-					var subFields = _parameters(fromAdditionalRESTInfo: subinfo, forEntity: destinationEntity, firstLevel: false, forcedFieldsKeyName: fieldsKeyName)
+					var subFields = _parameters(fromAdditionalRESTInfo: subinfo, forEntity: destinationEntity, firstLevel: false, forcedFieldsKeyName: fieldsKeyName, forcedPaginator: propertyMapping?.relationshipPaginator)
 					for component in propertyPathInFields.reversed() {
 						var params = [String: ParameterizedStringSet]()
 						merge(queryParams: &params, newValues: subFields, pssParser: pssParser)
