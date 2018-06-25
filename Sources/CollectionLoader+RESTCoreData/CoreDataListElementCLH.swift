@@ -20,6 +20,7 @@ import RESTUtils
 @available(OSX 10.12, *)
 public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, BridgeType : Bridge> : CoreDataCLH where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescription> {
 	
+	public let bridge: BridgeType
 	public let context: NSManagedObjectContext
 	public let requestManager: RequestManager
 	
@@ -27,18 +28,27 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 	
 	public var listElementObjectId: NSManagedObjectID?
 	
-	public convenience init(listElementEntity: NSEntityDescription, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescription>?, listProperty lp: NSRelationshipDescription, apiOrderProperty aop: NSAttributeDescription, apiOrderDelta aod: Int = 1, additionalFetchRequestPredicate afrp: NSPredicate? = nil, context c: NSManagedObjectContext, requestManager rm: RequestManager) {
+	public convenience init(
+		listElementEntity: NSEntityDescription, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescription>?, listProperty lp: NSRelationshipDescription,
+		apiOrderProperty aop: NSAttributeDescription, apiOrderDelta aod: Int = 1, additionalFetchRequestPredicate afrp: NSPredicate? = nil,
+		context c: NSManagedObjectContext, bridge b: BridgeType? = nil, requestManager rm: RequestManager
+	) {
 		let fr = NSFetchRequest<NSManagedObject>()
 		fr.entity = listElementEntity
 		fr.fetchLimit = 1
-		self.init(listElementFetchRequest: fr, additionalElementFetchInfo: aefi, listProperty: lp, apiOrderProperty: aop, apiOrderDelta: aod, additionalFetchRequestPredicate: afrp, context: c, requestManager: rm)
+		self.init(listElementFetchRequest: fr, additionalElementFetchInfo: aefi, listProperty: lp, apiOrderProperty: aop, apiOrderDelta: aod, additionalFetchRequestPredicate: afrp, context: c, bridge: b, requestManager: rm)
 	}
 	
-	public init<ListElementObjectType : NSManagedObject>(listElementFetchRequest: NSFetchRequest<ListElementObjectType>, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescription>?, listProperty lp: NSRelationshipDescription, apiOrderProperty aop: NSAttributeDescription, apiOrderDelta aod: Int = 1, additionalFetchRequestPredicate afrp: NSPredicate? = nil, context c: NSManagedObjectContext, requestManager rm: RequestManager) {
+	public init<ListElementObjectType : NSManagedObject>(
+		listElementFetchRequest: NSFetchRequest<ListElementObjectType>, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescription>?, listProperty lp: NSRelationshipDescription,
+		apiOrderProperty aop: NSAttributeDescription, apiOrderDelta aod: Int = 1, additionalFetchRequestPredicate afrp: NSPredicate? = nil,
+		context c: NSManagedObjectContext, bridge b: BridgeType? = nil, requestManager rm: RequestManager
+	) {
 		assert(lp.isOrdered)
 		
 		context = c
 		requestManager = rm
+		bridge = rm.getBridge(from: b)
 		
 		fetchRequest = listElementFetchRequest as! NSFetchRequest<NSFetchRequestResult>
 		additionalElementFetchInfo = aefi
@@ -81,7 +91,7 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 	}
 	
 	public func pageInfoFor(startOffset: Int, endOffset: Int) -> Any {
-		return RESTOffsetLimitPaginatorInfo(startOffset: startOffset, endOffset: endOffset)
+		return bridge.pageInfoFor(startOffset: startOffset, endOffset: endOffset)
 	}
 	
 	public func operationForLoading(pageInfo: Any, preRun: (() -> Bool)?, preImport: (() -> Bool)?, preCompletion: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)?) -> BackRequestOperation<RESTCoreDataFetchRequest, BridgeType> {
@@ -137,11 +147,11 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 	}
 	
 	public func nextPageInfo(for completionResults: BridgeBackRequestResult<BridgeType>, from pageInfo: Any, nElementsPerPage: Int) -> Any?? {
-		return nil
+		return bridge.nextPageInfo(for: completionResults, from: pageInfo, nElementsPerPage: nElementsPerPage)
 	}
 	
 	public func previousPageInfo(for completionResults: BridgeBackRequestResult<BridgeType>, from pageInfo: Any, nElementsPerPage: Int) -> Any? {
-		return nil
+		return bridge.previousPageInfo(for: completionResults, from: pageInfo, nElementsPerPage: nElementsPerPage)
 	}
 	
 	private let fetchRequest: NSFetchRequest<NSFetchRequestResult>

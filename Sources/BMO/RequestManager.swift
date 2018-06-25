@@ -212,11 +212,10 @@ public final class RequestManager {
 		NotificationCenter.default.post(name: .BMORequestManagerCancelAllBackRequestOperations, object: self)
 	}
 	
-	/* ***************
-	   MARK: - Private
-	   *************** */
-	
-	private func getBridge<BridgeType: Bridge>(from bridge: BridgeType?) -> BridgeType {
+	/** If source bridge is not nil, it is returned directly. Otherwise, the
+	bridges in the request manager are enumerated; the first of the expected type
+	is returned. */
+	public func getBridge<BridgeType: Bridge>(from bridge: BridgeType?) -> BridgeType {
 		if let bridge = bridge {return bridge}
 		
 		for bridge in bridges! {
