@@ -243,10 +243,10 @@
 		7B93F6EB20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */; };
 		7B93F6EC20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */; };
 		7B93F6ED20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */; };
-		7BA6BFBC20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* Bridge+CoreDataCLH.swift */; };
-		7BA6BFBD20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* Bridge+CoreDataCLH.swift */; };
-		7BA6BFBE20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* Bridge+CoreDataCLH.swift */; };
-		7BA6BFBF20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* Bridge+CoreDataCLH.swift */; };
+		7BA6BFBC20E162A600622645 /* PageInfoRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */; };
+		7BA6BFBD20E162A600622645 /* PageInfoRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */; };
+		7BA6BFBE20E162A600622645 /* PageInfoRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */; };
+		7BA6BFBF20E162A600622645 /* PageInfoRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */; };
 		7BB4E56320C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
 		7BB4E56420C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
 		7BB4E56520C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
@@ -1297,7 +1297,7 @@
 		7B8BD032200274B9009BE667 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* BMOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOTests.swift; sourceTree = "<group>"; };
 		7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTColorTransformerTests.swift; sourceTree = "<group>"; };
-		7BA6BFBB20E162A600622645 /* Bridge+CoreDataCLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bridge+CoreDataCLH.swift"; sourceTree = "<group>"; };
+		7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoRetriever.swift; sourceTree = "<group>"; };
 		7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTUUIDTransformer.swift; sourceTree = "<group>"; };
 		7BB4E56F20C0BEAC003A0977 /* RESTURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTURLTransformer.swift; sourceTree = "<group>"; };
 		7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTBase64DataTransformer.swift; sourceTree = "<group>"; };
@@ -1987,7 +1987,7 @@
 				7BB9653D202228F600024DE1 /* CoreDataSearchCLH.swift */,
 				7BB9653F202228F600024DE1 /* CoreDataListElementCLH.swift */,
 				7BB9653E202228F600024DE1 /* AnyCoreDataCLH.swift */,
-				7BA6BFBB20E162A600622645 /* Bridge+CoreDataCLH.swift */,
+				7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */,
 			);
 			path = "CollectionLoader+RESTCoreData";
 			sourceTree = "<group>";
@@ -4217,7 +4217,7 @@
 				7BB965EE20222B6400024DE1 /* CoreDataSearchCLH.swift in Sources */,
 				7BB965F020222B6400024DE1 /* AnyCoreDataCLH.swift in Sources */,
 				7BB965ED20222B6400024DE1 /* CoreDataCLH.swift in Sources */,
-				7BA6BFBC20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */,
+				7BA6BFBC20E162A600622645 /* PageInfoRetriever.swift in Sources */,
 				7BB965EF20222B6400024DE1 /* CoreDataListElementCLH.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4237,7 +4237,7 @@
 				7BB965F220222B6400024DE1 /* CoreDataSearchCLH.swift in Sources */,
 				7BB965F420222B6400024DE1 /* AnyCoreDataCLH.swift in Sources */,
 				7BB965F120222B6400024DE1 /* CoreDataCLH.swift in Sources */,
-				7BA6BFBD20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */,
+				7BA6BFBD20E162A600622645 /* PageInfoRetriever.swift in Sources */,
 				7BB965F320222B6400024DE1 /* CoreDataListElementCLH.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4257,7 +4257,7 @@
 				7BB965F620222B6400024DE1 /* CoreDataSearchCLH.swift in Sources */,
 				7BB965F820222B6400024DE1 /* AnyCoreDataCLH.swift in Sources */,
 				7BB965F520222B6400024DE1 /* CoreDataCLH.swift in Sources */,
-				7BA6BFBE20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */,
+				7BA6BFBE20E162A600622645 /* PageInfoRetriever.swift in Sources */,
 				7BB965F720222B6400024DE1 /* CoreDataListElementCLH.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4277,7 +4277,7 @@
 				7BB965FA20222B6500024DE1 /* CoreDataSearchCLH.swift in Sources */,
 				7BB965FC20222B6500024DE1 /* AnyCoreDataCLH.swift in Sources */,
 				7BB965F920222B6500024DE1 /* CoreDataCLH.swift in Sources */,
-				7BA6BFBF20E162A600622645 /* Bridge+CoreDataCLH.swift in Sources */,
+				7BA6BFBF20E162A600622645 /* PageInfoRetriever.swift in Sources */,
 				7BB965FB20222B6500024DE1 /* CoreDataListElementCLH.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

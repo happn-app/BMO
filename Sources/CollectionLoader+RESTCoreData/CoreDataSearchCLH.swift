@@ -35,9 +35,12 @@ import RESTUtils
  * of the expected entity. */
 
 @available(OSX 10.12, *)
-public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType : Bridge> : CoreDataCLH where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescription> {
+public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType, PageInfoRetrieverType : PageInfoRetriever> : CoreDataCLH
+	where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescription>, PageInfoRetrieverType.BridgeType == BridgeType
+{
 	
 	public let bridge: BridgeType
+	public let pageInfoRetriever: PageInfoRetrieverType?
 	public let context: NSManagedObjectContext
 	public let requestManager: RequestManager
 	
@@ -47,13 +50,14 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType 
 		fetchRequest fr: NSFetchRequest<FetchedObjectsType>, additionalFetchInfo afi: AdditionalRESTRequestInfo<NSPropertyDescription>?,
 		apiOrderProperty aop: NSAttributeDescription? = nil, apiOrderDelta aod: Int = 1,
 		deletionDateProperty ddp: NSAttributeDescription? = nil,
-		context c: NSManagedObjectContext, bridge b: BridgeType? = nil, requestManager rm: RequestManager
+		context c: NSManagedObjectContext, bridge b: BridgeType? = nil, pageInfoRetriever pir: PageInfoRetrieverType? = nil, requestManager rm: RequestManager
 	) {
 		assert(aod > 0)
 		assert(ddp?.attributeValueClassName == nil || ddp?.attributeValueClassName == "NSDate" || ddp?.attributeValueClassName == "Date")
 		
 		context = c
 		requestManager = rm
+		pageInfoRetriever = pir
 		bridge = rm.getBridge(from: b)
 		
 		fetchRequest = fr as! NSFetchRequest<NSFetchRequestResult>
@@ -79,7 +83,7 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType 
 	}
 	
 	public func pageInfoFor(startOffset: Int, endOffset: Int) -> PageInfo {
-		return PageInfo(offset: startOffset, paginatorInfo: bridge.pageInfoFor(startOffset: startOffset, endOffset: endOffset))
+		return PageInfo(offset: startOffset, paginatorInfo: pageInfoRetriever?.pageInfoFor(startOffset: startOffset, endOffset: endOffset) ?? RESTOffsetLimitPaginatorInfo(startOffset: startOffset, endOffset: endOffset))
 	}
 	
 	public func operationForLoading(pageInfo: PageInfo, preRun: (() -> Bool)?, preImport: (() -> Bool)?, preCompletion: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)?) -> BackRequestOperation<RESTCoreDataFetchRequest, BridgeType> {
@@ -123,12 +127,14 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType 
 	}
 	
 	public func nextPageInfo(for completionResults: BridgeBackRequestResult<BridgeType>, from pageInfo: PageInfo, nElementsPerPage: Int) -> PageInfo?? {
-		guard let i = bridge.nextPageInfo(for: completionResults, from: pageInfo.paginatorInfo, nElementsPerPage: nElementsPerPage) else {return nil}
+		guard let pageInfoRetriever = pageInfoRetriever else {return nil}
+		guard let i = pageInfoRetriever.nextPageInfo(for: completionResults, from: pageInfo.paginatorInfo, nElementsPerPage: nElementsPerPage) else {return nil}
 		return .some(i.flatMap{ PageInfo(offset: pageInfo.offset.flatMap{ $0 + nElementsPerPage }, paginatorInfo: $0) })
 	}
 	
 	public func previousPageInfo(for completionResults: BridgeBackRequestResult<BridgeType>, from pageInfo: PageInfo, nElementsPerPage: Int) -> PageInfo? {
-		let i = bridge.previousPageInfo(for: completionResults, from: pageInfo.paginatorInfo, nElementsPerPage: nElementsPerPage)
+		guard let pageInfoRetriever = pageInfoRetriever else {return nil}
+		let i = pageInfoRetriever.previousPageInfo(for: completionResults, from: pageInfo.paginatorInfo, nElementsPerPage: nElementsPerPage)
 		return i.flatMap{ PageInfo(offset: pageInfo.offset.flatMap{ $0 - nElementsPerPage }, paginatorInfo: $0) }
 	}
 	
