@@ -82,6 +82,50 @@
 		7B0AB1682021179100AC083A /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0FF2021148000AC083A /* BMO_RESTCoreData.framework */; };
 		7B3192C12019F1CC0088312B /* ParameterizedStringSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */; };
 		7B3192C32019F2640088312B /* RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192C22019F2640088312B /* RESTPath.swift */; };
+		7B34DB6D20E927C300E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B34DB6E20E927CB00E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B34DB6F20E927D000E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B34DB7020E927D600E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0F20E923060041213D /* AsyncOperationResult.framework */; };
+		7B34DB7120E927DE00E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B34DB7220E927E400E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B34DB7320E927EA00E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B34DB7420E9283A00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
+		7B34DB7520E9285800E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A34BF20027B4600348DF4 /* BMO.framework */; };
+		7B34DB7620E9286500E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* BMO.framework */; };
+		7B34DB7720E9289000E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B817EF92019158200625427 /* BMO_FastImportRepresentation.framework */; };
+		7B34DB7820E9289000E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
+		7B34DB7920E928A200E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516182201FBB1A00B94FB3 /* BMO_FastImportRepresentation.framework */; };
+		7B34DB7A20E928A200E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A34BF20027B4600348DF4 /* BMO.framework */; };
+		7B34DB7B20E928B600E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161A2201FBC2200B94FB3 /* BMO_FastImportRepresentation.framework */; };
+		7B34DB7C20E928B600E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* BMO.framework */; };
+		7B34DB7D20E928EB00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
+		7B34DB7E20E928EB00E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B817EF92019158200625427 /* BMO_FastImportRepresentation.framework */; };
+		7B34DB7F20E928EB00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
+		7B34DB8020E928EB00E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332712019296C005184FE /* RESTUtils.framework */; };
+		7B34DB8120E9291300E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B51621A201FBDF000B94FB3 /* BMO_CoreData.framework */; };
+		7B34DB8220E9291300E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516182201FBB1A00B94FB3 /* BMO_FastImportRepresentation.framework */; };
+		7B34DB8320E9291300E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A34BF20027B4600348DF4 /* BMO.framework */; };
+		7B34DB8420E9291300E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161D5201FBDAB00B94FB3 /* RESTUtils.framework */; };
+		7B34DB8520E9292A00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516236201FBDFE00B94FB3 /* BMO_CoreData.framework */; };
+		7B34DB8620E9292A00E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161A2201FBC2200B94FB3 /* BMO_FastImportRepresentation.framework */; };
+		7B34DB8720E9292A00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* BMO.framework */; };
+		7B34DB8820E9292A00E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161F1201FBDBE00B94FB3 /* RESTUtils.framework */; };
+		7B34DB8920E929A600E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
+		7B34DB8A20E929E600E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B51621A201FBDF000B94FB3 /* BMO_CoreData.framework */; };
+		7B34DB8B20E929F300E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516236201FBDFE00B94FB3 /* BMO_CoreData.framework */; };
+		7B34DB8C20E929FF00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516252201FBE0C00B94FB3 /* BMO_CoreData.framework */; };
+		7B34DB8D20E92A3C00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
+		7B34DB8E20E92A3C00E16DF1 /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */; };
+		7B34DB8F20E92A3C00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
+		7B34DB9020E92A3C00E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332712019296C005184FE /* RESTUtils.framework */; };
+		7B34DB9120E92A5D00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B51621A201FBDF000B94FB3 /* BMO_CoreData.framework */; };
+		7B34DB9220E92A5D00E16DF1 /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0E62021147D00AC083A /* BMO_RESTCoreData.framework */; };
+		7B34DB9320E92A5D00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A34BF20027B4600348DF4 /* BMO.framework */; };
+		7B34DB9420E92A5D00E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161D5201FBDAB00B94FB3 /* RESTUtils.framework */; };
+		7B34DB9520E92A7A00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B516236201FBDFE00B94FB3 /* BMO_CoreData.framework */; };
+		7B34DB9620E92A7A00E16DF1 /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0FF2021148000AC083A /* BMO_RESTCoreData.framework */; };
+		7B34DB9720E92A7A00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* BMO.framework */; };
+		7B34DB9820E92A7A00E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5161F1201FBDBE00B94FB3 /* RESTUtils.framework */; };
 		7B3C40442018B29F00E4A0A5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* RequestManager.swift */; };
 		7B3C40452018B29F00E4A0A5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* RequestManager.swift */; };
 		7B3C40462018B29F00E4A0A5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* RequestManager.swift */; };
@@ -222,6 +266,48 @@
 		7B516288201FBF8800B94FB3 /* RESTPathProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B75E6AE201E5E3D00D88635 /* RESTPathProtocols.swift */; };
 		7B516289201FBF8800B94FB3 /* AdditionalRESTRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */; };
 		7B51628A201FBF8800B94FB3 /* ParameterizedStringSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */; };
+		7B672C1620E923670041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1720E9236C0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1820E923730041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1920E9237B0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0F20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1A20E9238A0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1B20E9238F0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1C20E923930041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1D20E9239A0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0F20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1E20E923A60041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C1F20E923AB0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2020E923B10041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2120E923B60041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0F20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2220E923BE0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2320E923BE0041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0620E923060041213D /* CollectionLoader.framework */; };
+		7B672C2420E923BE0041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0920E923060041213D /* KVObserver.framework */; };
+		7B672C2520E923C60041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2620E923C60041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFE20E923060041213D /* CollectionLoader.framework */; };
+		7B672C2720E923C60041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0220E923060041213D /* KVObserver.framework */; };
+		7B672C2820E923CC0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2920E923CC0041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF120E923060041213D /* CollectionLoader.framework */; };
+		7B672C2A20E923CC0041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF820E923060041213D /* KVObserver.framework */; };
+		7B672C2B20E923D40041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0F20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2C20E923D40041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0E20E923060041213D /* CollectionLoader.framework */; };
+		7B672C2D20E923D40041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C1220E923070041213D /* KVObserver.framework */; };
+		7B672C2E20E923E80041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C2F20E923EE0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3020E923F40041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3120E924040041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3220E924160041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3320E924200041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3420E924330041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3520E924380041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3620E9243E0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3720E9244D0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3820E9244D0041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0620E923060041213D /* CollectionLoader.framework */; };
+		7B672C3920E9244D0041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0920E923060041213D /* KVObserver.framework */; };
+		7B672C3A20E924610041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFF20E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3B20E924610041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BFE20E923060041213D /* CollectionLoader.framework */; };
+		7B672C3C20E924610041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0220E923060041213D /* KVObserver.framework */; };
+		7B672C3D20E9246D0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF220E923060041213D /* AsyncOperationResult.framework */; };
+		7B672C3E20E9246D0041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF120E923060041213D /* CollectionLoader.framework */; };
+		7B672C3F20E9246D0041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672BF820E923060041213D /* KVObserver.framework */; };
 		7B75E6AF201E5E3D00D88635 /* RESTPathProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B75E6AE201E5E3D00D88635 /* RESTPathProtocols.swift */; };
 		7B7A34C820027B4700348DF4 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A34BF20027B4600348DF4 /* BMO.framework */; };
 		7B7A34D620027B6700348DF4 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
@@ -527,139 +613,6 @@
 			remoteGlobalIDString = 7B516251201FBE0C00B94FB3;
 			remoteInfo = "BMO+CoreData-watchOS";
 		};
-		7B0AB17620211C3500AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
-			remoteInfo = "AsyncOperationResult-macOS";
-		};
-		7B0AB17820211C4100AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
-			remoteInfo = "AsyncOperationResult-tvOS";
-		};
-		7B0AB17A20211C4900AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
-			remoteInfo = "AsyncOperationResult-iOS";
-		};
-		7B0AB17C20211C4D00AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
-			remoteInfo = "AsyncOperationResult-watchOS";
-		};
-		7B0AB17E20211C5600AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
-			remoteInfo = "AsyncOperationResult-macOS";
-		};
-		7B0AB18020211C5B00AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
-			remoteInfo = "AsyncOperationResult-tvOS";
-		};
-		7B0AB18220211C5F00AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
-			remoteInfo = "AsyncOperationResult-iOS";
-		};
-		7B0AB18420211C6400AC083A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
-			remoteInfo = "AsyncOperationResult-watchOS";
-		};
-		7B3C405C2018B40200E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B8BD01A20026E8C009BE667;
-			remoteInfo = "AsyncOperationResult-macOS";
-		};
-		7B3C405E2018B40200E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B7A34BF20027B4600348DF4;
-			remoteInfo = "AsyncOperationResult-tvOS";
-		};
-		7B3C40602018B40200E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7BC696D52002775C007BC3E9;
-			remoteInfo = "AsyncOperationResult-iOS";
-		};
-		7B3C40622018B40200E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7BB52E43200279EA007CAD7B;
-			remoteInfo = "AsyncOperationResult-watchOS";
-		};
-		7B3C40642018B40200E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B8BD02220026E8C009BE667;
-			remoteInfo = "AsyncOperationResult-macOSTests";
-		};
-		7B3C40662018B40200E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7BC696DD2002775C007BC3E9;
-			remoteInfo = "AsyncOperationResult-iOSTests";
-		};
-		7B3C40682018B40200E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B7A34C720027B4700348DF4;
-			remoteInfo = "AsyncOperationResult-tvOSTests";
-		};
-		7B3C406A2018B41700E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
-			remoteInfo = "AsyncOperationResult-macOS";
-		};
-		7B3C406C2018B41B00E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
-			remoteInfo = "AsyncOperationResult-tvOS";
-		};
-		7B3C406E2018B41E00E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
-			remoteInfo = "AsyncOperationResult-iOS";
-		};
-		7B3C40702018B42100E4A0A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
-			remoteInfo = "AsyncOperationResult-watchOS";
-		};
 		7B51618C201FBB1A00B94FB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
@@ -933,55 +886,6 @@
 			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
 			remoteInfo = "happnLogger-macOS";
 		};
-		7BB9654E2022294600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B8BD01A20026E8C009BE667;
-			remoteInfo = "CollectionLoader-macOS";
-		};
-		7BB965502022294600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B7A34BF20027B4600348DF4;
-			remoteInfo = "CollectionLoader-tvOS";
-		};
-		7BB965522022294600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7BC696D52002775C007BC3E9;
-			remoteInfo = "CollectionLoader-iOS";
-		};
-		7BB965542022294600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7BB52E43200279EA007CAD7B;
-			remoteInfo = "CollectionLoader-watchOS";
-		};
-		7BB965562022294600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B8BD02220026E8C009BE667;
-			remoteInfo = "CollectionLoader-macOSTests";
-		};
-		7BB965582022294600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7BC696DD2002775C007BC3E9;
-			remoteInfo = "CollectionLoader-iOSTests";
-		};
-		7BB9655A2022294600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B7A34C720027B4700348DF4;
-			remoteInfo = "CollectionLoader-tvOSTests";
-		};
 		7BB9656B2022299900024DE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
@@ -1031,20 +935,6 @@
 			remoteGlobalIDString = 7B0AB0B62021147200AC083A;
 			remoteInfo = "BMO+RESTCoreData-macOS";
 		};
-		7BB965C520222A0600024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
-			remoteInfo = "CollectionLoader-macOS";
-		};
-		7BB965C720222B1D00024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
-			remoteInfo = "AsyncOperationResult-macOS";
-		};
 		7BB965C920222B3500024DE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
@@ -1072,20 +962,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B0AB0CF2021147D00AC083A;
 			remoteInfo = "BMO+RESTCoreData-tvOS";
-		};
-		7BB965D120222B3500024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
-			remoteInfo = "AsyncOperationResult-tvOS";
-		};
-		7BB965D320222B3500024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
-			remoteInfo = "CollectionLoader-tvOS";
 		};
 		7BB965D520222B4700024DE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1115,20 +991,6 @@
 			remoteGlobalIDString = 7B0AB0E82021148000AC083A;
 			remoteInfo = "BMO+RESTCoreData-iOS";
 		};
-		7BB965DD20222B4700024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
-			remoteInfo = "AsyncOperationResult-iOS";
-		};
-		7BB965DF20222B4700024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
-			remoteInfo = "CollectionLoader-iOS";
-		};
 		7BB965E120222B5A00024DE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
@@ -1156,20 +1018,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B0AB1012021148300AC083A;
 			remoteInfo = "BMO+RESTCoreData-watchOS";
-		};
-		7BB965E920222B5A00024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
-			remoteInfo = "AsyncOperationResult-watchOS";
-		};
-		7BB965EB20222B5A00024DE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
-			remoteInfo = "CollectionLoader-watchOS";
 		};
 		7BB965FD20222BA200024DE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1225,6 +1073,7 @@
 		7B0AB1252021148600AC083A /* BMO+RESTCoreData-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0AB1322021148A00AC083A /* BMO+RESTCoreData-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0AB13F2021148E00AC083A /* BMO+RESTCoreData-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0B8D5920E920A5006E622D /* StaticCarthageBuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticCarthageBuild.xcconfig; sourceTree = "<group>"; };
 		7B21BACD2003B2C600DFF758 /* BMO.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BMO.podspec; sourceTree = "<group>"; };
 		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B21BAD02003BBC700DFF758 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -1232,7 +1081,6 @@
 		7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterizedStringSet.swift; sourceTree = "<group>"; };
 		7B3192C22019F2640088312B /* RESTPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTPath.swift; sourceTree = "<group>"; };
 		7B3C40432018B29F00E4A0A5 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
-		7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AsyncOperationResult.xcodeproj; path = AsyncOperationResult/AsyncOperationResult.xcodeproj; sourceTree = "<group>"; };
 		7B3C40722018B44700E4A0A5 /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfCores.swift; sourceTree = "<group>"; };
 		7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
@@ -1272,6 +1120,18 @@
 		7B51623E201FBDFE00B94FB3 /* BMO+CoreData-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+CoreData-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B516252201FBE0C00B94FB3 /* BMO_CoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO_CoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B57B69C201FDAEA00FAED2F /* Jake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jake.swift; sourceTree = "<group>"; };
+		7B672BF120E923060041213D /* CollectionLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CollectionLoader.framework; sourceTree = "<group>"; };
+		7B672BF220E923060041213D /* AsyncOperationResult.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AsyncOperationResult.framework; sourceTree = "<group>"; };
+		7B672BF820E923060041213D /* KVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KVObserver.framework; sourceTree = "<group>"; };
+		7B672BFE20E923060041213D /* CollectionLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CollectionLoader.framework; sourceTree = "<group>"; };
+		7B672BFF20E923060041213D /* AsyncOperationResult.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AsyncOperationResult.framework; sourceTree = "<group>"; };
+		7B672C0220E923060041213D /* KVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KVObserver.framework; sourceTree = "<group>"; };
+		7B672C0620E923060041213D /* CollectionLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CollectionLoader.framework; sourceTree = "<group>"; };
+		7B672C0720E923060041213D /* AsyncOperationResult.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AsyncOperationResult.framework; sourceTree = "<group>"; };
+		7B672C0920E923060041213D /* KVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KVObserver.framework; sourceTree = "<group>"; };
+		7B672C0E20E923060041213D /* CollectionLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CollectionLoader.framework; sourceTree = "<group>"; };
+		7B672C0F20E923060041213D /* AsyncOperationResult.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AsyncOperationResult.framework; sourceTree = "<group>"; };
+		7B672C1220E923070041213D /* KVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KVObserver.framework; sourceTree = "<group>"; };
 		7B75E6AE201E5E3D00D88635 /* RESTPathProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTPathProtocols.swift; sourceTree = "<group>"; };
 		7B7A34BF20027B4600348DF4 /* BMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7A34C720027B4700348DF4 /* BMO-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1307,7 +1167,6 @@
 		7BB9653E202228F600024DE1 /* AnyCoreDataCLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCoreDataCLH.swift; sourceTree = "<group>"; };
 		7BB9653F202228F600024DE1 /* CoreDataListElementCLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataListElementCLH.swift; sourceTree = "<group>"; };
 		7BB96540202228F700024DE1 /* CoreDataCLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCLH.swift; sourceTree = "<group>"; };
-		7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CollectionLoader.xcodeproj; path = CollectionLoader/CollectionLoader.xcodeproj; sourceTree = "<group>"; };
 		7BB965612022299800024DE1 /* CollectionLoader_RESTCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionLoader_RESTCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB965692022299900024DE1 /* CollectionLoader+RESTCoreData-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CollectionLoader+RESTCoreData-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB9657D202229A900024DE1 /* CollectionLoader_RESTCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionLoader_RESTCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1345,6 +1204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1E20E923A60041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1352,6 +1212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1F20E923AB0041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1359,6 +1220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2020E923B10041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1366,6 +1228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2120E923B60041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1373,7 +1236,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3420E924330041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB7F20E928EB00E16DF1 /* BMO.framework in Frameworks */,
+				7B34DB7D20E928EB00E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB7E20E928EB00E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
 				7B0AB1622021175D00AC083A /* BMO_RESTCoreData.framework in Frameworks */,
+				7B34DB8020E928EB00E16DF1 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1381,7 +1249,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3520E924380041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB8320E9291300E16DF1 /* BMO.framework in Frameworks */,
+				7B34DB8120E9291300E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB8220E9291300E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
 				7B0AB1652021177F00AC083A /* BMO_RESTCoreData.framework in Frameworks */,
+				7B34DB8420E9291300E16DF1 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1389,7 +1262,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3620E9243E0041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB8720E9292A00E16DF1 /* BMO.framework in Frameworks */,
+				7B34DB8520E9292A00E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB8620E9292A00E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
 				7B0AB1682021179100AC083A /* BMO_RESTCoreData.framework in Frameworks */,
+				7B34DB8820E9292A00E16DF1 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1397,6 +1275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B34DB6E20E927CB00E16DF1 /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1404,6 +1283,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B34DB7220E927E400E16DF1 /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB7520E9285800E16DF1 /* BMO.framework in Frameworks */,
 				7B51618B201FBB1A00B94FB3 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1412,6 +1293,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B34DB6F20E927D000E16DF1 /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1419,6 +1301,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B34DB7320E927EA00E16DF1 /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB7620E9286500E16DF1 /* BMO.framework in Frameworks */,
 				7B5161AB201FBC2300B94FB3 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1427,6 +1311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B34DB7020E927D600E16DF1 /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1471,6 +1356,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1B20E9238F0041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1478,7 +1364,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3220E924160041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB7A20E928A200E16DF1 /* BMO.framework in Frameworks */,
 				7B516223201FBDF000B94FB3 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB7920E928A200E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1486,6 +1375,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1C20E923930041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1493,7 +1383,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3320E924200041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB7C20E928B600E16DF1 /* BMO.framework in Frameworks */,
 				7B51623F201FBDFF00B94FB3 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB7B20E928B600E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1501,6 +1394,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1D20E9239A0041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1508,6 +1402,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1720E9236C0041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1515,6 +1410,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2F20E923EE0041213D /* AsyncOperationResult.framework in Frameworks */,
 				7B7A34C820027B4700348DF4 /* BMO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1523,6 +1419,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B34DB6D20E927C300E16DF1 /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1530,6 +1427,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B34DB7120E927DE00E16DF1 /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB7420E9283A00E16DF1 /* BMO.framework in Frameworks */,
 				7B817F022019158200625427 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1538,6 +1437,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1A20E9238A0041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1545,7 +1445,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3120E924040041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB7820E9289000E16DF1 /* BMO.framework in Frameworks */,
 				7B8332522019274B005184FE /* BMO_CoreData.framework in Frameworks */,
+				7B34DB7720E9289000E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1568,6 +1471,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1620E923670041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1575,6 +1479,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2E20E923E80041213D /* AsyncOperationResult.framework in Frameworks */,
 				7B8BD02320026E8C009BE667 /* BMO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1583,6 +1488,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1920E9237B0041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1590,6 +1496,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2220E923BE0041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB8920E929A600E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B672C2320E923BE0041213D /* CollectionLoader.framework in Frameworks */,
+				7B672C2420E923BE0041213D /* KVObserver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1597,7 +1507,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3720E9244D0041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB8F20E92A3C00E16DF1 /* BMO.framework in Frameworks */,
+				7B34DB8D20E92A3C00E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB8E20E92A3C00E16DF1 /* BMO_RESTCoreData.framework in Frameworks */,
+				7B672C3820E9244D0041213D /* CollectionLoader.framework in Frameworks */,
 				7BB9656A2022299900024DE1 /* CollectionLoader_RESTCoreData.framework in Frameworks */,
+				7B672C3920E9244D0041213D /* KVObserver.framework in Frameworks */,
+				7B34DB9020E92A3C00E16DF1 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1605,6 +1522,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2520E923C60041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB8A20E929E600E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B672C2620E923C60041213D /* CollectionLoader.framework in Frameworks */,
+				7B672C2720E923C60041213D /* KVObserver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1612,7 +1533,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3A20E924610041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB9320E92A5D00E16DF1 /* BMO.framework in Frameworks */,
+				7B34DB9120E92A5D00E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB9220E92A5D00E16DF1 /* BMO_RESTCoreData.framework in Frameworks */,
+				7B672C3B20E924610041213D /* CollectionLoader.framework in Frameworks */,
 				7BB96586202229A900024DE1 /* CollectionLoader_RESTCoreData.framework in Frameworks */,
+				7B672C3C20E924610041213D /* KVObserver.framework in Frameworks */,
+				7B34DB9420E92A5D00E16DF1 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1620,6 +1548,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2820E923CC0041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB8B20E929F300E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B672C2920E923CC0041213D /* CollectionLoader.framework in Frameworks */,
+				7B672C2A20E923CC0041213D /* KVObserver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1627,7 +1559,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3D20E9246D0041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB9720E92A7A00E16DF1 /* BMO.framework in Frameworks */,
+				7B34DB9520E92A7A00E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B34DB9620E92A7A00E16DF1 /* BMO_RESTCoreData.framework in Frameworks */,
+				7B672C3E20E9246D0041213D /* CollectionLoader.framework in Frameworks */,
 				7BB965A2202229BF00024DE1 /* CollectionLoader_RESTCoreData.framework in Frameworks */,
+				7B672C3F20E9246D0041213D /* KVObserver.framework in Frameworks */,
+				7B34DB9820E92A7A00E16DF1 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,6 +1574,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C2B20E923D40041213D /* AsyncOperationResult.framework in Frameworks */,
+				7B34DB8C20E929FF00E16DF1 /* BMO_CoreData.framework in Frameworks */,
+				7B672C2C20E923D40041213D /* CollectionLoader.framework in Frameworks */,
+				7B672C2D20E923D40041213D /* KVObserver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1642,6 +1585,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C1820E923730041213D /* AsyncOperationResult.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1649,6 +1593,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B672C3020E923F40041213D /* AsyncOperationResult.framework in Frameworks */,
 				7BC696DE2002775C007BC3E9 /* BMO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1693,28 +1638,16 @@
 			path = "BMO+RESTCoreDataTests";
 			sourceTree = "<group>";
 		};
-		7B3C40502018B3D300E4A0A5 /* Dependencies */ = {
+		7B3C40502018B3D300E4A0A5 /* Carthage Builds */ = {
 			isa = PBXGroup;
 			children = (
-				7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */,
-				7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */,
+				7B672C0520E923060041213D /* macOS */,
+				7B672BFB20E923060041213D /* tvOS */,
+				7B672BEE20E923060041213D /* iOS */,
+				7B672C0C20E923060041213D /* watchOS */,
 			);
-			name = Dependencies;
-			path = Carthage/Checkouts;
-			sourceTree = "<group>";
-		};
-		7B3C40522018B40200E4A0A5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7B3C405D2018B40200E4A0A5 /* AsyncOperationResult.framework */,
-				7B3C405F2018B40200E4A0A5 /* AsyncOperationResult.framework */,
-				7B3C40612018B40200E4A0A5 /* AsyncOperationResult.framework */,
-				7B3C40632018B40200E4A0A5 /* AsyncOperationResult.framework */,
-				7B3C40652018B40200E4A0A5 /* AsyncOperationResult-macOSTests.xctest */,
-				7B3C40672018B40200E4A0A5 /* AsyncOperationResult-iOSTests.xctest */,
-				7B3C40692018B40200E4A0A5 /* AsyncOperationResult-tvOSTests.xctest */,
-			);
-			name = Products;
+			name = "Carthage Builds";
+			path = Carthage/Build;
 			sourceTree = "<group>";
 		};
 		7B3C40772018B47500E4A0A5 /* Utilities */ = {
@@ -1808,7 +1741,7 @@
 				7B21BACD2003B2C600DFF758 /* BMO.podspec */,
 				7B8BD01120026AF1009BE667 /* Sources */,
 				7B8BD031200274B9009BE667 /* Tests */,
-				7B3C40502018B3D300E4A0A5 /* Dependencies */,
+				7B3C40502018B3D300E4A0A5 /* Carthage Builds */,
 				7B8BD01B20026E8C009BE667 /* Xcode Supporting Files */,
 				7B57B679201FD7A200FAED2F /* Frameworks */,
 				7B661F9C20026ACC00486182 /* Products */,
@@ -1862,6 +1795,47 @@
 				7BB965B5202229D000024DE1 /* CollectionLoader_RESTCoreData.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7B672BEE20E923060041213D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7B672BF220E923060041213D /* AsyncOperationResult.framework */,
+				7B672BF120E923060041213D /* CollectionLoader.framework */,
+				7B672BF820E923060041213D /* KVObserver.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		7B672BFB20E923060041213D /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				7B672BFF20E923060041213D /* AsyncOperationResult.framework */,
+				7B672BFE20E923060041213D /* CollectionLoader.framework */,
+				7B672C0220E923060041213D /* KVObserver.framework */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		7B672C0520E923060041213D /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				7B672C0720E923060041213D /* AsyncOperationResult.framework */,
+				7B672C0620E923060041213D /* CollectionLoader.framework */,
+				7B672C0920E923060041213D /* KVObserver.framework */,
+			);
+			name = macOS;
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		7B672C0C20E923060041213D /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				7B672C0F20E923060041213D /* AsyncOperationResult.framework */,
+				7B672C0E20E923060041213D /* CollectionLoader.framework */,
+				7B672C1220E923070041213D /* KVObserver.framework */,
+			);
+			path = watchOS;
 			sourceTree = "<group>";
 		};
 		7B817EFA2019158200625427 /* BMO+FastImportRepresentation */ = {
@@ -1952,6 +1926,7 @@
 		7B8BD01B20026E8C009BE667 /* Xcode Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B0B8D5920E920A5006E622D /* StaticCarthageBuild.xcconfig */,
 				7B8BD01D20026E8C009BE667 /* Framework-Info.plist */,
 				7B8BD02920026E8C009BE667 /* Test-Info.plist */,
 			);
@@ -1990,20 +1965,6 @@
 				7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */,
 			);
 			path = "CollectionLoader+RESTCoreData";
-			sourceTree = "<group>";
-		};
-		7BB965422022294600024DE1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7BB9654F2022294600024DE1 /* CollectionLoader.framework */,
-				7BB965512022294600024DE1 /* CollectionLoader.framework */,
-				7BB965532022294600024DE1 /* CollectionLoader.framework */,
-				7BB965552022294600024DE1 /* CollectionLoader.framework */,
-				7BB965572022294600024DE1 /* CollectionLoader-macOSTests.xctest */,
-				7BB965592022294600024DE1 /* CollectionLoader-iOSTests.xctest */,
-				7BB9655B2022294600024DE1 /* CollectionLoader-tvOSTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		7BB9661E20223A3000024DE1 /* Paginators */ = {
@@ -2262,7 +2223,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB17F20211C5600AC083A /* PBXTargetDependency */,
 				7B0AB0B72021147200AC083A /* PBXTargetDependency */,
 				7B0AB0B92021147200AC083A /* PBXTargetDependency */,
 				7B0AB0BB2021147200AC083A /* PBXTargetDependency */,
@@ -2285,7 +2245,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB18120211C5B00AC083A /* PBXTargetDependency */,
 				7B0AB0D02021147D00AC083A /* PBXTargetDependency */,
 				7B0AB0D22021147D00AC083A /* PBXTargetDependency */,
 				7B0AB0D42021147D00AC083A /* PBXTargetDependency */,
@@ -2308,7 +2267,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB18320211C5F00AC083A /* PBXTargetDependency */,
 				7B0AB0E92021148000AC083A /* PBXTargetDependency */,
 				7B0AB0EB2021148000AC083A /* PBXTargetDependency */,
 				7B0AB0ED2021148000AC083A /* PBXTargetDependency */,
@@ -2331,7 +2289,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB18520211C6400AC083A /* PBXTargetDependency */,
 				7B0AB1022021148300AC083A /* PBXTargetDependency */,
 				7B0AB1042021148300AC083A /* PBXTargetDependency */,
 				7B0AB1062021148300AC083A /* PBXTargetDependency */,
@@ -2591,7 +2548,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB17920211C4100AC083A /* PBXTargetDependency */,
 				7B5162A4201FC02600B94FB3 /* PBXTargetDependency */,
 				7B5162A6201FC02600B94FB3 /* PBXTargetDependency */,
 			);
@@ -2630,7 +2586,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB17B20211C4900AC083A /* PBXTargetDependency */,
 				7B5162AA201FC03A00B94FB3 /* PBXTargetDependency */,
 				7B5162AC201FC03A00B94FB3 /* PBXTargetDependency */,
 			);
@@ -2669,7 +2624,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB17D20211C4D00AC083A /* PBXTargetDependency */,
 				7B5162B0201FC04200B94FB3 /* PBXTargetDependency */,
 				7B5162B2201FC04200B94FB3 /* PBXTargetDependency */,
 			);
@@ -2690,7 +2644,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B3C406D2018B41B00E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-tvOS";
 			productName = "happnLogger-tvOS";
@@ -2764,7 +2717,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B0AB17720211C3500AC083A /* PBXTargetDependency */,
 				7B8332692019287B005184FE /* PBXTargetDependency */,
 				7B83326B2019287F005184FE /* PBXTargetDependency */,
 			);
@@ -2839,7 +2791,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B3C406B2018B41700E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-macOS";
 			productName = "happnLogger-macOS";
@@ -2876,7 +2827,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B3C40712018B42100E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-watchOS";
 			productName = "happnLogger-watchOS";
@@ -2899,8 +2849,6 @@
 				7BB965C020222A0600024DE1 /* PBXTargetDependency */,
 				7BB965C220222A0600024DE1 /* PBXTargetDependency */,
 				7BB965C420222A0600024DE1 /* PBXTargetDependency */,
-				7BB965C820222B1D00024DE1 /* PBXTargetDependency */,
-				7BB965C620222A0600024DE1 /* PBXTargetDependency */,
 			);
 			name = "CollectionLoader+RESTCoreData-macOS";
 			productName = "CollectionLoader+RESTCoreData-macOS";
@@ -2941,8 +2889,6 @@
 				7BB965CC20222B3500024DE1 /* PBXTargetDependency */,
 				7BB965CE20222B3500024DE1 /* PBXTargetDependency */,
 				7BB965D020222B3500024DE1 /* PBXTargetDependency */,
-				7BB965D220222B3500024DE1 /* PBXTargetDependency */,
-				7BB965D420222B3500024DE1 /* PBXTargetDependency */,
 			);
 			name = "CollectionLoader+RESTCoreData-tvOS";
 			productName = "CollectionLoader+RESTCoreData-tvOS";
@@ -2983,8 +2929,6 @@
 				7BB965D820222B4700024DE1 /* PBXTargetDependency */,
 				7BB965DA20222B4700024DE1 /* PBXTargetDependency */,
 				7BB965DC20222B4700024DE1 /* PBXTargetDependency */,
-				7BB965DE20222B4700024DE1 /* PBXTargetDependency */,
-				7BB965E020222B4700024DE1 /* PBXTargetDependency */,
 			);
 			name = "CollectionLoader+RESTCoreData-iOS";
 			productName = "CollectionLoader+RESTCoreData-iOS";
@@ -3025,8 +2969,6 @@
 				7BB965E420222B5A00024DE1 /* PBXTargetDependency */,
 				7BB965E620222B5A00024DE1 /* PBXTargetDependency */,
 				7BB965E820222B5A00024DE1 /* PBXTargetDependency */,
-				7BB965EA20222B5A00024DE1 /* PBXTargetDependency */,
-				7BB965EC20222B5A00024DE1 /* PBXTargetDependency */,
 			);
 			name = "CollectionLoader+RESTCoreData-watchOS";
 			productName = "CollectionLoader+RESTCoreData-watchOS";
@@ -3045,7 +2987,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B3C406F2018B41E00E4A0A5 /* PBXTargetDependency */,
 			);
 			name = "BMO-iOS";
 			productName = "happnLogger-iOS";
@@ -3264,16 +3205,6 @@
 			mainGroup = 7B661F9220026ACC00486182;
 			productRefGroup = 7B661F9C20026ACC00486182 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7B3C40522018B40200E4A0A5 /* Products */;
-					ProjectRef = 7B3C40512018B40200E4A0A5 /* AsyncOperationResult.xcodeproj */;
-				},
-				{
-					ProductGroup = 7BB965422022294600024DE1 /* Products */;
-					ProjectRef = 7BB965412022294600024DE1 /* CollectionLoader.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7B639D8D2002CDE70079C664 /* All */,
@@ -3322,107 +3253,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7B3C405D2018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AsyncOperationResult.framework;
-			remoteRef = 7B3C405C2018B40200E4A0A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B3C405F2018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AsyncOperationResult.framework;
-			remoteRef = 7B3C405E2018B40200E4A0A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B3C40612018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AsyncOperationResult.framework;
-			remoteRef = 7B3C40602018B40200E4A0A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B3C40632018B40200E4A0A5 /* AsyncOperationResult.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AsyncOperationResult.framework;
-			remoteRef = 7B3C40622018B40200E4A0A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B3C40652018B40200E4A0A5 /* AsyncOperationResult-macOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AsyncOperationResult-macOSTests.xctest";
-			remoteRef = 7B3C40642018B40200E4A0A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B3C40672018B40200E4A0A5 /* AsyncOperationResult-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AsyncOperationResult-iOSTests.xctest";
-			remoteRef = 7B3C40662018B40200E4A0A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B3C40692018B40200E4A0A5 /* AsyncOperationResult-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AsyncOperationResult-tvOSTests.xctest";
-			remoteRef = 7B3C40682018B40200E4A0A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7BB9654F2022294600024DE1 /* CollectionLoader.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CollectionLoader.framework;
-			remoteRef = 7BB9654E2022294600024DE1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7BB965512022294600024DE1 /* CollectionLoader.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CollectionLoader.framework;
-			remoteRef = 7BB965502022294600024DE1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7BB965532022294600024DE1 /* CollectionLoader.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CollectionLoader.framework;
-			remoteRef = 7BB965522022294600024DE1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7BB965552022294600024DE1 /* CollectionLoader.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CollectionLoader.framework;
-			remoteRef = 7BB965542022294600024DE1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7BB965572022294600024DE1 /* CollectionLoader-macOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CollectionLoader-macOSTests.xctest";
-			remoteRef = 7BB965562022294600024DE1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7BB965592022294600024DE1 /* CollectionLoader-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CollectionLoader-iOSTests.xctest";
-			remoteRef = 7BB965582022294600024DE1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7BB9655B2022294600024DE1 /* CollectionLoader-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CollectionLoader-tvOSTests.xctest";
-			remoteRef = 7BB9655A2022294600024DE1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7B0AB0C92021147200AC083A /* Resources */ = {
@@ -4435,66 +4265,6 @@
 			target = 7B516251201FBE0C00B94FB3 /* BMO+CoreData-watchOS */;
 			targetProxy = 7B0AB16F20211A4000AC083A /* PBXContainerItemProxy */;
 		};
-		7B0AB17720211C3500AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-macOS";
-			targetProxy = 7B0AB17620211C3500AC083A /* PBXContainerItemProxy */;
-		};
-		7B0AB17920211C4100AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-tvOS";
-			targetProxy = 7B0AB17820211C4100AC083A /* PBXContainerItemProxy */;
-		};
-		7B0AB17B20211C4900AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-iOS";
-			targetProxy = 7B0AB17A20211C4900AC083A /* PBXContainerItemProxy */;
-		};
-		7B0AB17D20211C4D00AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-watchOS";
-			targetProxy = 7B0AB17C20211C4D00AC083A /* PBXContainerItemProxy */;
-		};
-		7B0AB17F20211C5600AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-macOS";
-			targetProxy = 7B0AB17E20211C5600AC083A /* PBXContainerItemProxy */;
-		};
-		7B0AB18120211C5B00AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-tvOS";
-			targetProxy = 7B0AB18020211C5B00AC083A /* PBXContainerItemProxy */;
-		};
-		7B0AB18320211C5F00AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-iOS";
-			targetProxy = 7B0AB18220211C5F00AC083A /* PBXContainerItemProxy */;
-		};
-		7B0AB18520211C6400AC083A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-watchOS";
-			targetProxy = 7B0AB18420211C6400AC083A /* PBXContainerItemProxy */;
-		};
-		7B3C406B2018B41700E4A0A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-macOS";
-			targetProxy = 7B3C406A2018B41700E4A0A5 /* PBXContainerItemProxy */;
-		};
-		7B3C406D2018B41B00E4A0A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-tvOS";
-			targetProxy = 7B3C406C2018B41B00E4A0A5 /* PBXContainerItemProxy */;
-		};
-		7B3C406F2018B41E00E4A0A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-iOS";
-			targetProxy = 7B3C406E2018B41E00E4A0A5 /* PBXContainerItemProxy */;
-		};
-		7B3C40712018B42100E4A0A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-watchOS";
-			targetProxy = 7B3C40702018B42100E4A0A5 /* PBXContainerItemProxy */;
-		};
 		7B51618D201FBB1A00B94FB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7B516181201FBB1A00B94FB3 /* BMO+FastImportRepresentation-tvOS */;
@@ -4725,16 +4495,6 @@
 			target = 7B0AB0B62021147200AC083A /* BMO+RESTCoreData-macOS */;
 			targetProxy = 7BB965C320222A0600024DE1 /* PBXContainerItemProxy */;
 		};
-		7BB965C620222A0600024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CollectionLoader-macOS";
-			targetProxy = 7BB965C520222A0600024DE1 /* PBXContainerItemProxy */;
-		};
-		7BB965C820222B1D00024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-macOS";
-			targetProxy = 7BB965C720222B1D00024DE1 /* PBXContainerItemProxy */;
-		};
 		7BB965CA20222B3500024DE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7B7A34BE20027B4600348DF4 /* BMO-tvOS */;
@@ -4754,16 +4514,6 @@
 			isa = PBXTargetDependency;
 			target = 7B0AB0CF2021147D00AC083A /* BMO+RESTCoreData-tvOS */;
 			targetProxy = 7BB965CF20222B3500024DE1 /* PBXContainerItemProxy */;
-		};
-		7BB965D220222B3500024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-tvOS";
-			targetProxy = 7BB965D120222B3500024DE1 /* PBXContainerItemProxy */;
-		};
-		7BB965D420222B3500024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CollectionLoader-tvOS";
-			targetProxy = 7BB965D320222B3500024DE1 /* PBXContainerItemProxy */;
 		};
 		7BB965D620222B4700024DE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4785,16 +4535,6 @@
 			target = 7B0AB0E82021148000AC083A /* BMO+RESTCoreData-iOS */;
 			targetProxy = 7BB965DB20222B4700024DE1 /* PBXContainerItemProxy */;
 		};
-		7BB965DE20222B4700024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-iOS";
-			targetProxy = 7BB965DD20222B4700024DE1 /* PBXContainerItemProxy */;
-		};
-		7BB965E020222B4700024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CollectionLoader-iOS";
-			targetProxy = 7BB965DF20222B4700024DE1 /* PBXContainerItemProxy */;
-		};
 		7BB965E220222B5A00024DE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7BB52E42200279EA007CAD7B /* BMO-watchOS */;
@@ -4814,16 +4554,6 @@
 			isa = PBXTargetDependency;
 			target = 7B0AB1012021148300AC083A /* BMO+RESTCoreData-watchOS */;
 			targetProxy = 7BB965E720222B5A00024DE1 /* PBXContainerItemProxy */;
-		};
-		7BB965EA20222B5A00024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AsyncOperationResult-watchOS";
-			targetProxy = 7BB965E920222B5A00024DE1 /* PBXContainerItemProxy */;
-		};
-		7BB965EC20222B5A00024DE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CollectionLoader-watchOS";
-			targetProxy = 7BB965EB20222B5A00024DE1 /* PBXContainerItemProxy */;
 		};
 		7BB965FE20222BA200024DE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4864,11 +4594,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = macosx;
@@ -4891,11 +4624,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = macosx;
@@ -4916,10 +4652,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = appletvos;
@@ -4942,10 +4681,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = appletvos;
@@ -4967,10 +4709,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = iphoneos;
@@ -4993,10 +4738,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = iphoneos;
@@ -5019,10 +4767,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-watchOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = watchos;
@@ -5046,10 +4797,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-watchOS";
 				PRODUCT_NAME = BMO_RESTCoreData;
 				SDKROOT = watchos;
@@ -5069,8 +4823,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -5087,8 +4845,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -5102,8 +4864,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5119,8 +4885,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5135,8 +4905,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5152,8 +4926,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.RESTCoreData-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5172,10 +4950,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-tvOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = appletvos;
@@ -5198,10 +4979,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-tvOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = appletvos;
@@ -5219,8 +5003,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5236,8 +5024,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5256,10 +5048,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-iOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = iphoneos;
@@ -5282,10 +5077,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-iOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = iphoneos;
@@ -5303,8 +5101,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5320,8 +5122,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5341,10 +5147,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-watchOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = watchos;
@@ -5368,10 +5177,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-watchOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = watchos;
@@ -5396,7 +5208,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = appletvos;
@@ -5422,7 +5233,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = appletvos;
@@ -5441,7 +5251,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5458,7 +5268,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5480,7 +5290,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = iphoneos;
@@ -5506,7 +5315,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = iphoneos;
@@ -5525,7 +5333,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5542,7 +5350,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5565,7 +5373,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-watchOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = watchos;
@@ -5592,7 +5399,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-watchOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = watchos;
@@ -5614,10 +5420,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-tvOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = appletvos;
@@ -5640,10 +5449,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-tvOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = appletvos;
@@ -5661,8 +5473,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5678,8 +5494,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -5698,10 +5518,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-iOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = iphoneos;
@@ -5724,10 +5547,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-iOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = iphoneos;
@@ -5745,8 +5571,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5762,8 +5592,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -5783,10 +5617,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-watchOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = watchos;
@@ -5810,10 +5647,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-watchOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = watchos;
@@ -5963,10 +5803,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-tvOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = appletvos;
@@ -5989,10 +5832,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-tvOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = appletvos;
@@ -6010,8 +5856,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -6027,8 +5877,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -6048,11 +5902,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-macOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = macosx;
@@ -6075,11 +5932,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-macOS";
 				PRODUCT_NAME = BMO_FastImportRepresentation;
 				SDKROOT = macosx;
@@ -6097,8 +5957,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6114,8 +5978,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.FastImportRepresentation-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6134,11 +6002,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-macOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = macosx;
@@ -6161,11 +6032,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreData-macOS";
 				PRODUCT_NAME = BMO_CoreData;
 				SDKROOT = macosx;
@@ -6184,8 +6058,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreDataTests-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6202,8 +6080,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO.CoreDataTests-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6226,7 +6108,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = macosx;
@@ -6253,7 +6134,6 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOS";
 				PRODUCT_NAME = RESTUtils;
 				SDKROOT = macosx;
@@ -6272,7 +6152,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6289,7 +6169,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.RESTUtils-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6308,11 +6188,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-macOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = macosx;
@@ -6336,11 +6219,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-macOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = macosx;
@@ -6359,8 +6245,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6376,8 +6266,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6396,10 +6290,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-watchOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = watchos;
@@ -6423,10 +6320,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-watchOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = watchos;
@@ -6449,11 +6349,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-macOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = macosx;
@@ -6476,11 +6379,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-macOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = macosx;
@@ -6499,8 +6405,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6518,8 +6428,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -6537,10 +6451,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-tvOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = appletvos;
@@ -6563,10 +6480,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-tvOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = appletvos;
@@ -6585,8 +6505,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -6604,8 +6528,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -6624,10 +6552,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-iOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = iphoneos;
@@ -6650,10 +6581,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-iOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = iphoneos;
@@ -6672,8 +6606,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -6691,8 +6629,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -6712,10 +6654,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-watchOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = watchos;
@@ -6739,10 +6684,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.CollectionLoader.RESTCoreData-watchOS";
 				PRODUCT_NAME = CollectionLoader_RESTCoreData;
 				SDKROOT = watchos;
@@ -6764,10 +6712,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-iOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = iphoneos;
@@ -6790,10 +6741,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-iOS";
 				PRODUCT_NAME = BMO;
 				SDKROOT = iphoneos;
@@ -6811,8 +6765,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -6827,8 +6785,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.BMO-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
