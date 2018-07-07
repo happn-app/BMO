@@ -6,4 +6,5 @@ xcuserdata/
 
 # Package Managers
 /.build/
-/Carthage/
+/Carthage/*
+!/Carthage/*.xcfilelist

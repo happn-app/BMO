@@ -1,0 +1,9 @@
+# Static, Carthage-generated frameworks
+$(SRCROOT)/Carthage/Build/Mac/Static/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/Mac/Static/KVObserver.framework
+$(SRCROOT)/Carthage/Build/iOS/Static/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/iOS/Static/KVObserver.framework
+$(SRCROOT)/Carthage/Build/tvOS/Static/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/tvOS/Static/KVObserver.framework
+$(SRCROOT)/Carthage/Build/watchOS/Static/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/watchOS/Static/KVObserver.framework

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -40,6 +40,17 @@
 			);
 			name = All;
 			productName = All;
+		};
+		7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7B8B289620F121B100BB7956 /* Build configuration list for PBXAggregateTarget "Workaround Carthage Static Folder" */;
+			buildPhases = (
+				7B8B289720F121C000BB7956 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Workaround Carthage Static Folder";
+			productName = "Workaround Carthage Static Folder";
 		};
 /* End PBXAggregateTarget section */
 
@@ -878,6 +889,174 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B8332702019296C005184FE;
 			remoteInfo = "BMO+REST";
+		};
+		7B8B289820F121E800BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B289A20F121EB00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B289C20F121ED00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B289E20F121F000BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28A020F121F600BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28A220F121F800BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28A420F121FB00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28A620F121FE00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28A820F1220200BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28AA20F1220600BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28AC20F1220900BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28AE20F1220D00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28B020F1221300BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28B220F1221800BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28B420F1221E00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28B620F1222200BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28B820F1222600BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28BA20F1222B00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28BC20F1222F00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28BE20F1223500BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28C020F1223B00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28C220F1223F00BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28C420F1224400BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
+		};
+		7B8B28C620F1224800BB7956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8B289320F121B000BB7956;
+			remoteInfo = "Workaround Carthage Static Folder";
 		};
 		7B8BD02420026E8C009BE667 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -2223,6 +2402,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28B920F1222600BB7956 /* PBXTargetDependency */,
 				7B0AB0B72021147200AC083A /* PBXTargetDependency */,
 				7B0AB0B92021147200AC083A /* PBXTargetDependency */,
 				7B0AB0BB2021147200AC083A /* PBXTargetDependency */,
@@ -2245,6 +2425,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28BB20F1222B00BB7956 /* PBXTargetDependency */,
 				7B0AB0D02021147D00AC083A /* PBXTargetDependency */,
 				7B0AB0D22021147D00AC083A /* PBXTargetDependency */,
 				7B0AB0D42021147D00AC083A /* PBXTargetDependency */,
@@ -2267,6 +2448,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28BD20F1222F00BB7956 /* PBXTargetDependency */,
 				7B0AB0E92021148000AC083A /* PBXTargetDependency */,
 				7B0AB0EB2021148000AC083A /* PBXTargetDependency */,
 				7B0AB0ED2021148000AC083A /* PBXTargetDependency */,
@@ -2289,6 +2471,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28BF20F1223500BB7956 /* PBXTargetDependency */,
 				7B0AB1022021148300AC083A /* PBXTargetDependency */,
 				7B0AB1042021148300AC083A /* PBXTargetDependency */,
 				7B0AB1062021148300AC083A /* PBXTargetDependency */,
@@ -2365,6 +2548,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28AB20F1220600BB7956 /* PBXTargetDependency */,
 				7B51619C201FBBC300B94FB3 /* PBXTargetDependency */,
 			);
 			name = "BMO+FastImportRepresentation-tvOS";
@@ -2402,6 +2586,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28AD20F1220900BB7956 /* PBXTargetDependency */,
 				7B5161CF201FBD6600B94FB3 /* PBXTargetDependency */,
 			);
 			name = "BMO+FastImportRepresentation-iOS";
@@ -2439,6 +2624,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28AF20F1220D00BB7956 /* PBXTargetDependency */,
 				7B5161CD201FBD6200B94FB3 /* PBXTargetDependency */,
 			);
 			name = "BMO+FastImportRepresentation-watchOS";
@@ -2458,6 +2644,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28A320F121F800BB7956 /* PBXTargetDependency */,
 			);
 			name = "RESTUtils-tvOS";
 			productName = "BMO+RESTUtils-tvOS";
@@ -2494,6 +2681,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28A520F121FB00BB7956 /* PBXTargetDependency */,
 			);
 			name = "RESTUtils-iOS";
 			productName = "BMO+RESTUtils-iOS";
@@ -2530,6 +2718,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28A720F121FE00BB7956 /* PBXTargetDependency */,
 			);
 			name = "RESTUtils-watchOS";
 			productName = "BMO+RESTUtils-watchOS";
@@ -2548,6 +2737,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28B320F1221800BB7956 /* PBXTargetDependency */,
 				7B5162A4201FC02600B94FB3 /* PBXTargetDependency */,
 				7B5162A6201FC02600B94FB3 /* PBXTargetDependency */,
 			);
@@ -2586,6 +2776,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28B520F1221E00BB7956 /* PBXTargetDependency */,
 				7B5162AA201FC03A00B94FB3 /* PBXTargetDependency */,
 				7B5162AC201FC03A00B94FB3 /* PBXTargetDependency */,
 			);
@@ -2624,6 +2815,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28B720F1222200BB7956 /* PBXTargetDependency */,
 				7B5162B0201FC04200B94FB3 /* PBXTargetDependency */,
 				7B5162B2201FC04200B94FB3 /* PBXTargetDependency */,
 			);
@@ -2644,6 +2836,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B289B20F121EB00BB7956 /* PBXTargetDependency */,
 			);
 			name = "BMO-tvOS";
 			productName = "happnLogger-tvOS";
@@ -2680,6 +2873,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28A920F1220200BB7956 /* PBXTargetDependency */,
 				7B817F17201916CE00625427 /* PBXTargetDependency */,
 			);
 			name = "BMO+FastImportRepresentation-macOS";
@@ -2717,6 +2911,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28B120F1221300BB7956 /* PBXTargetDependency */,
 				7B8332692019287B005184FE /* PBXTargetDependency */,
 				7B83326B2019287F005184FE /* PBXTargetDependency */,
 			);
@@ -2755,6 +2950,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28A120F121F600BB7956 /* PBXTargetDependency */,
 			);
 			name = "RESTUtils-macOS";
 			productName = "BMO+REST";
@@ -2791,6 +2987,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B289920F121E800BB7956 /* PBXTargetDependency */,
 			);
 			name = "BMO-macOS";
 			productName = "happnLogger-macOS";
@@ -2827,6 +3024,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B289F20F121F000BB7956 /* PBXTargetDependency */,
 			);
 			name = "BMO-watchOS";
 			productName = "happnLogger-watchOS";
@@ -2845,6 +3043,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28C120F1223B00BB7956 /* PBXTargetDependency */,
 				7BB965BE20222A0600024DE1 /* PBXTargetDependency */,
 				7BB965C020222A0600024DE1 /* PBXTargetDependency */,
 				7BB965C220222A0600024DE1 /* PBXTargetDependency */,
@@ -2885,6 +3084,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28C320F1223F00BB7956 /* PBXTargetDependency */,
 				7BB965CA20222B3500024DE1 /* PBXTargetDependency */,
 				7BB965CC20222B3500024DE1 /* PBXTargetDependency */,
 				7BB965CE20222B3500024DE1 /* PBXTargetDependency */,
@@ -2925,6 +3125,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28C520F1224400BB7956 /* PBXTargetDependency */,
 				7BB965D620222B4700024DE1 /* PBXTargetDependency */,
 				7BB965D820222B4700024DE1 /* PBXTargetDependency */,
 				7BB965DA20222B4700024DE1 /* PBXTargetDependency */,
@@ -2965,6 +3166,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B28C720F1224800BB7956 /* PBXTargetDependency */,
 				7BB965E220222B5A00024DE1 /* PBXTargetDependency */,
 				7BB965E420222B5A00024DE1 /* PBXTargetDependency */,
 				7BB965E620222B5A00024DE1 /* PBXTargetDependency */,
@@ -2987,6 +3189,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B8B289D20F121ED00BB7956 /* PBXTargetDependency */,
 			);
 			name = "BMO-iOS";
 			productName = "happnLogger-iOS";
@@ -3142,6 +3345,9 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
+					7B8B289320F121B000BB7956 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					7B8BD01920026E8C009BE667 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -3208,6 +3414,7 @@
 			projectRoot = "";
 			targets = (
 				7B639D8D2002CDE70079C664 /* All */,
+				7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */,
 				7B8BD01920026E8C009BE667 /* BMO-macOS */,
 				7B7A34BE20027B4600348DF4 /* BMO-tvOS */,
 				7BC696D42002775C007BC3E9 /* BMO-iOS */,
@@ -3550,6 +3757,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B8B289720F121C000BB7956 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Carthage/$(FL_WORKAROUND_CARTHAGE_FOLDER_NAME)FolderWorkaroundInput.xcfilelist",
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+				"$(SRCROOT)/Carthage/$(FL_WORKAROUND_CARTHAGE_FOLDER_NAME)FolderWorkaroundOutput.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Link (ln) static Frameworks generated by Carthage in the “Static” folder\n# to the root Carthage folder\n\"$SRCROOT/Scripts/carthage_workaround_static_folder.sh\" \"$FL_WORKAROUND_CARTHAGE_FOLDER_NAME\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B0AB0BD2021147200AC083A /* Sources */ = {
@@ -4454,6 +4683,126 @@
 			isa = PBXTargetDependency;
 			target = 7B8332702019296C005184FE /* RESTUtils-macOS */;
 			targetProxy = 7B83327B2019296C005184FE /* PBXContainerItemProxy */;
+		};
+		7B8B289920F121E800BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B289820F121E800BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B289B20F121EB00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B289A20F121EB00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B289D20F121ED00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B289C20F121ED00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B289F20F121F000BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B289E20F121F000BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28A120F121F600BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28A020F121F600BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28A320F121F800BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28A220F121F800BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28A520F121FB00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28A420F121FB00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28A720F121FE00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28A620F121FE00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28A920F1220200BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28A820F1220200BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28AB20F1220600BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28AA20F1220600BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28AD20F1220900BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28AC20F1220900BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28AF20F1220D00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28AE20F1220D00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28B120F1221300BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28B020F1221300BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28B320F1221800BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28B220F1221800BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28B520F1221E00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28B420F1221E00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28B720F1222200BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28B620F1222200BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28B920F1222600BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28B820F1222600BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28BB20F1222B00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28BA20F1222B00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28BD20F1222F00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28BC20F1222F00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28BF20F1223500BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28BE20F1223500BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28C120F1223B00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28C020F1223B00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28C320F1223F00BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28C220F1223F00BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28C520F1224400BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28C420F1224400BB7956 /* PBXContainerItemProxy */;
+		};
+		7B8B28C720F1224800BB7956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8B289320F121B000BB7956 /* Workaround Carthage Static Folder */;
+			targetProxy = 7B8B28C620F1224800BB7956 /* PBXContainerItemProxy */;
 		};
 		7B8BD02520026E8C009BE667 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5785,7 +6134,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = "";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -6174,6 +6524,22 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		7B8B289420F121B100BB7956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B8B289520F121B100BB7956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -7085,6 +7451,15 @@
 			buildConfigurations = (
 				7B8332862019296C005184FE /* Debug */,
 				7B8332872019296C005184FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B8B289620F121B100BB7956 /* Build configuration list for PBXAggregateTarget "Workaround Carthage Static Folder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8B289420F121B100BB7956 /* Debug */,
+				7B8B289520F121B100BB7956 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
