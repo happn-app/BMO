@@ -39,7 +39,7 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 		let fr = NSFetchRequest<NSManagedObject>()
 		fr.entity = listElementEntity
 		fr.fetchLimit = 1
-		self.init(listElementFetchRequest: fr, additionalElementFetchInfo: aefi, listProperty: lp, apiOrderProperty: aop, apiOrderDelta: aod, additionalFetchRequestPredicate: afrp, context: c, bridge: b, requestManager: rm)
+		self.init(listElementFetchRequest: fr, additionalElementFetchInfo: aefi, listProperty: lp, apiOrderProperty: aop, apiOrderDelta: aod, additionalFetchRequestPredicate: afrp, context: c, bridge: b, pageInfoRetriever: pir, requestManager: rm)
 	}
 	
 	public init<ListElementObjectType : NSManagedObject>(
