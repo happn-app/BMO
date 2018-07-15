@@ -33,7 +33,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 	}
 	
 	func unsafeImport(in db: NSManagedObjectContext, updatingObject updatedObject: DbType.ObjectType?) throws -> ResultBuilderType.ResultType {
-		var objectsByUniquingIds = [AnyHashable: NSManagedObject]()
+		var objectsByEntityAndUniquingIds = [NSEntityDescription: [AnyHashable: NSManagedObject]]()
 		for (entity, uniquingIds) in uniquingIdsByEntity {
 			let request = NSFetchRequest<NSManagedObject>()
 			request.entity = entity
@@ -43,14 +43,14 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 			
 			for object in objects {
 				guard let uid = object.value(forKey: uniquingPropertyName) as? AnyHashable else {assertionFailure("Well… This is unexpected! Didn't get an AnyHashable value for UID of object \(object) (property name \(uniquingPropertyName))"); continue}
-				objectsByUniquingIds[uid] = object
+				objectsByEntityAndUniquingIds[entity, default: [:]][uid] = object
 			}
 		}
 		
 		/* The insertedObjects variable is only used to know the objects who need
 		 * a permanent ID retrieval. */
 		var insertedObjects = [NSManagedObject]()
-		_ = try unsafeImport(representations: representations, in: db, updatingObject: updatedObject, isRootImport: true, resultBuilder: resultBuilder, prefetchedObjectsByUniquingIds: &objectsByUniquingIds, insertedObjects: &insertedObjects)
+		_ = try unsafeImport(representations: representations, in: db, updatingObject: updatedObject, isRootImport: true, resultBuilder: resultBuilder, prefetchedObjectsByEntityAndUniquingIds: &objectsByEntityAndUniquingIds, insertedObjects: &insertedObjects)
 		return resultBuilder.result
 	}
 	
@@ -70,7 +70,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 		}
 	}
 	
-	private func unsafeImport(representations: [DbRepresentationType], in db: NSManagedObjectContext, updatingObject updatedObject: DbType.ObjectType?, isRootImport: Bool, resultBuilder: ResultBuilderType, prefetchedObjectsByUniquingIds uniqIdToObject: inout [AnyHashable: NSManagedObject], insertedObjects: inout [NSManagedObject]) throws -> [DbType.ObjectType] {
+	private func unsafeImport(representations: [DbRepresentationType], in db: NSManagedObjectContext, updatingObject updatedObject: DbType.ObjectType?, isRootImport: Bool, resultBuilder: ResultBuilderType, prefetchedObjectsByEntityAndUniquingIds uniqIdAndEntityToObject: inout [NSEntityDescription: [AnyHashable: NSManagedObject]], insertedObjects: inout [NSManagedObject]) throws -> [DbType.ObjectType] {
 		if let updatedObject = updatedObject, updatedObject.isUsable {
 			guard representations.count <= 1 else {
 				throw ImportError.tooManyRepresentationsToUpdateObject
@@ -80,7 +80,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 					throw ImportError.updatedObjectAndRepresentedObjectEntitiesDoNotMatch
 				}
 				if let uid = r.uniquingId {
-					if let currentObjectForUID = uniqIdToObject[uid] {
+					if let currentObjectForUID = uniqIdAndEntityToObject[r.entity]?[uid] {
 						if currentObjectForUID != updatedObject {
 							/* We're told to forcibly update an object, but another
 							 * object has already been created for the given UID. We
@@ -103,7 +103,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 							}
 							updatedObject.setValue(uid, forKey: uniquingPropertyName)
 						}
-						uniqIdToObject[uid] = updatedObject
+						uniqIdAndEntityToObject[r.entity, default: [:]][uid] = updatedObject
 					}
 				}
 			}
@@ -113,13 +113,13 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 		for representation in representations {
 			let object: NSManagedObject
 			if let uid = representation.uniquingId {
-				if let o = uniqIdToObject[uid] {object = o}
+				if let o = uniqIdAndEntityToObject[representation.entity]?[uid] {object = o}
 				else {
 					/* If the object is not in the uniqIdToObject dictionary we have
 					 * to create it. */
 					object = NSEntityDescription.insertNewObject(forEntityName: representation.entity.name!, into: db)
 					object.setValue(uid, forKey: uniquingPropertyName)
-					uniqIdToObject[uid] = object
+					uniqIdAndEntityToObject[representation.entity]?[uid] = object
 					insertedObjects.append(object)
 					try resultBuilder.unsafeInserted(object: object, fromDb: db)
 				}
@@ -140,6 +140,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 			
 			try resultBuilder.unsafeStartedImporting(object: object, inDb: db)
 			
+			assert(object.entity.isKindOf(entity: representation.entity))
 			for (k, v) in representation.attributes {object.setValue(v, forKey: k)}
 			
 			for (relationshipName, relationshipValue) in representation.relationships {
@@ -151,7 +152,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 					continue
 				}
 				
-				let importedRelationshipValue = try unsafeImport(representations: value, in: db, updatingObject: nil, isRootImport: false, resultBuilder: subBuilder, prefetchedObjectsByUniquingIds: &uniqIdToObject, insertedObjects: &insertedObjects)
+				let importedRelationshipValue = try unsafeImport(representations: value, in: db, updatingObject: nil, isRootImport: false, resultBuilder: subBuilder, prefetchedObjectsByEntityAndUniquingIds: &uniqIdAndEntityToObject, insertedObjects: &insertedObjects)
 				let relationship = representation.entity.relationshipsByName[relationshipName]!
 				if !relationship.isToMany {
 					/* To-one relationship */

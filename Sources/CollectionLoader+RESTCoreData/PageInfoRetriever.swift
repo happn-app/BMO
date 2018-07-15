@@ -13,14 +13,6 @@ import RESTUtils
 
 
 
-/* Ideally, this protocol would not exist and would instead be an extension of
- * Bridge. The extension would have a default implementation for these methods
- * (as is expected for protocol extensions), and concrete Bridge implementations
- * would overwrite the implementations as needed. However, because of a Swift
- * weirdness (not sure if normal behavior or not; will write on Swift forums),
- * when calling the extension from the same module it has been defined, if the
- * override is in another module, the default implementation is used instead,
- * which make this solution impossible for us. */
 public protocol PageInfoRetriever {
 	
 	associatedtype BridgeType : Bridge

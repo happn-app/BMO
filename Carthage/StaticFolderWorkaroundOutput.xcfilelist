@@ -1,9 +1,13 @@
 # Links to actual Carthage-generated frameworks
 $(SRCROOT)/Carthage/Build/Mac/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/Mac/CollectionLoader.framework
 $(SRCROOT)/Carthage/Build/Mac/KVObserver.framework
 $(SRCROOT)/Carthage/Build/iOS/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/iOS/CollectionLoader.framework
 $(SRCROOT)/Carthage/Build/iOS/KVObserver.framework
 $(SRCROOT)/Carthage/Build/tvOS/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/tvOS/CollectionLoader.framework
 $(SRCROOT)/Carthage/Build/tvOS/KVObserver.framework
 $(SRCROOT)/Carthage/Build/watchOS/AsyncOperationResult.framework
+$(SRCROOT)/Carthage/Build/watchOS/CollectionLoader.framework
 $(SRCROOT)/Carthage/Build/watchOS/KVObserver.framework
