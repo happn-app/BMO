@@ -23,7 +23,7 @@ public extension NSPredicate {
 		case let comparison as NSComparisonPredicate:
 			return [comparison]
 			
-		case let compound as NSCompoundPredicate where allowOrCompound || allowAndCompound:
+		case let compound as NSCompoundPredicate where (compound.compoundPredicateType == .or && allowOrCompound) || (compound.compoundPredicateType == .and && allowAndCompound):
 			return try? compound.subpredicates.compactMap{
 				guard let comparison = $0 as? NSComparisonPredicate else {
 					if !failForUnknownPredicates {return nil}
