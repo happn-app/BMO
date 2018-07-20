@@ -18,12 +18,12 @@ public extension NSPredicate {
 	
 	/* If failForUnknownPredicate is true, the function will gather all the first
 	 * level predicates it can and ignore any unknown predicates. */
-	func firstLevelComparisonSubpredicates(failForUnknownPredicates: Bool) -> [NSComparisonPredicate]? {
+	func firstLevelComparisonSubpredicates(failForUnknownPredicates: Bool, withOrCompound allowOrCompound: Bool = false, withAndCompound allowAndCompound: Bool = false) -> [NSComparisonPredicate]? {
 		switch self {
 		case let comparison as NSComparisonPredicate:
 			return [comparison]
 			
-		case let compound as NSCompoundPredicate where compound.compoundPredicateType == .or:
+		case let compound as NSCompoundPredicate where (compound.compoundPredicateType == .or && allowOrCompound) || (compound.compoundPredicateType == .and && allowAndCompound):
 			return try? compound.subpredicates.compactMap{
 				guard let comparison = $0 as? NSComparisonPredicate else {
 					if !failForUnknownPredicates {return nil}
@@ -51,8 +51,8 @@ public extension NSPredicate {
 		return firstLevelConstants(forKeyPath: keyPath, failForUnknownPredicates: false)!
 	}
 	
-	func enumerateFirstLevelConstants(forKeyPath keyPath: String?, stopAtUnknownPredicates: Bool = false, _ handler: (_ keyPath: String, _ constant: Any) -> Void) {
-		guard let subpredicates = firstLevelComparisonSubpredicates(failForUnknownPredicates: stopAtUnknownPredicates) else {return}
+	func enumerateFirstLevelConstants(forKeyPath keyPath: String?, stopAtUnknownPredicates: Bool = false, withOrCompound allowOrCompound: Bool = true, withAndCompound allowAndCompound: Bool = false, _ handler: (_ keyPath: String, _ constant: Any) -> Void) {
+		guard let subpredicates = firstLevelComparisonSubpredicates(failForUnknownPredicates: stopAtUnknownPredicates, withOrCompound: allowOrCompound, withAndCompound: allowAndCompound) else {return}
 		
 		for predicate in subpredicates {
 			switch (predicate.comparisonPredicateModifier, predicate.predicateOperatorType, predicate.leftExpression.expressionType, predicate.rightExpression.expressionType) {
