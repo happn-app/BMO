@@ -250,20 +250,22 @@ extension RequestManager {
 		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?,
 		fetchType: RESTCoreDataFetchRequest.FetchType = .always,
 		onContext context: NSManagedObjectContext, bridge: BridgeType? = nil,
+		preCompletionHandler: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)? = nil,
 		handler: ((_ response: AsyncOperationResult<BridgeBackRequestResult<BridgeType>>) -> Void)? = nil
 	) -> BackRequestOperation<RESTCoreDataFetchRequest, BridgeType>
 	{
-		return operationForFetchingObjects(fromFetchRequest: fetchRequest, additionalRequestInfo: additionalRequestInfo, fetchType: fetchType, onContext: context, bridge: bridge, autoStart: true, handler: handler)
+		return operationForFetchingObjects(fromFetchRequest: fetchRequest, additionalRequestInfo: additionalRequestInfo, fetchType: fetchType, onContext: context, bridge: bridge, autoStart: true, preCompletionHandler: preCompletionHandler, handler: handler)
 	}
 	
 	public func operationForFetchingObjects<BridgeType>(
 		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?,
 		fetchType: RESTCoreDataFetchRequest.FetchType,
 		onContext context: NSManagedObjectContext, bridge: BridgeType? = nil, autoStart: Bool,
+		preCompletionHandler: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)? = nil,
 		handler: ((_ response: AsyncOperationResult<BridgeBackRequestResult<BridgeType>>) -> Void)? = nil
 	) -> BackRequestOperation<RESTCoreDataFetchRequest, BridgeType>
 	{
-		let bmoRequest = RESTCoreDataFetchRequest(context: context, fetchRequest: fetchRequest, fetchType: fetchType, additionalInfo: additionalRequestInfo)
+		let bmoRequest = RESTCoreDataFetchRequest(context: context, fetchRequest: fetchRequest, fetchType: fetchType, additionalInfo: additionalRequestInfo, leaveBridgeHandler: nil, preImportHandler: nil, preCompletionHandler: preCompletionHandler)
 		let handler = handler.flatMap{ originalHandler in
 			return { (_ response: AsyncOperationResult<BackRequestResult<RESTCoreDataFetchRequest, BridgeType>>) -> Void in
 				originalHandler(response.simpleBackRequestResult())
