@@ -235,7 +235,7 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 		var mappingEntityForcedParams = entityMapping?.forcedParametersOnFetch ?? [:]
 		var clientForcedParams = additionalRESTInfo?.additionalRequestParameters ?? [:]
 		var mappingForcedParams = (firstLevel ? restMapping.forcedParametersOnFetch : [:])
-		var paginatorParams = additionalRESTInfo?.paginatorInfo.flatMap{ (forcedPaginator ?? entityMapping?.paginator)?.paginationParams(withPaginatorInfo: $0) } ?? [:]
+		var paginatorParams = additionalRESTInfo?.paginatorInfo.flatMap{ (forcedPaginator ?? additionalRESTInfo?.forcedPaginator ?? entityMapping?.paginator)?.paginationParams(withPaginatorInfo: $0) } ?? [:]
 		
 		/* *** Fields params *** */
 		if let fieldsKeyName = forcedFieldsKeyName ?? entityMapping?.fieldsKeyName {

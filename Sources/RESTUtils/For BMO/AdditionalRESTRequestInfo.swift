@@ -16,6 +16,7 @@ public struct AdditionalRESTRequestInfo<DbPropertyDescription : Hashable> {
 	/** Only has meaning for a root additional REST info. If set to a non-nil
 	value, will replace the computed REST path from the REST mapping. */
 	public var forcedRESTPath: RESTPath?
+	public var forcedPaginator: RESTPaginator?
 	
 	public var fetchedProperties: Set<DbPropertyDescription>?
 	public var additionalRequestParameters: [String: Any]
@@ -49,8 +50,9 @@ public struct AdditionalRESTRequestInfo<DbPropertyDescription : Hashable> {
 		}
 	}
 	
-	public init(fromInfo sourceInfo: AdditionalRESTRequestInfo<DbPropertyDescription>? = nil, forcedRESTPath frp: RESTPath? = nil, fetchedProperties f: Set<DbPropertyDescription>? = nil, additionalRequestParameters add: [String: Any]? = nil, paginatorInfo pi: Any? = nil, subAdditionalInfo subInfo: [DbPropertyDescription: AdditionalRESTRequestInfo<DbPropertyDescription>]? = nil) {
+	public init(fromInfo sourceInfo: AdditionalRESTRequestInfo<DbPropertyDescription>? = nil, forcedRESTPath frp: RESTPath? = nil, forcedPaginator fp: RESTPaginator? = nil, fetchedProperties f: Set<DbPropertyDescription>? = nil, additionalRequestParameters add: [String: Any]? = nil, paginatorInfo pi: Any? = nil, subAdditionalInfo subInfo: [DbPropertyDescription: AdditionalRESTRequestInfo<DbPropertyDescription>]? = nil) {
 		forcedRESTPath = frp ?? sourceInfo?.forcedRESTPath
+		forcedPaginator = fp ?? sourceInfo?.forcedPaginator
 		fetchedProperties = f ?? sourceInfo?.fetchedProperties
 		additionalRequestParameters = add ?? sourceInfo?.additionalRequestParameters ?? [:]
 		paginatorInfo = pi ?? sourceInfo?.paginatorInfo
