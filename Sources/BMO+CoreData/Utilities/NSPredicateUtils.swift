@@ -41,62 +41,71 @@ public extension NSPredicate {
 		return firstLevelComparisonSubpredicates(failForUnknownPredicates: false)!
 	}
 	
-	func firstLevelConstants(forKeyPath keyPath: String, failForUnknownPredicates: Bool) -> [Any]? {
+	func firstLevelConstants(forKeyPath keyPath: String, failForUnknownPredicates: Bool, withOrCompound allowOrCompound: Bool = true, withAndCompound allowAndCompound: Bool = false) -> [Any]? {
 		var res = [Any]()
-		enumerateFirstLevelConstants(forKeyPath: keyPath, stopAtUnknownPredicates: failForUnknownPredicates) { res.append($1) }
-		return res
+		let noUnknownPredicatesFound = enumerateFirstLevelConstants(forKeyPath: keyPath, stopAtUnknownPredicates: failForUnknownPredicates, withOrCompound: allowOrCompound, withAndCompound: allowAndCompound){
+			res.append($1)
+		}
+		if !failForUnknownPredicates || noUnknownPredicatesFound {
+			return res
+		}
+		return nil
 	}
 	
-	func firstLevelConstants(forKeyPath keyPath: String) -> [Any] {
-		return firstLevelConstants(forKeyPath: keyPath, failForUnknownPredicates: false)!
+	func firstLevelConstants(forKeyPath keyPath: String, withOrCompound allowOrCompound: Bool = true, withAndCompound allowAndCompound: Bool = false) -> [Any] {
+		return firstLevelConstants(forKeyPath: keyPath, failForUnknownPredicates: false, withOrCompound: allowOrCompound, withAndCompound: allowAndCompound)!
 	}
 	
-	func enumerateFirstLevelConstants(forKeyPath keyPath: String?, stopAtUnknownPredicates: Bool = false, withOrCompound allowOrCompound: Bool = true, withAndCompound allowAndCompound: Bool = false, _ handler: (_ keyPath: String, _ constant: Any) -> Void) {
-		guard let subpredicates = firstLevelComparisonSubpredicates(failForUnknownPredicates: stopAtUnknownPredicates, withOrCompound: allowOrCompound, withAndCompound: allowAndCompound) else {return}
+	/** - returns: `true` if no unknown predicates have been encountered. */
+	@discardableResult
+	func enumerateFirstLevelConstants(forKeyPath keyPath: String?, stopAtUnknownPredicates: Bool = false, withOrCompound allowOrCompound: Bool = true, withAndCompound allowAndCompound: Bool = false, _ handler: (_ keyPath: String, _ constant: Any) -> Void) -> Bool {
+		guard let subpredicates = firstLevelComparisonSubpredicates(failForUnknownPredicates: stopAtUnknownPredicates, withOrCompound: allowOrCompound, withAndCompound: allowAndCompound) else {return false}
 		
+		var res = true
 		for predicate in subpredicates {
 			switch (predicate.comparisonPredicateModifier, predicate.predicateOperatorType, predicate.leftExpression.expressionType, predicate.rightExpression.expressionType) {
 			case (.direct, .in, .keyPath, .constantValue):
 				guard keyPath == nil || predicate.leftExpression.keyPath == keyPath else {
-					if stopAtUnknownPredicates {return}
-					else                       {continue}
+					if stopAtUnknownPredicates {return false}
+					else                       {res = false; continue}
 				}
 				/* We got a "keyPath IN object" predicate! */
 				switch predicate.rightExpression.constantValue {
 				case let a as [Any]:            for e in a {handler(predicate.leftExpression.keyPath, e)}
 				case let s as Set<AnyHashable>: for e in s {handler(predicate.leftExpression.keyPath, e)}
 				default:
-					if stopAtUnknownPredicates {return}
-					else                       {continue}
+					if stopAtUnknownPredicates {return false}
+					else                       {res = false; continue}
 				}
 				
 			case (.direct, .contains, .constantValue, .keyPath):
 				guard keyPath == nil || predicate.rightExpression.keyPath == keyPath else {
-					if stopAtUnknownPredicates {return}
-					else                       {continue}
+					if stopAtUnknownPredicates {return false}
+					else                       {res = false; continue}
 				}
 				/* We got a "object CONTAINS keyPath" predicate! */
 				switch predicate.leftExpression.constantValue {
 				case let a as [Any]:            for e in a {handler(predicate.rightExpression.keyPath, e)}
 				case let s as Set<AnyHashable>: for e in s {handler(predicate.rightExpression.keyPath, e)}
 				default:
-					if stopAtUnknownPredicates {return}
-					else                       {continue}
+					if stopAtUnknownPredicates {return false}
+					else                       {res = false; continue}
 				}
 				
 			case (.direct, .equalTo, _, _):
 				guard let kp = predicate.keyPathExpression?.keyPath, (keyPath == nil || kp == keyPath) else {
-					if stopAtUnknownPredicates {return}
-					else                       {continue}
+					if stopAtUnknownPredicates {return false}
+					else                       {res = false; continue}
 				}
 				/* We got a "keyPath == constant" predicate! */
 				if let c = predicate.constantValueExpression?.constantValue {handler(kp, c)}
 				
 			default:
-				if stopAtUnknownPredicates {return}
-				else                       {continue}
+				if stopAtUnknownPredicates {return false}
+				else                       {res = false; continue}
 			}
 		}
+		return res
 	}
 	
 	func predicateByAddingKeyPathPrefix(_ keyPathPrefix: String) -> NSPredicate {
