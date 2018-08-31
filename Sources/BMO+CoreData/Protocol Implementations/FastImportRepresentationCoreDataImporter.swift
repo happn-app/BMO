@@ -119,7 +119,7 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 					 * to create it. */
 					object = NSEntityDescription.insertNewObject(forEntityName: representation.entity.name!, into: db)
 					object.setValue(uid, forKey: uniquingPropertyName)
-					uniqIdAndEntityToObject[representation.entity]?[uid] = object
+					uniqIdAndEntityToObject[representation.entity, default: [:]][uid] = object
 					insertedObjects.append(object)
 					try resultBuilder.unsafeInserted(object: object, fromDb: db)
 				}
