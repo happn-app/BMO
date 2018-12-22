@@ -1256,7 +1256,6 @@
 		7B0AB1322021148A00AC083A /* BMO+RESTCoreData-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0AB13F2021148E00AC083A /* BMO+RESTCoreData-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0B8D5920E920A5006E622D /* StaticCarthageBuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticCarthageBuild.xcconfig; sourceTree = "<group>"; };
-		7B21BACD2003B2C600DFF758 /* BMO.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = BMO.podspec; sourceTree = "<group>"; };
 		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B21BAD02003BBC700DFF758 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7B21BAD12003BF0600DFF758 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
@@ -1921,7 +1920,6 @@
 				7B21BACE2003B2C600DFF758 /* Readme.md */,
 				7B21BAD12003BF0600DFF758 /* License.txt */,
 				7B21BAD02003BBC700DFF758 /* Package.swift */,
-				7B21BACD2003B2C600DFF758 /* BMO.podspec */,
 				7B8BD01120026AF1009BE667 /* Sources */,
 				7B8BD031200274B9009BE667 /* Tests */,
 				7B3C40502018B3D300E4A0A5 /* Carthage Builds */,
