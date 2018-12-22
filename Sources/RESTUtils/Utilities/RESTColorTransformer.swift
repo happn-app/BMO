@@ -236,7 +236,7 @@ public class RESTColorTransformer : ValueTransformer {
 			guard #available(OSX 10.13, tvOS 11.0, iOS 11.0, watchOS 4.0, *) else {return nil}
 			guard let colorName = info.resolve(with: vars) else {return nil}
 			#if os(OSX)
-				return NSColor(named: NSColor.Name(rawValue: colorName))
+				return NSColor(named: colorName)
 			#else
 				return UIColor(named: colorName)
 			#endif
