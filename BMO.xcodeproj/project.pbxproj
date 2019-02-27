@@ -1927,7 +1927,11 @@
 				7B57B679201FD7A200FAED2F /* Frameworks */,
 				7B661F9C20026ACC00486182 /* Products */,
 			);
+			indentWidth = 3;
 			sourceTree = "<group>";
+			tabWidth = 3;
+			usesTabs = 1;
+			wrapsLines = 0;
 		};
 		7B661F9C20026ACC00486182 /* Products */ = {
 			isa = PBXGroup;
