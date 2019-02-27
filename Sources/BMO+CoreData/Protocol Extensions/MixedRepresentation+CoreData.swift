@@ -15,7 +15,10 @@ import BMO
 
 extension MixedRepresentation where DbEntityDescriptionType == NSEntityDescription {
 	
-	public init(entity e: DbEntityDescriptionType, uniquingId uid: AnyHashable?, mixedRepresentationDictionary: [String: Any?], userInfo info: BridgeUserInfoType, relationshipAndMetadataValuePreprocessor handler: (_ relationship: NSRelationshipDescription, _ value: Any??) -> RemoteRelationshipAndMetadataRepresentationType?? = { $1 as? RemoteRelationshipAndMetadataRepresentationType? }) {
+	public init(entity e: DbEntityDescriptionType, uniquingId uid: AnyHashable?, mixedRepresentationDictionary: [String: Any?], userInfo info: BridgeUserInfoType, relationshipAndMetadataValuePreprocessor handler: (_ relationship: NSRelationshipDescription, _ value: Any??) -> RemoteRelationshipAndMetadataRepresentationType?? = {
+		guard let relationshipValue = $1 else {return nil}
+		return relationshipValue as? RemoteRelationshipAndMetadataRepresentationType?
+	}) {
 		self.init(entity: e, uniquingId: uid, mixedRepresentationDictionary: mixedRepresentationDictionary, userInfo: info, relationshipAndMetadataValuePreprocessorNoDefault: handler)
 	}
 	
