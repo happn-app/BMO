@@ -1258,7 +1258,6 @@
 		7B0B8D5920E920A5006E622D /* StaticCarthageBuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticCarthageBuild.xcconfig; sourceTree = "<group>"; };
 		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B21BAD02003BBC700DFF758 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		7B21BAD12003BF0600DFF758 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterizedStringSet.swift; sourceTree = "<group>"; };
 		7B3192C22019F2640088312B /* RESTPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTPath.swift; sourceTree = "<group>"; };
 		7B37122621026D71000E6124 /* RESTNumericTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTNumericTransformer.swift; sourceTree = "<group>"; };
@@ -1379,6 +1378,7 @@
 		7BDB847820C0D359001684D7 /* RESTBoolTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTBoolTransformer.swift; sourceTree = "<group>"; };
 		7BEB91ED202131E30068239F /* Bridge+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bridge+CoreData.swift"; sourceTree = "<group>"; };
 		7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTColorTransformer.swift; sourceTree = "<group>"; };
+		B1A42E582230148000AE81E8 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1918,7 +1918,7 @@
 			isa = PBXGroup;
 			children = (
 				7B21BACE2003B2C600DFF758 /* Readme.md */,
-				7B21BAD12003BF0600DFF758 /* License.txt */,
+				B1A42E582230148000AE81E8 /* LICENSE.md */,
 				7B21BAD02003BBC700DFF758 /* Package.swift */,
 				7B8BD01120026AF1009BE667 /* Sources */,
 				7B8BD031200274B9009BE667 /* Tests */,
