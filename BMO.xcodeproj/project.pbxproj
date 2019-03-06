@@ -1256,7 +1256,6 @@
 		7B0AB1322021148A00AC083A /* BMO+RESTCoreData-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0AB13F2021148E00AC083A /* BMO+RESTCoreData-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMO+RESTCoreData-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0B8D5920E920A5006E622D /* StaticCarthageBuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticCarthageBuild.xcconfig; sourceTree = "<group>"; };
-		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B21BAD02003BBC700DFF758 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterizedStringSet.swift; sourceTree = "<group>"; };
 		7B3192C22019F2640088312B /* RESTPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTPath.swift; sourceTree = "<group>"; };
@@ -1917,7 +1916,6 @@
 		7B661F9220026ACC00486182 = {
 			isa = PBXGroup;
 			children = (
-				7B21BACE2003B2C600DFF758 /* Readme.md */,
 				B1A42E582230148000AE81E8 /* LICENSE.md */,
 				7B21BAD02003BBC700DFF758 /* Package.swift */,
 				7B8BD01120026AF1009BE667 /* Sources */,
