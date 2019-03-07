@@ -184,30 +184,4 @@ class RESTUtilsTests: XCTestCase {
 		XCTAssertEqual(r.resolvedPath(source: ["key": "val"]), "hello")
 	}
 	
-	/* Fill this array with all the tests to have Linux testing compatibility. */
-	static var allTests = [
-		("testInvalidPath1", testInvalidPath1),
-		("testInvalidPath2", testInvalidPath2),
-		("testInvalidPath3", testInvalidPath3),
-		("testInvalidPath4", testInvalidPath4),
-		("testInvalidPath5", testInvalidPath5),
-		("testInvalidPath6", testInvalidPath6),
-		("testInvalidPath7", testInvalidPath7),
-		("testInvalidPath8", testInvalidPath8),
-		("testInvalidPath9", testInvalidPath9),
-		("testInvalidPath10", testInvalidPath10),
-		("testInvalidPath11", testInvalidPath11),
-		("testConstantRESTPath", testConstantRESTPath),
-		("testVariableRESTPath", testVariableRESTPath),
-		("testEmptySubpathRESTPath", testEmptySubpathRESTPath),
-		("testEmptyVariableRESTPath", testEmptyVariableRESTPath),
-		("testOpenParenthesisVariableRESTPath", testOpenParenthesisVariableRESTPath),
-		("testConstantAndVariableRESTPath", testConstantAndVariableRESTPath),
-		("testSimpleVariableReplacement", testSimpleVariableReplacement),
-		("testTwoLevelsKeyPathVariableReplacement", testTwoLevelsKeyPathVariableReplacement),
-		("testTwoLevelsKeyPathVariableReplacement2", testTwoLevelsKeyPathVariableReplacement2),
-		("testSimpleAbsentVariableReplacement", testSimpleAbsentVariableReplacement),
-		("testSimpleAbsentOptionalVariableReplacement", testSimpleAbsentOptionalVariableReplacement)
-	]
-	
 }
