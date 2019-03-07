@@ -14,7 +14,7 @@ When filing an issue, please provide as much of the following information as pos
 6. **Version of BMO / Xcode / iOS / OSX**
 7. **Version of involved dependency manager (SPM / Carthage)**
 
-If you'd like to send us sensitive sample code to help troubleshoot your issue, you can email <XXXX@happn.com> directly.
+If you'd like to send us sensitive sample code to help troubleshoot your issue, you can email <oss@happn.com> directly.
 
 ### Speeding things up :runner:
 
@@ -38,11 +38,9 @@ $(which git && git --version)
 
 ## Contributing Enhancements
 
-We love contributions to BMO! If you'd like to contribute code, documentation, or any other improvements, please [file a Pull Request](https://github.com/happn-app/BMO/pulls) on our GitHub repository. Make sure to accept our [CLA](#cla) and to follow our [style guide](TODO).
+We love contributions to BMO! If you'd like to contribute code, documentation, or any other improvements, please [file a Pull Request](https://github.com/happn-app/BMO/pulls) on our GitHub repository. Unit tests are highly appreciated for each of your contribution.
 
 ### Commit Messages
-
-Although we don’t enforce a strict format for commit messages, we prefer that you follow the guidelines below, which are common among open source projects. Following these guidelines helps with the review process, searching commit logs and documentation of implementation details. At a high level, the contents of the commit message should convey the rationale of the change, without delving into much detail. For example, `setter names were not set right` leaves the reviewer wondering about which bits and why they weren’t “right”. In contrast, `[BMOProperty] Correctly capitalize setterName` conveys almost all there is to the change.
 
 Below are some guidelines about the format of the commit message itself:
 
@@ -52,3 +50,5 @@ Below are some guidelines about the format of the commit message itself:
 * If the commit fixes a bug, include the number of the issue in the message.
 * Use the first person infinitive tense - for example "Fix …" instead of "Fixes …" or "Fixed …".
 * If the commit is a bug fix on top of another recently committed change, or a revert or reapply of a patch, include the Git revision number of the prior related commit, e.g. `Revert abcd3fg because it caused #1234`.
+
+You can find our reference guidelines [here](https://chris.beams.io/posts/git-commit/).
