@@ -32,11 +32,4 @@ class RESTColorTransformerTests: XCTestCase {
 		XCTAssertEqual(RESTColorTransformer.convertObjectToColor("00000000"), BMOColor(red: 0, green: 0, blue: 0, alpha: 0))
 	}
 	
-	/* Fill this array with all the tests to have Linux testing compatibility. */
-	static var allTests = [
-		("testSimpleFail", testSimpleFail),
-		("testSimpleHexColorWithSharpConversion", testSimpleHexColorWithSharpConversion),
-		("testSimpleHexColorWithoutSharpConversion", testSimpleHexColorWithoutSharpConversion)
-	]
-	
 }
