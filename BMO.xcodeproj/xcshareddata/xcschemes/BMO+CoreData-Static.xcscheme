@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B8BD01920026E8C009BE667"
-               BuildableName = "BMO.framework"
-               BlueprintName = "BMO-macOS"
+               BlueprintIdentifier = "7BF78F92224E7F5500E22C3C"
+               BuildableName = "BMO_CoreData.framework"
+               BlueprintName = "BMO+CoreData-Static"
                ReferencedContainer = "container:BMO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B8BD02120026E8C009BE667"
-               BuildableName = "BMO-macOSTests.xctest"
-               BlueprintName = "BMO-macOSTests"
-               ReferencedContainer = "container:BMO.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B8BD01920026E8C009BE667"
-            BuildableName = "BMO.framework"
-            BlueprintName = "BMO-macOS"
-            ReferencedContainer = "container:BMO.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B8BD01920026E8C009BE667"
-            BuildableName = "BMO.framework"
-            BlueprintName = "BMO-macOS"
+            BlueprintIdentifier = "7BF78F92224E7F5500E22C3C"
+            BuildableName = "BMO_CoreData.framework"
+            BlueprintName = "BMO+CoreData-Static"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B8BD01920026E8C009BE667"
-            BuildableName = "BMO.framework"
-            BlueprintName = "BMO-macOS"
+            BlueprintIdentifier = "7BF78F92224E7F5500E22C3C"
+            BuildableName = "BMO_CoreData.framework"
+            BlueprintName = "BMO+CoreData-Static"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
