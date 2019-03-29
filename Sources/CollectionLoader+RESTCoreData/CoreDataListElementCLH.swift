@@ -51,7 +51,7 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 		
 		context = c
 		requestManager = rm
-		pageInfoRetriever = pir
+		pageInfoRetriever = pir ?? (rm.getBridge(from: b) as? PageInfoRetrieverType)
 		bridge = rm.getBridge(from: b)
 		
 		fetchRequest = listElementFetchRequest as! NSFetchRequest<NSFetchRequestResult>
