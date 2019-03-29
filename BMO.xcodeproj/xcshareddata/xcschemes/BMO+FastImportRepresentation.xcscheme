@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7BB52E42200279EA007CAD7B"
-               BuildableName = "BMO.framework"
-               BlueprintName = "BMO-watchOS"
+               BlueprintIdentifier = "7B817EF82019158200625427"
+               BuildableName = "BMO_FastImportRepresentation.framework"
+               BlueprintName = "BMO+FastImportRepresentation"
                ReferencedContainer = "container:BMO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7B817F002019158200625427"
+               BuildableName = "BMO+FastImportRepresentationTests.xctest"
+               BlueprintName = "BMO+FastImportRepresentationTests"
+               ReferencedContainer = "container:BMO.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7B817EF82019158200625427"
+            BuildableName = "BMO_FastImportRepresentation.framework"
+            BlueprintName = "BMO+FastImportRepresentation"
+            ReferencedContainer = "container:BMO.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BB52E42200279EA007CAD7B"
-            BuildableName = "BMO.framework"
-            BlueprintName = "BMO-watchOS"
+            BlueprintIdentifier = "7B817EF82019158200625427"
+            BuildableName = "BMO_FastImportRepresentation.framework"
+            BlueprintName = "BMO+FastImportRepresentation"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BB52E42200279EA007CAD7B"
-            BuildableName = "BMO.framework"
-            BlueprintName = "BMO-watchOS"
+            BlueprintIdentifier = "7B817EF82019158200625427"
+            BuildableName = "BMO_FastImportRepresentation.framework"
+            BlueprintName = "BMO+FastImportRepresentation"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

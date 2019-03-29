@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B5161C1201FBCEF00B94FB3"
-               BuildableName = "BMO_FastImportRepresentation.framework"
-               BlueprintName = "BMO+FastImportRepresentation-watchOS"
+               BlueprintIdentifier = "7BF78F3E224E7F3D00E22C3C"
+               BuildableName = "BMO.framework"
+               BlueprintName = "BMO-Static"
                ReferencedContainer = "container:BMO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B5161C1201FBCEF00B94FB3"
-            BuildableName = "BMO_FastImportRepresentation.framework"
-            BlueprintName = "BMO+FastImportRepresentation-watchOS"
+            BlueprintIdentifier = "7BF78F3E224E7F3D00E22C3C"
+            BuildableName = "BMO.framework"
+            BlueprintName = "BMO-Static"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B5161C1201FBCEF00B94FB3"
-            BuildableName = "BMO_FastImportRepresentation.framework"
-            BlueprintName = "BMO+FastImportRepresentation-watchOS"
+            BlueprintIdentifier = "7BF78F3E224E7F3D00E22C3C"
+            BuildableName = "BMO.framework"
+            BlueprintName = "BMO-Static"
             ReferencedContainer = "container:BMO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
