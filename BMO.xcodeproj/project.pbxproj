@@ -550,7 +550,7 @@
 		7B8BD032200274B9009BE667 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* BMOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOTests.swift; sourceTree = "<group>"; };
 		7B92AD432231E14F00900BD6 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
-		7B92AD442231E14F00900BD6 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		7B92AD442231E14F00900BD6 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; wrapsLines = 1; };
 		7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTColorTransformerTests.swift; sourceTree = "<group>"; };
 		7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoRetriever.swift; sourceTree = "<group>"; };
 		7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTUUIDTransformer.swift; sourceTree = "<group>"; };
