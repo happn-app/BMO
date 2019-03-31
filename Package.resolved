@@ -3,29 +3,29 @@
     "pins": [
       {
         "package": "AsyncOperationResult",
-        "repositoryURL": "git@github.com:happn-app/AsyncOperationResult.git",
+        "repositoryURL": "https://github.com/happn-app/AsyncOperationResult.git",
         "state": {
           "branch": null,
-          "revision": "7d75dfc7eb6ae489b6b01e3321e5940e2b55a233",
-          "version": "1.0.1"
+          "revision": "cf6a617364267bedc334a9e61cf1f7efd7c0e0b4",
+          "version": "1.0.5"
         }
       },
       {
         "package": "CollectionLoader",
-        "repositoryURL": "git@github.com:happn-app/CollectionLoader.git",
+        "repositoryURL": "https://github.com/happn-app/CollectionLoader.git",
         "state": {
           "branch": null,
-          "revision": "c47302a964ba8e37db30f6e81362a4aad23f8902",
-          "version": "0.9.1"
+          "revision": "295889cfcf3e57544e1ebeeeed6213a5635692e0",
+          "version": "0.9.4"
         }
       },
       {
         "package": "KVObserver",
-        "repositoryURL": "git@github.com:happn-app/KVObserver.git",
+        "repositoryURL": "https://github.com/happn-tech/KVObserver.git",
         "state": {
           "branch": null,
-          "revision": "b0bbb37d803cb9ec64fdda2941dbf8d2c7cd4638",
-          "version": "0.9.1"
+          "revision": "3a8bd558a72c9ab393f94a6f947307e8d01c8c9e",
+          "version": "0.9.4"
         }
       }
     ]

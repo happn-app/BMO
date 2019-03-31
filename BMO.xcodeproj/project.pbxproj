@@ -401,6 +401,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B0100BF225162EC006ADDA9 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		7B013600201F769000CE0893 /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
 		7B013608201F7D2300CE0893 /* ImportError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportError.swift; sourceTree = "<group>"; };
 		7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdditionalRequestInfo+RESTCoreData.swift"; sourceTree = "<group>"; };
@@ -824,6 +825,7 @@
 			children = (
 				7B92AD432231E14F00900BD6 /* License.txt */,
 				7B92AD442231E14F00900BD6 /* Readme.md */,
+				7B0100BF225162EC006ADDA9 /* Cartfile */,
 				7B21BAD02003BBC700DFF758 /* Package.swift */,
 				7B8BD01120026AF1009BE667 /* Sources */,
 				7B8BD031200274B9009BE667 /* Tests */,

@@ -13,8 +13,8 @@ let package = Package(
 		)
 	],
 	dependencies: [
-		.package(url: "git@github.com:happn-app/AsyncOperationResult.git", from: "1.0.0"),
-		.package(url: "git@github.com:happn-app/CollectionLoader.git", from: "0.9.0")
+		.package(url: "https://github.com/happn-app/AsyncOperationResult.git", from: "1.0.5"),
+		.package(url: "https://github.com/happn-app/CollectionLoader.git", from: "0.9.4")
 	],
 	targets: [
 		.target(name: "BMO",                           dependencies: ["AsyncOperationResult"]),
