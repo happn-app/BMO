@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0100C022516973006ADDA9 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
+		7B0100C122516973006ADDA9 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B817EF92019158200625427 /* BMO_FastImportRepresentation.framework */; };
+		7B0100C222516973006ADDA9 /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */; };
+		7B0100C322516973006ADDA9 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
+		7B0100C422516973006ADDA9 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332712019296C005184FE /* RESTUtils.framework */; };
 		7B013601201F769000CE0893 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013600201F769000CE0893 /* CoreDataUtils.swift */; };
 		7B013609201F7D2300CE0893 /* ImportError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B013608201F7D2300CE0893 /* ImportError.swift */; };
 		7B0AB0A520210E3300AC083A /* ParameterizedStringSetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0A420210E3300AC083A /* ParameterizedStringSetParser.swift */; };
@@ -17,18 +22,10 @@
 		7B0AB144202115AF00AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */; };
 		7B0AB145202115AF00AC083A /* CoreData+RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */; };
 		7B0AB157202115FD00AC083A /* BMO_RESTCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0AB0B52021127E00AC083A /* BMO_RESTCoreDataTests.swift */; };
-		7B0AB1622021175D00AC083A /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */; };
 		7B3192C12019F1CC0088312B /* ParameterizedStringSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192BC2019F1CC0088312B /* ParameterizedStringSet.swift */; };
 		7B3192C32019F2640088312B /* RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192C22019F2640088312B /* RESTPath.swift */; };
 		7B34DB6D20E927C300E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
 		7B34DB7120E927DE00E16DF1 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
-		7B34DB7420E9283A00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
-		7B34DB7720E9289000E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B817EF92019158200625427 /* BMO_FastImportRepresentation.framework */; };
-		7B34DB7820E9289000E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
-		7B34DB7D20E928EB00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
-		7B34DB7E20E928EB00E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B817EF92019158200625427 /* BMO_FastImportRepresentation.framework */; };
-		7B34DB7F20E928EB00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
-		7B34DB8020E928EB00E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332712019296C005184FE /* RESTUtils.framework */; };
 		7B34DB8920E929A600E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
 		7B34DB8D20E92A3C00E16DF1 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
 		7B34DB8E20E92A3C00E16DF1 /* BMO_RESTCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0AB0CD2021147300AC083A /* BMO_RESTCoreData.framework */; };
@@ -58,6 +55,10 @@
 		7B516170201F81C400B94FB3 /* MixedRepresentation+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51616F201F81C400B94FB3 /* MixedRepresentation+CoreData.swift */; };
 		7B516178201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B516177201F92A200B94FB3 /* AsyncOperationResult+BMOCoreData.swift */; };
 		7B51617C201FB6F600B94FB3 /* FastImportResultBuilderForBackResultsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51617B201FB6F600B94FB3 /* FastImportResultBuilderForBackResultsImporter.swift */; };
+		7B53A70F22516CD9003A6981 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B817EF92019158200625427 /* BMO_FastImportRepresentation.framework */; };
+		7B53A71222516D08003A6981 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
+		7B53A71722516D1D003A6981 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
+		7B53A72022516D6C003A6981 /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
 		7B672C1620E923670041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
 		7B672C1A20E9238A0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
 		7B672C1E20E923A60041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
@@ -66,7 +67,6 @@
 		7B672C2420E923BE0041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0920E923060041213D /* KVObserver.framework */; };
 		7B672C2E20E923E80041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
 		7B672C3120E924040041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
-		7B672C3420E924330041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
 		7B672C3720E9244D0041213D /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
 		7B672C3820E9244D0041213D /* CollectionLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0620E923060041213D /* CollectionLoader.framework */; };
 		7B672C3920E9244D0041213D /* KVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0920E923060041213D /* KVObserver.framework */; };
@@ -86,8 +86,6 @@
 		7B83328E2019310D005184FE /* AdditionalRESTRequestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83328D2019310D005184FE /* AdditionalRESTRequestInfo.swift */; };
 		7B8BD02320026E8C009BE667 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
 		7B8BD036200274B9009BE667 /* BMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* BMOTests.swift */; };
-		7B92AD452231E14F00900BD6 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B92AD432231E14F00900BD6 /* License.txt */; };
-		7B92AD462231E14F00900BD6 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 7B92AD442231E14F00900BD6 /* Readme.md */; };
 		7B93F6EB20C1DC7400D74742 /* RESTColorTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93F6EA20C1DC7400D74742 /* RESTColorTransformerTests.swift */; };
 		7BA6BFBC20E162A600622645 /* PageInfoRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6BFBB20E162A600622645 /* PageInfoRetriever.swift */; };
 		7BB4E56320C0BE3E003A0977 /* RESTUUIDTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E56220C0BE3E003A0977 /* RESTUUIDTransformer.swift */; };
@@ -140,8 +138,6 @@
 		7BF78F52224E7F3D00E22C3C /* OperationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40F72018E6C900E4A0A5 /* OperationError.swift */; };
 		7BF78F53224E7F3D00E22C3C /* BackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B42018BA3400E4A0A5 /* BackRequest.swift */; };
 		7BF78F55224E7F3D00E22C3C /* AsyncOperationResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B672C0720E923060041213D /* AsyncOperationResult.framework */; };
-		7BF78F58224E7F3D00E22C3C /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 7B92AD442231E14F00900BD6 /* Readme.md */; };
-		7BF78F59224E7F3D00E22C3C /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B92AD432231E14F00900BD6 /* License.txt */; };
 		7BF78F61224E7F4500E22C3C /* RESTPropertyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9663D202242A200024DE1 /* RESTPropertyMapping.swift */; };
 		7BF78F62224E7F4500E22C3C /* RESTMapper+ConvenienceInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB966472022431C00024DE1 /* RESTMapper+ConvenienceInit.swift */; };
 		7BF78F63224E7F4500E22C3C /* RESTEnumTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57920C0C05F003A0977 /* RESTEnumTransformer.swift */; };
@@ -236,6 +232,83 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B8332482019274B005184FE;
 			remoteInfo = "BMO+CoreData-macOS";
+		};
+		7B53A71022516CE9003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B817EF82019158200625427;
+			remoteInfo = "BMO+FastImportRepresentation";
+		};
+		7B53A71322516D0F003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = BMO;
+		};
+		7B53A71522516D17003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = BMO;
+		};
+		7B53A71822516D4A003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = BMO;
+		};
+		7B53A71A22516D4A003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8332702019296C005184FE;
+			remoteInfo = RESTUtils;
+		};
+		7B53A71C22516D4A003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B817EF82019158200625427;
+			remoteInfo = "BMO+FastImportRepresentation";
+		};
+		7B53A71E22516D4A003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8332482019274B005184FE;
+			remoteInfo = "BMO+CoreData";
+		};
+		7B53A72122516DA2003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = BMO;
+		};
+		7B53A72322516DA2003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8332702019296C005184FE;
+			remoteInfo = RESTUtils;
+		};
+		7B53A72522516DA2003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8332482019274B005184FE;
+			remoteInfo = "BMO+CoreData";
+		};
+		7B53A72722516DA2003A6981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0B62021147200AC083A;
+			remoteInfo = "BMO+RESTCoreData";
 		};
 		7B817F032019158200625427 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -532,12 +605,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B672C3420E924330041213D /* AsyncOperationResult.framework in Frameworks */,
-				7B34DB7F20E928EB00E16DF1 /* BMO.framework in Frameworks */,
-				7B34DB7D20E928EB00E16DF1 /* BMO_CoreData.framework in Frameworks */,
-				7B34DB7E20E928EB00E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
-				7B0AB1622021175D00AC083A /* BMO_RESTCoreData.framework in Frameworks */,
-				7B34DB8020E928EB00E16DF1 /* RESTUtils.framework in Frameworks */,
+				7B53A72022516D6C003A6981 /* AsyncOperationResult.framework in Frameworks */,
+				7B0100C322516973006ADDA9 /* BMO.framework in Frameworks */,
+				7B0100C022516973006ADDA9 /* BMO_CoreData.framework in Frameworks */,
+				7B0100C122516973006ADDA9 /* BMO_FastImportRepresentation.framework in Frameworks */,
+				7B0100C222516973006ADDA9 /* BMO_RESTCoreData.framework in Frameworks */,
+				7B0100C422516973006ADDA9 /* RESTUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B34DB7120E927DE00E16DF1 /* AsyncOperationResult.framework in Frameworks */,
-				7B34DB7420E9283A00E16DF1 /* BMO.framework in Frameworks */,
+				7B53A71722516D1D003A6981 /* BMO.framework in Frameworks */,
 				7B817F022019158200625427 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,9 +645,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B672C3120E924040041213D /* AsyncOperationResult.framework in Frameworks */,
-				7B34DB7820E9289000E16DF1 /* BMO.framework in Frameworks */,
+				7B53A71222516D08003A6981 /* BMO.framework in Frameworks */,
 				7B8332522019274B005184FE /* BMO_CoreData.framework in Frameworks */,
-				7B34DB7720E9289000E16DF1 /* BMO_FastImportRepresentation.framework in Frameworks */,
+				7B53A70F22516CD9003A6981 /* BMO_FastImportRepresentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,7 +1297,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B53A71922516D4A003A6981 /* PBXTargetDependency */,
+				7B53A71F22516D4A003A6981 /* PBXTargetDependency */,
+				7B53A71D22516D4A003A6981 /* PBXTargetDependency */,
 				7B0AB1612021175200AC083A /* PBXTargetDependency */,
+				7B53A71B22516D4A003A6981 /* PBXTargetDependency */,
 			);
 			name = "BMO+RESTCoreDataTests";
 			productName = "BMO+CoreDataTests";
@@ -1261,6 +1338,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B53A71622516D17003A6981 /* PBXTargetDependency */,
 				7B817F042019158200625427 /* PBXTargetDependency */,
 			);
 			name = "BMO+FastImportRepresentationTests";
@@ -1299,7 +1377,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B53A71422516D0F003A6981 /* PBXTargetDependency */,
 				7B8332542019274B005184FE /* PBXTargetDependency */,
+				7B53A71122516CE9003A6981 /* PBXTargetDependency */,
 			);
 			name = "BMO+CoreDataTests";
 			productName = "BMO+CoreDataTests";
@@ -1411,7 +1491,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B53A72222516DA2003A6981 /* PBXTargetDependency */,
+				7B53A72622516DA2003A6981 /* PBXTargetDependency */,
+				7B53A72822516DA2003A6981 /* PBXTargetDependency */,
 				7BB9656C2022299900024DE1 /* PBXTargetDependency */,
+				7B53A72422516DA2003A6981 /* PBXTargetDependency */,
 			);
 			name = "CollectionLoader+RESTCoreDataTests";
 			productName = "CollectionLoader+RESTCoreData-macOSTests";
@@ -1577,22 +1661,22 @@
 					};
 					7B8332702019296C005184FE = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					7B8332782019296C005184FE = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					7B8BD01920026E8C009BE667 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					7B8BD02120026E8C009BE667 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					7BB965602022299800024DE1 = {
@@ -1606,6 +1690,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					7BF78F3E224E7F3D00E22C3C = {
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					7BF78F5F224E7F4500E22C3C = {
@@ -1721,8 +1806,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B92AD462231E14F00900BD6 /* Readme.md in Resources */,
-				7B92AD452231E14F00900BD6 /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1751,8 +1834,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BF78F58224E7F3D00E22C3C /* Readme.md in Resources */,
-				7BF78F59224E7F3D00E22C3C /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2096,6 +2177,61 @@
 			target = 7B8332482019274B005184FE /* BMO+CoreData */;
 			targetProxy = 7B0AB16920211A1B00AC083A /* PBXContainerItemProxy */;
 		};
+		7B53A71122516CE9003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B817EF82019158200625427 /* BMO+FastImportRepresentation */;
+			targetProxy = 7B53A71022516CE9003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A71422516D0F003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8BD01920026E8C009BE667 /* BMO */;
+			targetProxy = 7B53A71322516D0F003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A71622516D17003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8BD01920026E8C009BE667 /* BMO */;
+			targetProxy = 7B53A71522516D17003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A71922516D4A003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8BD01920026E8C009BE667 /* BMO */;
+			targetProxy = 7B53A71822516D4A003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A71B22516D4A003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332702019296C005184FE /* RESTUtils */;
+			targetProxy = 7B53A71A22516D4A003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A71D22516D4A003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B817EF82019158200625427 /* BMO+FastImportRepresentation */;
+			targetProxy = 7B53A71C22516D4A003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A71F22516D4A003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332482019274B005184FE /* BMO+CoreData */;
+			targetProxy = 7B53A71E22516D4A003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A72222516DA2003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8BD01920026E8C009BE667 /* BMO */;
+			targetProxy = 7B53A72122516DA2003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A72422516DA2003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332702019296C005184FE /* RESTUtils */;
+			targetProxy = 7B53A72322516DA2003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A72622516DA2003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332482019274B005184FE /* BMO+CoreData */;
+			targetProxy = 7B53A72522516DA2003A6981 /* PBXContainerItemProxy */;
+		};
+		7B53A72822516DA2003A6981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0B62021147200AC083A /* BMO+RESTCoreData */;
+			targetProxy = 7B53A72722516DA2003A6981 /* PBXContainerItemProxy */;
+		};
 		7B817F042019158200625427 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7B817EF82019158200625427 /* BMO+FastImportRepresentation */;
@@ -2300,7 +2436,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
@@ -2342,7 +2477,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
@@ -2444,7 +2578,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = HPN;
@@ -2508,7 +2642,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2767,7 +2901,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
@@ -2809,7 +2942,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
@@ -3261,7 +3393,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
@@ -3296,7 +3427,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.happn.CollectionLoader.RESTCoreDataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -3304,7 +3434,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (

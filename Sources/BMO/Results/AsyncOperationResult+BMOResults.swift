@@ -26,7 +26,7 @@ extension AsyncOperationResult<BridgeType : Bridge> where T == BackRequestResult
 	var simpleBackRequestError: Swift.Error? {...}
 }*/
 
-public extension AsyncOperationResult {
+extension AsyncOperationResult {
 	
 	public func simpleBackRequestResult<RequestType, BridgeType>(forRequestPartId requestPartId: RequestType.RequestPartId) -> AsyncOperationResult<BridgeBackRequestResult<BridgeType>> where T == BackRequestResult<RequestType, BridgeType> {
 		switch self {

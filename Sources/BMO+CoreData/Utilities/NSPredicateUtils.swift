@@ -227,6 +227,11 @@ public extension NSExpression {
 			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Adding a key path prefix to a conditional expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }}
 			else                                                          {NSLog("Adding a key path prefix to a conditional expression might result to a flawed NSExpression or unexpected results.")}
 			return NSExpression(forConditional: predicate.predicateByAddingKeyPathPrefix(keyPathPrefix), trueExpression: `true`.expressionByAddingKeyPathPrefix(keyPathPrefix), falseExpression: `false`.expressionByAddingKeyPathPrefix(keyPathPrefix))
+			
+		@unknown default:
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Unknown expression type for expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, self, keyPathPrefix) }}
+			else                                                          {NSLog("Unknown expression type for expression %@ when adding key path prefix \"%@\". Returning original expression.", self, keyPathPrefix)}
+			return copy() as! NSExpression
 		}
 	}
 	
