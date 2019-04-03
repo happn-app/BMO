@@ -1,4 +1,4 @@
-!!! MANDATORY TO FILL OUT !!!
+Please fill in everything here.
 <!---
 
 **Feature Request**: Just fill in the first two sections below.
@@ -25,7 +25,7 @@ and the steps you have taken to reproduce it in as many details as possible.
 
 
 ## Code Sample
-ℹ 
+ℹ
 Provide a code sample or test case that highlights the issue.
 If relevant, include your model definitions.
 For larger code samples, links to external gists/repositories are preferred.
@@ -34,7 +34,7 @@ Full Xcode projects that we can compile ourselves are ideal!
 
 
 ## Version of BMO and Tooling
-ℹ 
+ℹ
 [In the CONTRIBUTING guidelines](https://github.com/happn-app/BMO/blob/master/CONTRIBUTING.md#speeding-things-up-runner), you will find a script, which will help determining some of these versions.
 
 BMO version: ?
