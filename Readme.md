@@ -1,61 +1,80 @@
-# BMO
-![Platforms](https://img.shields.io/badge/platform-macOS%20|%20iOS%20|%20tvOS%20|%20watchOS-lightgrey.svg?style=flat) [![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![SPM compatible](https://img.shields.io/badge/SPM-compatible-E05C43.svg?style=flat)](https://swift.org/package-manager/) [![License](https://img.shields.io/github/license/happn-tech/BMO.svg?style=flat)](License.txt) [![happn](https://img.shields.io/badge/from-happn-0087B4.svg?style=flat)](https://happn.com)
+BMO is a concept. Any Db Object can be a BMO.
 
-- [Presentation](#presentation)
-- [Getting started](#getting-started)
-    - [Template files](#template-files)
-    - [CoreData](#coredata)
-    - [BMO Operation](#bmo-operation)
-    - [BMO Bridge](#bmo-bridge)
-    - [Usage](#usage)
-- [Advanced Usage](#advanced-usage)
+BMO or Backed Managed Objects is made for linking any local database (CoreData, Realm, etc.) to any API (REST, SOAP, etc.).
+For now BMO has a concrete implementation with CoreData and REST
 
-## Presentation
+Below you can find a schema which present how you communicate with CoreData and how BMO translate your CoreData request to create/read/update/delete data with an API and reflect results in CoreData.
 
-BMO or Backed Managed Objects was made for linking any local database (CoreData, Realm, etc.) to any API (REST, SOAP, etc.).
-In this example we use a CoreData stack and BMO link our local DB to our API.
-<br />
-Schematic present how you communicate with your CoreData stack and BMO intercept your request to fetch fresh new data from API and inject results in your DB.
-<br />
-<br />
-For example :
-- 1./ Fetch list of user from CoreData
-- 2./ Get local result
-- 2./ BMO intercept your fetch request
-- 3./ BMO ask to API list of users
-- 4./ BMO gets results from API
-- 5./ BMO insert fresh new results in your DB
-- 6./ CoreData notifiy your fetch result controller with fresh new users
-<br />
-Schematic sequence of a classic fetch request with BMO with a CoreData DB:
 <img src="https://github.com/happn-app/BMOSpotifyClient/blob/master/Ressources/bmo-schema-front.png" width="310">
 
-## Getting started
+- [Features](#features)
+- [Component Libraries](#component-libraries)
+- [Dependencies](#dependencies)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Getting started](#getting-started)
+    - [CoreData](#coredata)
+    - [BMOBridge](#bmobridge)
+        - [RestMapper](#restmapper)
+        - [BackOperation](#backoperation)
+        - [RemoteObjectRepresentations](#remoteobjectrepresentations)
+        - [MixedRepresentation](#mixedrepresentation)
+    - [Usage](#usage)
+        - [RequestManager](#requestmanager)
+        - [NSFetchedResultsController](#nsfetchedresultscontroller)
+        - [Fetch datas](#fetch-datas)
+- [Advanced Usage](#advanced-usage)
 
-Follow this instructions to setup your own project with BMO in only few minutes!
-<br />
-- Initialize your project with CoreData usage
-- Import BMO with carthage
+
+## Features
+- Create objects
+- Read objects
+- Update objects
+- Delete objects
+
+## Component Libraries
+BMO is built with layers of concrete implementations
+- BMO 
+- RestUtils
+- BMO+FastImportRepresentation
+- BMO+CoreData
+- BMO+RESTCoreData : THE concrete implementation
+- CollectionLoader+RESTCoreData (Documentation TODO)
+
+## Dependencies
+In order to keep BMO+RESTCoreData focused specifically on synchronizing your CoreData DB and your REST API, additional component libraries have been created by the happn to allow you to go to the essential.
+
+- AsyncOperationResult
+- CollectionLoader
+- KVObserver
+- RecursiveSyncDispatch
+- RetryingOperation
+- SemiSingleton
+- URLRequestOperation
+
+## Requirements
+iOS 10.0+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0+
+Xcode 10.1+
+Swift 4.2+
+
+## Installation
+Carthage
+
+Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate BMO into your Xcode project using Carthage, specify it in your Cartfile:
+
 ```swift
 //  Cartfile
 
-github "happn-app/BMO" "master"
-github "Alamofire/Alamofire" "master" // Optional. Use with template files.
+github "happn-tech/BMO" ~> 1.0
+github "happn-tech/URLRequestOperation" ~> 1.1
 ```
-- Setup your project with carthage builds. ([Carthage quick start](https://github.com/Carthage/Carthage#quick-start))
 
-### Template files
 
-You can easily configure this three files to perform your first light BMO implementation. This following easy-to-use will guide you to achieve your first light implementation!
-<br />
-Download an import [template demo files](https://github.com/happn-app/BMOSpotifyClient/tree/master/Template) in your projet.
-- AsyncOperation
-- DemoBMOOperation
-- DemoBMOBridge
+## Getting started
 
 ### CoreData
 
-- Prepare your CoreData model with your entities and attributes (cf example)
+- Prepare your CoreData model with your entities and attributes
 - Set a 'bmoId' attribute as name of your unique key value of each entity
 - Setup your CoreData context from persistent container in AppDelegate
 ```swift
@@ -65,120 +84,140 @@ private(set) var context: NSManagedObjectContext!
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     /* Setup CoreData context */
-    let container = NSPersistentContainer(name: "DemoBMO") // Replace 'DemoBMO' by your xcdatamodeld name
+    let container = NSPersistentContainer(name: "XXX") // Replace 'XXX' by your xcdatamodeld name
     container.loadPersistentStores(completionHandler: { _, _ in })
     context = container.viewContext
 
     [...]
 }
 ```
-CoreData model Example:
-<br />
 <img src="https://github.com/happn-app/BMOSpotifyClient/blob/master/Ressources/bmo-demo-xcdatamodel.png" width="300">
-
-### BMO Operation
-
-BMO use Operation object to perform request. You need to implement your own Operation to perform BMO request and retrieve results.
-<br />
-DemoBMOOperation provide you a practical example, we use an [AsyncOperation](https://gist.github.com/Thomaslegravier/03346fc9a2e7bd065e5ea461a404b43c) implementation and [Alamofire](https://github.com/Alamofire/Alamofire) to perform calls.
-<br />
-You can easily use native URLRequestSession and URLRequestOperation instead Alamofire if you want, just update DemoBMOOperation startOperation block.
-<br />
-- Update "apiURL" path with your own API path in DemoBMOOperation class
-```swift
-//  DemoBMOOperation.swift
-
-static let apiURL: URL = URL(string: "https://your-api-path.com")!
-```
-- Add your access token if necessary
-```swift
-//  DemoBMOOperation.swift
-
-override func startOperation() -> ((@escaping (AsyncOperation.Result?) -> Void) -> ())? {
-    return { (operationEnded) in
-        var authenticatedRequest = self.request
-        authenticatedRequest.addValue("Bearer \("your-access-token")", forHTTPHeaderField: "Authorization")
-
-        Alamofire.request(authenticatedRequest).validate().responseJSON{ response in
-            if let json = response.result.value as? [String: Any?] {
-                operationEnded(.success(json))
-            } else {
-                operationEnded(.error(response.error ?? Err.unknownError))
-            }
-        }
-    }
-}
-```
 
 ### BMO Bridge
 
-A bridge is the interface between your local CoreData database and API. This bridge is your major settings file to configure and guide BMO for in/out requests.
-<br />
-- Prepare your mapping in DemoBMOBridge <br />
-To link your local database to your API you need to communicate your mapping to BMO. This mapping define the link between your local and distant datas.
-Define your mapping in a RestMapper object for a simple usage in all your bridge methods.<br />
-Update this mapping with your own needs.
+The BMO Bridge is the interface between your local CoreData database and API. This bridge is your main settings file to configure and guide BMO for in/out requests.
+Create a class which implements Bridge protocol.
+
+Your defined bridge will define and provides all these informations : 
+
+- Before and after request
+    - *restMapper* : Define the mapping between you local and remote objects
+
+- Before request
+    - *backOperation* : Define how requests to your API will be built (backOperation())
+
+- After request and before inserting in local model
+    - *remoteObjectRepresentations* : Provides the Datas returned by API and allows you to return the [String: Any?] representations of your datas (remoteObjectRepresentations())
+    - *mixedRepresentation*         : Provides the remoteObjectRepresentations returned previsously and allows you to return a representation ready to be inserted in your local model (mixedRepresentation)
+
+
+#### RestMapper
+Here we asssume we have created an entity called "User" in our CodeData DB
+
+This entity has three attributes : 
+    - bmoId (primary key)
+    - username
+    - firstname
+
+We can see here that the remote representations (in JSON returned by API) these three attributes looks like that : 
+    - id
+    - user_name
+    - first_name
+
+Thanks to that mapping BMO will know how to build request and how to map JSON to local model
+
 ```swift
-//  DemoBMOBridge.swift
+//  MyBridge.swift
 
 private lazy var restMapper: RESTMapper<NSEntityDescription, NSPropertyDescription> = {
-    let urlTransformer = RESTURLTransformer()
-    let boolTransformer = RESTBoolTransformer()
-    let dateTransformer = RESTDateAndTimeTransformer()
-    let intTransformer = RESTNumericTransformer(numericFormat: .int)
-
     let userMapping: [_RESTConvenienceMappingForEntity] = [
         .restPath("/users"),
         .uniquingPropertyName("bmoId"),
         .propertiesMapping([
             "bmoId":           [.restName("id")],
-            "username":        [.restName("unque_name")],
-            "firstname":       [.restName("firstname")],
-            "lastname":        [.restName("lastname")],
-            "registerDate":    [.restName("register_date"), .restToLocalTransformer(dateTransformer)],
-            "profileUrl":      [.restName("link"), .restToLocalTransformer(urlTransformer)],
-            "profilePictures": [.restName("profile_pictures")],
-            "isActive":        [.restName("active"), .restToLocalTransformer(boolTransformer)]
+            "username":        [.restName("user_name")],
+            "firstname":       [.restName("first_name")],
         ])
     ]
-
-    let imageMapping: [_RESTConvenienceMappingForEntity] = [
-        .propertiesMapping([
-            "height": [.restName("height"), .restToLocalTransformer(intTransformer)],
-            "width":  [.restName("width"), .restToLocalTransformer(intTransformer)],
-            "url":    [.restName("url"), .restToLocalTransformer(urlTransformer)]
-        ])
-    ]
-
+        
     return RESTMapper(
         model: dbModel,
         defaultPaginator: RESTOffsetLimitPaginator(),
         convenienceMapping: [
             "User":  userMapping,
-            "Image": imageMapping
         ]
     )
 }()
 ```
-- Results from fetch request <br />
-You need pass to BMO your fetch request results, so he can process them.<br />
-Update DemoBridge to provide JSON key where your results are.
-```swift
-//  DemoBMOBridge.swift
 
-func remoteObjectRepresentations(fromFinishedOperation operation: BackOperationType, userInfo: UserInfoType) throws -> [RemoteObjectRepresentationType]? {
-    switch operation.results {
-    case .success(let success): return success["items"] as? [DemoBMOOperation.RemoteObjectRepresentationType] // Replace "items" by your key data in JSON results
-    case .error(let e):         throw Err.operationError(e)
+#### BackOperation
+Now you can create your backOperations which contains the URLSession which will make the concrete requests
+
+Here you can see how to build a simple GET request
+```swift
+//  MyBridge.swift
+
+    func backOperation(forFetchRequest fetchRequest: DbType.FetchRequestType, additionalInfo: AdditionalRequestInfoType?, userInfo: inout UserInfoType) throws -> BackOperationType? {
+        var request = try MyBridge.urlRequest(forFetchRequest: fetchRequest, additionalRequestInfo: additionalInfo, forcedRESTPathResolutionValues: nil, restMapper: restMapper!, apiRoot: SpotifyBMOBridge.apiURL)
+        return URLRequestOperation(request: request)
     }
-}
 ```
-<br />
-Ok so now we have an operational bridge with a mapping. Let's use it !
+
+#### RemoteObjectRepresentations
+Once more, BMO is operation-based.
+So here you are told by BMO that one of your backOperation is finished.
+You can get the datas fetched by this operation, deserialize and returns it.
+(Here you can see we get the "items" key of our JSON because we want the Array of users contained in it)
+
+```swift
+//  MyBridge.swift
+
+    func remoteObjectRepresentations(fromFinishedOperation operation: BackOperationType, userInfo: UserInfoType) throws -> [RemoteObjectRepresentationType]? {
+        switch operation.results {
+        case .success(let success): return success["items"] as? [MyBridge.RemoteObjectRepresentationType] // Replace "items" by your key data in JSON results
+        case .error(let e):         throw Err.operationError(e)
+        }
+    }
+
+```
+
+#### MixedRepresentation
+The cherry on the cake.
+In most of the cases you really can user this default implementation of this method.
+The idea here is to create a mixed representations of the above remoteObjectRepresentations.
+This is called mixed because it has all the infos of the type of local entity it is supposed to represent. And it also embbed a [String : Any?] called attributes in which all keys are local attributes name and all values are the values fetched by API.
+
+```swift
+//  MyBridge.swift
+
+    func mixedRepresentation(fromRemoteObjectRepresentation remoteRepresentation: RemoteObjectRepresentationType, expectedEntity: DbType.EntityDescriptionType, userInfo: UserInfoType) -> MixedRepresentation<DbType.EntityDescriptionType, RemoteRelationshipAndMetadataRepresentationType, UserInfoType>? {
+        guard let restMapper = restMapper, let entity = restMapper.actualLocalEntity(forRESTRepresentation: remoteRepresentation, expectedEntity: expectedEntity) else {return nil}
+
+        let mixedRepresentationDictionary = restMapper.mixedRepresentation(ofEntity: entity, fromRESTRepresentation: remoteRepresentation, userInfo: userInfo)
+
+        let uniquingId = restMapper.uniquingId(forLocalRepresentation: mixedRepresentationDictionary, ofEntity: entity)
+
+        return MixedRepresentation(entity: entity, uniquingId: uniquingId, mixedRepresentationDictionary: mixedRepresentationDictionary, userInfo: userInfo)
+    }
+
+
+//  MixedRepresentation.swift
+public struct MixedRepresentation {
+    ...
+    public let entity: NSEntityDescription
+    public let uniquingId: AnyHashable?
+    public let attributes: [String : Any?]
+    ...
+}
+
+```
 
 ### Usage
 
-- Prepare your request manager in the AppDelegate
+#### RequestManager
+
+You can instantiate your request manager in the AppDelegate for example
+
 ```swift
 //  AppDelegate.swift
 
@@ -187,18 +226,18 @@ import BMO
 private(set) var requestManager: RequestManager!
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-    [...]
-
     /* Setup BMO request manager */
-    requestManager = RequestManager(bridges: [DemoBMOBridge(dbModel: container.managedObjectModel)], resultsImporterFactory: DemoBMOBridge.DemoBMOImporter())
+    requestManager = RequestManager(bridges: [DemoBMOBridge(dbModel: container.managedObjectModel)], resultsImporterFactory: MyBridge.DemoBMOImporter())
 }
 ```
-- Implement a fetch result controller <br />
-Template files provide you a DemoUserListViewController. <br />
-This controller use a fetch result controller with a CoreData fetch request:
+#### NSFetchedResultsController
+
+One of the best way to fetch CoreData and display it in a UITableView for example is to use a NSFetchedResultsController
+
+Here you create it, bind it to a NSFetchRequest of Users and tell that your it will delegate to your ViewController the processing of new datas linked to that NSFetchRequest (insert, update, delete, move)
+
 ```swift
-//  DemoUserListViewController.swift
+//  ViewController.swift
 
 let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
 fetchRequest.predicate = NSPredicate(format: "%K != NULL", #keyPath(User.username))
@@ -207,9 +246,16 @@ fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest
 fetchedResultsController?.delegate = self
 try! self.fetchedResultsController?.performFetch()
 ```
-- Perform data fetch
+
+Please refer to Apple Documentation to implement NSFetchedResultsController (https://developer.apple.com/documentation/coredata/nsfetchedresultscontroller)
+happn provides you an helper for this implementation (https://github.com/happn-tech/CollectionAndTableViewUpdateConveniences)
+
+
+#### Fetch datas
+Here you just ask your previously created RequestManager to fetch objects corresponding to the above NSFetchRequest
+
 ```swift
-//  DemoUserListViewController.swift
+//  ViewController.swift
 
 private func performBMOUserFetch() {
     guard let fetchRequest = fetchedResultsController?.fetchRequest else {return}
@@ -221,24 +267,19 @@ private func performBMOUserFetch() {
     )
 }
 ```
-That's it 🥳, you can now run your project and your data will be automatically display in your table view.
-<br />
-<br />
-Demo files are given as simple template. Update mapping and configuration to fit your API and local data model.
-## Advanced Usage
-<strong>TODO:</strong>
-- Insert request
-- Update request
-- Delete request
-- Metadata
-- UserInfos
-- RemoteObjectRepresentations
-- MixedRepresentation
-- Advanced RestMapper
-- Transformers
-- Paginator
-    - RESTOffsetLimitPaginator
-    - RESTMaxIdPaginator
 
-## Credits
-This project was originally created by [François Lamboley](https://github.com/Frizlab) while working at [happn](https://happn.com).
+That's it 🥳, you can now run your project and your datas will be automatically display in your table view.
+
+
+## Advanced Usage 
+- *UserInfos*     : Define various UserInfos you would like to define before building your requests
+- *Metadatas*     : Define metadatas your API could provide (pagination,...)
+
+## Evolving BMO
+- BMO+Realm
+- BMO+RESTRealm
+- BMO+SOAPCoreData
+...
+
+
+
