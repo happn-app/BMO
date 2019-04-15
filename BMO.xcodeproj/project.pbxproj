@@ -6,6 +6,41 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		7B294E072264E45700BD008F /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7B294E0A2264E45700BD008F /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				7B294E102264E48900BD008F /* PBXTargetDependency */,
+				7B294E122264E48900BD008F /* PBXTargetDependency */,
+				7B294E142264E48900BD008F /* PBXTargetDependency */,
+				7B294E162264E48900BD008F /* PBXTargetDependency */,
+				7B294E182264E48900BD008F /* PBXTargetDependency */,
+				7B294E1A2264E48900BD008F /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+		7B294E0B2264E47400BD008F /* All-Static */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7B294E0C2264E47400BD008F /* Build configuration list for PBXAggregateTarget "All-Static" */;
+			buildPhases = (
+			);
+			dependencies = (
+				7B294E1C2264E49500BD008F /* PBXTargetDependency */,
+				7B294E1E2264E49500BD008F /* PBXTargetDependency */,
+				7B294E202264E49500BD008F /* PBXTargetDependency */,
+				7B294E222264E49500BD008F /* PBXTargetDependency */,
+				7B294E242264E49500BD008F /* PBXTargetDependency */,
+				7B294E262264E49500BD008F /* PBXTargetDependency */,
+			);
+			name = "All-Static";
+			productName = "All-Static";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		7B0100C022516973006ADDA9 /* BMO_CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332492019274B005184FE /* BMO_CoreData.framework */; };
 		7B0100C122516973006ADDA9 /* BMO_FastImportRepresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B817EF92019158200625427 /* BMO_FastImportRepresentation.framework */; };
@@ -232,6 +267,90 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B8332482019274B005184FE;
 			remoteInfo = "BMO+CoreData-macOS";
+		};
+		7B294E0F2264E48900BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
+			remoteInfo = BMO;
+		};
+		7B294E112264E48900BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8332702019296C005184FE;
+			remoteInfo = RESTUtils;
+		};
+		7B294E132264E48900BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B817EF82019158200625427;
+			remoteInfo = "BMO+FastImportRepresentation";
+		};
+		7B294E152264E48900BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8332482019274B005184FE;
+			remoteInfo = "BMO+CoreData";
+		};
+		7B294E172264E48900BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0AB0B62021147200AC083A;
+			remoteInfo = "BMO+RESTCoreData";
+		};
+		7B294E192264E48900BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB965602022299800024DE1;
+			remoteInfo = "CollectionLoader+RESTCoreData";
+		};
+		7B294E1B2264E49500BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF78F3E224E7F3D00E22C3C;
+			remoteInfo = "BMO-Static";
+		};
+		7B294E1D2264E49500BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF78F5F224E7F4500E22C3C;
+			remoteInfo = "RESTUtils-Static";
+		};
+		7B294E1F2264E49500BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF78F83224E7F4D00E22C3C;
+			remoteInfo = "BMO+FastImportRepresentation-Static";
+		};
+		7B294E212264E49500BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF78F92224E7F5500E22C3C;
+			remoteInfo = "BMO+CoreData-Static";
+		};
+		7B294E232264E49500BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF78FAC224E7F5D00E22C3C;
+			remoteInfo = "BMO+RESTCoreData-Static";
+		};
+		7B294E252264E49500BD008F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BF78FC5224E7F6500E22C3C;
+			remoteInfo = "CollectionLoader+RESTCoreData-Static";
 		};
 		7B53A71022516CE9003A6981 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1643,6 +1762,14 @@
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
+					7B294E072264E45700BD008F = {
+						CreatedOnToolsVersion = 10.2;
+						ProvisioningStyle = Automatic;
+					};
+					7B294E0B2264E47400BD008F = {
+						CreatedOnToolsVersion = 10.2;
+						ProvisioningStyle = Automatic;
+					};
 					7B817EF82019158200625427 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1010;
@@ -1727,6 +1854,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				7B294E072264E45700BD008F /* All */,
+				7B294E0B2264E47400BD008F /* All-Static */,
 				7B8BD01920026E8C009BE667 /* BMO */,
 				7BF78F3E224E7F3D00E22C3C /* BMO-Static */,
 				7B8BD02120026E8C009BE667 /* BMOTests */,
@@ -2181,6 +2310,66 @@
 			target = 7B8332482019274B005184FE /* BMO+CoreData */;
 			targetProxy = 7B0AB16920211A1B00AC083A /* PBXContainerItemProxy */;
 		};
+		7B294E102264E48900BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8BD01920026E8C009BE667 /* BMO */;
+			targetProxy = 7B294E0F2264E48900BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E122264E48900BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332702019296C005184FE /* RESTUtils */;
+			targetProxy = 7B294E112264E48900BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E142264E48900BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B817EF82019158200625427 /* BMO+FastImportRepresentation */;
+			targetProxy = 7B294E132264E48900BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E162264E48900BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8332482019274B005184FE /* BMO+CoreData */;
+			targetProxy = 7B294E152264E48900BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E182264E48900BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0AB0B62021147200AC083A /* BMO+RESTCoreData */;
+			targetProxy = 7B294E172264E48900BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E1A2264E48900BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BB965602022299800024DE1 /* CollectionLoader+RESTCoreData */;
+			targetProxy = 7B294E192264E48900BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E1C2264E49500BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF78F3E224E7F3D00E22C3C /* BMO-Static */;
+			targetProxy = 7B294E1B2264E49500BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E1E2264E49500BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF78F5F224E7F4500E22C3C /* RESTUtils-Static */;
+			targetProxy = 7B294E1D2264E49500BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E202264E49500BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF78F83224E7F4D00E22C3C /* BMO+FastImportRepresentation-Static */;
+			targetProxy = 7B294E1F2264E49500BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E222264E49500BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF78F92224E7F5500E22C3C /* BMO+CoreData-Static */;
+			targetProxy = 7B294E212264E49500BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E242264E49500BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF78FAC224E7F5D00E22C3C /* BMO+RESTCoreData-Static */;
+			targetProxy = 7B294E232264E49500BD008F /* PBXContainerItemProxy */;
+		};
+		7B294E262264E49500BD008F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BF78FC5224E7F6500E22C3C /* CollectionLoader+RESTCoreData-Static */;
+			targetProxy = 7B294E252264E49500BD008F /* PBXContainerItemProxy */;
+		};
 		7B53A71122516CE9003A6981 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7B817EF82019158200625427 /* BMO+FastImportRepresentation */;
@@ -2514,6 +2703,38 @@
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.happn.BMO.RESTCoreDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7B294E082264E45700BD008F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B294E092264E45700BD008F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7B294E0D2264E47400BD008F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B294E0E2264E47400BD008F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -3972,6 +4193,24 @@
 			buildConfigurations = (
 				7B0AB1232021148600AC083A /* Debug */,
 				7B0AB1242021148600AC083A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B294E0A2264E45700BD008F /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B294E082264E45700BD008F /* Debug */,
+				7B294E092264E45700BD008F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B294E0C2264E47400BD008F /* Build configuration list for PBXAggregateTarget "All-Static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B294E0D2264E47400BD008F /* Debug */,
+				7B294E0E2264E47400BD008F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
