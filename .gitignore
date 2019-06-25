@@ -6,5 +6,5 @@ xcuserdata/
 
 # Package Managers
 /.build/
-/Carthage/*
-!/Carthage/*.xcfilelist
+/.swiftpm/
+/Carthage/
