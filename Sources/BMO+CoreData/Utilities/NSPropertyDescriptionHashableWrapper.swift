@@ -46,7 +46,7 @@ public struct NSPropertyDescriptionHashableWrapper : Hashable {
 	}
 	
 	public func hash(into hasher: inout Hasher) {
-		hasher.combine(wrappedProperty)
+		hasher.combine(wrappedProperty.name)
 	}
 	
 }
