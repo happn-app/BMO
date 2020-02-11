@@ -1,5 +1,6 @@
+//
 /*
-Copyright 2019 happn
+Copyright 2020 happn
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,10 +15,28 @@ See the License for the specific language governing permissions and
 limitations under the License. */
 
 import CoreData
-
-import BMO_CoreData
-import RESTUtils
+import Foundation
 
 
 
-public typealias RESTCoreDataSaveRequest = CoreDataSaveRequest<AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>>
+public struct NSPropertyDescriptionHashableWrapper : Hashable {
+	
+	public var wrappedProperty: NSPropertyDescription
+	
+	init(_ property: NSPropertyDescription) {
+		wrappedProperty = property
+	}
+	
+	public func hash(into hasher: inout Hasher) {
+		hasher.combine(wrappedProperty)
+	}
+	
+}
+
+public extension NSPropertyDescription {
+	
+	func hashableWrapper() -> NSPropertyDescriptionHashableWrapper {
+		return NSPropertyDescriptionHashableWrapper(self)
+	}
+	
+}
