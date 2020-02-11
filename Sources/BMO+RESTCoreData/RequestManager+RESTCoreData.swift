@@ -82,7 +82,7 @@ extension RequestManager {
 	}
 	
 	public func unsafeFetchObject<BridgeType, ObjectType: NSManagedObject>(
-		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?,
+		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?,
 		fetchType: RESTCoreDataFetchRequest.FetchType = .always,
 		onContext context: NSManagedObjectContext, bridge: BridgeType? = nil,
 		handler: ((_ fetchedObject: ObjectType?, _ fullResponse: AsyncOperationResult<BridgeBackRequestResult<BridgeType>>) -> Void)? = nil
@@ -163,7 +163,7 @@ extension RequestManager {
 	
 	@discardableResult
 	public func fetchObject<BridgeType, ObjectType: NSManagedObject>(
-		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?,
+		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?,
 		fetchType: RESTCoreDataFetchRequest.FetchType = .always,
 		onContext context: NSManagedObjectContext, bridge: BridgeType? = nil,
 		handler: ((_ fetchedObject: ObjectType?, _ fullResponse: AsyncOperationResult<BridgeBackRequestResult<BridgeType>>) -> Void)? = nil
@@ -254,7 +254,7 @@ extension RequestManager {
 	The handler (if any) **won't** be called on the context. */
 	@discardableResult
 	public func fetchObjects<BridgeType>(
-		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?,
+		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?,
 		fetchType: RESTCoreDataFetchRequest.FetchType = .always,
 		onContext context: NSManagedObjectContext, bridge: BridgeType? = nil,
 		preCompletionHandler: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)? = nil,
@@ -265,7 +265,7 @@ extension RequestManager {
 	}
 	
 	public func operationForFetchingObjects<BridgeType>(
-		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?,
+		fromFetchRequest fetchRequest: NSFetchRequest<NSFetchRequestResult>, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?,
 		fetchType: RESTCoreDataFetchRequest.FetchType,
 		onContext context: NSManagedObjectContext, bridge: BridgeType? = nil, autoStart: Bool,
 		preCompletionHandler: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)? = nil,
@@ -296,7 +296,7 @@ extension RequestManager {
 	The handler is **NOT** called on the context. */
 	@discardableResult
 	public func unsafeSave<BridgeType>(
-		context: NSManagedObjectContext, objectsToSaveOnRemote objects: [NSManagedObject]?, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>? = nil, rollbackInsteadOfSave: Bool = false,
+		context: NSManagedObjectContext, objectsToSaveOnRemote objects: [NSManagedObject]?, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>? = nil, rollbackInsteadOfSave: Bool = false,
 		bridge: BridgeType? = nil,
 		handler: ((_ response: AsyncOperationResult<BackRequestResult<RESTCoreDataSaveRequest, BridgeType>>) -> Void)? = nil
 	) -> BackRequestOperation<RESTCoreDataSaveRequest, BridgeType>?
@@ -315,7 +315,7 @@ extension RequestManager {
 	The handler is **NOT** called on the context. */
 	@discardableResult
 	public func unsafeSaveAfterBackReturns<BridgeType>(
-		context: NSManagedObjectContext, objectsToSaveOnRemote objects: [NSManagedObject]?, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>? = nil,
+		context: NSManagedObjectContext, objectsToSaveOnRemote objects: [NSManagedObject]?, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>? = nil,
 		bridge: BridgeType? = nil,
 		handler: ((_ response: AsyncOperationResult<BackRequestResult<RESTCoreDataSaveRequest, BridgeType>>) -> Void)? = nil
 		) -> BackRequestOperation<RESTCoreDataSaveRequest, BridgeType>?
@@ -324,7 +324,7 @@ extension RequestManager {
 	}
 	
 	public func unsafeOperationForSaving<BridgeType>(
-		context: NSManagedObjectContext, objectsToSaveOnRemote objects: [NSManagedObject]?, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescription>? = nil, saveWorkflow: RESTCoreDataSaveRequest.SaveWorkflow = .saveBeforeBackReturns,
+		context: NSManagedObjectContext, objectsToSaveOnRemote objects: [NSManagedObject]?, additionalRequestInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>? = nil, saveWorkflow: RESTCoreDataSaveRequest.SaveWorkflow = .saveBeforeBackReturns,
 		bridge: BridgeType? = nil,
 		autoStart: Bool, handler: ((_ response: AsyncOperationResult<BackRequestResult<RESTCoreDataSaveRequest, BridgeType>>) -> Void)? = nil
 	) -> BackRequestOperation<RESTCoreDataSaveRequest, BridgeType>?

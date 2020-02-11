@@ -20,7 +20,7 @@ import RESTUtils
 
 
 
-extension AdditionalRESTRequestInfo where DbPropertyDescription == NSPropertyDescription {
+extension AdditionalRESTRequestInfo where DbPropertyDescription == NSPropertyDescriptionHashableWrapper {
 	
 	public init(flatifiedFields: String?, inEntity entity: NSEntityDescription, paginatorInfo: Any? = nil, keyPathPaginatorInfo: [String: Any]? = nil, keyPathForcedFieldsEntity: [String: NSEntityDescription]? = nil) {
 		guard let flatifiedFields = flatifiedFields else {
@@ -34,18 +34,18 @@ extension AdditionalRESTRequestInfo where DbPropertyDescription == NSPropertyDes
 	
 	public init(parameters params: [String: ParameterizedStringSet], inEntity entity: NSEntityDescription?, paginatorInfo: Any? = nil, keyPathPaginatorInfo: [String: Any]? = nil, keyPathForcedFieldsEntity: [String: NSEntityDescription]? = nil) {
 		var additionalRequestParametersBuilding = [String: Any]()
-		var fetchedPropertiesBuilding = Set<NSPropertyDescription>()
-		var subAdditionalInfoBuilding = [NSPropertyDescription: AdditionalRESTRequestInfo<NSPropertyDescription>]()
+		var fetchedPropertiesBuilding = Set<NSPropertyDescriptionHashableWrapper>()
+		var subAdditionalInfoBuilding = [NSPropertyDescriptionHashableWrapper: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>]()
 		for (paramName, paramValue) in params {
 			switch paramName {
 			case "fields":
 				for (fieldName, v) in paramValue.valuesAndParams {
-					guard let property = entity?.propertiesByName[fieldName] else {fatalError("Invalid fields \"\(fieldName)\" for entity named \(entity?.name ?? "<Unknown>") (property not found in entity)")}
+					guard let property = entity?.propertiesByName[fieldName]?.hashableWrapper() else {fatalError("Invalid fields \"\(fieldName)\" for entity named \(entity?.name ?? "<Unknown>") (property not found in entity)")}
 					
 					fetchedPropertiesBuilding.insert(property)
 					let (subPaginatorInfo, subKeyPathPaginatorInfo) = AdditionalRESTRequestInfo.subKeyPathInfo(forField: fieldName, inKeyPathInfo: keyPathPaginatorInfo)
 					let (subForcedEntity, subKeyPathForcedFieldsEntity) = AdditionalRESTRequestInfo.subKeyPathInfo(forField: fieldName, inKeyPathInfo: keyPathForcedFieldsEntity)
-					if v.count > 0 {subAdditionalInfoBuilding[property] = AdditionalRESTRequestInfo<NSPropertyDescription>(parameters: v, inEntity: subForcedEntity ?? (property as? NSRelationshipDescription)?.destinationEntity, paginatorInfo: subPaginatorInfo, keyPathPaginatorInfo: subKeyPathPaginatorInfo, keyPathForcedFieldsEntity: subKeyPathForcedFieldsEntity)}
+					if v.count > 0 {subAdditionalInfoBuilding[property] = AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>(parameters: v, inEntity: subForcedEntity ?? (property.wrappedProperty as? NSRelationshipDescription)?.destinationEntity, paginatorInfo: subPaginatorInfo, keyPathPaginatorInfo: subKeyPathPaginatorInfo, keyPathForcedFieldsEntity: subKeyPathForcedFieldsEntity)}
 				}
 				
 			default:
