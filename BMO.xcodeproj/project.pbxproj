@@ -32,8 +32,6 @@
 		7B34DB8F20E92A3C00E16DF1 /* BMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* BMO.framework */; };
 		7B34DB9020E92A3C00E16DF1 /* RESTUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8332712019296C005184FE /* RESTUtils.framework */; };
 		7B37122721026D71000E6124 /* RESTNumericTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122621026D71000E6124 /* RESTNumericTransformer.swift */; };
-		7B37D21023F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37D20F23F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift */; };
-		7B37D21123F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37D20F23F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift */; };
 		7B3C40442018B29F00E4A0A5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* RequestManager.swift */; };
 		7B3C40732018B44700E4A0A5 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40722018B44700E4A0A5 /* Bridge.swift */; };
 		7B3C40792018B48100E4A0A5 /* NumberOfCores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */; };
@@ -117,6 +115,8 @@
 		7BD6276620C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */; };
 		7BD6276B20C0BBCE0011ED8E /* RESTNumericTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */; };
 		7BDB847920C0D359001684D7 /* RESTBoolTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB847820C0D359001684D7 /* RESTBoolTransformer.swift */; };
+		7BDD26FB23F2D1DE0006FBFD /* NSPropertyDescriptionHashableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37D20F23F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift */; };
+		7BDD26FC23F2D1DF0006FBFD /* NSPropertyDescriptionHashableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37D20F23F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift */; };
 		7BEB91EE202131E30068239F /* Bridge+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB91ED202131E30068239F /* Bridge+CoreData.swift */; };
 		7BEEDB8420C162B300275BCE /* RESTColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEEDB8320C162B300275BCE /* RESTColorTransformer.swift */; };
 		7BF78F40224E7F3D00E22C3C /* BackRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40CE2018BE6C00E4A0A5 /* BackRequestResult.swift */; };
@@ -782,7 +782,6 @@
 				7B01360A201F7EC500CE0893 /* AdditionalRequestInfo+RESTCoreData.swift */,
 				7B0AB08D2020BEDF00AC083A /* CoreData+RESTPath.swift */,
 				7BB9662E20223FC600024DE1 /* CoreData+RESTMapper.swift */,
-				7B37D20F23F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift */,
 			);
 			path = "BMO+RESTCoreData";
 			sourceTree = "<group>";
@@ -874,6 +873,7 @@
 				7B013608201F7D2300CE0893 /* ImportError.swift */,
 				7B013600201F769000CE0893 /* CoreDataUtils.swift */,
 				7BB966052022323800024DE1 /* NSPredicateUtils.swift */,
+				7B37D20F23F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1888,7 +1888,6 @@
 				7B0AB144202115AF00AC083A /* AdditionalRequestInfo+RESTCoreData.swift in Sources */,
 				7B0AB142202115AF00AC083A /* RESTCoreDataFetchRequest.swift in Sources */,
 				7B0AB145202115AF00AC083A /* CoreData+RESTPath.swift in Sources */,
-				7B37D21023F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift in Sources */,
 				7B0AB141202115AF00AC083A /* RequestManager+RESTCoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1922,6 +1921,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDD26FB23F2D1DE0006FBFD /* NSPropertyDescriptionHashableWrapper.swift in Sources */,
 				7B83326220192758005184FE /* CoreDataSaveRequest.swift in Sources */,
 				7B83326020192758005184FE /* Db+CoreData.swift in Sources */,
 				7B013601201F769000CE0893 /* CoreDataUtils.swift in Sources */,
@@ -2115,6 +2115,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDD26FC23F2D1DF0006FBFD /* NSPropertyDescriptionHashableWrapper.swift in Sources */,
 				7BF78F98224E7F5500E22C3C /* CoreDataSaveRequest.swift in Sources */,
 				7BF78F99224E7F5500E22C3C /* Db+CoreData.swift in Sources */,
 				7BF78F9A224E7F5500E22C3C /* CoreDataUtils.swift in Sources */,
@@ -2138,7 +2139,6 @@
 				7BF78FB8224E7F5D00E22C3C /* AdditionalRequestInfo+RESTCoreData.swift in Sources */,
 				7BF78FB9224E7F5D00E22C3C /* RESTCoreDataFetchRequest.swift in Sources */,
 				7BF78FBA224E7F5D00E22C3C /* CoreData+RESTPath.swift in Sources */,
-				7B37D21123F2C99B008B64DE /* NSPropertyDescriptionHashableWrapper.swift in Sources */,
 				7BF78FBB224E7F5D00E22C3C /* RequestManager+RESTCoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

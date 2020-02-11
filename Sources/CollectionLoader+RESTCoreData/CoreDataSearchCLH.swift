@@ -19,6 +19,7 @@ import os.log
 
 import AsyncOperationResult
 import BMO
+import BMO_CoreData
 import BMO_RESTCoreData
 import RESTUtils
 

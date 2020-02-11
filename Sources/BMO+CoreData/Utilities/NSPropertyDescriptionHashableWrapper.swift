@@ -19,6 +19,10 @@ import Foundation
 
 
 
+/**
+CoreData has a (f**ing) bug! It is possible to get two NSPropertyDescription
+objects that are equal but have different hashes. So we wrap the properties to
+override the hash. */
 public struct NSPropertyDescriptionHashableWrapper : Hashable {
 	
 	public var wrappedProperty: NSPropertyDescription
