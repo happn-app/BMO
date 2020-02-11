@@ -29,32 +29,17 @@ public struct AdditionalRESTRequestInfo<DbPropertyDescription : Hashable> {
 	public var additionalRequestParameters: [String: Any]
 	
 	public var paginatorInfo: Any?
+	public var subAdditionalInfo: [DbPropertyDescription: AdditionalRESTRequestInfo<DbPropertyDescription>]
 	
+	/**
+	Access and modify the subAdditionalInfo. Strictly equivalent to accessing the
+	subAdditionalInfo dictionary directly, but kept for retro-compatibility w/
+	previous version where the CoreData Db conformance was made with the
+	NSPropertyDescription type directly, which caused problems because of a
+	CoreData bug. */
 	public subscript(property: DbPropertyDescription) -> AdditionalRESTRequestInfo<DbPropertyDescription>? {
-		get {
-			if let subInfo = _subAdditionalInfo[property] {return subInfo}
-			if let property = property as? NSPropertyDescription {
-				/* Let's workaround the hash bug of NSPropertyDescription... :( */
-				for (k, v) in _subAdditionalInfo {
-					if (k as? NSPropertyDescription)?.name == property.name {
-						return v
-					}
-				}
-			}
-			return nil
-		}
-		set {
-			defer {_subAdditionalInfo[property] = newValue}
-			guard _subAdditionalInfo[property] == nil else {return}
-			if let property = property as? NSPropertyDescription {
-				/* Let's workaround the hash bug of NSPropertyDescription... :( */
-				for (k, _) in _subAdditionalInfo {
-					if (k as? NSPropertyDescription)?.name == property.name {
-						_subAdditionalInfo.removeValue(forKey: k)
-					}
-				}
-			}
-		}
+		get {subAdditionalInfo[property]}
+		set {subAdditionalInfo[property] = newValue}
 	}
 	
 	public init(fromInfo sourceInfo: AdditionalRESTRequestInfo<DbPropertyDescription>? = nil, forcedRESTPath frp: RESTPath? = nil, forcedPaginator fp: RESTPaginator? = nil, fetchedProperties f: Set<DbPropertyDescription>? = nil, additionalRequestParameters add: [String: Any]? = nil, paginatorInfo pi: Any? = nil, subAdditionalInfo subInfo: [DbPropertyDescription: AdditionalRESTRequestInfo<DbPropertyDescription>]? = nil) {
@@ -63,13 +48,7 @@ public struct AdditionalRESTRequestInfo<DbPropertyDescription : Hashable> {
 		fetchedProperties = f ?? sourceInfo?.fetchedProperties
 		additionalRequestParameters = add ?? sourceInfo?.additionalRequestParameters ?? [:]
 		paginatorInfo = pi ?? sourceInfo?.paginatorInfo
-		_subAdditionalInfo = subInfo ?? sourceInfo?._subAdditionalInfo ?? [:]
+		subAdditionalInfo = subInfo ?? sourceInfo?.subAdditionalInfo ?? [:]
 	}
-	
-	/* Private (implicitely, we still need it though for ObjC compatibility)
-	 * because the NSPropertyDescription class is buggy. Instead we'll implement
-	 * a subscript directly in this struct to access sub-additional info which
-	 * will workaround the hashing problem. */
-	public private(set) var _subAdditionalInfo: [DbPropertyDescription: AdditionalRESTRequestInfo<DbPropertyDescription>]
 	
 }
