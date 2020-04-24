@@ -96,9 +96,9 @@ public enum LocalToRESTPropertyMapping {
 	/** The source (local) property value will be transformerd using the given
 	handler then set at the given destination property path. */
 	case propertyHandlerMapping(destinationPropertyPath: [String], transformer: (_ value: Any?, _ userInfo: Any?) -> Any??)
-	/** The source (local) property value will be given to the handler. The
-	results will be merged with the current local representation of the object. */
-	case objectHandlerMapping(transformer: (_ value: Any?, _ userInfo: Any?) -> [String: Any?]?)
+	/** The source (local) object will be given to the handler. The results will
+	be merged with the current local representation of the object. */
+	case objectHandlerMapping(transformer: (_ object: Any?, _ userInfo: Any?) -> [String: Any?]?)
 	
 }
 
