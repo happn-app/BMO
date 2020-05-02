@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "AsyncOperationResult",
-        "repositoryURL": "https://github.com/happn-app/AsyncOperationResult.git",
+        "repositoryURL": "https://github.com/happn-tech/AsyncOperationResult.git",
         "state": {
           "branch": null,
           "revision": "cf6a617364267bedc334a9e61cf1f7efd7c0e0b4",
@@ -12,7 +12,7 @@
       },
       {
         "package": "CollectionLoader",
-        "repositoryURL": "https://github.com/happn-app/CollectionLoader.git",
+        "repositoryURL": "https://github.com/happn-tech/CollectionLoader.git",
         "state": {
           "branch": null,
           "revision": "295889cfcf3e57544e1ebeeeed6213a5635692e0",
