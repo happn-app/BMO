@@ -166,6 +166,10 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 					newValues = (newValuesBuilding as! [String: Any?]) /* Internal logic error if cast is not true */
 					
 				case .objectHandlerMapping(transformer: let handlerTransformer):
+					guard let newComputedValues = handlerTransformer(value, userInfo) else {continue}
+					newValues = newComputedValues
+					
+				case .objectToObjectHandlerMapping(transformer: let handlerTransformer):
 					guard let newComputedValues = handlerTransformer(localRepresentation, userInfo) else {continue}
 					newValues = newComputedValues
 				}

@@ -96,9 +96,30 @@ public enum LocalToRESTPropertyMapping {
 	/** The source (local) property value will be transformerd using the given
 	handler then set at the given destination property path. */
 	case propertyHandlerMapping(destinationPropertyPath: [String], transformer: (_ value: Any?, _ userInfo: Any?) -> Any??)
-	/** The source (local) object will be given to the handler. The results will
-	be merged with the current local representation of the object. */
-	case objectHandlerMapping(transformer: (_ object: Any?, _ userInfo: Any?) -> [String: Any?]?)
+	/** The source (local) property value will be given to the handler. The
+	results will be merged with the current local representation of the object. */
+	case objectHandlerMapping(transformer: (_ value: Any?, _ userInfo: Any?) -> [String: Any?]?)
+	
+	/** A special case, when it is not possible to create the REST representation
+	from a single property.
+	
+	Theorically (see comment above `RESTPropertyMapping`), the conversion to REST
+	is done by iterating over all the properties of your local object and
+	applying the property mapping over the value of these properties.
+	
+	This algorithm implies that one REST representation key cannot be set using
+	multiple local key values.
+	This property mapping case fixes this issue and gives you the _whole_ object
+	when mapping a given property.
+	
+	Usually this property mapping should be avoided because the mapping is linked
+	to _one_ local property, but _multiple_ local properties are used to compute
+	the REST properties, which can have unintended side effects, in particular,
+	sometimes the values you expect might be skipped.
+	A simple (albeit untested) solution to avoid this mapping would be to create
+	a computed/transient property on your local model that resolves to the REST
+	value you want and map this transient property… */
+	case objectToObjectHandlerMapping(transformer: (_ value: [String: Any?]?, _ userInfo: Any?) -> [String: Any?]?)
 	
 }
 
@@ -118,7 +139,9 @@ public enum LocalToRESTPropertyMapping {
  *      of a REST representation;
  * BUT
  *    - One REST representation key cannot be set using multiple local key
- *      values. */
+ *      values.
+ *      This limitation is mitigated by the `objectToObjectHandlerMapping`
+ *      LocalToRESTPropertyMapping case (see its comment). */
 struct RESTPropertyMapping {
 	
 	let restToLocalMapping: RESTToLocalPropertyMapping
