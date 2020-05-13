@@ -113,16 +113,18 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 		
 		let request = RESTCoreDataFetchRequest(context: context, fetchRequest: fetchRequest, fetchType: .always, additionalInfo: additionalFetchInfo, leaveBridgeHandler: preRun, preImportHandler: preImport, preCompletionHandler: { importResults in
 			if importResults.rootObjectsAndRelationships.count > 1 {
-				if #available(tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Got more than one root element as a result of a request for a list element collection loader helper. Taking first. Got: %@", log: $0, type: .info, importResults.rootObjectsAndRelationships) }}
-				else                                               {NSLog("Got more than one root element as a result of a request for a list element collection loader helper. Taking first. Got: %@", importResults.rootObjectsAndRelationships)}
+				if #available(tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Got more than one root element as a result of a request for a list element collection loader helper. Taking first. Got: %@", log: $0, type: .info, importResults.rootObjectsAndRelationships) }
+				}
 			}
 			guard let root = importResults.rootObjectsAndRelationships.first?.object else {return}
 			
 			assert(!root.objectID.isTemporaryID)
 			
 			if let curRootObjectID = self.listElementObjectId, curRootObjectID != root.objectID {
-				if #available(tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Got different root object id from a result of a request for a list element collection loader helper than previous one. Replacing with new one. Previous: %{public}@; retrieved: %{public}@", log: $0, type: .info, curRootObjectID, root.objectID) }}
-				else                                               {NSLog("Got different root object id from a result of a request for a list element collection loader helper than previous one. Replacing with new one. Previous: %@; retrieved: %@", curRootObjectID, root.objectID)}
+				if #available(tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Got different root object id from a result of a request for a list element collection loader helper than previous one. Replacing with new one. Previous: %{public}@; retrieved: %{public}@", log: $0, type: .info, curRootObjectID, root.objectID) }
+				}
 			}
 			self.listElementObjectId = root.objectID
 			

@@ -107,8 +107,9 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 						if (newValue as AnyObject).isKind(of: propertyValueType) {
 							result[property.name] = newValue
 						} else {
-							if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got new value %@ of type %{public}@ for property %{public}@. Expecting %{public}@. Skipping value.", log: $0, type: .info, String(describing: newValue), String(describing: type(of: newValue)), String(describing: property), String(describing: propertyValueType)) }}
-							else                                                          {NSLog("Got new value %@ of type %@ for property %@. Expecting %@. Skipping value.", String(describing: newValue), String(describing: type(of: newValue)), String(describing: property), String(describing: propertyValueType))}
+							if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+								RESTUtilsConfig.oslog.flatMap{ os_log("Got new value %@ of type %{public}@ for property %{public}@. Expecting %{public}@. Skipping value.", log: $0, type: .info, String(describing: newValue), String(describing: type(of: newValue)), String(describing: property), String(describing: propertyValueType)) }
+							}
 						}
 					} else {
 						/* No type checking; setting value directly. */
@@ -305,8 +306,9 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 				if let curFields = result[fieldsKeyName] {result[fieldsKeyName] = computedFields.merged(curFields, pssParser: pssParser)}
 				else                                     {result[fieldsKeyName] = computedFields.valuesAndParams.count > 0 ? computedFields : nil}
 			} else {
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got forced param \"%@\" for fields. Don't know how to merge. Not computing fields.", log: $0, type: .info, String(describing: forcedFields)) }}
-				else                                                          {NSLog("Got forced param \"%@\" for fields. Don't know how to merge. Not computing fields.", String(describing: forcedFields))}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					RESTUtilsConfig.oslog.flatMap{ os_log("Got forced param \"%@\" for fields. Don't know how to merge. Not computing fields.", log: $0, type: .info, String(describing: forcedFields)) }
+				}
 				result[fieldsKeyName] = forcedFields
 			}
 		}
@@ -373,8 +375,9 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 			case nil:                                      queryParams[k] = v
 			case .some(let pss as ParameterizedStringSet): queryParams[k] = pss.merged(v, pssParser: pssParser)
 			default:
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("TODO. Got some untreated edge case when merging two query params dictionary. Not merging value \"%@\" (original, will stay) and \"%@\" (new, will be dropped)", log: $0, type: .error, String(describing: queryParams[k]), String(describing: v)) }}
-				else                                                          {NSLog("TODO. Got some untreated edge case when merging two query params dictionary. Not merging value \"%@\" (original, will stay) and \"%@\" (new, will be dropped)", String(describing: queryParams[k]), String(describing: v))}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					RESTUtilsConfig.oslog.flatMap{ os_log("TODO. Got some untreated edge case when merging two query params dictionary. Not merging value \"%@\" (original, will stay) and \"%@\" (new, will be dropped)", log: $0, type: .error, String(describing: queryParams[k]), String(describing: v)) }
+				}
 			}
 		}
 	}
@@ -392,8 +395,9 @@ public class RESTMapper<DbEntityDescription : DbRESTEntityDescription & Hashable
 			{
 				return lpss.merged(hpss)
 			} else {
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Cannot merge \"%@\" and \"%@\" forced fields. Using first version.", log: $0, type: .info, String(describing: h), String(describing: l)) }}
-				else                                                          {NSLog("Cannot merge \"%@\" and \"%@\" forced fields. Using first version.", String(describing: h), String(describing: l))}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					RESTUtilsConfig.oslog.flatMap{ os_log("Cannot merge \"%@\" and \"%@\" forced fields. Using first version.", log: $0, type: .info, String(describing: h), String(describing: l)) }
+				}
 				return hpss ?? h /* Client primes over paginator... */
 			}
 		}

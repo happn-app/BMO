@@ -70,7 +70,7 @@
 		7B3C40442018B29F00E4A0A5 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* RequestManager.swift */; };
 		7B3C40732018B44700E4A0A5 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40722018B44700E4A0A5 /* Bridge.swift */; };
 		7B3C40792018B48100E4A0A5 /* NumberOfCores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */; };
-		7B3C40812018B50300E4A0A5 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */; };
+		7B3C40812018B50300E4A0A5 /* BMOConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* BMOConfig.swift */; };
 		7B3C40862018B54500E4A0A5 /* Db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40852018B54500E4A0A5 /* Db.swift */; };
 		7B3C40962018B63600E4A0A5 /* MixedRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40912018B63600E4A0A5 /* MixedRepresentation.swift */; };
 		7B3C40A62018B7AB00E4A0A5 /* DbRepresentationExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A42018B7AB00E4A0A5 /* DbRepresentationExporter.swift */; };
@@ -144,7 +144,7 @@
 		7BB9663E202242A200024DE1 /* RESTPropertyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9663D202242A200024DE1 /* RESTPropertyMapping.swift */; };
 		7BB96643202242F000024DE1 /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB96642202242F000024DE1 /* BaseProtocols.swift */; };
 		7BB966482022431C00024DE1 /* RESTMapper+ConvenienceInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB966472022431C00024DE1 /* RESTMapper+ConvenienceInit.swift */; };
-		7BB9664D2022546900024DE1 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9664C2022546900024DE1 /* DependencyInjection.swift */; };
+		7BB9664D2022546900024DE1 /* RESTUtilsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9664C2022546900024DE1 /* RESTUtilsConfig.swift */; };
 		7BB966512022578F00024DE1 /* NSPredicateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB966052022323800024DE1 /* NSPredicateUtils.swift */; };
 		7BB966572022613900024DE1 /* CollectionLoader_RESTCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB966562022613900024DE1 /* CollectionLoader_RESTCoreDataTests.swift */; };
 		7BD6276620C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */; };
@@ -156,7 +156,7 @@
 		7BF78F41224E7F3D00E22C3C /* ImportBridgeOperationResultsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40B92018BA9500E4A0A5 /* ImportBridgeOperationResultsRequest.swift */; };
 		7BF78F42224E7F3D00E22C3C /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40432018B29F00E4A0A5 /* RequestManager.swift */; };
 		7BF78F43224E7F3D00E22C3C /* Db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40852018B54500E4A0A5 /* Db.swift */; };
-		7BF78F44224E7F3D00E22C3C /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */; };
+		7BF78F44224E7F3D00E22C3C /* BMOConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40802018B50300E4A0A5 /* BMOConfig.swift */; };
 		7BF78F45224E7F3D00E22C3C /* DbRepresentationExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40A42018B7AB00E4A0A5 /* DbRepresentationExporter.swift */; };
 		7BF78F46224E7F3D00E22C3C /* NumberOfCores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */; };
 		7BF78F47224E7F3D00E22C3C /* UniquingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C40BE2018BACF00E4A0A5 /* UniquingRequest.swift */; };
@@ -180,7 +180,7 @@
 		7BF78F65224E7F4500E22C3C /* RESTBase64DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4E57420C0BF15003A0977 /* RESTBase64DataTransformer.swift */; };
 		7BF78F66224E7F4500E22C3C /* RESTMapperTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9662920223ED600024DE1 /* RESTMapperTransformer.swift */; };
 		7BF78F67224E7F4500E22C3C /* RESTPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3192C22019F2640088312B /* RESTPath.swift */; };
-		7BF78F68224E7F4500E22C3C /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9664C2022546900024DE1 /* DependencyInjection.swift */; };
+		7BF78F68224E7F4500E22C3C /* RESTUtilsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9664C2022546900024DE1 /* RESTUtilsConfig.swift */; };
 		7BF78F69224E7F4500E22C3C /* RESTMaxIdPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9660B20223A1E00024DE1 /* RESTMaxIdPaginator.swift */; };
 		7BF78F6A224E7F4500E22C3C /* RESTBoolTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB847820C0D359001684D7 /* RESTBoolTransformer.swift */; };
 		7BF78F6B224E7F4500E22C3C /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9662120223DD900024DE1 /* AnyEquatable.swift */; };
@@ -612,7 +612,7 @@
 		7B3C40432018B29F00E4A0A5 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		7B3C40722018B44700E4A0A5 /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		7B3C40782018B48100E4A0A5 /* NumberOfCores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfCores.swift; sourceTree = "<group>"; };
-		7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		7B3C40802018B50300E4A0A5 /* BMOConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOConfig.swift; sourceTree = "<group>"; };
 		7B3C40852018B54500E4A0A5 /* Db.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Db.swift; sourceTree = "<group>"; };
 		7B3C40912018B63600E4A0A5 /* MixedRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedRepresentation.swift; sourceTree = "<group>"; };
 		7B3C40A42018B7AB00E4A0A5 /* DbRepresentationExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbRepresentationExporter.swift; sourceTree = "<group>"; };
@@ -695,7 +695,7 @@
 		7BB9663D202242A200024DE1 /* RESTPropertyMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTPropertyMapping.swift; sourceTree = "<group>"; };
 		7BB96642202242F000024DE1 /* BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
 		7BB966472022431C00024DE1 /* RESTMapper+ConvenienceInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RESTMapper+ConvenienceInit.swift"; sourceTree = "<group>"; };
-		7BB9664C2022546900024DE1 /* DependencyInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		7BB9664C2022546900024DE1 /* RESTUtilsConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTUtilsConfig.swift; sourceTree = "<group>"; };
 		7BB966562022613900024DE1 /* CollectionLoader_RESTCoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionLoader_RESTCoreDataTests.swift; sourceTree = "<group>"; };
 		7BD6275D20C0BBC50011ED8E /* RESTDateAndTimeTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTDateAndTimeTransformer.swift; sourceTree = "<group>"; };
 		7BD6276A20C0BBCE0011ED8E /* RESTNumericTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTNumericTransformer.swift; sourceTree = "<group>"; };
@@ -1146,12 +1146,12 @@
 		7B83328C20192F99005184FE /* RESTUtils */ = {
 			isa = PBXGroup;
 			children = (
+				7BB9664C2022546900024DE1 /* RESTUtilsConfig.swift */,
 				7BB9662720223DF800024DE1 /* RESTPath */,
 				7BB9662820223E0A00024DE1 /* RESTMapper */,
 				7BB9661E20223A3000024DE1 /* Paginators */,
 				7B0AB0AE20210F2E00AC083A /* For BMO */,
 				7BB9662620223DDD00024DE1 /* Utilities */,
-				7BB9664C2022546900024DE1 /* DependencyInjection.swift */,
 			);
 			path = RESTUtils;
 			sourceTree = "<group>";
@@ -1173,13 +1173,13 @@
 		7B8BD01220026AF1009BE667 /* BMO */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C40802018B50300E4A0A5 /* BMOConfig.swift */,
 				7B3C40432018B29F00E4A0A5 /* RequestManager.swift */,
 				7B3C40F22018E27600E4A0A5 /* Protocols */,
 				7B3C40B32018BA1D00E4A0A5 /* Requests */,
 				7B3C40E22018DA8900E4A0A5 /* Request Operations */,
 				7B3C40C32018BDDA00E4A0A5 /* Results */,
 				7B3C40772018B47500E4A0A5 /* Utilities */,
-				7B3C40802018B50300E4A0A5 /* DependencyInjection.swift */,
 			);
 			path = BMO;
 			sourceTree = "<group>";
@@ -2083,7 +2083,7 @@
 				7BB4E57520C0BF15003A0977 /* RESTBase64DataTransformer.swift in Sources */,
 				7BB9662A20223ED600024DE1 /* RESTMapperTransformer.swift in Sources */,
 				7B3192C32019F2640088312B /* RESTPath.swift in Sources */,
-				7BB9664D2022546900024DE1 /* DependencyInjection.swift in Sources */,
+				7BB9664D2022546900024DE1 /* RESTUtilsConfig.swift in Sources */,
 				7BB9661220223A1F00024DE1 /* RESTMaxIdPaginator.swift in Sources */,
 				7BDB847920C0D359001684D7 /* RESTBoolTransformer.swift in Sources */,
 				7BB9662220223DDA00024DE1 /* AnyEquatable.swift in Sources */,
@@ -2123,7 +2123,7 @@
 				7B3C40BA2018BA9500E4A0A5 /* ImportBridgeOperationResultsRequest.swift in Sources */,
 				7B3C40442018B29F00E4A0A5 /* RequestManager.swift in Sources */,
 				7B3C40862018B54500E4A0A5 /* Db.swift in Sources */,
-				7B3C40812018B50300E4A0A5 /* DependencyInjection.swift in Sources */,
+				7B3C40812018B50300E4A0A5 /* BMOConfig.swift in Sources */,
 				7B3C40A62018B7AB00E4A0A5 /* DbRepresentationExporter.swift in Sources */,
 				7B3C40792018B48100E4A0A5 /* NumberOfCores.swift in Sources */,
 				7B3C40BF2018BACF00E4A0A5 /* UniquingRequest.swift in Sources */,
@@ -2178,7 +2178,7 @@
 				7BF78F41224E7F3D00E22C3C /* ImportBridgeOperationResultsRequest.swift in Sources */,
 				7BF78F42224E7F3D00E22C3C /* RequestManager.swift in Sources */,
 				7BF78F43224E7F3D00E22C3C /* Db.swift in Sources */,
-				7BF78F44224E7F3D00E22C3C /* DependencyInjection.swift in Sources */,
+				7BF78F44224E7F3D00E22C3C /* BMOConfig.swift in Sources */,
 				7BF78F45224E7F3D00E22C3C /* DbRepresentationExporter.swift in Sources */,
 				7BF78F46224E7F3D00E22C3C /* NumberOfCores.swift in Sources */,
 				7BF78F47224E7F3D00E22C3C /* UniquingRequest.swift in Sources */,
@@ -2208,7 +2208,7 @@
 				7BF78F65224E7F4500E22C3C /* RESTBase64DataTransformer.swift in Sources */,
 				7BF78F66224E7F4500E22C3C /* RESTMapperTransformer.swift in Sources */,
 				7BF78F67224E7F4500E22C3C /* RESTPath.swift in Sources */,
-				7BF78F68224E7F4500E22C3C /* DependencyInjection.swift in Sources */,
+				7BF78F68224E7F4500E22C3C /* RESTUtilsConfig.swift in Sources */,
 				7BF78F69224E7F4500E22C3C /* RESTMaxIdPaginator.swift in Sources */,
 				7BF78F6A224E7F4500E22C3C /* RESTBoolTransformer.swift in Sources */,
 				7BF78F6B224E7F4500E22C3C /* AnyEquatable.swift in Sources */,

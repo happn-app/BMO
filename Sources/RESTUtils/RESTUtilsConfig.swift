@@ -18,15 +18,15 @@ import os.log
 
 
 
-public struct DependencyInjection {
+public struct RESTUtilsConfig {
 	
-	init() {
-		if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {log = .default}
-		else                                                          {log = nil}
-	}
+	/** We use OSLog to log. When swift-log will be fully compatible with OSLog,
+	we’ll use swift-log. For the time being we don’t care about non-Apple
+	platforms, so we know OSLog is availble. */
+	@available(macOS 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *)
+	public static var oslog: OSLog? = .default
 	
-	public var log: OSLog?
+	/** This struct is simply a container for static configuration properties. */
+	private init() {}
 	
 }
-
-public var di = DependencyInjection()

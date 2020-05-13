@@ -105,8 +105,9 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 								 * UID as the one we're given in the representation.
 								 * We'll update the UID of the object but print a
 								 * message in the logs first! */
-								if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to update object %@ but representation has UID %@. Updating UID (property “%{public}@”) of updated object (experimental; might lead to unexpected results).", log: $0, type: .info, updatedObject, String(describing: uid), uniquingPropertyName) }}
-								else                                                          {NSLog("Asked to update object %@ but representation has UID %@. Updating UID (property “%@”) of updated object (experimental; might lead to unexpected results).", updatedObject, String(describing: uid), uniquingPropertyName)}
+								if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+									BMOConfig.oslog.flatMap{ os_log("Asked to update object %@ but representation has UID %@. Updating UID (property “%{public}@”) of updated object (experimental; might lead to unexpected results).", log: $0, type: .info, updatedObject, String(describing: uid), uniquingPropertyName) }
+								}
 							}
 							updatedObject.setValue(uid, forKey: uniquingPropertyName)
 						}
@@ -164,12 +165,14 @@ final class FastImportRepresentationCoreDataImporter<ResultBuilderType : SingleT
 				if !relationship.isToMany {
 					/* To-one relationship */
 					if !mergeType.isReplace {
-						if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got merge type %{public}@ for a to-one relationship (%{public}@). Ignoring, using replace.", log: $0, type: .info, String(describing: mergeType), relationshipName) }}
-						else                                                          {NSLog("Got merge type %{public}@ for a to-one relationship (%{public}@). Ignoring, using replace.", String(describing: mergeType), relationshipName)}
+						if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+							BMOConfig.oslog.flatMap{ os_log("Got merge type %{public}@ for a to-one relationship (%{public}@). Ignoring, using replace.", log: $0, type: .info, String(describing: mergeType), relationshipName) }
+						}
 					}
 					if importedRelationshipValue.count > 1 {
-						if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got %d values for a to-one relationship (%{public}@). Taking first value.", log: $0, type: .info, importedRelationshipValue.count, relationshipName) }}
-						else                                                          {NSLog("Got %d values for a to-one relationship (%{public}@). Taking first value.", importedRelationshipValue.count, relationshipName)}
+						if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+							BMOConfig.oslog.flatMap{ os_log("Got %d values for a to-one relationship (%{public}@). Taking first value.", log: $0, type: .info, importedRelationshipValue.count, relationshipName) }
+						}
 					}
 					object.setValue(importedRelationshipValue.first, forKey: relationshipName)
 				} else {

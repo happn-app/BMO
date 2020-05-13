@@ -72,8 +72,9 @@ extension RequestManager {
 		let object = (try? context.fetch(fetchRequest))?.first as! ObjectType?
 		#if DEBUG
 			if let c = try? context.count(for: fetchRequest), c > 1 {
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Got %d results where at most 1 was expected.", log: $0, type: .info, c) }}
-				else                                                          {NSLog("Got %d results where at most 1 was expected.", c)}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Got %d results where at most 1 was expected.", log: $0, type: .info, c) }
+				}
 			}
 		#endif
 		
@@ -92,8 +93,9 @@ extension RequestManager {
 		let object = (try? context.fetch(fetchRequest))?.first as! ObjectType?
 		#if DEBUG
 			if let c = try? context.count(for: fetchRequest), c > 1 {
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Got %d results where at most 1 was expected.", log: $0, type: .info, c) }}
-				else                                                          {NSLog("Got %d results where at most 1 was expected.", c)}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Got %d results where at most 1 was expected.", log: $0, type: .info, c) }
+				}
 			}
 		#endif
 		
@@ -176,8 +178,9 @@ extension RequestManager {
 					let object = (try? context.fetch(fetchRequest))?.first as! ObjectType?
 					#if DEBUG
 						if let c = try? context.count(for: fetchRequest), c > 1 {
-							if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Got %d results where at most 1 was expected.", log: $0, type: .info, c) }}
-							else                                                          {NSLog("Got %d results where at most 1 was expected.", c)}
+							if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+								BMOConfig.oslog.flatMap{ os_log("Got %d results where at most 1 was expected.", log: $0, type: .info, c) }
+							}
 						}
 					#endif
 					

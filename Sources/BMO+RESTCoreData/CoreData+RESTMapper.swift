@@ -17,6 +17,7 @@ import CoreData
 import Foundation
 import os.log
 
+import BMO
 import RESTUtils
 
 
@@ -39,13 +40,15 @@ extension NSAttributeDescription {
 			return NSClassFromString(forcedClassName)!
 		}
 		guard let className = attributeValueClassName else {
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got an attribute description whose attributeValueClassName is nil; returning nil valueType. Attribute is %{public}@", log: $0, type: .info, self) }}
-			else                                                          {NSLog("Got an attribute description whose attributeValueClassName is nil; returning nil valueType. Attribute is %@", self)}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Got an attribute description whose attributeValueClassName is nil; returning nil valueType. Attribute is %{public}@", log: $0, type: .info, self) }
+			}
 			return nil
 		}
 		guard let objcClass = NSClassFromString(className) else {
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Got an attribute value class name (%{public}@) which is unreachable in the ObjC runtime; returning nil valueType. Attribute is %{public}@", log: $0, type: .info, className, self) }}
-			else                                                          {NSLog("Got an attribute value class name (%@) which is unreachable in the ObjC runtime; returning nil valueType. Attribute is %{public}@", className, self)}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Got an attribute value class name (%{public}@) which is unreachable in the ObjC runtime; returning nil valueType. Attribute is %{public}@", log: $0, type: .info, className, self) }
+			}
 			return nil
 		}
 		return objcClass
