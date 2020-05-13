@@ -48,7 +48,8 @@ public final class RESTNumericTransformer : ValueTransformer {
 		
 	}
 	
-	/** Try and convert the given object to an Int.
+	/**
+	Try and convert the given object to an Int.
 	
 	Supported input object types:
 	- Int
@@ -111,7 +112,8 @@ public final class RESTNumericTransformer : ValueTransformer {
 		}
 	}
 	
-	/** Try and convert the given object to a Float.
+	/**
+	Try and convert the given object to a Float.
 	
 	Supported input object types:
 	- Float
@@ -140,7 +142,8 @@ public final class RESTNumericTransformer : ValueTransformer {
 		return float
 	}
 	
-	/** Try and convert the given object to a Double.
+	/**
+	Try and convert the given object to a Double.
 	
 	Supported input object types:
 	- Double

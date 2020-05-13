@@ -164,7 +164,8 @@ public final class RequestManager {
 	
 	public var defaultResultsImporterFactory: AnyBackResultsImporterFactory?
 	
-	/** Initializer for the RequestManager.
+	/**
+	Initializer for the RequestManager.
 	
 	- Parameter backOperationQueue: The queue on which the back operations (API
 	calls) will be made. If nil, a default queue (well suited for back operations

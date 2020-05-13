@@ -37,17 +37,18 @@ public final class RESTDateAndTimeTransformer : ValueTransformer {
 		case numericTimestamp(style: NumericTimestampStyle)
 		
 		/** Useful for parsing birthdates for instance; expect a date with format
-		yyyy-MM-dd. If match, will return the given date at 0:00 GMT. */
+		`yyyy-MM-dd`. If match, will return the given date at 0:00 GMT. */
 		case dateNoTime(locale: Locale?)
 		
-		/** If you want to mix dateNoTime and iso8601, put dateNoTime as iso8601
-		will parse dateNoTime successfully, but with a (probably) wrong timezone. */
+		/** If you want to mix dateNoTime and iso8601, put dateNoTime first as
+		iso8601 will parse dateNoTime successfully, but with a (probably) wrong
+		timezone. */
 		@available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *)
 		case iso8601(options: ISO8601DateFormatter.Options, timezone: TimeZone?)
 		
 		/** If you target a platform where the system ISO8601DateFormatter is not
 		available, use this format. Under the hood, uses a DateFormatter with
-		format "yyyy-MM-dd'T'HH:mm:ssZZZZZ" (with en_US_POSIX locale). */
+		format “`yyyy-MM-dd'T'HH:mm:ssZZZZZ`” (with `en_US_POSIX` locale). */
 		@available(OSX, obsoleted: 10.12, message: "Use iso8601 to get a real ISO8601 date formatter.")
 		@available(tvOS, obsoleted: 10.0, message: "Use iso8601 to get a real ISO8601 date formatter.")
 		@available(iOS, obsoleted: 10.0, message: "Use iso8601 to get a real ISO8601 date formatter.")
