@@ -13,14 +13,20 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-/* A test to write an umbrella Framework to avoid importing all these each time
- * one wants to use BMO with REST and CoreData. Does not seem to work (at least
- * not in Xcode, not tested with anything else). */
+import Foundation
+import os.log
 
-@_exported import BMO
-@_exported import RESTUtils
-@_exported import BMO_FastImportRepresentation
-@_exported import BMO_CoreData
-@_exported import BMO_RESTCoreData
-@_exported import CollectionLoader
-@_exported import CollectionLoader_RESTCoreData
+
+
+public struct RESTUtilsConfig {
+	
+	/** We use OSLog to log. When swift-log will be fully compatible with OSLog,
+	we’ll use swift-log. For the time being we don’t care about non-Apple
+	platforms, so we know OSLog is availble. */
+	@available(macOS 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *)
+	public static var oslog: OSLog? = .default
+	
+	/** This struct is simply a container for static configuration properties. */
+	private init() {}
+	
+}

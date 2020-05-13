@@ -20,8 +20,9 @@ import os.log
 
 var numberOfCores: Int? = {
 	guard MemoryLayout<Int32>.size <= MemoryLayout<Int>.size else {
-		if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Int32 is bigger than Int (%d > %d). Cannot return the number of cores.", log: $0, type: .info, MemoryLayout<Int32>.size, MemoryLayout<Int>.size) }}
-		else                                                          {NSLog("Int32 is bigger than Int (%d > %d). Cannot return the number of cores.", MemoryLayout<Int32>.size, MemoryLayout<Int>.size)}
+		if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+			BMOConfig.oslog.flatMap{ os_log("Int32 is bigger than Int (%d > %d). Cannot return the number of cores.", log: $0, type: .info, MemoryLayout<Int32>.size, MemoryLayout<Int>.size) }
+		}
 		return nil
 	}
 	

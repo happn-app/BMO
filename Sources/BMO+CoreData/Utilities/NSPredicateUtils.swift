@@ -170,8 +170,9 @@ public extension NSExpression {
 			return NSExpression(forKeyPath: keyPathPrefix + "." + keyPath)
 			
 		case .function:
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Adding a key path prefix to a function expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }}
-			else                                                          {NSLog("Adding a key path prefix to a function expression might result to a flawed NSExpression or unexpected results.")}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Adding a key path prefix to a function expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }
+			}
 			return NSExpression(forFunction: operand.expressionByAddingKeyPathPrefix(keyPathPrefix), selectorName: function, arguments: arguments /* We do not transform arguments. Should we? I don't know. */)
 			
 		case .unionSet:
@@ -184,20 +185,23 @@ public extension NSExpression {
 			return NSExpression(forMinusSet: left.expressionByAddingKeyPathPrefix(keyPathPrefix), with: right.expressionByAddingKeyPathPrefix(keyPathPrefix))
 			
 		case .subquery:
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Adding a key path prefix to a sub-query expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }}
-			else                                                          {NSLog("Adding a key path prefix to a sub-query expression might result to a flawed NSExpression or unexpected results.")}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Adding a key path prefix to a sub-query expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }
+			}
 			switch collection {
 			case let str as String:        return NSExpression(forSubquery: NSExpression(forKeyPath: keyPathPrefix + "." + str), usingIteratorVariable: variable, predicate: predicate)
 			case let expr as NSExpression: return NSExpression(forSubquery: expr.expressionByAddingKeyPathPrefix(keyPathPrefix), usingIteratorVariable: variable, predicate: predicate)
 			default:
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Unknown collection %@ for sub-query expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, String(describing: collection), self, keyPathPrefix) }}
-				else                                                          {NSLog("Unknown collection %@ for sub-query expression %@ when adding key path prefix \"%@\". Returning original expression.", String(describing: collection), self, keyPathPrefix)}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Unknown collection %@ for sub-query expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, String(describing: collection), self, keyPathPrefix) }
+				}
 				return copy() as! NSExpression
 			}
 			
 		case .aggregate:
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Adding a key path prefix to an aggregate expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }}
-			else                                                          {NSLog("Adding a key path prefix to an aggregate expression might result to a flawed NSExpression or unexpected results.")}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Adding a key path prefix to an aggregate expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }
+			}
 			/* Note: For all maps below, we “flat” map instead of simply mapping to
 			         be sure to have NSExpression. In theory it shouldn't be
 			         possible for the collection to contain something else than
@@ -206,31 +210,36 @@ public extension NSExpression {
 			case let exprs as [Any]:            return NSExpression(forAggregate: exprs.compactMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
 			case let exprs as Set<AnyHashable>: return NSExpression(forAggregate: exprs.compactMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
 			case let exprs as [AnyHashable: Any]:
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Doc says we can initialize an aggregate expression with a dictionary, but method signature says otherwise... Returning an aggregate expression with a collection being the values of the original collection (prefixed by added prefix).", log: $0, type: .info) }}
-				else                                                          {NSLog("Doc says we can initialize an aggregate expression with a dictionary, but method signature says otherwise... Returning an aggregate expression with a collection being the values of the original collection (prefixed by added prefix).")}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Doc says we can initialize an aggregate expression with a dictionary, but method signature says otherwise... Returning an aggregate expression with a collection being the values of the original collection (prefixed by added prefix).", log: $0, type: .info) }
+				}
 				return NSExpression(forAggregate: exprs.values.compactMap{ ($0 as? NSExpression)?.expressionByAddingKeyPathPrefix(keyPathPrefix) ?? nil })
 				
 			default:
-				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Unknown collection %@ for aggregate expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, String(describing: collection), self, keyPathPrefix) }}
-				else                                                          {NSLog("Unknown collection %@ for aggregate expression %@ when adding key path prefix \"%@\". Returning original expression.", String(describing: collection), self, keyPathPrefix)}
+				if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Unknown collection %@ for aggregate expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, String(describing: collection), self, keyPathPrefix) }
+				}
 				return copy() as! NSExpression
 			}
 			
 		case .block:
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Adding a key path prefix to a block expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }}
-			else                                                          {NSLog("Adding a key path prefix to a block expression might result to a flawed NSExpression or unexpected results.")}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Adding a key path prefix to a block expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }
+			}
 			return NSExpression(block: expressionBlock, arguments: arguments?.map{ $0.expressionByAddingKeyPathPrefix(keyPathPrefix) })
 			
 		case .conditional:
 			/* Not sure what a conditional expression is... */
 			guard #available(OSX 10.11, iOS 9.0, *) else {fatalError("Conditional expression shouldn't be available on this OS version!")}
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Adding a key path prefix to a conditional expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }}
-			else                                                          {NSLog("Adding a key path prefix to a conditional expression might result to a flawed NSExpression or unexpected results.")}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Adding a key path prefix to a conditional expression might result to a flawed NSExpression or unexpected results.", log: $0, type: .info) }
+			}
 			return NSExpression(forConditional: predicate.predicateByAddingKeyPathPrefix(keyPathPrefix), trueExpression: `true`.expressionByAddingKeyPathPrefix(keyPathPrefix), falseExpression: `false`.expressionByAddingKeyPathPrefix(keyPathPrefix))
 			
 		@unknown default:
-			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Unknown expression type for expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, self, keyPathPrefix) }}
-			else                                                          {NSLog("Unknown expression type for expression %@ when adding key path prefix \"%@\". Returning original expression.", self, keyPathPrefix)}
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+				BMOConfig.oslog.flatMap{ os_log("Unknown expression type for expression %@ when adding key path prefix \"%@\". Returning original expression.", log: $0, type: .error, self, keyPathPrefix) }
+			}
 			return copy() as! NSExpression
 		}
 	}

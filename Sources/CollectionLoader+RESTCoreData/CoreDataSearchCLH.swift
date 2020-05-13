@@ -105,8 +105,9 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType,
 			}
 		} else {
 			if apiOrderProperty != nil {
-				if #available(tvOS 10.0, iOS 10.0, watchOS 3.0, *) {BMO.di.log.flatMap{ os_log("Got no start index, but I do have an API order property! Leaving to default value, object order will probably be random...", log: $0, type: .info) }}
-				else                                               {NSLog("Got no start index, but I do have an API order property! Leaving to default value, object order will probably be random...")}
+				if #available(tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
+					BMOConfig.oslog.flatMap{ os_log("Got no start index, but I do have an API order property! Leaving to default value, object order will probably be random...", log: $0, type: .info) }
+				}
 			}
 			fullPreCompletionHandler = preCompletion
 		}

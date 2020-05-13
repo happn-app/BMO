@@ -11,9 +11,12 @@ let package = Package(
 		.watchOS(.v2)
 	],
 	products: [
+		.library(name: "BMO", targets: ["BMO"]),
+		.library(name: "RESTUtils", targets: ["RESTUtils"]),
+		/* A Library for BMO w/ CoreData and REST. */
 		.library(
 			name: "Jake",
-			targets: ["Jake"]
+			targets: ["BMO", "RESTUtils", "BMO+FastImportRepresentation", "BMO+CoreData", "BMO+RESTCoreData", "CollectionLoader+RESTCoreData"]
 		)
 	],
 	dependencies: [
@@ -27,12 +30,11 @@ let package = Package(
 		.target(name: "BMO+CoreData",                  dependencies: ["AsyncOperationResult", "BMO", "BMO+FastImportRepresentation"]),
 		.target(name: "BMO+RESTCoreData",              dependencies: ["AsyncOperationResult", "BMO", "RESTUtils", "BMO+FastImportRepresentation", "BMO+CoreData"]),
 		.target(name: "CollectionLoader+RESTCoreData", dependencies: ["AsyncOperationResult", "CollectionLoader", "BMO", "RESTUtils", "BMO+FastImportRepresentation", "BMO+CoreData", "BMO+RESTCoreData"]),
-		.target(name: "Jake",                          dependencies: ["AsyncOperationResult", "CollectionLoader", "BMO", "RESTUtils", "BMO+FastImportRepresentation", "BMO+CoreData", "BMO+RESTCoreData", "CollectionLoader+RESTCoreData"]),
 		.testTarget(name: "BMOTests",                           dependencies: ["BMO"]),
 		.testTarget(name: "RESTUtilsTests",                     dependencies: ["RESTUtils"]),
-		.testTarget(name: "BMO+FastImportRepresentationTests",  dependencies: ["BMO+FastImportRepresentation"]),
-		.testTarget(name: "BMO+CoreDataTests",                  dependencies: ["BMO+CoreData"]),
-		.testTarget(name: "BMO+RESTCoreDataTests",              dependencies: ["BMO+RESTCoreData"]),
-		.testTarget(name: "CollectionLoader+RESTCoreDataTests", dependencies: ["CollectionLoader+RESTCoreData"])
+		.testTarget(name: "BMO-FastImportRepresentationTests",  dependencies: ["BMO+FastImportRepresentation"]),
+		.testTarget(name: "BMO-CoreDataTests",                  dependencies: ["BMO+CoreData"]),
+		.testTarget(name: "BMO-RESTCoreDataTests",              dependencies: ["BMO+RESTCoreData"]),
+		.testTarget(name: "CollectionLoader-RESTCoreDataTests", dependencies: ["CollectionLoader+RESTCoreData"])
 	]
 )
