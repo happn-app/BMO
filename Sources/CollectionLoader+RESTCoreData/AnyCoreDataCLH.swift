@@ -18,6 +18,7 @@ import Foundation
 
 import AsyncOperationResult
 import BMO
+import BMO_CoreData
 import BMO_RESTCoreData
 import RESTUtils
 
@@ -25,7 +26,7 @@ import RESTUtils
 
 @available(OSX 10.12, *)
 public enum AnyCoreDataCLH<FetchedObjectsType : NSManagedObject, BridgeType, PageInfoRetrieverType : PageInfoRetriever> : CoreDataCLH
-	where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescription>, PageInfoRetrieverType.BridgeType == BridgeType
+	where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>, PageInfoRetrieverType.BridgeType == BridgeType
 {
 	
 	case search(CoreDataSearchCLH<FetchedObjectsType, BridgeType, PageInfoRetrieverType>)

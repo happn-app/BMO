@@ -20,4 +20,4 @@ import RESTUtils
 
 
 
-public typealias RESTCoreDataSaveRequest = CoreDataSaveRequest<AdditionalRESTRequestInfo<NSPropertyDescription>>
+public typealias RESTCoreDataSaveRequest = CoreDataSaveRequest<AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>>

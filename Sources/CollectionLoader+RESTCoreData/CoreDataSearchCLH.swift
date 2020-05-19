@@ -19,6 +19,7 @@ import os.log
 
 import AsyncOperationResult
 import BMO
+import BMO_CoreData
 import BMO_RESTCoreData
 import RESTUtils
 
@@ -43,7 +44,7 @@ import RESTUtils
 
 @available(OSX 10.12, *)
 public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType, PageInfoRetrieverType : PageInfoRetriever> : CoreDataCLH
-	where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescription>, PageInfoRetrieverType.BridgeType == BridgeType
+	where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>, PageInfoRetrieverType.BridgeType == BridgeType
 {
 	
 	public let bridge: BridgeType
@@ -54,7 +55,7 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType,
 	public let resultsController: NSFetchedResultsController<FetchedObjectsType>
 	
 	public init(
-		fetchRequest fr: NSFetchRequest<FetchedObjectsType>, additionalFetchInfo afi: AdditionalRESTRequestInfo<NSPropertyDescription>?,
+		fetchRequest fr: NSFetchRequest<FetchedObjectsType>, additionalFetchInfo afi: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?,
 		apiOrderProperty aop: NSAttributeDescription? = nil, apiOrderDelta aod: Int = 1,
 		deletionDateProperty ddp: NSAttributeDescription? = nil,
 		context c: NSManagedObjectContext, bridge b: BridgeType? = nil, pageInfoRetriever pir: PageInfoRetrieverType? = nil, requestManager rm: RequestManager
@@ -112,7 +113,7 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType,
 			fullPreCompletionHandler = preCompletion
 		}
 		
-		let additionalInfo = AdditionalRESTRequestInfo<NSPropertyDescription>(fromInfo: additionalFetchInfo, paginatorInfo: pageInfo.paginatorInfo)
+		let additionalInfo = AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>(fromInfo: additionalFetchInfo, paginatorInfo: pageInfo.paginatorInfo)
 		let request = RESTCoreDataFetchRequest(context: context, fetchRequest: fetchRequest, fetchType: .always, additionalInfo: additionalInfo, leaveBridgeHandler: preRun, preImportHandler: preImport, preCompletionHandler: fullPreCompletionHandler)
 		return requestManager.operation(forBackRequest: request, autoStart: false, handler: nil)
 	}
@@ -147,7 +148,7 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType,
 	}
 	
 	private let fetchRequest: NSFetchRequest<NSFetchRequestResult>
-	private let additionalFetchInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?
+	private let additionalFetchInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?
 	
 	private let apiOrderProperty: NSAttributeDescription?
 	private let apiOrderDelta: Int /* Must be > 0 */

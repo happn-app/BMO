@@ -32,8 +32,7 @@ public protocol Db {
 	 *
 	 * We'll probably NOT change that anytime soon because:
 	 *    - There's a CoreData bug related to hash value of NSPropertyDescription
-	 *      (see _propertyMapping... function in RESTMapper for a more thorough
-	 *      description of the bug);
+	 *      (but that’s been mitigated w/ NSPropertyDescriptionHashableWrapper);
 	 *    - I tried doing that one day, but for reasons I do not remember exactly
 	 *      it was a hassle (problems related to the REST Mapper IIRC). */
 	associatedtype PropertyDescriptionType : Hashable

@@ -17,10 +17,7 @@ import Foundation
 
 
 
-/* Note: DbPropertyDescription would not need the DbRESTPropertyDescription
- *       restriction if it weren't for the CoreData bug described in the
- *       _propertyMapping... method. */
-struct RESTMapping<DbEntityDescription : DbRESTEntityDescription & Hashable, DbPropertyDescription : DbRESTPropertyDescription & Hashable> {
+struct RESTMapping<DbEntityDescription : DbRESTEntityDescription & Hashable, DbPropertyDescription : Hashable> {
 	
 	let entitiesMapping: [DbEntityDescription: RESTEntityMapping<DbPropertyDescription>]
 	
@@ -64,35 +61,10 @@ struct RESTMapping<DbEntityDescription : DbRESTEntityDescription & Hashable, DbP
 	}
 	
 	private func _propertyMapping(forProperty property: DbPropertyDescription, expectedEntity entity: DbEntityDescription, canGoUp: Bool, canGoDown: Bool) -> RESTPropertyMapping? {
-		/* CoreData bug spotted:
-		 *    - Entity A is parent of entity B and declares the property p;
-		 *    - Asking CoreData the property description for the property p on A
-		 *      or B will both return a valid property description (let's call
-		 *      them p1 & p2);
-		 *    - Both property descriptions returned are equal (p1 == p2 in the
-		 *      Swift sense (not pointer equal, but isEqual: equal));
-		 *    - However, they do **NOT** have the same hash! The property
-		 *      description returned for B is a _proxy_ for the description of the
-		 *      A property description. And apparently, Apple miscalculated the
-		 *      hash in the proxy :(
-		 * This is **NOT** a Swift/ObjC interoperability problem, as the same bug
-		 * has been observed on an ObjC-only project.
-		 *
-		 * To “fix” this, if the subscript fetch in propertiesMapping for the
-		 * given property returns nil, we check then if it wouldn't be set anyway
-		 * using the property name, thus bypassing the hash.
-		 * Indeed, the second check is much much slower...
-		 *
-		 * Without the bug, the whole if below is reduced to this simple line:
-		 * if let m = entitiesMapping[entity]?.propertiesMapping[property] {return m}*/
-		if let entityMapping = entitiesMapping[entity] {
-			if let m = entityMapping.propertiesMapping[property] {return m}
-			for (k, v) in entityMapping.propertiesMapping {
-				if k.name == property.name {
-					return v
-				}
-			}
+		if let m = entitiesMapping[entity]?.propertiesMapping[property] {
+			return m
 		}
+		
 		/* Mapping not found, first let's go up if allowed. */
 		if canGoUp, let superentity = entity.superentity {
 			if let m = _propertyMapping(forProperty: property, expectedEntity: superentity as! DbEntityDescription, canGoUp: true, canGoDown: false) {

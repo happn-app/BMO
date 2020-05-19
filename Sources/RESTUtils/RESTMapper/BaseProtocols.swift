@@ -43,7 +43,7 @@ public protocol DbRESTPropertyDescription {
 	general). */
 	var valueType: AnyClass? {get}
 	/** Returns the type of the destination entity for relationship properties.
-	For other types of properties, return nil. */
+	For other types of properties, returns nil. */
 	var destinationEntity: EntityDescription? {get}
 	
 }

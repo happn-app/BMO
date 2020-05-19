@@ -19,6 +19,7 @@ import os.log
 
 import AsyncOperationResult
 import BMO
+import BMO_CoreData
 import BMO_RESTCoreData
 import RESTUtils
 
@@ -26,7 +27,7 @@ import RESTUtils
 
 @available(OSX 10.12, *)
 public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, BridgeType, PageInfoRetrieverType : PageInfoRetriever> : CoreDataCLH
-	where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescription>, PageInfoRetrieverType.BridgeType == BridgeType
+	where BridgeType.DbType == NSManagedObjectContext, BridgeType.AdditionalRequestInfoType == AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>, PageInfoRetrieverType.BridgeType == BridgeType
 {
 	
 	public let bridge: BridgeType
@@ -39,7 +40,7 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 	public var listElementObjectId: NSManagedObjectID?
 	
 	public convenience init(
-		listElementEntity: NSEntityDescription, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescription>?, listProperty lp: NSRelationshipDescription,
+		listElementEntity: NSEntityDescription, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?, listProperty lp: NSRelationshipDescription,
 		apiOrderProperty aop: NSAttributeDescription, apiOrderDelta aod: Int = 1, additionalFetchRequestPredicate afrp: NSPredicate? = nil,
 		context c: NSManagedObjectContext, bridge b: BridgeType? = nil, pageInfoRetriever pir: PageInfoRetrieverType? = nil, requestManager rm: RequestManager
 	) {
@@ -50,7 +51,7 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 	}
 	
 	public init<ListElementObjectType : NSManagedObject>(
-		listElementFetchRequest: NSFetchRequest<ListElementObjectType>, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescription>?, listProperty lp: NSRelationshipDescription,
+		listElementFetchRequest: NSFetchRequest<ListElementObjectType>, additionalElementFetchInfo aefi: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?, listProperty lp: NSRelationshipDescription,
 		apiOrderProperty aop: NSAttributeDescription, apiOrderDelta aod: Int = 1, additionalFetchRequestPredicate afrp: NSPredicate? = nil,
 		context c: NSManagedObjectContext, bridge b: BridgeType? = nil, pageInfoRetriever pir: PageInfoRetrieverType? = nil, requestManager rm: RequestManager
 	) {
@@ -106,10 +107,10 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 	}
 	
 	public func operationForLoading(pageInfo: Any, preRun: (() -> Bool)?, preImport: (() -> Bool)?, preCompletion: ((_ importResults: ImportResult<NSManagedObjectContext>) throws -> Void)?) -> BackRequestOperation<RESTCoreDataFetchRequest, BridgeType> {
-		let additionalListInfo = AdditionalRESTRequestInfo<NSPropertyDescription>(fromInfo: additionalElementFetchInfo?[listProperty], paginatorInfo: pageInfo)
+		let additionalListInfo = AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>(fromInfo: additionalElementFetchInfo?[listProperty.hashableWrapper()], paginatorInfo: pageInfo)
 		
-		var additionalFetchInfo = additionalElementFetchInfo ?? AdditionalRESTRequestInfo<NSPropertyDescription>()
-		additionalFetchInfo[listProperty] = additionalListInfo
+		var additionalFetchInfo = additionalElementFetchInfo ?? AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>()
+		additionalFetchInfo[listProperty.hashableWrapper()] = additionalListInfo
 		
 		let request = RESTCoreDataFetchRequest(context: context, fetchRequest: fetchRequest, fetchType: .always, additionalInfo: additionalFetchInfo, leaveBridgeHandler: preRun, preImportHandler: preImport, preCompletionHandler: { importResults in
 			if importResults.rootObjectsAndRelationships.count > 1 {
@@ -170,7 +171,7 @@ public class CoreDataListElementCLH<FetchedObjectsType : NSManagedObject, Bridge
 	}
 	
 	private let fetchRequest: NSFetchRequest<NSFetchRequestResult>
-	private let additionalElementFetchInfo: AdditionalRESTRequestInfo<NSPropertyDescription>?
+	private let additionalElementFetchInfo: AdditionalRESTRequestInfo<NSPropertyDescriptionHashableWrapper>?
 	
 	private let listProperty: NSRelationshipDescription
 	

@@ -26,7 +26,7 @@ extension NSManagedObjectContext : Db {
 	public typealias FetchRequestType = NSFetchRequest<NSFetchRequestResult>
 	
 	public typealias EntityDescriptionType = NSEntityDescription
-	public typealias PropertyDescriptionType = NSPropertyDescription
+	public typealias PropertyDescriptionType = NSPropertyDescriptionHashableWrapper
 	
 	public func performAndWait(_ block: () throws -> Void) rethrows {
 		try withoutActuallyEscaping(block) { escapableBlock in
