@@ -65,7 +65,7 @@ public class CoreDataSearchCLH<FetchedObjectsType : NSManagedObject, BridgeType,
 		
 		context = c
 		requestManager = rm
-		pageInfoRetriever = pir ?? (rm.getBridge(from: b) as? PageInfoRetrieverType)
+		pageInfoRetriever = pir
 		bridge = rm.getBridge(from: b)
 		
 		fetchRequest = fr as! NSFetchRequest<NSFetchRequestResult>
