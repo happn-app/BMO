@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/happn-tech/AsyncOperationResult.git",
         "state": {
           "branch": null,
-          "revision": "cf6a617364267bedc334a9e61cf1f7efd7c0e0b4",
-          "version": "1.0.5"
+          "revision": "058d4d66860193122f274cce70e5780e793e373c",
+          "version": "1.0.6"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/happn-tech/CollectionLoader.git",
         "state": {
           "branch": null,
-          "revision": "295889cfcf3e57544e1ebeeeed6213a5635692e0",
-          "version": "0.9.4"
+          "revision": "b8e5f3da40d280359569a7f53b13ccf0e7c3bc4b",
+          "version": "0.9.5"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/happn-tech/KVObserver.git",
         "state": {
           "branch": null,
-          "revision": "3a8bd558a72c9ab393f94a6f947307e8d01c8c9e",
-          "version": "0.9.4"
+          "revision": "6b6252489a2b1cdb67857576962676b6cb6c679a",
+          "version": "0.9.5"
         }
       }
     ]
