@@ -25,7 +25,14 @@ import Foundation
 
 
 
+/* Note: This transformer is only available when `NSColor(named:)` (or `UIColor`
+ * counterpart) are available.
+ * In theory, only the `colorName` case of the `ColorType` enum should be marked
+ * as unavailable when said inits are unavailable. However it is not possible to
+ * have an enum case with associated values marked as potentially unavailable. */
+
 /** Reverse transformation is not supported. */
+@available(macOS 10.13, tvOS 11.0, iOS 11.0, watchOS 4.0, *)
 public class RESTColorTransformer : ValueTransformer {
 	
 	public enum ColorType {
@@ -51,7 +58,6 @@ public class RESTColorTransformer : ValueTransformer {
 		
 		case whiteAlpha(whiteInfo: ColorComponentInfo<CGFloat>, alphaInfo: ColorComponentInfo<CGFloat>)
 		
-		@available(OSX 10.13, tvOS 11.0, iOS 11.0, watchOS 4.0, *)
 		case colorName(info: ColorComponentInfo<String>)
 		
 	}
@@ -240,7 +246,6 @@ public class RESTColorTransformer : ValueTransformer {
 		
 		switch colorType {
 		case .colorName(info: let info):
-			guard #available(OSX 10.13, tvOS 11.0, iOS 11.0, watchOS 4.0, *) else {return nil}
 			guard let colorName = info.resolve(with: vars) else {return nil}
 			#if os(OSX)
 				return NSColor(named: NSColor.Name(rawValue: colorName))

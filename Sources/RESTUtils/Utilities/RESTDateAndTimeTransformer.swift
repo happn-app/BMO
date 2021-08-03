@@ -17,11 +17,19 @@ import Foundation
 
 
 
+/* Note: This transformer is only available when `ISO8601DateFormatter` is
+ * available.
+ * In theory, only the `iso8601` case of the `DateConversionFormat` enum should
+ * be marked as unavailable when the formatter is unavailable. However it is not
+ * possible to have an enum case with associated values marked as potentially
+ * unavailable. */
+
 /** Transforms an object to a Date and vice-versa with a set of options to
 customize how the conversion is attempted.
 
 For the reverse transformation, depending on the options, the reversed value can
 either be a `String` or an `NSNumber`. */
+@available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *)
 public final class RESTDateAndTimeTransformer : ValueTransformer {
 	
 	public enum DateConversionFormat {
@@ -43,7 +51,6 @@ public final class RESTDateAndTimeTransformer : ValueTransformer {
 		/** If you want to mix dateNoTime and iso8601, put dateNoTime first as
 		iso8601 will parse dateNoTime successfully, but with a (probably) wrong
 		timezone. */
-		@available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *)
 		case iso8601(options: ISO8601DateFormatter.Options, timezone: TimeZone?)
 		
 		/** If you target a platform where the system ISO8601DateFormatter is not
@@ -87,7 +94,7 @@ public final class RESTDateAndTimeTransformer : ValueTransformer {
 				if let date = dateFormatter.date(from: strObj) {return date}
 				
 			case .iso8601(options: let options, timezone: let timeZone):
-				guard #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) else {continue}
+//				guard #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) else {continue}
 				guard let strObj = strObj else {continue}
 				let isoDateFormatter = ISO8601DateFormatter()
 				isoDateFormatter.formatOptions = options
@@ -123,13 +130,8 @@ public final class RESTDateAndTimeTransformer : ValueTransformer {
 	public let reverseConversionDateFormat: DateConversionFormat
 	
 	public convenience override init() {
-		if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
-			let iso8601Formatter = DateConversionFormat.iso8601(options: [.withFullDate, .withFullTime], timezone: nil)
-			self.init(forwardConversionDateFormats: [iso8601Formatter], reverseConversionDateFormat: iso8601Formatter)
-		} else {
-			let iso8601Formatter = DateConversionFormat.fakeISO8601(timezone: nil)
-			self.init(forwardConversionDateFormats: [iso8601Formatter], reverseConversionDateFormat: iso8601Formatter)
-		}
+		let iso8601Formatter = DateConversionFormat.iso8601(options: [.withFullDate, .withFullTime], timezone: nil)
+		self.init(forwardConversionDateFormats: [iso8601Formatter], reverseConversionDateFormat: iso8601Formatter)
 	}
 	
 	public init(forwardConversionDateFormats f: [DateConversionFormat], reverseConversionDateFormat r: DateConversionFormat) {
@@ -160,7 +162,6 @@ public final class RESTDateAndTimeTransformer : ValueTransformer {
 			return dateFormatter.string(from: date)
 			
 		case .iso8601(options: let options, timezone: let timeZone):
-			guard #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) else {return nil}
 			let isoDateFormatter = ISO8601DateFormatter()
 			isoDateFormatter.formatOptions = options
 			isoDateFormatter.timeZone = timeZone
