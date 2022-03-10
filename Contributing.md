@@ -2,7 +2,7 @@
 
 ## Filing Issues
 
-Whether you find a bug, typo or an API call that could be clarified, please [file an issue](https://github.com/happn-tech/BMO/issues) on our GitHub repository.
+Whether you find a bug, typo or an API call that could be clarified, please [file an issue](https://github.com/happn-app/BMO/issues) on our GitHub repository.
 
 When filing an issue, please provide as much of the following information as possible in order to help others fix it:
 
@@ -38,7 +38,7 @@ $(which git && git --version)
 
 ## Contributing Enhancements
 
-We love contributions to BMO! If you'd like to contribute code, documentation, or any other improvements, please [file a Pull Request](https://github.com/happn-tech/BMO/pulls) on our GitHub repository. Unit tests are highly appreciated for each of your contribution.
+We love contributions to BMO! If you'd like to contribute code, documentation, or any other improvements, please [file a Pull Request](https://github.com/happn-app/BMO/pulls) on our GitHub repository. Unit tests are highly appreciated for each of your contribution.
 
 ### Commit Messages
 

@@ -3,25 +3,25 @@
     "pins": [
       {
         "package": "AsyncOperationResult",
-        "repositoryURL": "https://github.com/happn-tech/AsyncOperationResult.git",
+        "repositoryURL": "https://github.com/happn-app/AsyncOperationResult.git",
         "state": {
           "branch": null,
-          "revision": "058d4d66860193122f274cce70e5780e793e373c",
-          "version": "1.0.6"
+          "revision": "fe81cdaa25a577a9ea688d71aa81387bfed213c7",
+          "version": "1.0.7"
         }
       },
       {
         "package": "CollectionLoader",
-        "repositoryURL": "https://github.com/happn-tech/CollectionLoader.git",
+        "repositoryURL": "https://github.com/happn-app/CollectionLoader.git",
         "state": {
           "branch": null,
-          "revision": "b8e5f3da40d280359569a7f53b13ccf0e7c3bc4b",
-          "version": "0.9.5"
+          "revision": "420dcee7e04c4bc95273443dcc6dec0ad6630664",
+          "version": "0.9.6"
         }
       },
       {
         "package": "KVObserver",
-        "repositoryURL": "https://github.com/happn-tech/KVObserver.git",
+        "repositoryURL": "https://github.com/happn-app/KVObserver.git",
         "state": {
           "branch": null,
           "revision": "6b6252489a2b1cdb67857576962676b6cb6c679a",

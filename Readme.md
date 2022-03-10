@@ -1,5 +1,5 @@
 # BMO
-![Platforms](https://img.shields.io/badge/platform-macOS%20|%20iOS%20|%20tvOS%20|%20watchOS-lightgrey.svg?style=flat) [![SPM compatible](https://img.shields.io/badge/SPM-compatible-E05C43.svg?style=flat)](https://swift.org/package-manager/) [![License](https://img.shields.io/github/license/happn-tech/BMO.svg?style=flat)](License.txt) [![happn](https://img.shields.io/badge/from-happn-0087B4.svg?style=flat)](https://happn.com)
+![Platforms](https://img.shields.io/badge/platform-macOS%20|%20iOS%20|%20tvOS%20|%20watchOS-lightgrey.svg?style=flat) [![SPM compatible](https://img.shields.io/badge/SPM-compatible-E05C43.svg?style=flat)](https://swift.org/package-manager/) [![License](https://img.shields.io/github/license/happn-app/BMO.svg?style=flat)](License.txt) [![happn](https://img.shields.io/badge/from-happn-0087B4.svg?style=flat)](https://happn.com)
 
 **BMO** is a concept. Any Database Object can be a **B**acked **M**anaged **O**bject.
 
@@ -28,7 +28,7 @@ BMO is a collection of protocols that makes it easy to link any local database (
 For now BMO has one concrete implementation, linking CoreData to a REST API.
 
 Here is a diagram showing the lifecycle of a request through BMO:
-![BMO Diagram](https://github.com/happn-tech/BMO/blob/master/docs/images/BMODiagram1.png)
+![BMO Diagram](https://github.com/happn-app/BMO/blob/master/docs/images/BMODiagram1.png)
 
 1. A CoreData request is sent to BMO.
 2. BMO returns the matching objects synchronously…
@@ -46,7 +46,7 @@ In order to have a clear separation of roles, this repository has many targets:
 - **BMO+RESTCoreData**: Additions to _BMO+CoreData_ to use BMO with a _REST_ API;
 - **RESTUtils**: A collection of utilities to build a BMO bridge for a _REST_ API. This target is not BMO specific and could be used in any project;
 - **BMO+FastImportRepresentation**: Usually you don’t have to deal with this one. It defines a structure which is used by BMO to import the _`MixedRepresentation`s_ in whatever db you use;
-- **CollectionLoader+RESTCoreData**: For using a [CollectionLoader](https://github.com/happn-tech/CollectionLoader) with BMO.
+- **CollectionLoader+RESTCoreData**: For using a [CollectionLoader](https://github.com/happn-app/CollectionLoader) with BMO.
 
 
 ## Installation and Dependencies
@@ -60,22 +60,22 @@ idempotent requests).
 Here’s a basic Cartfile you can use for your BMO-based projects.
 ```ogdl
 # Cartfile
-github "happn-tech/BMO" ~> 0.1
-github "happn-tech/URLRequestOperation" ~> 1.1.5
+github "happn-app/BMO" ~> 0.1
+github "happn-app/URLRequestOperation" ~> 1.1.5
 ```
 
 ### Dependencies
 
 BMO has the following dependencies:
-- [AsyncOperationResult](https://github.com/happn-tech/AsyncOperationResult): Basically the `Result` type of the standard Swift library. (BMO was created with Swift 4.2; this dependency will be dropped.)
-- [CollectionLoader](https://github.com/happn-tech/CollectionLoader): A generic collection loader, supporting page-based fetching.
-   - [KVObserver](https://github.com/happn-tech/KVObserver): A clean wrapper around Objective-C’s KVO.
+- [AsyncOperationResult](https://github.com/happn-app/AsyncOperationResult): Basically the `Result` type of the standard Swift library. (BMO was created with Swift 4.2; this dependency will be dropped.)
+- [CollectionLoader](https://github.com/happn-app/CollectionLoader): A generic collection loader, supporting page-based fetching.
+   - [KVObserver](https://github.com/happn-app/KVObserver): A clean wrapper around Objective-C’s KVO.
 
 URLRequestOperation has the following dependencies:
-- [AsyncOperationResult](https://github.com/happn-tech/AsyncOperationResult): Basically the `Result` type of the standard Swift library. (URLRequestOperation was created with Swift 4.2; this dependency will be dropped.)
-- [RetryingOperation](https://github.com/happn-tech/RetryingOperation): Implementation of an abstract `Operation` providing conveniences for easily running and retrying a base operation.
-- [SemiSingleton](https://github.com/happn-tech/SemiSingleton): An implementation of the "singleton by id".
-   - [RecursiveSyncDispatch](https://github.com/happn-tech/RecursiveSyncDispatch): Recursively sync dispatch on private GCD queues.
+- [AsyncOperationResult](https://github.com/happn-app/AsyncOperationResult): Basically the `Result` type of the standard Swift library. (URLRequestOperation was created with Swift 4.2; this dependency will be dropped.)
+- [RetryingOperation](https://github.com/happn-app/RetryingOperation): Implementation of an abstract `Operation` providing conveniences for easily running and retrying a base operation.
+- [SemiSingleton](https://github.com/happn-app/SemiSingleton): An implementation of the "singleton by id".
+   - [RecursiveSyncDispatch](https://github.com/happn-app/RecursiveSyncDispatch): Recursively sync dispatch on private GCD queues.
 
 
 ## Requirements
@@ -87,7 +87,7 @@ URLRequestOperation has the following dependencies:
 ## Getting started
 This Readme will focus on using the CoreData+REST implementation of BMO. An advanced usage will show later how to create new concrete implementations of BMO for other databases or APIs.
 
-The Readme here will give the general steps to follow to implement BMO in an app. If you want a more detailed and thorough guide, please see our [example project](https://github.com/happn-tech/BMOSpotifyClient).
+The Readme here will give the general steps to follow to implement BMO in an app. If you want a more detailed and thorough guide, please see our [example project](https://github.com/happn-app/BMOSpotifyClient).
 
 ### The Core Data Stack
 There is only one requirement for your Core Data model: that all your mapped entities have a "uniquing property." This will be the property BMO will read and write to make sure you won't have duplicated instances in your stack. In effect, if you’re fetching an object already in the local database, the local and fetched objects will be merged together. The object that was already in the database will be updated.
@@ -95,7 +95,7 @@ The property can be named however you like, but must have the same name in all y
 
 Example of a simple model with the uniquing property name `bmoId`:
 
-![CoreData Model](https://github.com/happn-tech/BMO/blob/master/docs/images/CoreDataModelExample1.png)
+![CoreData Model](https://github.com/happn-app/BMO/blob/master/docs/images/CoreDataModelExample1.png)
 
 ### The BMO Bridge
 A bridge is an entity (class, struct, whatever) that implements the Bridge protocol. It is the interface between your local Core Data database and your API. This is the most important thing you have to provide to BMO.
@@ -263,7 +263,7 @@ Using the NSFetchedResultsController is a great way to react to changes occurrin
 
 Please refer to Apple Documentation to implement and use an NSFetchedResultsController (https://developer.apple.com/documentation/coredata/nsfetchedresultscontroller).
 
-happn provides a helper in order to use an NSFetchedResultsController in combination with a UITableView or a UICollectionView (https://github.com/happn-tech/CollectionAndTableViewUpdateConveniences).
+happn provides a helper in order to use an NSFetchedResultsController in combination with a UITableView or a UICollectionView (https://github.com/happn-app/CollectionAndTableViewUpdateConveniences).
 
 
 ## Advanced Usage
